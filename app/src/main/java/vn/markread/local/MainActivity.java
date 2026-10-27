@@ -92,7 +92,7 @@ public final class MainActivity extends Activity {
     private void unsupportedWebView(){TextView t=new TextView(this);t.setTextColor(Color.WHITE);t.setTextSize(18);t.setPadding(32,48,32,32);t.setText("MarkRead cần Android System WebView phiên bản 100 trở lên.\n\nHãy cập nhật Android System WebView trên thiết bị rồi mở lại app. Không cần cấp quyền truy cập toàn bộ bộ nhớ.");root.addView(t);}
     @SuppressWarnings("deprecation") private void createWebView(){
         nonce=UUID.randomUUID().toString();
-        web=new WebView(this);web.setBackgroundColor(Color.rgb(32,35,38));
+        web=new WebView(this);web.setBackgroundColor(Color.rgb(32,35,38));web.setDefaultFocusHighlightEnabled(false);
         web.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
         WebView.setWebContentsDebuggingEnabled(false);
         WebSettings s=web.getSettings();

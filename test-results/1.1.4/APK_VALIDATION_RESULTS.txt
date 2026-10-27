@@ -1,0 +1,45 @@
+APK validation: 25 checks passed
+PASS source manifest requests zero permissions
+PASS backup disabled
+PASS release debugging disabled
+PASS cleartext disabled
+PASS compiled APK requests zero permissions
+PASS correct package
+PASS correct upgrade version
+PASS minimum Android 8
+PASS target Android 15
+PASS launcher activity packaged
+PASS APK ZIP CRC valid
+PASS DEX packaged
+PASS no signing secrets in APK
+PASS APK contains latest generated renderer
+PASS one bundled renderer script
+PASS CSP script hash matches
+PASS Merriweather embedded offline
+PASS font license packaged
+PASS renderer CSP denies all network connections
+PASS document frame cannot run scripts
+PASS no external HTML assets
+PASS no JavaScriptInterface API used
+PASS WebView direct file/content access disabled
+PASS WebView network loads disabled
+PASS persistent tree grant uses only picker-returned read/write flags
+
+package: vn.markread.local
+
+package: name='vn.markread.local' versionCode='114' versionName='1.1.4' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+minSdkVersion:'26'
+targetSdkVersion:'35'
+application-label:'MarkRead'
+application-icon-160:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-65534:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application: label='MarkRead' icon='res/mipmap-anydpi-v26/ic_launcher.xml'
+launchable-activity: name='vn.markread.local.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160' '65534'

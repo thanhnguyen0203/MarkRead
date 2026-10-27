@@ -40,7 +40,7 @@ def build():
         password.write_text(secrets.token_urlsafe(36));password.chmod(0o600)
         run(['keytool','-genkeypair','-keystore',key,'-storetype','PKCS12','-alias','markread','-keyalg','RSA','-keysize','3072','-validity','10000','-dname','CN=MarkRead Local, O=Personal Offline Apps','-storepass:file',password,'-keypass:file',password,'-noprompt'])
         key.chmod(0o600)
-    output=DIST/'MarkRead-Android-1.1.3.apk'
+    output=DIST/'MarkRead-Android-1.1.4.apk'
     signed=BUILD/'signed.apk'
     run(['java','-jar',BT/'lib/apksigner.jar','sign','--ks',key,'--ks-key-alias','markread','--ks-pass','file:'+str(password),'--v4-signing-enabled','false','--out',signed,aligned])
     verify=subprocess.run(['java','-jar',str(BT/'lib/apksigner.jar'),'verify','--verbose','--print-certs',str(signed)],check=True,text=True,capture_output=True)

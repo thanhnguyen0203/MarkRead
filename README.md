@@ -1,8 +1,14 @@
-# MarkRead Android 1.1.3
+# MarkRead Android 1.1.4
 
-Offline Android Markdown reader and block editor. Package `vn.markread.local`, versionCode 113, min SDK 26, target/compile SDK 35. No runtime `uses-permission` declarations, no JavaScriptInterface, no analytics, no remote font loading.
+Offline Android Markdown reader and block editor. Package `vn.markread.local`, versionCode 114, min SDK 26, target/compile SDK 35. No runtime `uses-permission` declarations, no JavaScriptInterface, no analytics, no remote font loading.
 
 See `HUONG_DAN_CAI_DAT.md` for Vietnamese installation, feature details, privacy scope and limits. See `CHANGELOG.md` and the validation report for this release.
+
+## Reading update in 1.1.4
+
+The reader no longer appends an Add paragraph button. Inline editing keeps the structural final line ending outside the visible field, preserving source bytes without adding an empty display line when a paragraph is tapped. Content tap highlights and the native WebView focus highlight are disabled. Read/Source switching lives in the navigation menu; desktop Split remains available there.
+
+A compact, theme-aware 3 px progress bar sits below the navigation divider and stays at the top when navigation hides. Progress follows the active reader/source viewport, including content and viewport resizing. Output: `dist/MarkRead-Android-1.1.4.apk`, signed with the same local certificate as this checkout's 1.1.3 APK. Release evidence: `test-results/1.1.4/`.
 
 ## Architecture
 
@@ -58,7 +64,7 @@ Original code: MIT. Bundled packages and Merriweather retain their own notices u
 
 Search matches UTF-16 source offsets. Replacement edits only the current source snapshot and preserves per-document drafts. A bundled Blob worker evaluates JavaScript Unicode/multiline regexes with a 2.5-second deadline, bounded matches and UTF-8 output size. It has no network access; the parent allows `worker-src blob:` solely for this bundled worker, while the reader retains `worker-src none` and no scripts. Results from stale source/query/scope versions are ignored.
 
-Font choices are accessible themed listbox buttons. The read/source mode group is in editing settings; version 1.1.3 also offers a vertical overflow menu when unified editing is disabled. Hover feedback is gated by fine-pointer/hover media queries; Android tap highlight is transparent and keyboard focus remains visible.
+Font choices are accessible themed listbox buttons. Read/Source switching uses the vertical overflow menu when unified editing is disabled. Hover feedback is gated by fine-pointer/hover media queries; Android tap highlight is transparent and keyboard focus remains visible.
 
 The independent CSS picker uses ACTION_OPEN_DOCUMENT and a bounded local-only read without replacing the document snapshot or releasing its persisted tree grant. Rename accepts full validated basenames and retains the entry's original bounded read capability even if its extension changes. TXT is scanned as a text document; other renamed extensions remain readable within the current session but are not automatically scanned after restart.
 
@@ -74,4 +80,4 @@ On Windows, the Python builder accepts `aapt2.exe`/`zipalign.exe` and API 35 pla
 
 This checkout has no original private signing key. The local build creates and reuses `private/markread-release.p12` and its password file. Keep that directory private and backed up for future updates. The public `APK_SIGNATURE.txt` is certificate information only. An APK signed with this new key cannot replace an installed copy signed with the old key.
 
-Current release evidence is in `test-results/1.1.3/`; see `READING_UPDATE_RESULTS.md` for the latest verification summary. The reading revision passed 266 checks across unit, browser UI, simulated native UI and APK validation. The 69 Java Policy checks from the initial build were not rerun or included in that total. Initial artifact/build metadata is preserved in `test-results/1.1.3/history/`, and the initial 1.1.3 report is archived in `test-results/history/`. Android device and emulator testing has not been performed for this revision. VersionName and versionCode remain 1.1.3 and 113.
+Evidence for the previous 1.1.3 reading revision is in `test-results/1.1.3/`; see `READING_UPDATE_RESULTS.md` there. That revision passed 266 checks across unit, browser UI, simulated native UI and APK validation. The 69 Java Policy checks from the initial build were not rerun or included in that total. Initial artifact/build metadata is preserved in `test-results/1.1.3/history/`, and the initial 1.1.3 report is archived in `test-results/history/`. Android device and emulator testing was not performed for that revision.

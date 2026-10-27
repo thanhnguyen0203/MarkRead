@@ -1,3 +1,12 @@
+# MarkRead 1.1.4 — 27/10/2026
+
+- Bỏ nút “Thêm đoạn” ở cuối nội dung tài liệu.
+- Tắt highlight chạm trong vùng nội dung, kể cả phần tử giả CSS; tắt highlight focus mặc định của WebView. Giữ con trỏ nhập và chỉ báo focus bàn phím trong giao diện web.
+- Bỏ dòng trống phát sinh khi chạm vào khối để sửa: ký tự xuống dòng cuối khối được giữ riêng trong nguồn Markdown, không tạo thêm hàng trong ô nhập. Giữ chiều cao khối ban đầu và khoảng cách gốc; giữ nguyên ký tự xuống dòng khi chỉ mở/đóng hoặc hủy sửa.
+- Bỏ nhóm chuyển chế độ trùng lặp trong cài đặt. Chuyển Đọc/Nguồn bằng menu ⋮ trên thanh điều hướng; giữ Chia đôi trên màn hình lớn trong menu này.
+- Thêm thanh tiến độ đọc cao 3 px, dùng màu theme, ngay dưới đường phân cách thanh điều hướng. Thanh vẫn nằm ở đầu vùng đọc khi thanh điều hướng ẩn; cập nhật theo cuộn, đổi chế độ, đổi tài liệu và thay đổi kích thước nội dung.
+- Tăng versionName lên 1.1.4 và versionCode lên 114; dùng lại khóa ký cục bộ của APK 1.1.3. Không thay đổi các tính năng khác.
+
 # MarkRead 1.1.3 — 27/10/2026
 
 ## Bổ sung giao diện đọc và chỉnh sửa

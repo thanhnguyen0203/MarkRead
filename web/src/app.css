@@ -50,7 +50,6 @@ header{flex-wrap:nowrap;height:60px;min-height:60px;gap:8px}
 .setting-toggle input:checked+.switch-track:after{transform:translateX(18px);background:var(--panel)}
 .setting-toggle input:focus-visible+.switch-track{outline:2px solid var(--accent);outline-offset:4px}
 .setting-toggle input:disabled+.switch-track{opacity:.5}
-.unified #readMode,.unified #editMode,.unified #splitMode{display:none!important}
 #toast{bottom:24px}
 #prevFile,#nextFile{font-size:25px;min-width:34px}
 #renameDialog{width:420px;border-radius:16px}
@@ -129,9 +128,6 @@ button.primary:active{background:var(--accent);filter:brightness(.95)}
 .switch-track:after{width:18px;height:18px;top:3px;left:3px}.setting-toggle input{width:44px;height:36px}
 .setting-toggle input:checked+.switch-track:after{transform:translateX(18px)}
 .setting-toggle input:focus-visible+.switch-track{outline:1px solid var(--accent);outline-offset:4px;box-shadow:0 0 0 4px var(--selected)}
-.reading-modes{display:flex;padding:4px;background:var(--bg);border:1px solid var(--line);border-radius:12px;gap:4px;margin-bottom:18px}
-.reading-modes button{flex:1;min-height:38px;font-size:12px;color:var(--muted)}.reading-modes button.active{background:var(--selected);color:var(--accent)}
-.unified .reading-modes{display:none}
 #customCSS{border-radius:12px;padding:12px;min-height:160px}.css-heading button{padding:8px 10px;min-height:36px}
 .rename-field{padding:0;border-radius:12px}
 #renameInput{font-size:14px;min-height:46px;box-shadow:none;outline:none}
@@ -158,3 +154,7 @@ button.primary:active{background:var(--accent);filter:brightness(.95)}
 .file-row .file-icon,.file-type{border:0;border-radius:0}
 main{--header-offset:0px;--header-opacity:1;overflow:hidden}
 main>header{position:relative;z-index:3;background:var(--bg);transform:translateY(calc(0px - var(--header-offset)));margin-bottom:calc(0px - var(--header-offset));opacity:var(--header-opacity);will-change:transform,opacity}
+
+/* A quiet reading marker stays immediately below the moving navigation divider. */
+#readingProgress{--reading-progress:0;position:relative;z-index:3;flex:none;height:3px;overflow:hidden;background:var(--selected);pointer-events:none}
+#readingProgress>span{display:block;width:100%;height:100%;border-radius:0 2px 2px 0;background:var(--accent);background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 72%,var(--bg)),var(--accent));transform:scaleX(var(--reading-progress));transform-origin:left center}

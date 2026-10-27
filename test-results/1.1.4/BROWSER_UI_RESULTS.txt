@@ -1,0 +1,54 @@
+PASS removed both bottom bars
+PASS settings gear at right
+PASS 12 themes
+PASS theme preview matches actual reader with one selection border: dark 390
+PASS theme preview matches actual reader with one selection border: light 390
+PASS theme preview matches actual reader with one selection border: sepia 390
+PASS theme preview matches actual reader with one selection border: black 390
+PASS theme preview matches actual reader with one selection border: tokyo-night 390
+PASS theme preview matches actual reader with one selection border: tokyo-light 390
+PASS theme preview matches actual reader with one selection border: blue-gray 390
+PASS theme preview matches actual reader with one selection border: nord 390
+PASS theme preview matches actual reader with one selection border: dracula 390
+PASS theme preview matches actual reader with one selection border: rose-pine 390
+PASS theme preview matches actual reader with one selection border: forest 390
+PASS theme preview matches actual reader with one selection border: gruvbox 390
+PASS theme preview matches actual reader with one selection border: dark 1280
+PASS theme preview matches actual reader with one selection border: light 1280
+PASS theme preview matches actual reader with one selection border: sepia 1280
+PASS theme preview matches actual reader with one selection border: black 1280
+PASS theme preview matches actual reader with one selection border: tokyo-night 1280
+PASS theme preview matches actual reader with one selection border: tokyo-light 1280
+PASS theme preview matches actual reader with one selection border: blue-gray 1280
+PASS theme preview matches actual reader with one selection border: nord 1280
+PASS theme preview matches actual reader with one selection border: dracula 1280
+PASS theme preview matches actual reader with one selection border: rose-pine 1280
+PASS theme preview matches actual reader with one selection border: forest 1280
+PASS theme preview matches actual reader with one selection border: gruvbox 1280
+PASS one settings section visible
+PASS Merriweather loaded from packaged data
+PASS nested folder tree includes grandchildren
+PASS previous disabled at first file
+PASS next and previous use natural numeric order
+PASS draft survives navigation
+PASS reverse order controls file navigation
+PASS unified hides separate mode tabs and toolbar menu
+PASS unified source edits directly on the page without frame or toolbar
+PASS cancel restores exact source
+PASS block editing preserves remaining source exactly
+PASS fast consecutive taps cannot reuse stale source offsets
+PASS table opens its Markdown block
+PASS code opens fenced source
+PASS reader has no append-block control
+PASS export includes unified edits
+PASS custom CSS applies
+PASS unsafe CSS rejected
+PASS duplicate mode controls removed from settings
+PASS math and Mermaid render in unified mode
+PASS untrusted HTML cannot forge block edit offsets
+PASS reference link opens selected local Markdown in unified mode
+PASS no horizontal application overflow
+PASS appearance settings persist after reload
+PASS no JavaScript runtime errors: 
+PASS no external network requests
+Browser UI: 53 checks passed

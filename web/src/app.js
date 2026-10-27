@@ -49,6 +49,22 @@ let inlineEdit=null,readerSnapshot={text:null,path:null};const collapsedFolders=
 const blockMarkup=new WeakMap();
 const documentBar=document.querySelector('main>header'),main=documentBar.parentElement;
 let barOffset=0,barFrame=0,scrollIntentUntil=0;
+let progressFrame=0,progressObserver=null;
+function scheduleReadingProgress(){
+  if(progressFrame)return;
+  progressFrame=requestAnimationFrame(()=>{
+    progressFrame=0;
+    const scroller=mode==='edit'?$('editor'):$('reader').contentDocument?.scrollingElement;
+    if(!scroller)return;
+    const distance=Math.max(0,scroller.scrollHeight-scroller.clientHeight);
+    const fraction=distance?Math.max(0,Math.min(1,scroller.scrollTop/distance)):1;
+    $('readingProgress').style.setProperty('--reading-progress',String(fraction));
+    $('readingProgress').setAttribute('aria-valuenow',String(Math.round(fraction*100)));
+  });
+}
+const progressViewportObserver=new ResizeObserver(scheduleReadingProgress);
+progressViewportObserver.observe($('readerPane'));progressViewportObserver.observe($('editor'));
+$('editor').addEventListener('input',scheduleReadingProgress);
 function paintDocumentBar(){
   barFrame=0;const height=documentBar.offsetHeight;
   barOffset=Math.max(0,Math.min(height,barOffset));
@@ -65,6 +81,7 @@ function trackReadingScroll(scroller,doc){
   doc.addEventListener('keydown',e=>{if(!e.target.closest('input,textarea')&&['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key)){direction=['ArrowUp','PageUp','Home'].includes(e.key)||e.key===' '&&e.shiftKey?-1:1;intent(e);}});
   doc.addEventListener('pointerdown',e=>{if(e.clientX>=doc.documentElement.clientWidth-16){direction=0;intent(e);}},{passive:true});
   const update=()=>{
+    scheduleReadingProgress();
     const top=Math.max(0,Math.min(scroller.scrollTop,scroller.scrollHeight-scroller.clientHeight)),delta=top-previous;
     const resized=viewport!==main.clientHeight;previous=top;viewport=main.clientHeight;
     if(resized||delta*direction<0||performance.now()>scrollIntentUntil||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -299,8 +316,9 @@ async function render(ticket){
       if(loadTarget){d.getElementById(loadTarget)?.scrollIntoView();loadTarget='';}else if(sameDoc)d.defaultView.scrollTo({top:oldScroll,behavior:'instant'});
       const rendered=[...d.querySelectorAll('#paper>.md-block')];[...root.children].forEach((node,i)=>blockMarkup.set(rendered[i],blockMarkup.get(node)));
       trackReadingScroll(d.scrollingElement,d);
+      progressObserver?.disconnect();progressObserver=new ResizeObserver(scheduleReadingProgress);
+      progressObserver.observe(d.documentElement);progressObserver.observe(d.getElementById('paper'));scheduleReadingProgress();
       d.body.classList.toggle('unified-reader',settings.unified);
-      if(settings.unified){const add=d.createElement('button');add.className='add-block';add.textContent='＋ Thêm đoạn';add.addEventListener('click',()=>beginInline(null));d.getElementById('paper').append(add);}
       applyFind({scroll:false});status(current?'Đã mở · chỉ đọc bộ tệp được chọn':'Tài liệu mẫu · chưa truy cập tệp của bạn');
     };
     frame.dataset.path=base||'demo';
@@ -309,13 +327,14 @@ async function render(ticket){
     updateOutline(headings);
   }catch(e){if(ticket===renderSerial){status('Không dựng được bài. Có thể xem trong thẻ Nguồn.');toast('Lỗi hiển thị: '+(e.message||'không xác định'));}}
 }
-function syncInline(){
+function syncInline(value=null){
   if(!inlineEdit)return;
   const state=inlineEdit;
-  try{const next=replaceBlock(source,state.start,state.end,state.input.value,MAX_DOC),delta=next.end-state.end;
+  if(value===null&&state.input.value===state.lastValue)return;
+  try{const next=replaceBlock(source,state.start,state.end,value??state.input.value+state.suffix,MAX_DOC),delta=next.end-state.end;
     if(delta){for(const block of state.host.parentElement.querySelectorAll(':scope>.md-block'))if(block!==state.host&&Number(block.dataset.start)>=state.end){block.dataset.start=Number(block.dataset.start)+delta;block.dataset.end=Number(block.dataset.end)+delta;}}
-    source=next.text;state.end=next.end;state.host.dataset.end=state.end;$('editor').value=source;saveCurrent();stats();}
-  catch(e){state.input.value=source.slice(state.start,state.end);toast(e.message);}
+    source=next.text;state.end=next.end;state.lastValue=state.input.value;state.host.dataset.end=state.end;$('editor').value=source;saveCurrent();stats();}
+  catch(e){state.input.value=source.slice(state.start,state.end-state.suffix.length);state.lastValue=state.input.value;toast(e.message);}
 }
 function readingAnchor(d,preferred){
   const blocks=[...d.querySelectorAll('#paper>.md-block')];
@@ -337,7 +356,7 @@ function refreshInline(state,anchor){
   const old=[...paper.querySelectorAll(':scope>.md-block')],bySpan=new Map(old.map(b=>[b.dataset.start+':'+b.dataset.end,b]));
   for(const node of [...root.children]){const previous=bySpan.get(node.dataset.start+':'+node.dataset.end);if(previous&&previous!==state.host&&blockMarkup.get(previous)===blockMarkup.get(node))node.replaceWith(previous);}
   for(const node of old)if(node.parentElement===paper)node.remove();
-  const before=state.box.isConnected?state.box:paper.querySelector('.add-block');
+  const before=state.box.isConnected?state.box:null;
   for(const node of [...root.children])paper.insertBefore(node,before);
   readerSnapshot={text:source,path:current};updateOutline(headings);restoreReadingAnchor(d,anchor);
   const epoch=session,base=current;
@@ -350,7 +369,7 @@ function refreshInline(state,anchor){
 function finishInline(cancel=false,rerender=true,keepEditor=false,preferred=null){
   if(!inlineEdit)return;
   syncInline();const state=inlineEdit,d=state.input.ownerDocument,anchor=readingAnchor(d,preferred);
-  if(cancel){state.input.value=state.original;syncInline();if(anchor.node)anchor.start=Number(anchor.node.dataset.start);}
+  if(cancel){state.input.value=state.original.slice(0,state.original.length-state.suffix.length);syncInline(state.original);if(anchor.node)anchor.start=Number(anchor.node.dataset.start);}
   inlineEdit=null;state.observer.disconnect();d.defaultView.removeEventListener('resize',resizeInline);
   if(!keepEditor){state.input.blur();state.box.remove();}
   if(rerender){clearTimeout(renderTimer);renderSerial++;refreshInline(state,anchor);applyFind({scroll:false});}
@@ -359,33 +378,33 @@ function finishInline(cancel=false,rerender=true,keepEditor=false,preferred=null
 }
 function resizeInline(){
   if(!inlineEdit)return;
-  const {host,box,input}=inlineEdit;
+  const {host,box,input,minimumHeight,bottomGap}=inlineEdit;
   box.style.left=host.offsetLeft+'px';box.style.top=host.offsetTop+'px';box.style.width=host.clientWidth+'px';
   input.style.height='0px';input.style.height=input.scrollHeight+'px';
-  host.style.height=(box.offsetHeight+parseFloat(input.ownerDocument.defaultView.getComputedStyle(box).marginBottom))+'px';
+  host.style.height=Math.max(minimumHeight,box.offsetHeight+bottomGap)+'px';
 }
 function beginInline(block,box=null,caret=0){
-  if(!settings.unified)return;
+  if(!settings.unified||!block)return;
   if(inlineEdit){
-    const start=block?Number(block.dataset.start):null;box=finishInline(false,true,true,block);
-    if(start!==null){block=[...$('reader').contentDocument.querySelectorAll('.md-block')].find(b=>Number(b.dataset.start)<=start&&Number(b.dataset.end)>start);if(!block){box?.remove();return;}caret+=start-Number(block.dataset.start);}
+    const start=Number(block.dataset.start);box=finishInline(false,true,true,block);
+    block=[...$('reader').contentDocument.querySelectorAll('.md-block')].find(b=>Number(b.dataset.start)<=start&&Number(b.dataset.end)>start);if(!block){box?.remove();return;}caret+=start-Number(block.dataset.start);
   }
   if(readerSnapshot.text!==source||readerSnapshot.path!==current){scheduleRender();return;}
   clearTimeout(renderTimer);renderSerial++;
   const d=$('reader').contentDocument;
   if(!d)return;
-  const start=block?Number(block.dataset.start):source.length,end=block?Number(block.dataset.end):source.length;
+  const start=Number(block.dataset.start),end=Number(block.dataset.end);
   if(!Number.isInteger(start)||!Number.isInteger(end)||start<0||end<start||end>source.length)return;
-  const original=source.slice(start,end),host=block||d.createElement('div');
-  if(!block){host.className='md-block';host.dataset.start=start;host.dataset.end=end;d.querySelector('.add-block').before(host);}
+  const original=source.slice(start,end),host=block,suffix=/\r?\n$/.exec(original)?.[0]||'';
+  const minimumHeight=host.getBoundingClientRect().height,bottomGap=parseFloat(d.defaultView.getComputedStyle(host.lastElementChild||host).marginBottom)||0;
   const anchor=readingAnchor(d,host),originalNodes=[...host.childNodes];
   if(!box){box=d.createElement('div');box.className='inline-editor';const input=d.createElement('textarea');input.className='block-source';input.rows=1;input.spellcheck=false;input.setAttribute('aria-label','Mã nguồn khối Markdown');box.append(input);d.getElementById('paper').append(box);
     input.addEventListener('input',()=>{syncInline();resizeInline();});
     input.addEventListener('keydown',e=>{if(e.key==='Escape'||((e.ctrlKey||e.metaKey)&&e.key==='Enter')){e.preventDefault();e.stopPropagation();finishInline(e.key==='Escape');}if(e.key==='Tab'){e.preventDefault();input.setRangeText('  ',input.selectionStart,input.selectionEnd,'end');syncInline();resizeInline();}});
   }
-  const input=box.firstElementChild;input.value=original||(!block&&source&&!source.endsWith('\n\n')?'\n\n':'');
-  const observer=new ResizeObserver(resizeInline);inlineEdit={start,end,original,input,box,host,originalNodes,observer};
-  host.replaceChildren();host.classList.add('editing-block');syncInline();resizeInline();observer.observe(d.getElementById('paper'));d.defaultView.addEventListener('resize',resizeInline);
+  const input=box.firstElementChild;input.value=original.slice(0,original.length-suffix.length);
+  const observer=new ResizeObserver(resizeInline);inlineEdit={start,end,original,suffix,lastValue:input.value,input,box,host,originalNodes,observer,minimumHeight,bottomGap};
+  host.replaceChildren();host.classList.add('editing-block');resizeInline();observer.observe(d.getElementById('paper'));d.defaultView.addEventListener('resize',resizeInline);
   input.focus({preventScroll:true});input.setSelectionRange(caret,caret);restoreReadingAnchor(d,anchor);
 }
 // A tap outside the active source returns to rendered text. Scrolling does not commit.
@@ -398,7 +417,7 @@ function inlineCaret(block,e){
   return at<0?0:Math.min(text.length,at+range.startOffset);
 }
 function readerClick(e){
-  setModeMenu(false);if(e.target.closest('.inline-editor,.add-block'))return;
+  setModeMenu(false);if(e.target.closest('.inline-editor'))return;
   const a=e.target.closest('a[data-target]');
   if(!a){
     const block=e.target.closest('.md-block');
@@ -408,11 +427,11 @@ function readerClick(e){
   }
   e.preventDefault();const raw=a.dataset.target;if(raw.startsWith('#')){try{$('reader').contentDocument.getElementById(decodeURIComponent(raw.slice(1)))?.scrollIntoView();}catch{}return;}const target=localTarget(raw,current);if(target&&files.has(target.path)&&isDocument(target.path)){openFile(target.path,target.fragment);}else toast('Liên kết bị chặn: chỉ mở tệp Markdown trong bộ tệp đã chọn.');
 }
-function setMode(value){finishInline(false,false);if(settings.unified)value='read';mode=value;$('workspace').dataset.mode=value;for(const name of ['read','edit','split']){$(name+'Mode').classList.toggle('active',value===name);$(name+'Mode').setAttribute('aria-pressed',String(value===name));}for(const b of $('modeOptions').querySelectorAll('[data-mode]'))b.setAttribute('aria-checked',String(value===b.dataset.mode));if(value==='edit')$('editor').focus();}
+function setMode(value){finishInline(false,false);if(settings.unified)value='read';mode=value;$('workspace').dataset.mode=value;for(const b of $('modeOptions').querySelectorAll('[data-mode]'))b.setAttribute('aria-checked',String(value===b.dataset.mode));if(value==='edit')$('editor').focus();scheduleReadingProgress();}
 function setModeMenu(open){$('modeOptions').hidden=!open;$('modeToggle').setAttribute('aria-expanded',String(open));}
 $('modeToggle').addEventListener('click',()=>setModeMenu($('modeOptions').hidden));
 $('modeToggle').addEventListener('keydown',e=>{if(['ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();setModeMenu(true);($('modeOptions').querySelector('[aria-checked=true]')||$('modeOptions').querySelector('button')).focus();}});
-$('modeOptions').addEventListener('keydown',e=>{const options=[...$('modeOptions').querySelectorAll('button')],at=options.indexOf(document.activeElement);if(['ArrowDown','ArrowUp','Home','End'].includes(e.key)){e.preventDefault();options[e.key==='Home'?0:e.key==='End'?options.length-1:(at+(e.key==='ArrowDown'?1:-1)+options.length)%options.length].focus();}if(e.key==='Tab')setModeMenu(false);});
+$('modeOptions').addEventListener('keydown',e=>{const options=[...$('modeOptions').querySelectorAll('button')].filter(b=>b.getClientRects().length),at=options.indexOf(document.activeElement);if(['ArrowDown','ArrowUp','Home','End'].includes(e.key)){e.preventDefault();options[e.key==='Home'?0:e.key==='End'?options.length-1:(at+(e.key==='ArrowDown'?1:-1)+options.length)%options.length].focus();}if(e.key==='Tab')setModeMenu(false);});
 for(const b of $('modeOptions').querySelectorAll('[data-mode]'))b.addEventListener('click',()=>{setModeMenu(false);setMode(b.dataset.mode);if(mode==='read')$('modeToggle').focus();});
 document.addEventListener('pointerdown',e=>{if(!e.target.closest('#modeMenu'))setModeMenu(false);},true);
 let exportURL='';
@@ -521,7 +540,6 @@ $('openFiles').addEventListener('click',()=>{setOpenMenu(false);if(IS_ANDROID)ch
 for(const [id,folder] of [['folderInput',true],['filesInput',false]])$(id).addEventListener('change',async e=>{try{await importFiles(e.target.files,folder);}catch(err){toast('Không mở được bộ tệp: '+err.message);}e.target.value='';});
 $('forget').addEventListener('click',clearFiles);$('fileFilter').addEventListener('input',renderFileList);
 $('menu').addEventListener('click',()=>{document.body.classList.toggle('sidebar-open');});for(const id of ['scrim'])$(id).addEventListener('click',()=>document.body.classList.remove('sidebar-open'));
-for(const name of ['read','edit','split'])$(name+'Mode').addEventListener('click',()=>setMode(name));
 $('editor').addEventListener('input',()=>{if(new Blob([$('editor').value]).size>MAX_DOC){$('editor').value=source;toast('Bản sửa đã vượt giới hạn 5 MiB.');return;}source=$('editor').value;saveCurrent();stats();invalidateFind();scheduleRender(280);});
 $('editor').addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();const el=$('editor');el.setRangeText('  ',el.selectionStart,el.selectionEnd,'end');el.dispatchEvent(new Event('input'));}});
 $('prevFile').addEventListener('click',()=>moveFile(-1));$('nextFile').addEventListener('click',()=>moveFile(1));

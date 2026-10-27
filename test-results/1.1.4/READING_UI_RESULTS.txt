@@ -1,0 +1,47 @@
+PASS compact reading progress sits immediately below the navigation divider
+PASS file extension has no border
+PASS rename focus keeps the original border without an outer ring
+PASS rename text input adds no focus ring
+PASS no add-paragraph button at the end of unified content
+PASS programmatic positioning does not hide the title bar
+PASS tapping a paragraph adds no empty line or gap before the next paragraph
+PASS structural line ending is hidden in the field and preserved exactly in Markdown
+PASS tapping content and its source field has no WebView tap highlight
+PASS one tap switches directly to the next paragraph
+PASS switching paragraphs retains the same focused textarea
+PASS switching paragraphs preserves the tapped position
+PASS editing never reloads the reader iframe
+PASS switching after a length change preserves exact surrounding source
+PASS moving the caret between unchanged paragraphs keeps focus and the reader intact
+PASS cancel after switching restores only the active block
+PASS splitting a block keeps the next block editable with correct offsets
+PASS progress tracks actual document position after programmatic scrolling
+PASS a short downward scroll partially hides the bar
+PASS progress follows the bottom edge while navigation partially hides
+PASS continued downward scrolling completely hides the bar
+PASS progress stays at the top when navigation is fully hidden
+PASS scrolling upward gradually reveals the bar
+PASS continued upward scrolling fully restores the bar
+PASS the initial reading distance leaves the title bar visible
+PASS reduced motion keeps the bar stable
+PASS reading progress continues updating with reduced motion
+PASS reading to the end reaches exactly 100 percent
+PASS export preserves changes made across consecutive blocks
+PASS committing text preserves existing math and diagram nodes
+PASS an edited diagram renders again in the existing reader
+PASS reference links and heading anchors survive inline updates
+PASS a fully visible short document has complete progress
+PASS opening another long document resets reading progress
+PASS source mode tracks its own scroll progress
+PASS desktop split view remains available from the navigation menu
+PASS opening and closing CRLF.md does not add line endings
+PASS untouched CRLF.md exports exactly the imported source
+PASS cancelling CRLF.md restores the exact imported source
+PASS opening and closing NoEnd.md does not add line endings
+PASS untouched NoEnd.md exports exactly the imported source
+PASS cancelling NoEnd.md restores the exact imported source
+PASS opening and closing Separators.md does not add line endings
+PASS untouched Separators.md exports exactly the imported source
+PASS cancelling Separators.md restores the exact imported source
+PASS no runtime errors: 
+Reading UI: 46 checks passed

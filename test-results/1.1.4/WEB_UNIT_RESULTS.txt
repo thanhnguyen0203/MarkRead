@@ -1,0 +1,107 @@
+
+> markread-local@1.1.4 test
+> node --test tests/*.test.mjs
+
+✔ reject path https://evil.test/a (1.4526ms)
+✔ reject path http://a (0.3314ms)
+✔ reject path //evil.test/a (0.3128ms)
+✔ reject path file:///etc/passwd (0.1382ms)
+✔ reject path data:image/png,a (0.1202ms)
+✔ reject path javascript:alert(1) (0.0833ms)
+✔ reject path content://a (0.0721ms)
+✔ reject path /etc/a (0.0863ms)
+✔ reject path ../x.md (0.1959ms)
+✔ reject path %2e%2e/x.md (0.2758ms)
+✔ reject path %2fetc/passwd (0.1178ms)
+✔ reject path %5cetc/x (0.0898ms)
+✔ reject path %00x (0.0571ms)
+✔ reject path %ZZ (0.0469ms)
+✔ reject path ftp:a (0.0601ms)
+✔ reject path \a (0.0263ms)
+✔ relative links stay inside selected root (0.996ms)
+✔ reject unsafe CSS @import "https://evil.test/a.css"; (1.3962ms)
+✔ reject unsafe CSS p{background:url(https://evil.test)} (1.2059ms)
+✔ reject unsafe CSS p{background:u\72l(https://evil.test)} (1.2501ms)
+✔ reject unsafe CSS p{background:image-set("https://evil.test/a" 1x)} (0.512ms)
+✔ reject unsafe CSS @font-face{font-family:X;src:url(a)} (0.2953ms)
+✔ reject unsafe CSS p{behavior:expression(1)} (0.3538ms)
+✔ reject unsafe CSS p{--leak:url(x)} (0.6207ms)
+✔ reject unsafe CSS p{background:;broken;} (0.932ms)
+✔ reject unsafe CSS @keyframes leak{to{opacity:0}} (0.4045ms)
+✔ valid custom CSS and nested media (1.6709ms)
+✔ CSS size limit (0.1019ms)
+✔ UTF-8 Vietnamese and CRLF (0.2155ms)
+✔ UTF-16 BOM (0.1868ms)
+✔ reject invalid UTF-8 and binary (0.1277ms)
+✔ raster magic, fake SVG rejected (0.1526ms)
+✔ diagram guard forbids directives and external interaction (0.4694ms)
+✔ escape untrusted labels (0.1732ms)
+✔ Vietnamese heading anchors (0.624ms)
+✔ request/response transport preserves data (32.9141ms)
+✔ native errors propagate without being treated as success (2.632ms)
+✔ native file reads bounded chunks and reassembles UTF-8 exactly (21.6227ms)
+✔ single file does not invent relative directory access (1.0437ms)
+✔ cancelled picker preserves existing scope (0.48ms)
+✔ snapshot lists scoped IDs through pagination (0.9468ms)
+✔ export streams exact UTF-8 bytes in bounded messages (15.8252ms)
+✔ empty selected folder is a new scope, distinct from cancelled picker (0.3848ms)
+✔ literal search escapes every regular-expression metacharacter (2.3585ms)
+✔ Vietnamese case folding and sensitive option (0.4905ms)
+✔ offsets remain UTF-16 code-unit offsets with emoji (1.201ms)
+✔ empty query has no matches and never inserts text (1.2776ms)
+✔ invalid regex has a readable error (0.7955ms)
+✔ multiline anchors operate per line (0.4236ms)
+✔ zero-width matches advance over Unicode code points (0.6214ms)
+✔ replace one targets selected occurrence and preserves surrounding bytes (0.4318ms)
+✔ plain replacement treats dollar signs literally (0.2017ms)
+✔ deleting all matches uses empty replacement (0.2728ms)
+✔ replacement matches built-in JavaScript capture expansion (0.8012ms)
+✔ nonparticipating capture becomes empty (0.2043ms)
+✔ zero-width replacement is finite and does not split emoji (0.0863ms)
+✔ replacement text is never searched again in the same replace-all (0.0589ms)
+✔ output UTF-8 limit is enforced before building oversized result (0.1763ms)
+✔ too many matches cannot cause a partial replace-all (12.1324ms)
+✔ no-match replacement keeps exact input (0.3012ms)
+✔ query length is bounded (0.3657ms)
+✔ regex replacement expansion respects budget before joining large strings (0.3881ms)
+✔ natural sorting includes all subfolders in displayed tree order (2.19ms)
+✔ descending reverses sibling names using numeric comparison (0.3491ms)
+✔ navigation has boundaries and no implicit wrapping (0.2635ms)
+✔ block edit preserves unedited bytes: # Tiếng Việt
+
+Đoạn * (26.542ms)
+✔ block edit preserves unedited bytes: - A
+  - B
+
+- C
+
+Kết. (5.156ms)
+✔ block edit preserves unedited bytes: ```python
+print("x") (0.7005ms)
+✔ block edit preserves unedited bytes: A | B
+-- | --
+1 | 2
+ (1.533ms)
+✔ block edit preserves unedited bytes: <div>
+x
+</div>
+
+> qu (1.9206ms)
+✔ block edit preserves unedited bytes: 
+
+	code
+
+Đoạn cuối (0.244ms)
+✔ offset fallback cannot corrupt input (0.2261ms)
+✔ editing rejects invalid offsets and enforces UTF-8 size (0.2837ms)
+✔ all 12 themes supply valid complete palettes (0.2898ms)
+✔ inline ranges keep blank block separators unchanged (0.257ms)
+✔ rename accepts full filenames, preserves directory and normalizes Unicode (0.4526ms)
+ℹ tests 76
+ℹ suites 0
+ℹ pass 76
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 341.4086

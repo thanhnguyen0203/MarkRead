@@ -16,6 +16,9 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
  try{
   await page.goto('http://127.0.0.1:'+server.address().port);await frame().locator('h1').waitFor();
   await page.locator('#filesInput').setInputFiles({name:'Smooth.md',mimeType:'text/markdown',buffer:Buffer.from(original)});await frame().getByText(paragraphs[0],{exact:true}).waitFor();
+  await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='0');
+  const progress=page.locator('#readingProgress');
+  ok(await progress.evaluate(x=>{const bar=document.querySelector('main>header').getBoundingClientRect(),r=x.getBoundingClientRect();return r.height===3&&Math.abs(r.top-bar.bottom)<1}),'compact reading progress sits immediately below the navigation divider');
   ok(await page.locator('.file-icon').evaluate(x=>getComputedStyle(x).borderWidth==='0px'),'file extension has no border');
   await page.locator('#filename').dispatchEvent('contextmenu');
   const neutral=await page.locator('.rename-field').evaluate(x=>({border:getComputedStyle(x).border,outline:getComputedStyle(x).outlineStyle,shadow:getComputedStyle(x).boxShadow}));
@@ -24,14 +27,20 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   ok(await page.locator('#renameInput').evaluate(x=>getComputedStyle(x).outlineStyle==='none'&&getComputedStyle(x).boxShadow==='none'),'rename text input adds no focus ring');
   await page.locator('#renameCancel').tap();
   await page.locator('#settings').tap();await page.locator('[data-section=editing]').tap();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').tap();
-  await frame().locator('.add-block').waitFor();
+  await page.waitForFunction(()=>document.getElementById('reader').contentDocument?.body?.classList.contains('unified-reader'));
+  ok(await frame().locator('.add-block').count()===0,'no add-paragraph button at the end of unified content');
   await page.evaluate(()=>{const f=document.getElementById('reader');window.readerLoads=0;f.addEventListener('load',()=>window.readerLoads++);window.readerDocument=f.contentDocument;});
   await frame().getByText(paragraphs[18],{exact:true}).evaluate(x=>x.ownerDocument.defaultView.scrollTo({top:x.getBoundingClientRect().top+x.ownerDocument.scrollingElement.scrollTop-130,behavior:'instant'}));
   await page.waitForTimeout(80);ok(await offset()===0,'programmatic positioning does not hide the title bar');
+  const nextBefore=await frame().getByText(paragraphs[19],{exact:true}).boundingBox();
   await frame().getByText(paragraphs[18],{exact:true}).tap({position:{x:90,y:15}});
+  const nextAfter=await frame().getByText(paragraphs[19],{exact:true}).boundingBox();
+  ok(Math.abs(nextAfter.y-nextBefore.y)<1,'tapping a paragraph adds no empty line or gap before the next paragraph');
+  ok(await frame().locator('.block-source').inputValue()===paragraphs[18]&&await page.locator('#editor').inputValue()===original,'structural line ending is hidden in the field and preserved exactly in Markdown');
+  ok(await frame().locator('.block-source').evaluate(x=>getComputedStyle(x).webkitTapHighlightColor==='rgba(0, 0, 0, 0)'&&getComputedStyle(x.parentElement).webkitTapHighlightColor==='rgba(0, 0, 0, 0)'),'tapping content and its source field has no WebView tap highlight');
   await frame().locator('.block-source').evaluate(x=>{window.top.activeSource=x;window.top.sourceBlurs=0;x.addEventListener('blur',()=>window.top.sourceBlurs++);});
   const edited=paragraphs[18]+' Thêm nội dung dài hơn, giữ đúng offset các đoạn bên dưới.\n';
-  await frame().locator('.block-source').fill(edited);
+  await frame().locator('.block-source').fill(edited.replace(/\n$/,''));
   const target=frame().getByText(paragraphs[19],{exact:true}),before=await target.boundingBox();
   await target.tap({position:{x:80,y:14}});
   ok((await frame().locator('.block-source').inputValue()).startsWith(paragraphs[19]),'one tap switches directly to the next paragraph');
@@ -52,11 +61,16 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   ok((await frame().locator('.block-source').inputValue()).startsWith(paragraphs[21]),'splitting a block keeps the next block editable with correct offsets');
   await frame().locator('.block-source').press('Control+Enter');await frame().getByText('Đoạn được tách thêm.',{exact:true}).waitFor();
   await page.evaluate(()=>document.getElementById('reader').contentWindow.scrollTo({top:1000,behavior:'instant'}));await page.waitForTimeout(100);
+  ok(await progress.evaluate(x=>{const s=document.getElementById('reader').contentDocument.scrollingElement;return Math.abs(Number(x.getAttribute('aria-valuenow'))-100*s.scrollTop/(s.scrollHeight-s.clientHeight))<=.5}),'progress tracks actual document position after programmatic scrolling');
+  await page.screenshot({path:path.join(root,'test-results/1.1.4/reading-progress-visible.png')});
   await page.mouse.move(190,400);await page.mouse.wheel(0,24);await page.waitForTimeout(120);
   const partial=await offset(),height=await bar().evaluate(x=>x.offsetHeight);
   ok(partial>0&&partial<height,'a short downward scroll partially hides the bar');
+  ok(Math.abs((await progress.boundingBox()).y-(height-partial))<1,'progress follows the bottom edge while navigation partially hides');
   await page.mouse.wheel(0,160);await page.waitForTimeout(160);
   ok(await offset()===height,'continued downward scrolling completely hides the bar');
+  ok(Math.abs((await progress.boundingBox()).y)<1,'progress stays at the top when navigation is fully hidden');
+  await page.screenshot({path:path.join(root,'test-results/1.1.4/reading-progress-hidden.png')});
   await page.mouse.wheel(0,-20);await page.waitForTimeout(160);
   ok(await offset()>0&&await offset()<height,'scrolling upward gradually reveals the bar');
   await page.mouse.wheel(0,-160);await page.waitForTimeout(160);
@@ -64,6 +78,9 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   await page.evaluate(()=>document.getElementById('reader').contentWindow.scrollTo({top:0,behavior:'instant'}));await page.waitForTimeout(100);
   await page.mouse.wheel(0,40);await page.waitForTimeout(160);ok(await offset()===0,'the initial reading distance leaves the title bar visible');
   await page.emulateMedia({reducedMotion:'reduce'});await page.mouse.wheel(0,400);await page.waitForTimeout(160);ok(await offset()===0,'reduced motion keeps the bar stable');
+  ok(Number(await progress.getAttribute('aria-valuenow'))>0,'reading progress continues updating with reduced motion');
+  await page.evaluate(()=>{const s=document.getElementById('reader').contentDocument.scrollingElement;s.scrollTop=s.scrollHeight});
+  await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='100');ok(true,'reading to the end reaches exactly 100 percent');
   await page.locator('#download').tap();ok((await page.locator('#exportText').inputValue()).includes('Đoạn được tách thêm.'),'export preserves changes made across consecutive blocks');
   await page.locator('#exportDialog .close-dialog').tap();
   // Rendering dependencies must also survive a commit made in the live document.
@@ -76,6 +93,29 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   await frame().locator('.diagram').tap();await frame().locator('.block-source').fill('```mermaid\nflowchart TD\nA-->C\n```\n');await frame().locator('.block-source').press('Control+Enter');
   await frame().locator('.diagram svg').waitFor();ok(await frame().locator('.diagram').textContent().then(x=>x.includes('C')),'an edited diagram renders again in the existing reader');
   ok(await frame().locator('a[data-target="#anchor"]').count()===1&&await frame().locator('#anchor').count()===1,'reference links and heading anchors survive inline updates');
+  await page.locator('#filesInput').setInputFiles({name:'Short.md',mimeType:'text/markdown',buffer:Buffer.from('# Short\n')});await frame().locator('h1').filter({hasText:'Short'}).waitFor();
+  await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='100');ok(true,'a fully visible short document has complete progress');
+  await page.locator('#filesInput').setInputFiles({name:'Again.md',mimeType:'text/markdown',buffer:Buffer.from(original)});await frame().getByText(paragraphs[0],{exact:true}).waitFor();
+  await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='0');ok(true,'opening another long document resets reading progress');
+  await page.locator('#settings').tap();await page.locator('[data-section=editing]').tap();await page.locator('#unifiedEnabled').uncheck();await page.locator('#settingsDialog .close-dialog').tap();
+  await page.locator('#modeToggle').tap();await page.locator('#modeOptions [data-mode=edit]').tap();await page.locator('#editor').evaluate(x=>x.scrollTop=x.scrollHeight);
+  await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='100');ok(true,'source mode tracks its own scroll progress');
+  await page.setViewportSize({width:1280,height:800});await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode=split]').click();
+  ok(await page.locator('#editorPane').isVisible()&&await page.locator('#readerPane').isVisible(),'desktop split view remains available from the navigation menu');
+  await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode=read]').click();
+  await page.locator('#settings').click();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').click();
+  for(const [name,text] of [['CRLF.md','# CRLF\r\n\r\nFirst paragraph.\r\n\r\nSecond paragraph.\r\n'],['NoEnd.md','Only paragraph without a final newline'],['Separators.md','# Gaps\n\n\n\nFirst paragraph.\n\n\n\nSecond paragraph.\n\n']]){
+   const normalized=text.replace(/\r\n/g,'\n');
+   await page.locator('#filesInput').setInputFiles({name,mimeType:'text/markdown',buffer:Buffer.from(text)});await frame().locator('.md-block').first().waitFor();
+   await frame().locator('.md-block').first().click();await frame().locator('.block-source').press('Control+Enter');
+   ok(await page.locator('#editor').inputValue()===normalized,'opening and closing '+name+' does not add line endings');
+   // Keep the existing import-time CRLF normalization; tapping must not alter it.
+   await page.locator('#download').click();const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#exportLink').click()]);const exported=fs.readFileSync(await download.path(),'utf8');
+   ok(exported===normalized,'untouched '+name+' exports exactly the imported source');await page.locator('#exportDialog .close-dialog').click();
+   await frame().locator('.md-block').first().click();await frame().locator('.block-source').fill('Cancelled change');await frame().locator('.block-source').press('Escape');
+   await page.locator('#download').click();const [cancelDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#exportLink').click()]);const cancelled=fs.readFileSync(await cancelDownload.path(),'utf8');
+   ok(cancelled===normalized,'cancelling '+name+' restores the exact imported source');await page.locator('#exportDialog .close-dialog').click();
+  }
   ok(errors.length===0,'no runtime errors: '+errors.join('; '));
   console.log('Reading UI:',count,'checks passed');
  }catch(e){await page.screenshot({path:path.join(root,'build/reading-failure.png')}).catch(()=>{});throw e;}

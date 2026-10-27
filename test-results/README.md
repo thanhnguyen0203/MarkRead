@@ -1,6 +1,17 @@
 # Lịch sử kiểm thử MarkRead
 
-## Bản hiện tại: 1.1.3 — bổ sung giao diện đọc, 27/10/2026
+## Bản hiện tại: 1.1.4 — 27/10/2026
+
+**289 kiểm tra đạt**: 76 unit, 53 Browser UI, 62 Revision UI, 46 Reading UI, 27 Android mô phỏng và 25 kiểm tra APK. VersionCode 114; dùng lại chứng thư APK 1.1.3 cục bộ.
+
+- `1.1.4/RELEASE_RESULTS.md`: phạm vi, kết quả và giới hạn kiểm chứng.
+- `1.1.4/ARTIFACT.json`: phiên bản, SHA-256, dung lượng và chứng thư APK.
+- `1.1.4/*RESULTS.txt`, `APK_CHECK_RUN.txt`: log đã chạy.
+- `1.1.4/reading-progress-visible.png`, `reading-progress-hidden.png`: thanh tiến độ khi điều hướng hiện/ẩn.
+
+Chưa kiểm thử trên Android thật hoặc giả lập. Báo cáo gốc hiện tại: `../BAO_CAO_KIEM_THU_ANDROID.md`.
+
+## Lịch sử: 1.1.3 — bổ sung giao diện đọc, 27/10/2026
 
 Lượt bổ sung đã đạt **266 kiểm tra**: 76 JavaScript unit, 53 Browser UI, 62 Revision UI, 23 Reading UI, 27 native mô phỏng và 25 kiểm tra APK. Phiên bản giữ nguyên 1.1.3/113.
 
