@@ -42,6 +42,7 @@ The build embeds all libraries, KaTeX assets and Merriweather WOFF2 fonts. No fo
 - `web/tests/*.test.mjs`: parser utilities, scoped native transport, tree order/navigation and source-span replacements.
 - `web/tests/ui.cjs`: end-to-end UI with Playwright. Install Playwright and Chromium, set `MARKREAD_CHROMIUM` to the executable, and run `node web/tests/ui.cjs` from a writable checkout. Fixtures/screenshots are written to sibling `qa/`.
 - `web/tests/revision-ui.cjs`: verifies one-row toolbar across six viewport sizes, menu, themed font selection, touch states, compact settings, source search/replacement, regex timeout/recovery, extension changes and independent CSS import.
+- `web/tests/reading-ui.cjs`: verifies unboxed file extensions, rename focus without an outer ring, consecutive unified edits without iframe reloads or focus loss, stable tapped positions, source offsets, cancellation, progressive toolbar visibility, reduced motion, export, math, diagrams and reference links.
 - `web/tests/native-ui.cjs`: exercises the actual Android UI code path in Chromium with a simulated MessagePort host; this does not execute Android services.
 - `tests/PolicyTest.java`: pure JVM boundary checks; compile with JDK javac or ECJ, then run `vn.markread.local.PolicyTest`.
 - `tests/validate_apk.py`: checks compiled APK version, permissions, CSP, bundled font/license and renderer bytes.
@@ -65,8 +66,12 @@ The independent CSS picker uses ACTION_OPEN_DOCUMENT and a bounded local-only re
 
 Unified block editing now uses a frameless, auto-sized source field with the article font and colors. Tap outside or press Ctrl/Cmd+Enter to finish; Escape cancels the active block edit. The top-right vertical overflow menu switches Read/Source when unified editing is disabled. All twelve theme choices preview their actual background/text colors, with one continuous selection border.
 
+The follow-up reading revision removes borders from file-extension labels and the outer focus ring from the rename field. Tapping another block commits the current edit and opens the tapped block in the same reader document, preserving its screen position and reusing the focused textarea. Unchanged blocks retain their rendered content; edited source spans and dependent rendering are refreshed in place. A tap on a non-editable area still finishes editing.
+
+The document toolbar progressively slides and fades away after scrolling down past the initial reading distance, then returns on upward scrolling. Programmatic positioning does not trigger hiding. Reduced-motion preferences keep the toolbar stable.
+
 On Windows, the Python builder accepts `aapt2.exe`/`zipalign.exe` and API 35 platform folder variants. The renderer builder resolves its directory from a file URL on either Windows or Linux. With Java 17 on PATH and the SDK tools available under `toolchain/`, run `python build_apk.py`, then `python tests/validate_apk.py`. The output is `dist/MarkRead-Android-1.1.3.apk`.
 
 This checkout has no original private signing key. The local build creates and reuses `private/markread-release.p12` and its password file. Keep that directory private and backed up for future updates. The public `APK_SIGNATURE.txt` is certificate information only. An APK signed with this new key cannot replace an installed copy signed with the old key.
 
-Current release evidence is in `test-results/1.1.3/`. Earlier root-level logs are historical evidence, not results of this build; the prior report is archived in `test-results/history/`.
+Current release evidence is in `test-results/1.1.3/`; see `READING_UPDATE_RESULTS.md` for the latest verification summary. The reading revision passed 266 checks across unit, browser UI, simulated native UI and APK validation. The 69 Java Policy checks from the initial build were not rerun or included in that total. Initial artifact/build metadata is preserved in `test-results/1.1.3/history/`, and the initial 1.1.3 report is archived in `test-results/history/`. Android device and emulator testing has not been performed for this revision. VersionName and versionCode remain 1.1.3 and 113.

@@ -46,6 +46,38 @@ let files=new Map(), drafts=new Map(), originals=new Map(), current='',source=de
 let imageURLs=new Map(), toastTimer, renderTimer, loadTarget='',renderQueue=Promise.resolve();
 let editOriginal=demo;
 let inlineEdit=null,readerSnapshot={text:null,path:null};const collapsedFolders=new Set();
+const blockMarkup=new WeakMap();
+const documentBar=document.querySelector('main>header'),main=documentBar.parentElement;
+let barOffset=0,barFrame=0,scrollIntentUntil=0;
+function paintDocumentBar(){
+  barFrame=0;const height=documentBar.offsetHeight;
+  barOffset=Math.max(0,Math.min(height,barOffset));
+  main.style.setProperty('--header-offset',barOffset+'px');
+  main.style.setProperty('--header-opacity',String(1-barOffset/height));
+  documentBar.inert=barOffset>=height;
+}
+function showDocumentBar(){barOffset=0;scrollIntentUntil=0;cancelAnimationFrame(barFrame);paintDocumentBar();}
+function trackReadingScroll(scroller,doc){
+  let previous=scroller.scrollTop,viewport=main.clientHeight,direction=0,touchY=0;
+  const intent=e=>{scrollIntentUntil=performance.now()+250;if(e.type==='wheel')direction=Math.sign(e.deltaY);if(e.type==='touchmove'){const y=e.touches[0]?.clientY??touchY;direction=Math.sign(touchY-y);touchY=y;}};
+  doc.addEventListener('touchstart',e=>{touchY=e.touches[0]?.clientY||0;},{passive:true});
+  for(const name of ['wheel','touchmove'])doc.addEventListener(name,intent,{passive:true});
+  doc.addEventListener('keydown',e=>{if(!e.target.closest('input,textarea')&&['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key)){direction=['ArrowUp','PageUp','Home'].includes(e.key)||e.key===' '&&e.shiftKey?-1:1;intent(e);}});
+  doc.addEventListener('pointerdown',e=>{if(e.clientX>=doc.documentElement.clientWidth-16){direction=0;intent(e);}},{passive:true});
+  const update=()=>{
+    const top=Math.max(0,Math.min(scroller.scrollTop,scroller.scrollHeight-scroller.clientHeight)),delta=top-previous;
+    const resized=viewport!==main.clientHeight;previous=top;viewport=main.clientHeight;
+    if(resized||delta*direction<0||performance.now()>scrollIntentUntil||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    if(doc.querySelector('dialog[open]')||document.body.classList.contains('sidebar-open')||!$('modeOptions').hidden)return;
+    if(top<=0)barOffset=0;
+    else if(delta<0)barOffset+=delta;
+    else if(top>72)barOffset+=Math.min(delta,top-72);
+    if(!barFrame)barFrame=requestAnimationFrame(paintDocumentBar);
+  };
+  (scroller===doc.scrollingElement?doc:scroller).addEventListener('scroll',update,{passive:true});
+}
+documentBar.addEventListener('focusin',showDocumentBar);
+trackReadingScroll($('editor'),document);
 function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),4500);}
 function status(message){ /* Persistent status bar removed; failures use toast. */ }
 function dirty(){return source!==editOriginal;}
@@ -185,7 +217,7 @@ async function openFile(path,fragment=''){
     if(ticket!==openSerial||epoch!==session)return;
     saveCurrent();if(!originals.has(path))originals.set(path,text);current=path;source=text;editOriginal=originals.get(path);$('editor').value=text;$('filename').textContent=path.split('/').pop();$('filename').title=path+' · Ấn giữ để đổi tên';$('filename').setAttribute('aria-label',path.split('/').pop()+' · Ấn giữ để đổi tên');
     const parts=path.split('/');for(let i=1;i<parts.length;i++)collapsedFolders.delete(parts.slice(0,i).join('/'));
-    loadTarget=fragment;invalidateFind();$('findInput').value='';$('findCount').textContent='';document.body.classList.remove('sidebar-open');stats();renderFileList();scheduleRender();
+    loadTarget=fragment;showDocumentBar();invalidateFind();$('findInput').value='';$('findCount').textContent='';document.body.classList.remove('sidebar-open');stats();renderFileList();scheduleRender();
   }catch(e){if(ticket===openSerial)toast(e.message||'Không đọc được tệp. Hãy chọn lại quyền truy cập.');}
 }
 async function localImage(raw,base,epoch){
@@ -217,7 +249,8 @@ function safeHTML(text){
   for(const n of root.querySelectorAll('[data-math-token]')){const token=mathTokens[Number(n.getAttribute('data-math-token'))];n.removeAttribute('data-math-token');if(token)n.innerHTML=mathHTML(token.text,token.display);}
   const headings=[],counts=new Map();for(const h of root.querySelectorAll('h1,h2,h3,h4,h5,h6')){const slug=slugify(h.textContent),count=(counts.get(slug)||0)+1;counts.set(slug,count);h.id=slug+(count>1?'-'+count:'');headings.push({id:h.id,text:h.textContent,level:Number(h.tagName[1])});}
   for(const table of root.querySelectorAll('table')){const wrap=document.createElement('div');wrap.className='table-wrap';table.replaceWith(wrap);wrap.append(table);}
-  for(const {wrap,start,end} of trustedBlocks){wrap.className='md-block';wrap.dataset.start=start;wrap.dataset.end=editableBlockEnd(text,start,end);}
+  let diagramOrder=0;for(const code of root.querySelectorAll('pre > code'))if(/(?:^|\s)language-mermaid(?:\s|$)/i.test(code.className))code.dataset.diagramOrder=++diagramOrder;
+  for(const {wrap,start,end} of trustedBlocks){wrap.className='md-block';wrap.dataset.start=start;wrap.dataset.end=editableBlockEnd(text,start,end);blockMarkup.set(wrap,wrap.innerHTML);}
   return {root,images,headings};
 }
 let diagramSerial=0;
@@ -226,7 +259,7 @@ async function diagrams(root,ticket){
   for(const code of root.querySelectorAll('pre > code')){
     const lang=(code.className.match(/language-([\w+-]+)/)||[])[1]||'';
     if(lang.toLowerCase()==='mermaid'){
-      count++;const src=code.textContent;
+      count=Number(code.dataset.diagramOrder)||count+1;const src=code.textContent;
       if(!settings.mermaid)continue;
       if(count>8||!diagramAllowed(src)){const p=document.createElement('p');p.className='diagram-error';p.textContent='Sơ đồ vượt giới hạn hoặc chứa cấu hình/cú pháp không được hỗ trợ an toàn. Giữ mã nguồn bên dưới.';code.parentElement.before(p);continue;}
       let holder;
@@ -234,7 +267,7 @@ async function diagrams(root,ticket){
         globalThis.mermaid.initialize({startOnLoad:false,securityLevel:'strict',suppressErrorRendering:true,theme:themes[settings.theme].light?'neutral':'dark',fontFamily:'Arial, sans-serif',maxTextSize:12000,maxEdges:200,flowchart:{htmlLabels:false,useMaxWidth:true},sequence:{useMaxWidth:true},secure:['securityLevel','startOnLoad','maxTextSize','maxEdges','secure','theme','fontFamily','flowchart']});
         holder=document.createElement('div');holder.style.cssText='position:fixed;left:-20000px;top:0;width:900px;visibility:hidden';document.body.append(holder);
         const {svg}=await globalThis.mermaid.render('mrdiagram'+(++diagramSerial),src,holder);
-        if(ticket!==renderSerial)return;
+        if(ticket!==null&&ticket!==renderSerial)return;
         const sanitized=DOMPurify.sanitize(svg,{USE_PROFILES:{svg:true,svgFilters:true},FORBID_TAGS:['foreignObject','a','image','feImage','script','animate','animateMotion','set'],FORBID_ATTR:['href','xlink:href','onload'],ALLOW_DATA_ATTR:false});
         const wrap=document.createElement('div');wrap.className='diagram';wrap.innerHTML=sanitized;
         for(const el of wrap.querySelectorAll('*'))for(const attr of [...el.attributes])if(/(?:https?:|data:|javascript:|file:)/i.test(attr.value))el.removeAttribute(attr.name);
@@ -247,6 +280,9 @@ async function diagrams(root,ticket){
 function readerStyle(){const p=palettes[settings.theme];const fonts={sans:'-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif',serif:'Georgia,"Times New Roman",serif',merriweather:'"Merriweather",Georgia,serif',mono:'Consolas,"SFMono-Regular",monospace'};return `:root{${Object.entries(p).map(([k,v])=>`--${k}:${v}`).join(';')};--font:${fonts[settings.font]};--size:${settings.size}px;--width:${settings.width}px;--leading:${settings.leading}}`+fontCSS+paperCSS+katexCSS;}
 const READER_CSP="default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src blob:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; media-src 'none'; worker-src 'none'";
 function scheduleRender(delay=0){clearTimeout(renderTimer);const ticket=++renderSerial;renderTimer=setTimeout(()=>{renderQueue=renderQueue.catch(()=>{}).then(()=>render(ticket));},delay);}
+function updateOutline(headings){
+  const toc=document.createDocumentFragment();for(const h of headings.filter(x=>x.level<=3)){const a=document.createElement('a');a.textContent=h.text;a.href='#'+h.id;a.dataset.level=h.level;a.addEventListener('click',e=>{e.preventDefault();$('reader').contentDocument?.getElementById(h.id)?.scrollIntoView();});toc.append(a);}$('toc').replaceChildren(toc);
+}
 async function render(ticket){
   if(ticket!==renderSerial)return;
   const text=source,base=current,epoch=session;
@@ -259,8 +295,10 @@ async function render(ticket){
     frame.onload=()=>{
       if(ticket!==renderSerial)return;
       const d=frame.contentDocument;if(!d)return;readerSnapshot={text,path:base};
-      d.addEventListener('click',readerClick);d.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.closest('a'))readerClick(e);keyboard(e);});
-      if(loadTarget){d.getElementById(loadTarget)?.scrollIntoView();loadTarget='';}else if(sameDoc)d.scrollingElement.scrollTop=oldScroll;
+      d.addEventListener('click',readerClick);d.addEventListener('pointerdown',e=>{if(inlineEdit&&e.target.closest('.md-block')&&!e.target.closest('a,summary,button,input,.inline-editor'))e.preventDefault();});d.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.closest('a'))readerClick(e);keyboard(e);});
+      if(loadTarget){d.getElementById(loadTarget)?.scrollIntoView();loadTarget='';}else if(sameDoc)d.defaultView.scrollTo({top:oldScroll,behavior:'instant'});
+      const rendered=[...d.querySelectorAll('#paper>.md-block')];[...root.children].forEach((node,i)=>blockMarkup.set(rendered[i],blockMarkup.get(node)));
+      trackReadingScroll(d.scrollingElement,d);
       d.body.classList.toggle('unified-reader',settings.unified);
       if(settings.unified){const add=d.createElement('button');add.className='add-block';add.textContent='＋ Thêm đoạn';add.addEventListener('click',()=>beginInline(null));d.getElementById('paper').append(add);}
       applyFind({scroll:false});status(current?'Đã mở · chỉ đọc bộ tệp được chọn':'Tài liệu mẫu · chưa truy cập tệp của bạn');
@@ -268,25 +306,70 @@ async function render(ticket){
     frame.dataset.path=base||'demo';
     const style=(readerStyle()+settings.css).replace(/<\/style/gi,'<\\/style');
     frame.srcdoc=`<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="${escapeHTML(READER_CSP)}"><style>${style}</style></head><body><article id="paper">${root.innerHTML}</article></body></html>`;
-    const toc=document.createDocumentFragment();for(const h of headings.filter(x=>x.level<=3)){const a=document.createElement('a');a.textContent=h.text;a.href='#'+h.id;a.dataset.level=h.level;a.addEventListener('click',e=>{e.preventDefault();$('reader').contentDocument?.getElementById(h.id)?.scrollIntoView();});toc.append(a);}$('toc').replaceChildren(toc);
+    updateOutline(headings);
   }catch(e){if(ticket===renderSerial){status('Không dựng được bài. Có thể xem trong thẻ Nguồn.');toast('Lỗi hiển thị: '+(e.message||'không xác định'));}}
 }
 function syncInline(){
   if(!inlineEdit)return;
   const state=inlineEdit;
-  try{const next=replaceBlock(source,state.start,state.end,state.input.value,MAX_DOC);source=next.text;state.end=next.end;$('editor').value=source;saveCurrent();stats();}
+  try{const next=replaceBlock(source,state.start,state.end,state.input.value,MAX_DOC),delta=next.end-state.end;
+    if(delta){for(const block of state.host.parentElement.querySelectorAll(':scope>.md-block'))if(block!==state.host&&Number(block.dataset.start)>=state.end){block.dataset.start=Number(block.dataset.start)+delta;block.dataset.end=Number(block.dataset.end)+delta;}}
+    source=next.text;state.end=next.end;state.host.dataset.end=state.end;$('editor').value=source;saveCurrent();stats();}
   catch(e){state.input.value=source.slice(state.start,state.end);toast(e.message);}
 }
-function finishInline(cancel=false,rerender=true){
-  if(!inlineEdit)return;
-  syncInline();const state=inlineEdit;
-  if(cancel){const next=replaceBlock(source,state.start,state.end,state.original,MAX_DOC);source=next.text;$('editor').value=source;saveCurrent();stats();}
-  inlineEdit=null;readerSnapshot={text:null,path:null};state.input.blur();
-  if(rerender)scheduleRender();
+function readingAnchor(d,preferred){
+  const blocks=[...d.querySelectorAll('#paper>.md-block')];
+  const node=preferred||blocks.find(b=>b.getBoundingClientRect().top>=0&&b.getBoundingClientRect().height>0)||blocks.find(b=>b.getBoundingClientRect().bottom>0);
+  return {node,start:node?Number(node.dataset.start):null,top:node?.getBoundingClientRect().top||0,scroll:d.scrollingElement.scrollTop};
 }
-function beginInline(block){
+function restoreReadingAnchor(d,anchor){
+  const node=[...d.querySelectorAll('#paper>.md-block')].find(b=>Number(b.dataset.start)===anchor.start);
+  scrollIntentUntil=0;
+  d.defaultView.scrollTo({top:node?d.scrollingElement.scrollTop+node.getBoundingClientRect().top-anchor.top:anchor.scroll,behavior:'instant'});
+}
+function refreshInline(state,anchor){
+  const d=state.input.ownerDocument,paper=d.getElementById('paper');
+  if(state.original===source.slice(state.start,state.end)){
+    state.host.classList.remove('editing-block');state.host.style.height='';state.host.replaceChildren(...state.originalNodes);
+    readerSnapshot={text:source,path:current};restoreReadingAnchor(d,anchor);return;
+  }
+  const {root,images,headings}=safeHTML(source);
+  const old=[...paper.querySelectorAll(':scope>.md-block')],bySpan=new Map(old.map(b=>[b.dataset.start+':'+b.dataset.end,b]));
+  for(const node of [...root.children]){const previous=bySpan.get(node.dataset.start+':'+node.dataset.end);if(previous&&previous!==state.host&&blockMarkup.get(previous)===blockMarkup.get(node))node.replaceWith(previous);}
+  for(const node of old)if(node.parentElement===paper)node.remove();
+  const before=state.box.isConnected?state.box:paper.querySelector('.add-block');
+  for(const node of [...root.children])paper.insertBefore(node,before);
+  readerSnapshot={text:source,path:current};updateOutline(headings);restoreReadingAnchor(d,anchor);
+  const epoch=session,base=current;
+  // Decorate new nodes without navigating the iframe or disturbing its focused editor.
+  renderQueue=renderQueue.catch(()=>{}).then(async()=>{
+    for(const {node,raw} of images){if(!node.isConnected||$('reader').contentDocument!==d)continue;let url;try{url=await localImage(raw,base,epoch);}catch{}if(epoch!==session||!node.isConnected||$('reader').contentDocument!==d)continue;if(url){node.src=url;node.loading='lazy';node.decoding='async';}else{const msg=d.createElement('span');msg.className='blocked-image';msg.textContent=`Ảnh chưa được cấp quyền hoặc bị chặn: ${node.alt||raw.slice(0,120)||'ảnh'}`;node.replaceWith(msg);}}
+    if(epoch===session&&$('reader').contentDocument===d)await diagrams(paper,null);
+  });
+}
+function finishInline(cancel=false,rerender=true,keepEditor=false,preferred=null){
+  if(!inlineEdit)return;
+  syncInline();const state=inlineEdit,d=state.input.ownerDocument,anchor=readingAnchor(d,preferred);
+  if(cancel){state.input.value=state.original;syncInline();if(anchor.node)anchor.start=Number(anchor.node.dataset.start);}
+  inlineEdit=null;state.observer.disconnect();d.defaultView.removeEventListener('resize',resizeInline);
+  if(!keepEditor){state.input.blur();state.box.remove();}
+  if(rerender){clearTimeout(renderTimer);renderSerial++;refreshInline(state,anchor);applyFind({scroll:false});}
+  else{readerSnapshot={text:null,path:null};state.host.classList.remove('editing-block');state.host.style.height='';state.host.replaceChildren(...state.originalNodes);}
+  return keepEditor?state.box:null;
+}
+function resizeInline(){
+  if(!inlineEdit)return;
+  const {host,box,input}=inlineEdit;
+  box.style.left=host.offsetLeft+'px';box.style.top=host.offsetTop+'px';box.style.width=host.clientWidth+'px';
+  input.style.height='0px';input.style.height=input.scrollHeight+'px';
+  host.style.height=(box.offsetHeight+parseFloat(input.ownerDocument.defaultView.getComputedStyle(box).marginBottom))+'px';
+}
+function beginInline(block,box=null,caret=0){
   if(!settings.unified)return;
-  if(inlineEdit){finishInline();return;}
+  if(inlineEdit){
+    const start=block?Number(block.dataset.start):null;box=finishInline(false,true,true,block);
+    if(start!==null){block=[...$('reader').contentDocument.querySelectorAll('.md-block')].find(b=>Number(b.dataset.start)<=start&&Number(b.dataset.end)>start);if(!block){box?.remove();return;}caret+=start-Number(block.dataset.start);}
+  }
   if(readerSnapshot.text!==source||readerSnapshot.path!==current){scheduleRender();return;}
   clearTimeout(renderTimer);renderSerial++;
   const d=$('reader').contentDocument;
@@ -294,18 +377,37 @@ function beginInline(block){
   const start=block?Number(block.dataset.start):source.length,end=block?Number(block.dataset.end):source.length;
   if(!Number.isInteger(start)||!Number.isInteger(end)||start<0||end<start||end>source.length)return;
   const original=source.slice(start,end),host=block||d.createElement('div');
-  if(!block){host.className='md-block';d.querySelector('.add-block').before(host);}
-  const box=d.createElement('div');box.className='inline-editor';
-  const input=d.createElement('textarea');input.className='block-source';input.rows=1;input.spellcheck=false;input.setAttribute('aria-label','Mã nguồn khối Markdown');input.value=original||(!block&&source&&!source.endsWith('\n\n')?'\n\n':'');
-  box.append(input);host.replaceChildren(box);inlineEdit={start,end,original,input};
-  const resize=()=>{input.style.height='auto';input.style.height=input.scrollHeight+'px';};
-  input.addEventListener('input',()=>{syncInline();resize();});
-  input.addEventListener('keydown',e=>{if(e.key==='Escape'||((e.ctrlKey||e.metaKey)&&e.key==='Enter')){e.preventDefault();e.stopPropagation();finishInline(e.key==='Escape');}if(e.key==='Tab'){e.preventDefault();input.setRangeText('  ',input.selectionStart,input.selectionEnd,'end');syncInline();resize();}});
-  syncInline();resize();input.focus();input.setSelectionRange(0,0);host.scrollIntoView({block:'nearest'});
+  if(!block){host.className='md-block';host.dataset.start=start;host.dataset.end=end;d.querySelector('.add-block').before(host);}
+  const anchor=readingAnchor(d,host),originalNodes=[...host.childNodes];
+  if(!box){box=d.createElement('div');box.className='inline-editor';const input=d.createElement('textarea');input.className='block-source';input.rows=1;input.spellcheck=false;input.setAttribute('aria-label','Mã nguồn khối Markdown');box.append(input);d.getElementById('paper').append(box);
+    input.addEventListener('input',()=>{syncInline();resizeInline();});
+    input.addEventListener('keydown',e=>{if(e.key==='Escape'||((e.ctrlKey||e.metaKey)&&e.key==='Enter')){e.preventDefault();e.stopPropagation();finishInline(e.key==='Escape');}if(e.key==='Tab'){e.preventDefault();input.setRangeText('  ',input.selectionStart,input.selectionEnd,'end');syncInline();resizeInline();}});
+  }
+  const input=box.firstElementChild;input.value=original||(!block&&source&&!source.endsWith('\n\n')?'\n\n':'');
+  const observer=new ResizeObserver(resizeInline);inlineEdit={start,end,original,input,box,host,originalNodes,observer};
+  host.replaceChildren();host.classList.add('editing-block');syncInline();resizeInline();observer.observe(d.getElementById('paper'));d.defaultView.addEventListener('resize',resizeInline);
+  input.focus({preventScroll:true});input.setSelectionRange(caret,caret);restoreReadingAnchor(d,anchor);
 }
 // A tap outside the active source returns to rendered text. Scrolling does not commit.
 document.addEventListener('pointerdown',e=>{if(inlineEdit&&e.target!==$('reader'))finishInline();},true);
-function readerClick(e){setModeMenu(false);if(e.target.closest('.inline-editor,.add-block'))return;const a=e.target.closest('a[data-target]');if(!a){if(inlineEdit&&!e.target.closest('.inline-editor')){finishInline();return;}if(settings.unified&&mode==='read'&&!e.target.closest('.inline-editor,summary,button,input')&&!e.target.ownerDocument.getSelection()?.toString()){const block=e.target.closest('.md-block');if(block){if(inlineEdit){finishInline();return;}beginInline(block);}}return;}e.preventDefault();const raw=a.dataset.target;if(raw.startsWith('#')){try{$('reader').contentDocument.getElementById(decodeURIComponent(raw.slice(1)))?.scrollIntoView();}catch{}return;}const target=localTarget(raw,current);if(target&&files.has(target.path)&&isDocument(target.path)){openFile(target.path,target.fragment);}else toast('Liên kết bị chặn: chỉ mở tệp Markdown trong bộ tệp đã chọn.');}
+function inlineCaret(block,e){
+  if(!e.clientX&&!e.clientY)return 0;
+  const d=block.ownerDocument,range=d.caretRangeFromPoint?.(e.clientX,e.clientY);
+  if(!range||range.startContainer.nodeType!==3||!block.contains(range.startContainer))return 0;
+  const text=source.slice(Number(block.dataset.start),Number(block.dataset.end)),at=text.indexOf(range.startContainer.textContent);
+  return at<0?0:Math.min(text.length,at+range.startOffset);
+}
+function readerClick(e){
+  setModeMenu(false);if(e.target.closest('.inline-editor,.add-block'))return;
+  const a=e.target.closest('a[data-target]');
+  if(!a){
+    const block=e.target.closest('.md-block');
+    if(block&&settings.unified&&mode==='read'&&!e.target.closest('summary,button,input')&&!e.target.ownerDocument.getSelection()?.toString())beginInline(block,null,inlineCaret(block,e));
+    else if(inlineEdit)finishInline();
+    return;
+  }
+  e.preventDefault();const raw=a.dataset.target;if(raw.startsWith('#')){try{$('reader').contentDocument.getElementById(decodeURIComponent(raw.slice(1)))?.scrollIntoView();}catch{}return;}const target=localTarget(raw,current);if(target&&files.has(target.path)&&isDocument(target.path)){openFile(target.path,target.fragment);}else toast('Liên kết bị chặn: chỉ mở tệp Markdown trong bộ tệp đã chọn.');
+}
 function setMode(value){finishInline(false,false);if(settings.unified)value='read';mode=value;$('workspace').dataset.mode=value;for(const name of ['read','edit','split']){$(name+'Mode').classList.toggle('active',value===name);$(name+'Mode').setAttribute('aria-pressed',String(value===name));}for(const b of $('modeOptions').querySelectorAll('[data-mode]'))b.setAttribute('aria-checked',String(value===b.dataset.mode));if(value==='edit')$('editor').focus();}
 function setModeMenu(open){$('modeOptions').hidden=!open;$('modeToggle').setAttribute('aria-expanded',String(open));}
 $('modeToggle').addEventListener('click',()=>setModeMenu($('modeOptions').hidden));

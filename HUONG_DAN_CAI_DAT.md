@@ -10,11 +10,15 @@
 
 Bản này dùng package `vn.markread.local`, versionCode 113. Checkout không có khóa ký riêng của bản cũ; APK mới dùng khóa cục bộ trong `private/`. File `APK_SIGNATURE.txt` chỉ chứa thông tin chữ ký, không thể dùng để ký APK. Nếu ứng dụng đang cài dùng khóa khác, Android sẽ từ chối cài đè. Hãy xuất mọi bản sửa cần giữ trước khi thay bản cài; gỡ ứng dụng sẽ xóa cài đặt và quyền thư mục đã nhớ. Muốn cài đè bằng chữ ký cũ cần khôi phục đúng khóa riêng rồi build lại.
 
-## Ba thay đổi trong 1.1.3
+## Các thay đổi trong 1.1.3
 
 - **Sửa trực tiếp:** chế độ hợp nhất không còn khung và thanh MARKDOWN; văn bản dùng font/màu của bài và vùng sửa tự giãn.
 - **Menu chế độ:** khi tắt hợp nhất, nút **⋮** ở góc trên bên phải cho phép chọn **Đọc** hoặc **Nguồn**. Nhóm chọn trong cài đặt vẫn có.
 - **Preview theme:** 12 ô theme dùng đúng nền và chữ của mỗi theme; ô được chọn chỉ còn một viền và dấu chọn.
+- **Nhãn định dạng:** chữ MD và các phần mở rộng tệp không còn khung viền riêng.
+- **Ô đổi tên:** khi nhập tên, giữ viền thông thường và không có viền xanh bao ngoài.
+- **Chuyển đoạn sửa:** chạm đoạn khác để sửa ngay tại vị trí đó, giữ trang đọc và ô nhập đang lấy nét, không tải lại bài rồi cuộn trở về.
+- **Thanh tiêu đề:** ẩn dần khi cuộn xuống một đoạn và hiện dần khi cuộn lên. Nếu thiết bị bật tùy chọn giảm chuyển động, thanh được giữ ổn định.
 
 ## Mở tài liệu, thư mục con và chuyển bài
 
@@ -30,7 +34,9 @@ Bản sửa của từng tệp được giữ khi chuyển bài trong cùng phi�
 
 Khi tắt hợp nhất, bấm **⋮** ở góc trên bên phải để chọn **Đọc** hoặc **Nguồn**. Bạn cũng có thể chọn trong **Cài đặt → Đọc & chỉnh sửa**. Chế độ **Chia đôi** có trên màn hình lớn. Trên điện thoại, đóng cài đặt sau khi chọn để xem chế độ vừa chọn.
 
-Bật **Hợp nhất Đọc và Nguồn** để chạm vào từng đoạn, tiêu đề, bảng hoặc khối mã và sửa Markdown của khối đó. Vùng sửa xuất hiện trực tiếp trong bài, không có khung hoặc thanh công cụ riêng. Chạm ngoài hoặc bấm **Ctrl/Cmd+Enter** để trở lại bản đọc; **Esc** phục hồi riêng khối đang sửa. Các liên kết vẫn hoạt động như bình thường. Khi hợp nhất đang bật, nhóm chọn chế độ riêng và nút ⋮ được ẩn.
+Bật **Hợp nhất Đọc và Nguồn** để chạm vào từng đoạn, tiêu đề, bảng hoặc khối mã và sửa Markdown của khối đó. Vùng sửa xuất hiện trực tiếp trong bài, không có khung hoặc thanh công cụ riêng. Chạm vào đoạn khác để kết thúc sửa đoạn hiện tại và chuyển trực tiếp sang đoạn vừa chạm, giữ nguyên vị trí và ô nhập đang lấy nét. Chạm vùng trống ngoài đoạn hoặc bấm **Ctrl/Cmd+Enter** để trở lại bản đọc; **Esc** phục hồi riêng khối đang sửa. Các liên kết vẫn hoạt động như bình thường. Khi hợp nhất đang bật, nhóm chọn chế độ riêng và nút ⋮ được ẩn.
+
+Khi cuộn xuống qua đoạn đầu của bài, thanh tiêu đề sẽ trượt và mờ dần để tăng vùng đọc. Cuộn lên để thanh xuất hiện trở lại và dùng các nút chuyển bài, tìm kiếm, lưu hoặc cài đặt. Việc định vị nội dung bằng chương trình không tự ẩn thanh.
 
 Bấm biểu tượng lưu trên thanh trên để chọn nơi xuất bản sao bằng hộp lưu Android. App không tự ghi nội dung bản sửa vào tệp gốc. Chỉ đóng app sau khi đã xuất những bản sửa cần giữ.
 
@@ -56,6 +62,8 @@ Phím tắt: **Ctrl/Cmd+F** mở tìm; **Ctrl/Cmd+H** mở phần thay; Enter/Sh
 1. Ấn giữ khoảng nửa giây vào tên trên thanh trên hoặc trong danh sách. Bàn phím có thể dùng **F2**.
 2. Nhập toàn bộ tên, ví dụ `Chương 3.txt` hoặc `Chương 3.markdown`.
 3. Bấm **Đổi tên**.
+
+Ô nhập tên giữ viền thông thường khi được chọn, không có thêm vòng viền xanh bên ngoài.
 
 Đổi phần mở rộng chỉ đổi tên, không chuyển đổi định dạng nội dung. App kiểm tra tên sai và tên trùng, kể cả thư mục và tệp khác khi dùng quyền thư mục Android. Vị trí chỉ đọc hoặc không hỗ trợ đổi tên sẽ báo lỗi, giữ tên hiện tại. Nếu quyền ghi chưa có, mở lại đúng thư mục/tệp để cấp quyền.
 

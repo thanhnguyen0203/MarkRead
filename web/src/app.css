@@ -57,7 +57,7 @@ header{flex-wrap:nowrap;height:60px;min-height:60px;gap:8px}
 #renameDialog .dialog-head{padding:18px 22px}
 #renameDialog h2{font-size:20px;margin:0}
 .rename-field{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding-right:12px}
-.rename-field:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.rename-field:focus-within{outline:0;box-shadow:none}
 #renameInput{flex:1;width:100%;border:0;padding:12px;outline:0;background:none}
 #renameError{color:var(--accent);font-size:12px;line-height:1.65;white-space:pre-line}
 #renameError:empty{display:none}
@@ -133,7 +133,7 @@ button.primary:active{background:var(--accent);filter:brightness(.95)}
 .reading-modes button{flex:1;min-height:38px;font-size:12px;color:var(--muted)}.reading-modes button.active{background:var(--selected);color:var(--accent)}
 .unified .reading-modes{display:none}
 #customCSS{border-radius:12px;padding:12px;min-height:160px}.css-heading button{padding:8px 10px;min-height:36px}
-.rename-field{padding:0;border-radius:12px}.rename-field:focus-within{outline:1px solid var(--accent);outline-offset:2px;box-shadow:0 0 0 4px var(--selected)}
+.rename-field{padding:0;border-radius:12px}
 #renameInput{font-size:14px;min-height:46px;box-shadow:none;outline:none}
 #findbar{display:block;padding:12px 20px;background:var(--panel);font-size:12px;max-height:45dvh;overflow:auto}
 .find-heading{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:550;margin-bottom:6px}
@@ -153,3 +153,8 @@ button.primary:active{background:var(--accent);filter:brightness(.95)}
 .theme-options button:active{background:var(--preview-bg);color:var(--preview-text)}
 .theme-options button.active:focus:not(:focus-visible){box-shadow:inset 0 0 0 1px var(--preview-accent)}
 .theme-options button:focus-visible{outline:0;box-shadow:inset 0 0 0 1px var(--preview-accent);border-color:var(--preview-accent)}
+
+/* Keep file extensions unboxed and move the document bar with reading gestures. */
+.file-row .file-icon,.file-type{border:0;border-radius:0}
+main{--header-offset:0px;--header-opacity:1;overflow:hidden}
+main>header{position:relative;z-index:3;background:var(--bg);transform:translateY(calc(0px - var(--header-offset)));margin-bottom:calc(0px - var(--header-offset));opacity:var(--header-opacity);will-change:transform,opacity}

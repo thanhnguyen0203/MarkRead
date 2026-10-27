@@ -1,5 +1,16 @@
 # MarkRead 1.1.3 — 27/10/2026
 
+## Bổ sung giao diện đọc và chỉnh sửa
+
+- Bỏ khung viền quanh nhãn định dạng tệp, gồm MD trong danh sách và trên thanh tiêu đề.
+- Ô đổi tên giữ nguyên viền thông thường khi được chọn; bỏ viền xanh bao ngoài.
+- Trong chế độ hợp nhất, chạm đoạn khác để chuyển trực tiếp sang sửa đoạn đó. Giữ nguyên trang đọc, vị trí vừa chạm và ô nhập đang lấy nét; không tải lại iframe rồi khôi phục vị trí cuộn. Nếu chưa thay đổi nội dung, dùng lại phần hiển thị sẵn có khi chuyển đoạn.
+- Thanh tiêu đề ẩn dần khi cuộn xuống sau một đoạn đầu và hiện dần khi cuộn lên. Việc định vị bằng chương trình không tự ẩn thanh; tùy chọn giảm chuyển động giữ thanh ổn định.
+- Giữ nguyên versionName 1.1.3 và versionCode 113. APK được dựng lại bằng khóa ký cục bộ đã có, không thay đổi các tính năng khác.
+- 266 kiểm tra đạt: 76 unit, 53 Browser UI, 62 Revision UI, 23 Reading UI, 27 native mô phỏng và 25 kiểm tra APK. Chưa kiểm thử trên Android thật hoặc giả lập; không cộng lại 69 Java Policy của lượt trước vào tổng lần này.
+
+## Thay đổi trước đó trong 1.1.3
+
 - Bỏ khung, nền hộp, thanh MARKDOWN và nút kéo giãn khi sửa trong chế độ hợp nhất Đọc/Nguồn. Vùng sửa dùng font và màu chữ của bài, tự giãn theo nội dung. Chạm ngoài hoặc Ctrl/Cmd+Enter để kết thúc; Esc hủy lần sửa đang mở.
 - Khi tắt hợp nhất, thêm nút ba chấm dọc ở góc trên bên phải để chuyển Đọc/Nguồn. Menu phản ánh chế độ hiện tại, hỗ trợ bàn phím và đóng khi chạm ngoài, Esc hoặc Back Android.
 - Mỗi ô theme hiển thị đúng màu nền/chữ của theme đó trên giao diện cảm ứng và chuột. Theme đang chọn chỉ có một viền liên tục, giữ dấu chọn và chỉ báo lấy nét bàn phím.

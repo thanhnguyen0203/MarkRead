@@ -1,0 +1,83 @@
+// Regression coverage for continuous unified editing and the reading toolbar.
+const {chromium}=require('playwright');
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../..');let count=0;
+function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count++;}
+(async()=>{
+ const html=fs.readFileSync(path.join(root,'web/dist/MarkRead.html'),'utf8').replace('<meta name="native-channel" content="__NATIVE_NONCE__">','');
+ const server=http.createServer((req,res)=>res.end(html));await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ const browser=await chromium.launch({executablePath:process.env.MARKREAD_CHROMIUM,headless:true});
+ const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});page.setDefaultTimeout(10000);
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
+ const frame=()=>page.frameLocator('#reader'),bar=()=>page.locator('main>header');
+ const offset=()=>page.locator('main').evaluate(x=>parseFloat(x.style.getPropertyValue('--header-offset'))||0);
+ const paragraphs=Array.from({length:65},(_,i)=>`Đoạn ${i}. Nội dung tiếng Việt và ký tự 📝 để kiểm tra vị trí sửa. Dòng văn bản tiếp theo vẫn ở nguyên trong tài liệu.`);
+ const original='# Smooth\n\n'+paragraphs.join('\n\n')+'\n';
+ try{
+  await page.goto('http://127.0.0.1:'+server.address().port);await frame().locator('h1').waitFor();
+  await page.locator('#filesInput').setInputFiles({name:'Smooth.md',mimeType:'text/markdown',buffer:Buffer.from(original)});await frame().getByText(paragraphs[0],{exact:true}).waitFor();
+  ok(await page.locator('.file-icon').evaluate(x=>getComputedStyle(x).borderWidth==='0px'),'file extension has no border');
+  await page.locator('#filename').dispatchEvent('contextmenu');
+  const neutral=await page.locator('.rename-field').evaluate(x=>({border:getComputedStyle(x).border,outline:getComputedStyle(x).outlineStyle,shadow:getComputedStyle(x).boxShadow}));
+  await page.locator('#renameInput').tap();
+  ok(await page.locator('.rename-field').evaluate((x,b)=>{const s=getComputedStyle(x);return s.border===b.border&&s.outlineStyle==='none'&&s.boxShadow==='none'},neutral),'rename focus keeps the original border without an outer ring');
+  ok(await page.locator('#renameInput').evaluate(x=>getComputedStyle(x).outlineStyle==='none'&&getComputedStyle(x).boxShadow==='none'),'rename text input adds no focus ring');
+  await page.locator('#renameCancel').tap();
+  await page.locator('#settings').tap();await page.locator('[data-section=editing]').tap();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').tap();
+  await frame().locator('.add-block').waitFor();
+  await page.evaluate(()=>{const f=document.getElementById('reader');window.readerLoads=0;f.addEventListener('load',()=>window.readerLoads++);window.readerDocument=f.contentDocument;});
+  await frame().getByText(paragraphs[18],{exact:true}).evaluate(x=>x.ownerDocument.defaultView.scrollTo({top:x.getBoundingClientRect().top+x.ownerDocument.scrollingElement.scrollTop-130,behavior:'instant'}));
+  await page.waitForTimeout(80);ok(await offset()===0,'programmatic positioning does not hide the title bar');
+  await frame().getByText(paragraphs[18],{exact:true}).tap({position:{x:90,y:15}});
+  await frame().locator('.block-source').evaluate(x=>{window.top.activeSource=x;window.top.sourceBlurs=0;x.addEventListener('blur',()=>window.top.sourceBlurs++);});
+  const edited=paragraphs[18]+' Thêm nội dung dài hơn, giữ đúng offset các đoạn bên dưới.\n';
+  await frame().locator('.block-source').fill(edited);
+  const target=frame().getByText(paragraphs[19],{exact:true}),before=await target.boundingBox();
+  await target.tap({position:{x:80,y:14}});
+  ok((await frame().locator('.block-source').inputValue()).startsWith(paragraphs[19]),'one tap switches directly to the next paragraph');
+  ok(await frame().locator('.block-source').evaluate(x=>x===window.top.activeSource&&x.ownerDocument.activeElement===x)&&await page.evaluate(()=>sourceBlurs===0),'switching paragraphs retains the same focused textarea');
+  const after=await frame().locator('.block-source').boundingBox();
+  ok(Math.abs(after.y-before.y)<2,'switching paragraphs preserves the tapped position');
+  ok(await page.evaluate(()=>readerLoads===0&&document.getElementById('reader').contentDocument===readerDocument),'editing never reloads the reader iframe');
+  ok(await page.locator('#editor').inputValue()===original.replace(paragraphs[18]+'\n',edited),'switching after a length change preserves exact surrounding source');
+  await frame().getByText(paragraphs[20],{exact:true}).tap();await frame().getByText(paragraphs[19],{exact:true}).tap();
+  ok(await page.evaluate(()=>sourceBlurs===0&&readerLoads===0),'moving the caret between unchanged paragraphs keeps focus and the reader intact');
+  // A shorter viewport models the resize caused by the Android keyboard.
+  await page.setViewportSize({width:390,height:560});await page.waitForTimeout(80);
+  await frame().locator('.block-source').fill('Đoạn bị hủy 📝\n');await frame().locator('.block-source').press('Escape');
+  ok(await page.locator('#editor').inputValue()===original.replace(paragraphs[18]+'\n',edited),'cancel after switching restores only the active block');
+  await page.setViewportSize({width:390,height:844});
+  await frame().getByText(paragraphs[20],{exact:true}).tap();await frame().locator('.block-source').fill('Đoạn 20 mới.\n\nĐoạn được tách thêm.\n');
+  await frame().getByText(paragraphs[21],{exact:true}).tap();
+  ok((await frame().locator('.block-source').inputValue()).startsWith(paragraphs[21]),'splitting a block keeps the next block editable with correct offsets');
+  await frame().locator('.block-source').press('Control+Enter');await frame().getByText('Đoạn được tách thêm.',{exact:true}).waitFor();
+  await page.evaluate(()=>document.getElementById('reader').contentWindow.scrollTo({top:1000,behavior:'instant'}));await page.waitForTimeout(100);
+  await page.mouse.move(190,400);await page.mouse.wheel(0,24);await page.waitForTimeout(120);
+  const partial=await offset(),height=await bar().evaluate(x=>x.offsetHeight);
+  ok(partial>0&&partial<height,'a short downward scroll partially hides the bar');
+  await page.mouse.wheel(0,160);await page.waitForTimeout(160);
+  ok(await offset()===height,'continued downward scrolling completely hides the bar');
+  await page.mouse.wheel(0,-20);await page.waitForTimeout(160);
+  ok(await offset()>0&&await offset()<height,'scrolling upward gradually reveals the bar');
+  await page.mouse.wheel(0,-160);await page.waitForTimeout(160);
+  ok(await offset()===0,'continued upward scrolling fully restores the bar');
+  await page.evaluate(()=>document.getElementById('reader').contentWindow.scrollTo({top:0,behavior:'instant'}));await page.waitForTimeout(100);
+  await page.mouse.wheel(0,40);await page.waitForTimeout(160);ok(await offset()===0,'the initial reading distance leaves the title bar visible');
+  await page.emulateMedia({reducedMotion:'reduce'});await page.mouse.wheel(0,400);await page.waitForTimeout(160);ok(await offset()===0,'reduced motion keeps the bar stable');
+  await page.locator('#download').tap();ok((await page.locator('#exportText').inputValue()).includes('Đoạn được tách thêm.'),'export preserves changes made across consecutive blocks');
+  await page.locator('#exportDialog .close-dialog').tap();
+  // Rendering dependencies must also survive a commit made in the live document.
+  const rich='# Rich\n\n[Jump][ref]\n\n[ref]: #anchor\n\n## Anchor\n\n$x^2$\n\n```mermaid\nflowchart TD\nA-->B\n```\n';
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.locator('#filesInput').setInputFiles({name:'Rich.md',mimeType:'text/markdown',buffer:Buffer.from(rich)});
+  await frame().locator('.diagram svg').waitFor();await frame().locator('.diagram svg').evaluate(x=>window.top.originalDiagram=x);
+  await frame().locator('h1').tap();await frame().locator('.block-source').fill('# Rich updated\n');await frame().locator('.block-source').press('Control+Enter');
+  ok(await frame().locator('.diagram svg').evaluate(x=>x===window.top.originalDiagram)&&await frame().locator('.katex').count()===1,'committing text preserves existing math and diagram nodes');
+  await frame().locator('.diagram').tap();await frame().locator('.block-source').fill('```mermaid\nflowchart TD\nA-->C\n```\n');await frame().locator('.block-source').press('Control+Enter');
+  await frame().locator('.diagram svg').waitFor();ok(await frame().locator('.diagram').textContent().then(x=>x.includes('C')),'an edited diagram renders again in the existing reader');
+  ok(await frame().locator('a[data-target="#anchor"]').count()===1&&await frame().locator('#anchor').count()===1,'reference links and heading anchors survive inline updates');
+  ok(errors.length===0,'no runtime errors: '+errors.join('; '));
+  console.log('Reading UI:',count,'checks passed');
+ }catch(e){await page.screenshot({path:path.join(root,'build/reading-failure.png')}).catch(()=>{});throw e;}
+ finally{await browser.close();server.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

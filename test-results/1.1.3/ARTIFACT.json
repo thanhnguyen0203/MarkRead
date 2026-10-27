@@ -1,9 +1,15 @@
 {
   "versionName": "1.1.3",
   "versionCode": 113,
-  "apk": "dist\\MarkRead-Android-1.1.3.apk",
-  "bytes": 7127896,
-  "sha256": "b4370fffa62a86601a5ef495bc9ad594db927ebb370bc4982c856a161641802b",
+  "revision": "reading-ui-update",
+  "verifiedOn": "2026-10-27",
+  "apk": "dist/MarkRead-Android-1.1.3.apk",
+  "bytes": 7131992,
+  "sha256": "eb69d300d2d6bf343cfde43802996982f94c9df5d4a809c27c5d4aa380023eaf",
   "signingCertificateSha256": "52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54",
-  "previousCertificateMatches": false
+  "previousCertificateMatches": false,
+  "rendererSha256": "40bac2f7d5cb8f7755044a4ca27e79fda620507121867b561c85edc1b4e748ac",
+  "checksPassed": 266,
+  "verificationSummary": "test-results/1.1.3/READING_UPDATE_RESULTS.md",
+  "androidDeviceOrEmulatorTested": false
 }
