@@ -1,0 +1,13 @@
+/* CSS cho vùng đọc của MarkRead. Không tải bất kỳ tài nguyên bên ngoài. */
+#paper {
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+h1 { letter-spacing: -0.035em; }
+table { font-size: .88em; }
+blockquote { border-radius: 6px; }
+pre { line-height: 1.75; }
+@media (min-width: 1000px) {
+  #paper { padding-left: 48px; padding-right: 48px; }
+}

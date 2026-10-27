@@ -1,0 +1,15 @@
+Upgrade install 1.1.0 -> 1.1.1: PASS
+INSTRUMENTATION_STATUS: test=production manifest has zero requested permissions
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: test=production APK is not debuggable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: test=Android backup disabled
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: test=WebView created
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: test=file/content and network access disabled in WebView
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=FAIL after 5 checks: java.lang.Exception: JavaScript callback timed out
+
+INSTRUMENTATION_CODE: 0
+

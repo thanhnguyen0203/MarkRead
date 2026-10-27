@@ -1,0 +1,28 @@
+PASS single-row toolbar fits 320×640
+PASS single-row toolbar fits 360×800
+PASS single-row toolbar fits 390×844
+PASS single-row toolbar fits 412×915
+PASS single-row toolbar fits 844×390
+PASS single-row toolbar fits 1280×800
+PASS one Mở entry point
+PASS Mở menu offers both folder and file
+PASS Escape dismisses Mở menu
+PASS miniature theme swatches removed
+PASS theme tiles show their own palette
+PASS light theme tile has actual white background
+PASS settings height shrinks for short content
+PASS settings content stays within viewport: appearance
+PASS settings content stays within viewport: typography
+PASS settings content stays within viewport: editing
+PASS settings content stays within viewport: css
+PASS settings content stays within viewport: general
+PASS all boolean settings use switches
+PASS setting descriptions left, switches right
+PASS switch responds to pointer
+PASS switch responds to keyboard
+PASS nested selected file has rounded highlight and no square border
+PASS movement cancels long-press rename
+PASS browser fallback preserves Markdown extension
+PASS both unwanted descriptions removed
+PASS no runtime errors
+Revision UI: 27 checks passed

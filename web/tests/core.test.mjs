@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {localTarget,cleanCSS,decodeText,imageType,diagramAllowed,escapeHTML,slugify} from '../src/core.js';
+for(const raw of ['https://evil.test/a','http://a','//evil.test/a','file:///etc/passwd','data:image/png,a','javascript:alert(1)','content://a','/etc/a','../x.md','%2e%2e/x.md','%2fetc/passwd','%5cetc/x','%00x','%ZZ','ftp:a','\\a'])test(`reject path ${raw}`,()=>assert.equal(localTarget(raw,''),null));
+test('relative links stay inside selected root',()=>{assert.deepEqual(localTarget('../ảnh/a%20b.png','chuong/abc.md'),{path:'ảnh/a b.png',fragment:''});assert.deepEqual(localTarget('./b.md#Mục%202','docs/a.md'),{path:'docs/b.md',fragment:'Mục 2'});assert.equal(localTarget('../../secret.md','docs/a.md'),null);assert.deepEqual(localTarget('#muc','docs/a.md'),{path:'docs/a.md',fragment:'muc'});});
+for(const css of ['@import "https://evil.test/a.css";','p{background:url(https://evil.test)}','p{background:u\\72l(https://evil.test)}','p{background:image-set("https://evil.test/a" 1x)}','@font-face{font-family:X;src:url(a)}','p{behavior:expression(1)}','p{--leak:url(x)}','p{background:;broken;}', '@keyframes leak{to{opacity:0}}'])test(`reject unsafe CSS ${css}`,()=>assert.throws(()=>cleanCSS(css)));
+test('valid custom CSS and nested media',()=>{assert.match(cleanCSS('/* ok */ #paper { max-width:100%; color:#abc } @media(max-width:600px){h1{font-size:2em}}'),/@media/);});
+test('CSS size limit',()=>assert.throws(()=>cleanCSS(' '.repeat(100001))));
+test('UTF-8 Vietnamese and CRLF',()=>assert.equal(decodeText(new TextEncoder().encode('Xác suất\r\nCông thức')),'Xác suất\nCông thức'));
+test('UTF-16 BOM',()=>assert.equal(decodeText(Uint8Array.from([255,254,65,0,66,0])),'AB'));
+test('reject invalid UTF-8 and binary',()=>{assert.throws(()=>decodeText(Uint8Array.from([255,255])));assert.throws(()=>decodeText(Uint8Array.from([0,65])));});
+test('raster magic, fake SVG rejected',()=>{assert.equal(imageType(new TextEncoder().encode('<svg onload="alert(1)"></svg>')),null);assert.equal(imageType(Uint8Array.from([137,80,78,71,13,10,26,10,0,0,0,0])),'image/png');assert.equal(imageType(Uint8Array.from([255,216,255,0,0,0,0,0,0,0,0,0])),'image/jpeg');});
+test('diagram guard forbids directives and external interaction',()=>{assert.equal(diagramAllowed('flowchart TD\nA-->B'),true);for(const s of ['%%{init:{"securityLevel":"loose"}}%%\ngraph TD\nA-->B','graph TD\nclick A "https://evil.test"','graph TD\nstyle A fill:red','---\nconfig: {}\n---\ngraph TD\nA-->B','notdiagram','graph TD\n'+('a'.repeat(13000))])assert.equal(diagramAllowed(s),false);});
+test('escape untrusted labels',()=>assert.equal(escapeHTML('<img x="&">'), '&lt;img x=&quot;&amp;&quot;&gt;'));
+test('Vietnamese heading anchors',()=>assert.equal(slugify('Định lý xác suất — 2'),'dinh-ly-xac-suat-2'));

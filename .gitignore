@@ -1,0 +1,48 @@
+.gradle/
+.idea/
+local.properties
+build/
+dist/
+private/
+web/node_modules/
+web/.openai/
+web/dist/
+toolchain/*
+!toolchain/fetch_tools.py
+!toolchain/fetch_emulator.py
+*.iml
+
+# Android / Gradle
+.kotlin/
+.idea/
+*.apk
+*.aab
+*.log
+
+# Android signing
+*.jks
+*.keystore
+
+# Local credentials
+.env
+.env.*
+!.env.example
+google-services.json
+
+# Generated files
+**/.cxx/
+**/.externalNativeBuild/
+*.hprof
+
+# Windows / macOS
+Thumbs.db
+.DS_Store
+
+# Chỉ bật nếu chứa kết quả kiểm thử tự động
+# test-results/
+
+# Chỉ bật nếu chứa SDK/JDK tải về hoặc file tạo tự động
+# toolchain/
+
+# Chỉ bật nếu chứa dữ liệu cá nhân hoặc lịch sử AI
+# .agents/

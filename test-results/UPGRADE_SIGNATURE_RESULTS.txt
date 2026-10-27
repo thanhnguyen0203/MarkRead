@@ -1,0 +1,2 @@
+PASS 1.1.0 and 1.1.1 use the same signing certificate.
+Certificate SHA-256: 464dc397fa6db769ef2995696854609d7cb94bdd83edc4088aa8933d0254fd3b

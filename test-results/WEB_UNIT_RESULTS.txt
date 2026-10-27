@@ -1,0 +1,89 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> markread-local@1.1.1 test
+> node --test tests/*.test.mjs
+
+✔ reject path https://evil.test/a (5.054452ms)
+✔ reject path http://a (0.328983ms)
+✔ reject path //evil.test/a (0.14672ms)
+✔ reject path file:///etc/passwd (0.108302ms)
+✔ reject path data:image/png,a (0.122865ms)
+✔ reject path javascript:alert(1) (0.178668ms)
+✔ reject path content://a (0.090696ms)
+✔ reject path /etc/a (0.080691ms)
+✔ reject path ../x.md (0.161743ms)
+✔ reject path %2e%2e/x.md (0.204096ms)
+✔ reject path %2fetc/passwd (0.110556ms)
+✔ reject path %5cetc/x (0.06646ms)
+✔ reject path %00x (0.047782ms)
+✔ reject path %ZZ (0.066981ms)
+✔ reject path ftp:a (0.049074ms)
+✔ reject path \a (0.035903ms)
+✔ relative links stay inside selected root (1.178648ms)
+✔ reject unsafe CSS @import "https://evil.test/a.css"; (2.028693ms)
+✔ reject unsafe CSS p{background:url(https://evil.test)} (1.585848ms)
+✔ reject unsafe CSS p{background:u\72l(https://evil.test)} (2.036094ms)
+✔ reject unsafe CSS p{background:image-set("https://evil.test/a" 1x)} (0.467231ms)
+✔ reject unsafe CSS @font-face{font-family:X;src:url(a)} (0.27336ms)
+✔ reject unsafe CSS p{behavior:expression(1)} (0.239569ms)
+✔ reject unsafe CSS p{--leak:url(x)} (0.391066ms)
+✔ reject unsafe CSS p{background:;broken;} (0.515714ms)
+✔ reject unsafe CSS @keyframes leak{to{opacity:0}} (0.318908ms)
+✔ valid custom CSS and nested media (1.855884ms)
+✔ CSS size limit (0.106129ms)
+✔ UTF-8 Vietnamese and CRLF (0.255003ms)
+✔ UTF-16 BOM (0.279028ms)
+✔ reject invalid UTF-8 and binary (0.367782ms)
+✔ raster magic, fake SVG rejected (0.220781ms)
+✔ diagram guard forbids directives and external interaction (0.648423ms)
+✔ escape untrusted labels (0.189835ms)
+✔ Vietnamese heading anchors (0.955232ms)
+✔ request/response transport preserves data (8.83675ms)
+✔ native errors propagate without being treated as success (1.627296ms)
+✔ native file reads bounded chunks and reassembles UTF-8 exactly (42.364398ms)
+✔ single file does not invent relative directory access (0.457777ms)
+✔ cancelled picker preserves existing scope (0.423095ms)
+✔ snapshot lists scoped IDs through pagination (1.819499ms)
+✔ export streams exact UTF-8 bytes in bounded messages (26.682029ms)
+✔ empty selected folder is a new scope, distinct from cancelled picker (0.371708ms)
+✔ natural sorting includes all subfolders in displayed tree order (4.260781ms)
+✔ descending reverses sibling names using numeric comparison (0.284997ms)
+✔ navigation has boundaries and no implicit wrapping (0.28033ms)
+✔ block edit preserves unedited bytes: # Tiếng Việt
+
+Đoạn * (31.584336ms)
+✔ block edit preserves unedited bytes: - A
+  - B
+
+- C
+
+Kết. (9.106069ms)
+✔ block edit preserves unedited bytes: ```python
+print("x") (1.119419ms)
+✔ block edit preserves unedited bytes: A | B
+-- | --
+1 | 2
+ (1.236325ms)
+✔ block edit preserves unedited bytes: <div>
+x
+</div>
+
+> qu (3.269835ms)
+✔ block edit preserves unedited bytes: 
+
+	code
+
+Đoạn cuối (0.471026ms)
+✔ offset fallback cannot corrupt input (0.376825ms)
+✔ editing rejects invalid offsets and enforces UTF-8 size (0.489985ms)
+✔ all 12 themes supply valid complete palettes (0.610115ms)
+✔ inline ranges keep blank block separators unchanged (0.384626ms)
+✔ rename keeps the directory and exact Markdown extension (1.365989ms)
+ℹ tests 57
+ℹ suites 0
+ℹ pass 57
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 257.026155

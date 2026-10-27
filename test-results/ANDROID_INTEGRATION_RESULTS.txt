@@ -1,0 +1,11 @@
+Upgrade install 1.1.0 -> 1.1.1: PASS
+INSTRUMENTATION_STATUS: test=production manifest has zero requested permissions
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: test=production APK is not debuggable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: test=Android backup disabled
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=FAIL after 3 checks: java.lang.SecurityException: Permission Denial: writing com.android.externalstorage.ExternalStorageProvider uri content://com.android.externalstorage.documents/tree/primary%3ADownload%2FMarkReadStoreProbe/document/primary%3ADownload%2FMarkReadStoreProbe%2FNested%2FBefore.md from pid=2044, uid=10150 requires android.permission.MANAGE_DOCUMENTS, or grantUriPermission()
+
+INSTRUMENTATION_CODE: 0
+

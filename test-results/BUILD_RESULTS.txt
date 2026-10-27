@@ -1,0 +1,2 @@
+{"file":"dist/MarkRead.html","bytes":13180845,"sha256":"4a284dbcba2cb636ad1d5d7946c34029df7838556ff9e1ac2f74d451089c6261"}
+{"apk": "/workspace/scratch/3afbed5635f5/source/MarkRead_Source_1.1.1/dist/MarkRead-Android-1.1.1.apk", "bytes": 7123800, "sha256": "5749c6e6b6109874fcd0c047bf3ccbfd9c59378ef3b954e3947159e7c5c9db75"}
