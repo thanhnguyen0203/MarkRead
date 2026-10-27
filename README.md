@@ -1,6 +1,6 @@
-# MarkRead Android 1.1.2
+# MarkRead Android 1.1.3
 
-Offline Android Markdown reader and block editor. Package `vn.markread.local`, versionCode 112, min SDK 26, target/compile SDK 35. No runtime `uses-permission` declarations, no JavaScriptInterface, no analytics, no remote font loading.
+Offline Android Markdown reader and block editor. Package `vn.markread.local`, versionCode 113, min SDK 26, target/compile SDK 35. No runtime `uses-permission` declarations, no JavaScriptInterface, no analytics, no remote font loading.
 
 See `HUONG_DAN_CAI_DAT.md` for Vietnamese installation, feature details, privacy scope and limits. See `CHANGELOG.md` and the validation report for this release.
 
@@ -57,6 +57,16 @@ Original code: MIT. Bundled packages and Merriweather retain their own notices u
 
 Search matches UTF-16 source offsets. Replacement edits only the current source snapshot and preserves per-document drafts. A bundled Blob worker evaluates JavaScript Unicode/multiline regexes with a 2.5-second deadline, bounded matches and UTF-8 output size. It has no network access; the parent allows `worker-src blob:` solely for this bundled worker, while the reader retains `worker-src none` and no scripts. Results from stale source/query/scope versions are ignored.
 
-Font choices are accessible themed listbox buttons. The read/source mode group is in editing settings. Hover feedback is gated by fine-pointer/hover media queries; Android tap highlight is transparent and keyboard focus remains visible.
+Font choices are accessible themed listbox buttons. The read/source mode group is in editing settings; version 1.1.3 also offers a vertical overflow menu when unified editing is disabled. Hover feedback is gated by fine-pointer/hover media queries; Android tap highlight is transparent and keyboard focus remains visible.
 
 The independent CSS picker uses ACTION_OPEN_DOCUMENT and a bounded local-only read without replacing the document snapshot or releasing its persisted tree grant. Rename accepts full validated basenames and retains the entry's original bounded read capability even if its extension changes. TXT is scanned as a text document; other renamed extensions remain readable within the current session but are not automatically scanned after restart.
+
+## UI revision and packaging in 1.1.3
+
+Unified block editing now uses a frameless, auto-sized source field with the article font and colors. Tap outside or press Ctrl/Cmd+Enter to finish; Escape cancels the active block edit. The top-right vertical overflow menu switches Read/Source when unified editing is disabled. All twelve theme choices preview their actual background/text colors, with one continuous selection border.
+
+On Windows, the Python builder accepts `aapt2.exe`/`zipalign.exe` and API 35 platform folder variants. The renderer builder resolves its directory from a file URL on either Windows or Linux. With Java 17 on PATH and the SDK tools available under `toolchain/`, run `python build_apk.py`, then `python tests/validate_apk.py`. The output is `dist/MarkRead-Android-1.1.3.apk`.
+
+This checkout has no original private signing key. The local build creates and reuses `private/markread-release.p12` and its password file. Keep that directory private and backed up for future updates. The public `APK_SIGNATURE.txt` is certificate information only. An APK signed with this new key cannot replace an installed copy signed with the old key.
+
+Current release evidence is in `test-results/1.1.3/`. Earlier root-level logs are historical evidence, not results of this build; the prior report is archived in `test-results/history/`.

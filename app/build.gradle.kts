@@ -6,8 +6,8 @@ android {
         applicationId = "vn.markread.local"
         minSdk = 26
         targetSdk = 35
-        versionCode = 112
-        versionName = "1.1.2"
+        versionCode = 113
+        versionName = "1.1.3"
         testInstrumentationRunner = "vn.markread.local.tests.ProbeInstrumentation"
     }
     val key = rootProject.file("private/markread-release.p12")

@@ -1,8 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import crypto from 'node:crypto';
 import { build } from 'esbuild';
-const cwd=path.dirname(new URL(import.meta.url).pathname);
+const cwd=path.dirname(fileURLToPath(import.meta.url));
 const fontCSS=['Merriweather.woff2','Merriweather-Italic.woff2'].map((name,i)=>`@font-face{font-family:Merriweather;src:url(data:font/woff2;base64,${fs.readFileSync(path.join(cwd,'fonts',name)).toString('base64')}) format('woff2');font-weight:300 900;font-style:${i?'italic':'normal'};font-display:swap;}`).join('');
 let mathCSS=fs.readFileSync(path.join(cwd,'node_modules/katex/dist/katex.min.css'),'utf8');
 // WOFF2 is supported by the target modern browsers; remove duplicate fallback payloads.

@@ -1,0 +1,11 @@
+Release 1.1.3 signing status
+APK signature verification: PASS (v2 and v3).
+ZIP alignment verification: PASS (build command returned zero).
+Previous public certificate SHA-256: 464dc397fa6db769ef2995696854609d7cb94bdd83edc4088aa8933d0254fd3b
+Current certificate SHA-256: 52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54
+Certificates match: NO.
+Original private key was not present in the checkout; a new local key was generated.
+The public root APK_SIGNATURE.txt was preserved unchanged.
+In-place upgrade from an installation signed by the previous certificate: NOT COMPATIBLE.
+Android installation/device/emulator test of this release: NOT RUN.
+Keep private/ out of public source and back it up securely for future updates.

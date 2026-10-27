@@ -28,9 +28,9 @@ try:
  if previous.exists():
   adb(['install','-r',str(previous)],check=True,timeout=120)
   upgrade='PASS: baseline installed before upgrade'
- for apk in [ROOT/'dist/MarkRead-Android-1.1.2.apk',ROOT/'build/instrumentation/tests.apk']:adb(['install','-r',str(apk)],check=True,timeout=120)
+ for apk in [ROOT/'dist/MarkRead-Android-1.1.3.apk',ROOT/'build/instrumentation/tests.apk']:adb(['install','-r',str(apk)],check=True,timeout=120)
  probe=adb(['shell','am','instrument','-w','-r','vn.markread.local.tests/vn.markread.local.tests.ProbeInstrumentation'],capture_output=True,text=True,timeout=900)
- (ROOT/'dist/ANDROID_INTEGRATION_RESULTS.txt').write_text('Upgrade install 1.1.1 -> 1.1.2: '+upgrade+'\n'+probe.stdout+'\n'+probe.stderr)
+ (ROOT/'dist/ANDROID_INTEGRATION_RESULTS.txt').write_text('Upgrade install 1.1.1 -> 1.1.3: '+upgrade+'\n'+probe.stdout+'\n'+probe.stderr)
  print(probe.stdout,flush=True)
  adb(['logcat','-d','-v','brief'],stdout=(TC/'logcat.txt').open('w'))
  if 'checks passed' not in probe.stdout:raise RuntimeError('Android integration tests failed; see report')

@@ -1,0 +1,9 @@
+{
+  "versionName": "1.1.3",
+  "versionCode": 113,
+  "apk": "dist\\MarkRead-Android-1.1.3.apk",
+  "bytes": 7127896,
+  "sha256": "b4370fffa62a86601a5ef495bc9ad594db927ebb370bc4982c856a161641802b",
+  "signingCertificateSha256": "52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54",
+  "previousCertificateMatches": false
+}

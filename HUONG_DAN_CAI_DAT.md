@@ -1,27 +1,20 @@
-# MarkRead Android 1.1.2
+# MarkRead Android 1.1.3
 
 Ứng dụng đọc và chỉnh sửa tài liệu Markdown ngoại tuyến. Hỗ trợ Android 8 trở lên; cần Android System WebView 100 trở lên.
 
-## Cài bản cập nhật
+## Cài đặt APK 1.1.3
 
-1. Tải `MarkRead-Android-1.1.2.apk` về điện thoại.
-2. Mở APK bằng trình quản lý tệp và chọn **Cập nhật**. Nếu Android yêu cầu, cho phép ứng dụng đang mở APK cài ứng dụng.
-3. Mở MarkRead. Quyền thư mục và cài đặt đã lưu được giữ khi Android cho phép.
+1. Tải `dist/MarkRead-Android-1.1.3.apk` về điện thoại.
+2. Mở APK bằng trình quản lý tệp. Nếu Android yêu cầu, cho phép ứng dụng đang mở APK cài ứng dụng.
+3. Mở MarkRead và cấp lại quyền thư mục bằng bộ chọn hệ thống nếu cần.
 
-Bản này dùng package `vn.markread.local`, versionCode 112 và cùng khóa ký với bản 1.1.1. Không cần gỡ bản cũ. Hãy xuất bản sửa đang có trước khi cập nhật: nội dung chưa xuất chỉ nằm trong bộ nhớ của phiên đang mở.
+Bản này dùng package `vn.markread.local`, versionCode 113. Checkout không có khóa ký riêng của bản cũ; APK mới dùng khóa cục bộ trong `private/`. File `APK_SIGNATURE.txt` chỉ chứa thông tin chữ ký, không thể dùng để ký APK. Nếu ứng dụng đang cài dùng khóa khác, Android sẽ từ chối cài đè. Hãy xuất mọi bản sửa cần giữ trước khi thay bản cài; gỡ ứng dụng sẽ xóa cài đặt và quyền thư mục đã nhớ. Muốn cài đè bằng chữ ký cũ cần khôi phục đúng khóa riêng rồi build lại.
 
-## Tám thay đổi
+## Ba thay đổi trong 1.1.3
 
-| Mục | Cách hoạt động trong 1.1.2 |
-| --- | --- |
-| Bỏ “⋯” và tập trung | Thanh trên chỉ còn công cụ chuyển tệp, tìm/thay thế, lưu và cài đặt. Chọn chế độ Đọc/Nguồn trong **Cài đặt → Đọc & chỉnh sửa**. |
-| Tùy chọn theo theme | Bộ chọn font, thanh kéo, các nút và lựa chọn chế độ dùng màu theme hiện tại. Bộ chọn font hỗ trợ cảm ứng và bàn phím. |
-| Phản hồi khi chạm | Bỏ nền xanh mặc định của WebView. Có hiệu ứng nhấn nhẹ; viền lấy nét bằng bàn phím vẫn được giữ để dễ thao tác. |
-| Nút Mở | Biểu tượng SVG đồng bộ, menu có Mở thư mục/Mở tệp. Bỏ dấu × cạnh thương hiệu; chạm vùng ngoài hoặc dùng Back để đóng thanh bên. |
-| Đổi phần mở rộng | Ô đổi tên chứa toàn bộ tên và phần mở rộng; bỏ mô tả dưới ô. |
-| Nhả màu nút | Hiệu ứng rê chuột chỉ áp dụng cho chuột, tránh nền nút bị giữ sau khi chạm trên điện thoại. |
-| Tìm và thay thế | Thay một kết quả hoặc tất cả kết quả trong tài liệu hiện tại; hỗ trợ hoa/thường và regex. |
-| Nhập CSS độc lập | Mở bộ chọn tệp Android để chọn `.css` ở vị trí cục bộ khác, giữ nguyên bộ tài liệu đang mở. |
+- **Sửa trực tiếp:** chế độ hợp nhất không còn khung và thanh MARKDOWN; văn bản dùng font/màu của bài và vùng sửa tự giãn.
+- **Menu chế độ:** khi tắt hợp nhất, nút **⋮** ở góc trên bên phải cho phép chọn **Đọc** hoặc **Nguồn**. Nhóm chọn trong cài đặt vẫn có.
+- **Preview theme:** 12 ô theme dùng đúng nền và chữ của mỗi theme; ô được chọn chỉ còn một viền và dấu chọn.
 
 ## Mở tài liệu, thư mục con và chuyển bài
 
@@ -35,9 +28,9 @@ Bản sửa của từng tệp được giữ khi chuyển bài trong cùng phi�
 
 ## Đọc và chỉnh sửa
 
-Mở **Cài đặt → Đọc & chỉnh sửa** và chọn **Đọc** hoặc **Nguồn**. Chế độ **Chia đôi** có trên màn hình lớn. Trên điện thoại, đóng cài đặt sau khi chọn để xem chế độ vừa chọn.
+Khi tắt hợp nhất, bấm **⋮** ở góc trên bên phải để chọn **Đọc** hoặc **Nguồn**. Bạn cũng có thể chọn trong **Cài đặt → Đọc & chỉnh sửa**. Chế độ **Chia đôi** có trên màn hình lớn. Trên điện thoại, đóng cài đặt sau khi chọn để xem chế độ vừa chọn.
 
-Bật **Hợp nhất Đọc và Nguồn** để chạm vào từng đoạn, tiêu đề, bảng hoặc khối mã và sửa Markdown của khối đó. Bấm **Xong** hoặc chạm ngoài để trở lại bản đọc; **Hủy** phục hồi riêng khối đang sửa. Các liên kết vẫn hoạt động như bình thường. Khi hợp nhất đang bật, nhóm chọn chế độ riêng được ẩn.
+Bật **Hợp nhất Đọc và Nguồn** để chạm vào từng đoạn, tiêu đề, bảng hoặc khối mã và sửa Markdown của khối đó. Vùng sửa xuất hiện trực tiếp trong bài, không có khung hoặc thanh công cụ riêng. Chạm ngoài hoặc bấm **Ctrl/Cmd+Enter** để trở lại bản đọc; **Esc** phục hồi riêng khối đang sửa. Các liên kết vẫn hoạt động như bình thường. Khi hợp nhất đang bật, nhóm chọn chế độ riêng và nút ⋮ được ẩn.
 
 Bấm biểu tượng lưu trên thanh trên để chọn nơi xuất bản sao bằng hộp lưu Android. App không tự ghi nội dung bản sửa vào tệp gốc. Chỉ đóng app sau khi đã xuất những bản sửa cần giữ.
 
