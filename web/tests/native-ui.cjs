@@ -18,7 +18,8 @@ const root=path.resolve(__dirname,'../..');let count=0;function ok(x,name){asser
     case 'index':result={entries:docs.slice(q.args.offset,q.args.offset+q.args.limit).map(({id,name,path,size})=>({id,name,path,size}))};break;
     case 'read':{const d=docs.find(d=>d.id===q.args.fileId);if(!d)throw Error('unscoped read');const bytes=d.bytes.slice(q.args.offset,q.args.offset+q.args.length);result={data:btoa(String.fromCharCode(...bytes)),eof:q.args.offset+bytes.length>=d.bytes.length};break;}
     case 'rename':{const d=docs.find(d=>d.id===q.args.fileId);if(!d)throw Error('unscoped rename');if(q.args.name==='Denied.md'){channel.port1.postMessage(JSON.stringify({id:q.id,error:'Đổi tên cần quyền ghi. Chọn lại thư mục.'}));return;}d.path=d.path.slice(0,d.path.lastIndexOf('/')+1)+q.args.name;d.name=q.args.name;result={id:d.id,name:d.name,path:d.path,size:d.size};break;}
-    case 'theme':case 'forget':result=true;break;
+    case 'loadPreferences':result=null;break;
+    case 'savePreferences':case 'rememberDocument':case 'theme':case 'forget':result=true;break;
     case 'chooseCss':if(window.__cssFailure){channel.port1.postMessage(JSON.stringify({id:q.id,error:'Không đọc được CSS.'}));return;}result=window.__cssCancelled?{cancelled:true}:{css:'h1 { color: #12ab34; }',name:'External.css'};break;
     case 'beginExport':chunks=[];result={token:'export'};break;
     case 'appendExport':chunks.push(atob(q.args.data));result=true;break;

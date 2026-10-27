@@ -43,6 +43,9 @@ public final class DocumentStore {
     public synchronized List<Entry> cssEntries(){List<Entry> result=new ArrayList<>();for(Entry e:active.entries.values())if(e.name.toLowerCase(java.util.Locale.ROOT).endsWith(".css"))result.add(e);return result;}
     public synchronized Entry find(String id) throws IOException {Entry e=active.entries.get(id);if(e==null)throw new IOException("Tệp chưa được cấp quyền hoặc bộ tệp đã thay đổi.");return e;}
     public synchronized JSONObject current() throws Exception{return active.json();}
+    public synchronized boolean isFolder(){return active.folder;}
+    public synchronized List<Uri> selectedUris(){List<Uri> result=new ArrayList<>();for(Entry e:active.entries.values())result.add(e.uri);return result;}
+    public synchronized String pathForUri(String uri){for(Entry e:active.entries.values())if(e.uri.toString().equals(uri))return e.path;return "";}
     public synchronized JSONObject page(String generation,int offset,int limit) throws Exception {
         if(!active.generation.equals(generation)||offset<0||limit<1||limit>32)throw new IOException("Bộ tệp đã thay đổi. Hãy mở lại thư mục.");
         JSONArray a=new JSONArray();int index=0;for(Entry e:active.entries.values()){if(index>=offset&&index<offset+limit)a.put(e.json());index++;}

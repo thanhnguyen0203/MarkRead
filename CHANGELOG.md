@@ -1,3 +1,11 @@
+# MarkRead 1.1.5 — 27/10/2026
+
+- Luôn tự động lưu theme, font, cỡ chữ, bố cục, tùy chọn đọc/chỉnh sửa, thứ tự tệp và CSS; bỏ công tắc nhớ cài đặt mặc định tắt. Android lưu bản bền vững trong SharedPreferences, tiếp nhận cài đặt WebView đã lưu từ bản trước.
+- Trước 10 phút rời app, khôi phục thư mục/bộ tệp và đúng tài liệu gần nhất; từ đúng 10 phút đóng các tài liệu cũ. Giữ thư mục và danh sách tệp, gỡ bộ tệp mở riêng khi hết phiên. Cài đặt không hết hạn.
+- Áp dụng cùng quy tắc khi app còn sống trong nền; không tính thời gian ở bộ chọn mở/lưu tệp. File mở riêng nhận quyền bền vững theo đúng cờ hệ thống trả về.
+- Chỉ lưu metadata và URI được cấp quyền; bản sửa chưa xuất vẫn cần lưu thủ công. Nút × gỡ phiên và quyền mà không xóa cài đặt.
+- VersionName 1.1.5, versionCode 115; dùng lại khóa ký cục bộ hiện có. Kiểm chứng và giới hạn môi trường nằm trong `test-results/1.1.5/`.
+
 # MarkRead 1.1.4 — 27/10/2026
 
 - Bỏ nút “Thêm đoạn” ở cuối nội dung tài liệu.

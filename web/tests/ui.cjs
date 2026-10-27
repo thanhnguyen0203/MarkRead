@@ -1,7 +1,7 @@
 // End-to-end UI checks; requires Playwright and a Chromium executable.
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../..'),qa=path.join(root,'qa');
+const root=path.resolve(__dirname,'../..'),qa=path.join(root,'test-results/1.1.5/browser');
 const fixture=path.join(qa,'fixtures','Docs');fs.mkdirSync(fixture,{recursive:true});
 const sample='# A2\n\nĐoạn **đậm**.\n\n## Giữ nguyên\n\n| A | B |\n| --- | --- |\n| 1 | 2 |\n\n```python\nprint(2)\n```\n\n$x^2+1$\n';
 for(const [name,text] of [['Chương 2/A 2.md',sample],['Chương 2/A 10.md','# A10\n'],['Chương 10/Sâu/Z.md','# Z\n'],['Bài 1.md','# B1\n'],['Bài 2.md','# B2\n']]){const p=path.join(fixture,name);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,text);}
@@ -12,6 +12,7 @@ let count=0;function ok(value,name){assert.ok(value,name);console.log('PASS '+na
  const browser=await chromium.launch({executablePath:process.env.MARKREAD_CHROMIUM,headless:true,args:['--no-sandbox']});
  const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,isMobile:true,hasTouch:true});const page=await context.newPage();page.setDefaultTimeout(15000);page.setDefaultNavigationTimeout(30000);
  const errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith('http://127.0.0.1'))requests.push(r.url());});page.on('dialog',d=>d.accept());
+ await page.route('http://127.0.0.1:*/**',r=>r.fulfill({contentType:'text/html; charset=utf-8',body:html}));
  const selectMode=async id=>{await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode='+id.replace('Mode','')+']').click();};
  const selectOpen=async id=>{await page.locator('#openMenu').click();await page.locator('#'+id).click();};
  const frame=()=>page.frameLocator('#reader');const eq=async(sel,text)=>{await page.waitForFunction(([s,t])=>document.querySelector(s)?.textContent===t,[sel,text]);};
@@ -58,7 +59,7 @@ let count=0;function ok(value,name){assert.ok(value,name);console.log('PASS '+na
   await page.locator('#download').click();ok((await page.locator('#exportText').inputValue()).includes('Tiêu đề mới'),'export includes unified edits');await page.locator('#exportDialog .close-dialog').click();
   await page.locator('#settings').click();await page.locator('#unifiedEnabled').uncheck();await page.locator('[data-section=css]').click();await page.locator('#customCSS').fill('h1 { color: #ff0000; }');await page.locator('#applyCSS').click();await page.waitForFunction(()=>{const d=document.getElementById('reader').contentDocument;return d?.querySelector('h1')&&getComputedStyle(d.querySelector('h1')).color==='rgb(255, 0, 0)'});ok(true,'custom CSS applies');
   await page.locator('#customCSS').fill('p{background:url(https://evil.invalid/x)}');await page.locator('#applyCSS').click();ok(!(await page.locator('#cssFeedback').textContent()).includes('Đã áp dụng'),'unsafe CSS rejected');
-  await page.locator('[data-section=general]').click();await page.locator('#remember').check();await page.locator('#settingsDialog .close-dialog').click();await page.locator('#settings').click();await page.locator('[data-section=editing]').click();ok(await page.locator('.reading-modes,#readMode,#editMode,#splitMode').count()===0,'duplicate mode controls removed from settings');await page.locator('#settingsDialog .close-dialog').click();
+  await page.locator('[data-section=general]').click();ok(await page.evaluate(()=>!!localStorage.getItem('markread-appearance-v1')),'settings save automatically');await page.locator('#settingsDialog .close-dialog').click();await page.locator('#settings').click();await page.locator('[data-section=editing]').click();ok(await page.locator('.reading-modes,#readMode,#editMode,#splitMode').count()===0,'duplicate mode controls removed from settings');await page.locator('#settingsDialog .close-dialog').click();
   await selectMode('editMode');
   const hostile='# Safe\n\n<script>window.PWNED=true</script>\n\n<div data-start="0" data-end="999999" onclick="alert(1)">Plain</div>\n\n[Next][ref]\n\n[ref]: ../Bài%201.md\n\n$x^2$\n\n```mermaid\nflowchart TD\nA-->B\n```\n';
   await page.locator('#editor').fill(hostile);await selectMode('readMode');await page.locator('#settings').click();await page.locator('[data-section=editing]').click();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').click();

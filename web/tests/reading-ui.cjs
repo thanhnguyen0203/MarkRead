@@ -9,6 +9,7 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
  const browser=await chromium.launch({executablePath:process.env.MARKREAD_CHROMIUM,headless:true});
  const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});page.setDefaultTimeout(10000);
  const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
+ await page.route('http://127.0.0.1:*/**',r=>r.fulfill({contentType:'text/html; charset=utf-8',body:html}));
  const frame=()=>page.frameLocator('#reader'),bar=()=>page.locator('main>header');
  const offset=()=>page.locator('main').evaluate(x=>parseFloat(x.style.getPropertyValue('--header-offset'))||0);
  const paragraphs=Array.from({length:65},(_,i)=>`Đoạn ${i}. Nội dung tiếng Việt và ký tự 📝 để kiểm tra vị trí sửa. Dòng văn bản tiếp theo vẫn ở nguyên trong tài liệu.`);
@@ -62,7 +63,7 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   await frame().locator('.block-source').press('Control+Enter');await frame().getByText('Đoạn được tách thêm.',{exact:true}).waitFor();
   await page.evaluate(()=>document.getElementById('reader').contentWindow.scrollTo({top:1000,behavior:'instant'}));await page.waitForTimeout(100);
   ok(await progress.evaluate(x=>{const s=document.getElementById('reader').contentDocument.scrollingElement;return Math.abs(Number(x.getAttribute('aria-valuenow'))-100*s.scrollTop/(s.scrollHeight-s.clientHeight))<=.5}),'progress tracks actual document position after programmatic scrolling');
-  await page.screenshot({path:path.join(root,'test-results/1.1.4/reading-progress-visible.png')});
+  await page.screenshot({path:path.join(root,'test-results/1.1.5/reading-progress-visible.png')});
   await page.mouse.move(190,400);await page.mouse.wheel(0,24);await page.waitForTimeout(120);
   const partial=await offset(),height=await bar().evaluate(x=>x.offsetHeight);
   ok(partial>0&&partial<height,'a short downward scroll partially hides the bar');
@@ -70,7 +71,7 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   await page.mouse.wheel(0,160);await page.waitForTimeout(160);
   ok(await offset()===height,'continued downward scrolling completely hides the bar');
   ok(Math.abs((await progress.boundingBox()).y)<1,'progress stays at the top when navigation is fully hidden');
-  await page.screenshot({path:path.join(root,'test-results/1.1.4/reading-progress-hidden.png')});
+  await page.screenshot({path:path.join(root,'test-results/1.1.5/reading-progress-hidden.png')});
   await page.mouse.wheel(0,-20);await page.waitForTimeout(160);
   ok(await offset()>0&&await offset()<height,'scrolling upward gradually reveals the bar');
   await page.mouse.wheel(0,-160);await page.waitForTimeout(160);
@@ -104,16 +105,19 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   ok(await page.locator('#editorPane').isVisible()&&await page.locator('#readerPane').isVisible(),'desktop split view remains available from the navigation menu');
   await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode=read]').click();
   await page.locator('#settings').click();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').click();
+  // Inspect the actual export Blob without depending on the browser's download-to-disk policy.
+  await page.evaluate(()=>{const create=URL.createObjectURL;window.__exportBlobs=new Map();URL.createObjectURL=function(blob){const url=create.call(this,blob);window.__exportBlobs.set(url,blob);return url;};});
+  const exportedText=()=>page.evaluate(()=>window.__exportBlobs.get(document.getElementById('exportLink').href).text());
   for(const [name,text] of [['CRLF.md','# CRLF\r\n\r\nFirst paragraph.\r\n\r\nSecond paragraph.\r\n'],['NoEnd.md','Only paragraph without a final newline'],['Separators.md','# Gaps\n\n\n\nFirst paragraph.\n\n\n\nSecond paragraph.\n\n']]){
    const normalized=text.replace(/\r\n/g,'\n');
    await page.locator('#filesInput').setInputFiles({name,mimeType:'text/markdown',buffer:Buffer.from(text)});await frame().locator('.md-block').first().waitFor();
    await frame().locator('.md-block').first().click();await frame().locator('.block-source').press('Control+Enter');
    ok(await page.locator('#editor').inputValue()===normalized,'opening and closing '+name+' does not add line endings');
    // Keep the existing import-time CRLF normalization; tapping must not alter it.
-   await page.locator('#download').click();const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#exportLink').click()]);const exported=fs.readFileSync(await download.path(),'utf8');
+   await page.locator('#download').click();const exported=await exportedText();
    ok(exported===normalized,'untouched '+name+' exports exactly the imported source');await page.locator('#exportDialog .close-dialog').click();
    await frame().locator('.md-block').first().click();await frame().locator('.block-source').fill('Cancelled change');await frame().locator('.block-source').press('Escape');
-   await page.locator('#download').click();const [cancelDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#exportLink').click()]);const cancelled=fs.readFileSync(await cancelDownload.path(),'utf8');
+   await page.locator('#download').click();const cancelled=await exportedText();
    ok(cancelled===normalized,'cancelling '+name+' restores the exact imported source');await page.locator('#exportDialog .close-dialog').click();
   }
   ok(errors.length===0,'no runtime errors: '+errors.join('; '));

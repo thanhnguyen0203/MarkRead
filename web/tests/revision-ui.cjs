@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../..'),qa=path.join(root,'test-results/1.1.4');fs.mkdirSync(qa,{recursive:true});
+const root=path.resolve(__dirname,'../..'),qa=path.join(root,'test-results/1.1.5');fs.mkdirSync(qa,{recursive:true});
 let count=0;function ok(x,n){assert.ok(x,n);count++;console.log('PASS '+n)}
 (async()=>{
  const html=fs.readFileSync(path.join(root,'web/dist/MarkRead.html'),'utf8').replace('<meta name="native-channel" content="__NATIVE_NONCE__">','');
@@ -8,6 +8,7 @@ let count=0;function ok(x,n){assert.ok(x,n);count++;console.log('PASS '+n)}
  const b=await chromium.launch({executablePath:process.env.MARKREAD_CHROMIUM,headless:true,args:['--no-sandbox']});
  const context=await b.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const page=await context.newPage();page.setDefaultTimeout(12000);page.on('dialog',d=>d.accept());
  const errors=[],external=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith('http://127.0.0.1'))external.push(r.url())});
+ await page.route('http://127.0.0.1:*/**',r=>r.fulfill({contentType:'text/html; charset=utf-8',body:html}));
  const $=id=>page.locator('#'+id),frame=()=>page.frameLocator('#reader');
  const setMode=async id=>{await $('modeToggle').click();await page.locator('#modeOptions [data-mode='+id.replace('Mode','')+']').click()};
  const setText=async text=>{await setMode('editMode');await $('editor').fill(text);await setMode('readMode');await page.waitForFunction(t=>document.getElementById('reader').contentDocument?.body?.textContent.includes(t),text.replace(/^# /,'').split('\n')[0])};

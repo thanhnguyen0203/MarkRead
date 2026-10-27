@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="114" android:versionName="1.1.4">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="115" android:versionName="1.1.5">
     <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
     <!-- Deliberately no uses-permission: no Internet, storage, camera, location or contacts. -->
     <application android:label="MarkRead" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:theme="@style/AppTheme" android:allowBackup="false" android:enableOnBackInvokedCallback="false" android:fullBackupContent="false" android:dataExtractionRules="@xml/data_extraction_rules" android:usesCleartextTraffic="false" android:debuggable="false" android:supportsRtl="false">

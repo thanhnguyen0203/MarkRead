@@ -12,6 +12,7 @@ import bash from 'highlight.js/lib/languages/bash';
 import xml from 'highlight.js/lib/languages/xml';
 import {MAX_DOC,MAX_IMAGE,MAX_FILES,MARKDOWN,IMAGE,escapeHTML,localTarget,cleanCSS,decodeText,imageType,slugify,diagramAllowed} from './core.js';
 import {themes} from './themes.js';
+import {DEFAULTS,appearanceSettings} from './preferences.js';
 import {fileTree,orderedPaths,adjacentPath,mappedBlocks,replaceBlock,editableBlockEnd,renamedDocumentPath} from './workspace.js';
 import demo from './demo.md';
 import searchWorkerCode from 'inline-search-worker';
@@ -20,18 +21,10 @@ import katexCSS from 'inline-katex-css';
 import fontCSS from 'inline-merriweather-css';
 for (const [name,lang] of Object.entries({python,javascript,json,sql,css,bash,xml})) hljs.registerLanguage(name,lang);
 const $ = id => document.getElementById(id);
-const DEFAULTS={theme:'dark',font:'sans',size:18,width:860,leading:1.8,css:'',mermaid:true,remember:false,unified:false,descending:false};
 const STORAGE_KEY='markread-appearance-v1';
-let settings={...DEFAULTS};
+let settings={...DEFAULTS},preferencesLoaded=!IS_ANDROID,settingsTouched=false,nativeSessionToken='';
 try {
-  const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
-  if(saved?.remember) {
-    settings.theme=Object.hasOwn(themes,saved.theme)?saved.theme:'dark';
-    settings.font=['sans','serif','merriweather','mono'].includes(saved.font)?saved.font:'sans';
-    for(const [key,lo,hi] of [['size',12,32],['width',480,1400],['leading',1.2,2.4]]) if(Number.isFinite(saved[key])) settings[key]=Math.max(lo,Math.min(hi,saved[key]));
-    settings.css=typeof saved.css==='string'?cleanCSS(saved.css):'';
-    settings.mermaid=saved.mermaid!==false; settings.unified=saved.unified===true; settings.descending=saved.descending===true; settings.remember=true;
-  }
+  settings=appearanceSettings(JSON.parse(localStorage.getItem(STORAGE_KEY)||'null'));
 } catch { /* Storage can be unavailable for local files; run in memory. */ }
 const palettes=Object.fromEntries(Object.entries(themes).map(([id,t])=>[id,t.palette]));
 for(const [id,t] of Object.entries(themes)){
@@ -101,7 +94,12 @@ function dirty(){return source!==editOriginal;}
 function hasDrafts(){return dirty()||[...drafts].some(([p,s])=>s!==originals.get(p));}
 function updateDirty(){ $('dirty').textContent=dirty()?'●':''; }
 function stats(){const words=(source.match(/\S+/g)||[]).length;$('stats').textContent=`${words.toLocaleString('vi')} từ · ${Math.max(1,Math.ceil(words/220))} phút đọc`;updateDirty();}
-function persist(){try{if(settings.remember)localStorage.setItem(STORAGE_KEY,JSON.stringify(settings));else localStorage.removeItem(STORAGE_KEY);}catch{toast('Không lưu được giao diện; phiên này vẫn dùng bình thường.');}}
+function persist(){
+  settingsTouched=true;
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(settings));}catch{if(!IS_ANDROID)toast('Không lưu được cài đặt trên thiết bị này.');}
+  if(IS_ANDROID&&preferencesLoaded)nativeCall('savePreferences',{settings}).catch(()=>toast('Không lưu được cài đặt. Hãy thử lại.'));
+}
+function rememberDocument(){if(IS_ANDROID)nativeCall('rememberDocument',{fileId:files.get(current)?.id||'',sessionToken:nativeSessionToken}).catch(()=>toast('Không lưu được phiên đọc.'));}
 function uiSettings(){
   document.body.dataset.theme=settings.theme;
   for(const [key,value] of Object.entries(palettes[settings.theme]))document.body.style.setProperty('--'+key,value);
@@ -113,7 +111,7 @@ function uiSettings(){
   for(const b of $('themes').querySelectorAll('button')){b.classList.toggle('active',b.dataset.theme===settings.theme);b.setAttribute('aria-pressed',String(b.dataset.theme===settings.theme));}
   $('fontText').textContent=document.querySelector('[data-font="'+settings.font+'"] span').textContent;for(const b of document.querySelectorAll('[data-font]'))b.setAttribute('aria-selected',String(b.dataset.font===settings.font));$('fontSize').value=settings.size;$('width').value=settings.width;$('lineHeight').value=settings.leading;
   $('fontValue').textContent=`${settings.size} px`;$('widthValue').textContent=`${settings.width} px`;$('lineValue').textContent=settings.leading.toFixed(1);
-  $('mermaidEnabled').checked=settings.mermaid;$('remember').checked=settings.remember;
+  $('mermaidEnabled').checked=settings.mermaid;
 }
 const markdown=new Marked({gfm:true,breaks:false});
 let mathCount=0;
@@ -209,7 +207,7 @@ $('openMenu').addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDe
 $('openOptions').addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();(document.activeElement===$('openFolder')?$('openFiles'):$('openFolder')).focus();}if(e.key==='Escape'){setOpenMenu(false);$('openMenu').focus();}});
 
 function revokeImages(){for(const url of imageURLs.values())URL.revokeObjectURL(url);imageURLs.clear();}
-async function importFiles(list, folder, confirmed=false){
+async function importFiles(list, folder, confirmed=false,activePath=undefined){
   const incoming=[...list];if(!incoming.length&&!confirmed)return;
   if(incoming.length>MAX_FILES){toast(`Chỉ nhận tối đa ${MAX_FILES} tệp mỗi lần. Hãy chọn thư mục nhỏ hơn.`);return;}
   if(!confirmed&&hasDrafts()&&!confirm('Có bản sửa chưa tải xuống. Bỏ bản sửa và thay bộ tệp?'))return;
@@ -221,7 +219,8 @@ async function importFiles(list, folder, confirmed=false){
   }
   $('folderName').textContent=root||'CÁC TỆP ĐÃ CHỌN';$('folderName').title=root||'Không giữ quyền sau khi đóng trang';renderFileList();
   const docs=allPaths();
-  if(docs.length)await openFile(docs[0]);else{ $('filename').textContent='Chào mừng.md';stats();scheduleRender();toast('Bộ tệp chưa có .md hoặc .markdown.'); }
+  const target=activePath===undefined?docs[0]:activePath;
+  if(target&&docs.includes(target))await openFile(target);else{ $('filename').textContent='Chào mừng.md';$('filename').removeAttribute('aria-label');stats();scheduleRender();if(!docs.length&&activePath===undefined)toast('Bộ tệp chưa có .md hoặc .markdown.'); }
   status(`${docs.length} tài liệu · chỉ bộ tệp đã chọn`);
 }
 async function openFile(path,fragment=''){
@@ -233,6 +232,7 @@ async function openFile(path,fragment=''){
     const text=drafts.has(path)?drafts.get(path):decodeText(await file.arrayBuffer());
     if(ticket!==openSerial||epoch!==session)return;
     saveCurrent();if(!originals.has(path))originals.set(path,text);current=path;source=text;editOriginal=originals.get(path);$('editor').value=text;$('filename').textContent=path.split('/').pop();$('filename').title=path+' · Ấn giữ để đổi tên';$('filename').setAttribute('aria-label',path.split('/').pop()+' · Ấn giữ để đổi tên');
+    rememberDocument();
     const parts=path.split('/');for(let i=1;i<parts.length;i++)collapsedFolders.delete(parts.slice(0,i).join('/'));
     loadTarget=fragment;showDocumentBar();invalidateFind();$('findInput').value='';$('findCount').textContent='';document.body.classList.remove('sidebar-open');stats();renderFileList();scheduleRender();
   }catch(e){if(ticket===openSerial)toast(e.message||'Không đọc được tệp. Hãy chọn lại quyền truy cập.');}
@@ -532,7 +532,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.font-setting'))setF
 function settingsChange(){finishInline(false,false);uiSettings();persist();scheduleRender(80);if(IS_ANDROID)nativeCall('theme',{theme:settings.theme}).catch(()=>{});}
 async function chooseNative(folder){
   if(hasDrafts()&&!confirm('Có bản sửa chưa lưu. Bỏ bản sửa và thay bộ tệp?'))return;
-  try{const summary=await nativeCall(folder?'chooseFolder':'chooseFiles',{},300000);const snapshot=await nativeSnapshot(summary);if(!snapshot)return;await importFiles(snapshot.files,snapshot.folder,true);$('folderName').textContent=snapshot.label;if(snapshot.limited)toast('Chỉ nhận tối đa 5.000 mục và 32 cấp thư mục. Hãy chọn thư mục nhỏ hơn nếu thiếu bài.');}
+  try{const summary=await nativeCall(folder?'chooseFolder':'chooseFiles',{},300000);const snapshot=await nativeSnapshot(summary);if(!snapshot)return;nativeSessionToken=summary.sessionToken||'';await importFiles(snapshot.files,snapshot.folder,true);$('folderName').textContent=snapshot.label;if(snapshot.limited)toast('Chỉ nhận tối đa 5.000 mục và 32 cấp thư mục. Hãy chọn thư mục nhỏ hơn nếu thiếu bài.');}
   catch(e){toast(e.message);}
 }
 $('openFolder').addEventListener('click',()=>{setOpenMenu(false);if(IS_ANDROID){chooseNative(true);return;}if(!('webkitdirectory' in $('folderInput'))){toast('Trình duyệt không hỗ trợ thư mục. Hãy chọn các tệp .md và ảnh.');$('filesInput').click();}else $('folderInput').click();});
@@ -550,7 +550,7 @@ for(const b of document.querySelectorAll('.close-dialog'))b.addEventListener('cl
 for(const b of $('themes').querySelectorAll('button'))b.addEventListener('click',()=>{settings.theme=b.dataset.theme;settingsChange();});
 for(const [id,key] of [['fontSize','size'],['width','width'],['lineHeight','leading']])$(id).addEventListener('input',()=>{settings[key]=Number($(id).value);settingsChange();});
 $('unifiedEnabled').addEventListener('change',()=>{finishInline(false,false);settings.unified=$('unifiedEnabled').checked;setMode('read');settingsChange();});
-$('mermaidEnabled').addEventListener('change',()=>{settings.mermaid=$('mermaidEnabled').checked;settingsChange();});$('remember').addEventListener('change',()=>{settings.remember=$('remember').checked;persist();});
+$('mermaidEnabled').addEventListener('change',()=>{settings.mermaid=$('mermaidEnabled').checked;settingsChange();});
 $('applyCSS').addEventListener('click',()=>{try{const cleaned=cleanCSS($('customCSS').value);settings.css=cleaned;persist();scheduleRender();$('cssFeedback').textContent='Đã áp dụng CSS trong vùng đọc.';}catch(e){$('cssFeedback').textContent=e.message;}});
 $('resetCSS').addEventListener('click',()=>{settings.css='';$('customCSS').value='';$('cssFeedback').textContent='Đã xóa CSS.';persist();scheduleRender();});
 $('importCSS').addEventListener('click',async()=>{if(!IS_ANDROID){$('cssInput').click();return;}try{const result=await nativeCall('chooseCss',{},300000);if(result.cancelled)return;cleanCSS(result.css);$('customCSS').value=result.css;$('cssFeedback').textContent='Đã nhập CSS. Bấm Áp dụng để dùng.';}catch(e){$('cssFeedback').textContent=e.message;}});$('cssInput').addEventListener('change',async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>100000)throw new Error('CSS vượt 100.000 byte.');const text=decodeText(await f.arrayBuffer());cleanCSS(text);$('customCSS').value=text;$('cssFeedback').textContent='Đã nhập CSS. Bấm Áp dụng để dùng.';}catch(err){$('cssFeedback').textContent=err.message;}e.target.value='';});
@@ -569,7 +569,16 @@ if(IS_ANDROID){
   window.markReadSave=download;
   window.markReadBack=()=>{if(renameBusy)return 'handled';if(!$('modeOptions').hidden){setModeMenu(false);return 'handled';}if(!$('openOptions').hidden){setOpenMenu(false);return 'handled';}if(!$('fontOptions').hidden){setFontMenu(false);return 'handled';}if(inlineEdit){finishInline();return 'handled';}const dialog=[...document.querySelectorAll('dialog[open]')].pop();if(dialog){dialog.close();return 'handled';}if(document.body.classList.contains('sidebar-open')){document.body.classList.remove('sidebar-open');return 'handled';}if(!$('findbar').hidden){toggleFind(false);return 'handled';}if(mode!=='read'){setMode('read');return 'handled';}return hasDrafts()?'dirty':'exit';};
   nativeReady.then(async()=>{
-    try{await nativeCall('theme',{theme:settings.theme});const summary=await nativeCall('restore',{},120000);if(summary.count||summary.folder){const snapshot=await nativeSnapshot(summary);await importFiles(snapshot.files,snapshot.folder,true);$('folderName').textContent=snapshot.label;if(snapshot.limited)toast('Thư mục lớn. Chỉ nhận tối đa 5.000 mục.');}}
+    try{const saved=await nativeCall('loadPreferences');if(saved&&!settingsTouched)settings=appearanceSettings(saved);preferencesLoaded=true;uiSettings();persist();scheduleRender();await nativeCall('theme',{theme:settings.theme});await restoreNativeSession();}
     catch(e){toast(e.message||'Không khôi phục được quyền thư mục. Hãy chọn lại.');}
   });
+  window.addEventListener('markread-session-expired',()=>restoreNativeSession(true).catch(e=>toast(e.message)));
+}
+async function restoreNativeSession(expired=false){
+  const summary=await nativeCall('restore',{},120000),snapshot=await nativeSnapshot(summary);
+  nativeSessionToken=summary.sessionToken||'';
+  await importFiles(snapshot.files,snapshot.folder,true,snapshot.activePath||'');
+  $('folderName').textContent=snapshot.folder?snapshot.label:snapshot.count?snapshot.label:'CHƯA CẤP QUYỀN THƯ MỤC';
+  if(expired){setMode('read');toast('Đã đóng các tài liệu sau 10 phút rời app.');}
+  if(snapshot.limited)toast('Thư mục lớn. Chỉ nhận tối đa 5.000 mục.');
 }

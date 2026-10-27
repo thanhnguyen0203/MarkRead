@@ -1,14 +1,22 @@
-# MarkRead Android 1.1.4
+# MarkRead Android 1.1.5
 
 Ứng dụng đọc và chỉnh sửa tài liệu Markdown ngoại tuyến. Hỗ trợ Android 8 trở lên; cần Android System WebView 100 trở lên.
 
-## Cài đặt APK 1.1.4
+## Cài đặt APK 1.1.5
 
-1. Tải `dist/MarkRead-Android-1.1.4.apk` về điện thoại.
+1. Tải `dist/MarkRead-Android-1.1.5.apk` về điện thoại.
 2. Mở APK bằng trình quản lý tệp. Nếu Android yêu cầu, cho phép ứng dụng đang mở APK cài ứng dụng.
 3. Mở MarkRead và cấp lại quyền thư mục bằng bộ chọn hệ thống nếu cần.
 
-Bản này dùng package `vn.markread.local`, versionCode 114 và cùng khóa ký cục bộ với APK 1.1.3 đã dựng trong dự án. Không cần gỡ bản 1.1.3 nếu bản đang cài dùng cùng chữ ký đó. Nếu bản đang cài dùng khóa cũ khác, Android sẽ từ chối cài đè; muốn cài đè cần đúng khóa riêng tương ứng. File `APK_SIGNATURE.txt` chỉ chứa thông tin chữ ký, không thể dùng để ký APK. Luôn xuất bản sửa cần giữ trước khi thay bản cài; gỡ ứng dụng sẽ xóa cài đặt và quyền thư mục đã nhớ.
+Bản này dùng package `vn.markread.local`, versionCode 115 và cùng khóa ký cục bộ với APK 1.1.4 đã dựng trong dự án. Có thể cài đè bản dùng cùng chữ ký đó để giữ cài đặt và quyền thư mục. Nếu bản đang cài dùng khóa cũ khác, Android sẽ từ chối cài đè; muốn cài đè cần đúng khóa riêng tương ứng. File `APK_SIGNATURE.txt` chỉ chứa thông tin chữ ký, không thể dùng để ký APK. Luôn xuất bản sửa cần giữ trước khi thay bản cài; gỡ ứng dụng sẽ xóa cài đặt và quyền thư mục đã nhớ.
+
+## Nhớ cài đặt và phiên đọc trong 1.1.5
+
+- Theme, phông chữ, cỡ chữ, độ rộng bài, giãn dòng, tùy chọn chỉnh sửa, sơ đồ, thứ tự tệp và CSS đã áp dụng luôn tự động lưu. Không cần bật “Nhớ cài đặt”.
+- Rời app rồi mở lại trước 10 phút: khôi phục bộ thư mục/tệp đã chọn và tài liệu đang đọc gần nhất, nếu quyền Android vẫn còn hiệu lực. File mở riêng được giữ quyền đọc khi bộ chọn hỗ trợ.
+- Từ đúng 10 phút trở lên: đóng các tài liệu cũ, trở về màn hình chào. Thư mục và danh sách tệp vẫn được giữ để chọn bài; bộ tệp mở riêng được gỡ. Các cài đặt giao diện vẫn còn.
+- Quy tắc áp dụng cả khi thoát app và khi quay lại từ nền. Thời gian ở trong bộ chọn mở/lưu tệp không tính là rời app.
+- App chỉ lưu thông tin phiên và quyền truy cập; bản sửa chưa xuất không được ghi ra đĩa. Hãy xuất bản sửa trước khi đóng app hoặc rời app lâu hơn 10 phút. Nút × cạnh thư mục gỡ bộ tệp/quyền và phiên đọc, giữ cài đặt giao diện.
 
 ## Các thay đổi trong 1.1.4
 
@@ -83,7 +91,7 @@ Có 12 theme, trong đó có Tokyo Night/Light, Nord, xanh xám, Dracula, Rose P
 
 **Font chữ & bố cục** có font hệ thống, serif, Merriweather và monospace; chỉnh cỡ chữ, độ rộng, giãn dòng. Các font Merriweather được gói sẵn, không tải từ mạng. Bảng cài đặt co theo nội dung và cuộn khi màn hình thấp.
 
-**Nhớ cài đặt** lưu theme, font, bố cục, tùy chọn đọc, thứ tự và CSS trên thiết bị. Không lưu nội dung bài hoặc lịch sử đọc. Quyền thư mục được Android lưu riêng để mở lại nếu còn hiệu lực.
+Các cài đặt giao diện luôn tự động lưu trên thiết bị, độc lập với thời hạn phiên đọc. App giữ quyền thư mục, bộ tệp mở riêng và tài liệu gần nhất để khôi phục phiên theo mốc 10 phút ở trên. Không lưu nội dung bài hoặc bản sửa chưa xuất.
 
 ## Dữ liệu và giới hạn
 

@@ -8,7 +8,7 @@ if(IS_ANDROID)window.addEventListener('message',event=>{
   const nonce=document.querySelector('meta[name="native-channel"]')?.content;
   if(port||window!==window.top||location.href!=='https://appassets.androidplatform.net/app/index.html'||event.data!=='markread-native-init:'+nonce||event.ports.length!==1)return;
   clearTimeout(bootTimer);port=event.ports[0];port.onmessage=e=>{
-    try{const answer=JSON.parse(e.data),task=pending.get(answer.id);if(!task)return;pending.delete(answer.id);clearTimeout(task.timer);if(answer.error)task.reject(new Error(String(answer.error)));else task.resolve(answer.result);}catch{}
+    try{const answer=JSON.parse(e.data);if(answer.event==='sessionExpired'){window.dispatchEvent(new Event('markread-session-expired'));return;}const task=pending.get(answer.id);if(!task)return;pending.delete(answer.id);clearTimeout(task.timer);if(answer.error)task.reject(new Error(String(answer.error)));else task.resolve(answer.result);}catch{}
   };port.start();resolveReady();
 });else resolveReady();
 export async function nativeCall(op,args={},timeout=30000){

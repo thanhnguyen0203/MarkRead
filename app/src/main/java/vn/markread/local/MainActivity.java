@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.SystemClock;
 import android.util.Base64;
 import android.view.View;
 import android.view.WindowInsets;
@@ -35,6 +36,7 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import org.json.JSONObject;
+import org.json.JSONArray;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -43,8 +45,10 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -58,9 +62,13 @@ public final class MainActivity extends Activity {
     private FrameLayout root;
     private DocumentStore documents;
     private SharedPreferences prefs;
+    private SharedPreferences appearance;
     private WebMessagePort nativePort;
     private String nonce=UUID.randomUUID().toString();
+    private String sessionToken=UUID.randomUUID().toString();
     private boolean destroyed=false,pickerBusy=false,restored=false;
+    private boolean resumeRecent=false,expiryPending=false;
+    private long backgroundAt=0;
     private int pickerRequest=-1;
     private WebMessagePort pickerPort;
     private ByteArrayOutputStream exportData;
@@ -72,8 +80,11 @@ public final class MainActivity extends Activity {
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         prefs=getSharedPreferences("scope",MODE_PRIVATE);
+        appearance=getSharedPreferences("appearance",MODE_PRIVATE);
+        resumeRecent=SessionPolicy.recent(System.currentTimeMillis(),prefs.getLong("leftAt",0));
         documents=new DocumentStore(getContentResolver());
         root=new FrameLayout(this);root.setBackgroundColor(Color.rgb(32,35,38));setContentView(root);
+        try{setThemeColors(new JSONObject(appearance.getString("settings","{}")).optString("theme","dark"));}catch(Exception ignored){}
         configureInsets();
         try {
             PackageInfo provider=WebView.getCurrentWebViewPackage();
@@ -144,6 +155,7 @@ public final class MainActivity extends Activity {
             catch(Exception ignored) { }
         }},main);
         web.postWebMessage(new WebMessage("markread-native-init:"+nonce,new WebMessagePort[]{channel[1]}),Uri.parse(Policy.ORIGIN));
+        notifyExpiry();
     }
     private void reply(WebMessagePort port,int id,Object result,Exception error){
         main.post(()->{if(destroyed)return;try{JSONObject answer=new JSONObject().put("id",id);if(error==null)answer.put("result",result==null?JSONObject.NULL:result);else answer.put("error",errorMessage(error));port.postMessage(new WebMessage(answer.toString()));}catch(Exception ignored){} });
@@ -160,13 +172,31 @@ public final class MainActivity extends Activity {
         io.execute(()->{try{
             Object result;
             switch(op){
+                case "loadPreferences":
+                    String savedAppearance=appearance.getString("settings",null);
+                    try{result=savedAppearance==null?JSONObject.NULL:new JSONObject(savedAppearance);}catch(Exception invalid){appearance.edit().remove("settings").apply();result=JSONObject.NULL;}
+                    break;
+                case "savePreferences":
+                    JSONObject settings=a.getJSONObject("settings");String savedSettings=settings.toString();
+                    if(savedSettings.length()>110000)throw new IOException("Cài đặt vượt giới hạn dung lượng.");
+                    if(!appearance.edit().putString("settings",savedSettings).commit())throw new IOException("Không lưu được cài đặt.");
+                    result=Boolean.TRUE;break;
+                case "rememberDocument":
+                    if(!sessionToken.equals(a.optString("sessionToken"))){result=Boolean.FALSE;break;}
+                    String fileId=a.optString("fileId","");String activeUri=fileId.isEmpty()?"":documents.find(fileId).uri.toString();
+                    if(!prefs.edit().putString("activeUri",activeUri).commit())throw new IOException("Không lưu được phiên đọc.");
+                    result=Boolean.TRUE;break;
                 case "restore":
-                    if(!restored){restored=true;String saved=prefs.getString("tree",null);if(saved!=null){Uri tree=Uri.parse(saved);if(Policy.treeProvider(saved)&&hasReadGrant(tree)){documents.commit(documents.scanTree(tree));}else prefs.edit().remove("tree").apply();}}
-                    result=documents.current();break;
+                    if(!restored){restoreScope();restored=true;}
+                    result=scopeSummary();break;
                 case "index":result=documents.page(a.getString("generation"),a.getInt("offset"),a.getInt("limit"));break;
                 case "read":DocumentStore.Chunk c=documents.read(a.getString("fileId"),a.getLong("offset"),a.getInt("length"));result=new JSONObject().put("data",Base64.encodeToString(c.bytes,Base64.NO_WRAP)).put("eof",c.eof);break;
-                case "rename":result=documents.rename(a.getString("fileId"),a.getString("name"));break;
-                case "forget":documents.clear();releaseAllExcept(null);prefs.edit().remove("tree").apply();result=Boolean.TRUE;break;
+                case "rename":
+                    DocumentStore.Entry before=documents.find(a.getString("fileId"));boolean wasActive=before.uri.toString().equals(prefs.getString("activeUri",""));
+                    result=documents.rename(before.id,a.getString("name"));
+                    if(wasActive)prefs.edit().putString("activeUri",documents.find(before.id).uri.toString()).apply();
+                    if(!documents.isFolder())saveFileScope();break;
+                case "forget":sessionToken=UUID.randomUUID().toString();documents.clear();releaseAllExcept(null);prefs.edit().remove("tree").remove("files").remove("activeUri").apply();result=Boolean.TRUE;break;
                 case "beginExport":
                     int size=a.getInt("size");if(size<0||size>Policy.MAX_DOC)throw new IOException("Bản xuất vượt giới hạn 5 MiB.");
                     if(pickerBusy)throw new IOException("Hãy hoàn tất bộ chọn tệp đang mở.");
@@ -183,13 +213,44 @@ public final class MainActivity extends Activity {
     }
     private void checkExport(JSONObject a)throws Exception{if(exportData==null||exportToken==null||!exportToken.equals(a.optString("token")))throw new IOException("Phiên xuất tệp không hợp lệ.");}
     private void clearExport(){if(exportData!=null)exportData.reset();exportData=null;exportToken=null;exportName=null;exportExpected=0;}
-    private boolean hasReadGrant(Uri uri){for(UriPermission p:getContentResolver().getPersistedUriPermissions())if(p.isReadPermission()&&p.getUri().equals(uri))return true;return false;}
-    private void releaseAllExcept(Uri keep){for(UriPermission p:getContentResolver().getPersistedUriPermissions()){if(keep!=null&&keep.equals(p.getUri()))continue;try{int flags=(p.isReadPermission()?Intent.FLAG_GRANT_READ_URI_PERMISSION:0)|(p.isWritePermission()?Intent.FLAG_GRANT_WRITE_URI_PERMISSION:0);getContentResolver().releasePersistableUriPermission(p.getUri(),flags);}catch(Exception ignored){}}}
+    private Set<Uri> readGrants(){Set<Uri> result=new HashSet<>();for(UriPermission p:getContentResolver().getPersistedUriPermissions())if(p.isReadPermission())result.add(p.getUri());return result;}
+    private boolean hasReadGrant(Uri uri){return readGrants().contains(uri);}
+    private void releaseAllExcept(List<Uri> keep){for(UriPermission p:getContentResolver().getPersistedUriPermissions()){if(keep!=null&&keep.contains(p.getUri()))continue;try{int flags=(p.isReadPermission()?Intent.FLAG_GRANT_READ_URI_PERMISSION:0)|(p.isWritePermission()?Intent.FLAG_GRANT_WRITE_URI_PERMISSION:0);getContentResolver().releasePersistableUriPermission(p.getUri(),flags);}catch(Exception ignored){}}}
+    private void saveFileScope(){
+        Set<Uri> grants=readGrants();JSONArray saved=new JSONArray();for(Uri uri:documents.selectedUris())if(grants.contains(uri))saved.put(uri.toString());
+        prefs.edit().remove("tree").putString("files",saved.toString()).apply();
+    }
+    private JSONObject scopeSummary()throws Exception{return documents.current().put("activePath",documents.pathForUri(prefs.getString("activeUri",""))).put("sessionToken",sessionToken);}
+    private void restoreScope()throws Exception{
+        if(!resumeRecent)expireSession();
+        String saved=prefs.getString("tree",null);
+        if(saved!=null){
+            Uri tree=Uri.parse(saved);
+            if(Policy.treeProvider(saved)&&hasReadGrant(tree))documents.commit(documents.scanTree(tree));
+            else{prefs.edit().remove("tree").remove("activeUri").apply();releaseAllExcept(null);}
+        }else if(resumeRecent){
+            Set<Uri> grants=readGrants();JSONArray savedFiles=new JSONArray(prefs.getString("files","[]"));DocumentStore.Snapshot next=new DocumentStore.Snapshot();
+            for(int i=0;i<Math.min(savedFiles.length(),Policy.MAX_FILES);i++){
+                Uri uri=Uri.parse(savedFiles.getString(i));if(!Policy.localDocument(uri.toString())||!grants.contains(uri))continue;
+                try{List<Uri> one=new ArrayList<>();one.add(uri);next.entries.putAll(documents.scanFiles(one).entries);}catch(Exception ignored){/* Other selected files can still be restored. */}
+            }
+            documents.commit(next);saveFileScope();releaseAllExcept(documents.selectedUris());
+        }
+    }
+    private void expireSession(){
+        sessionToken=UUID.randomUUID().toString();
+        prefs.edit().remove("activeUri").remove("files").apply();
+        if(prefs.getString("tree",null)==null){documents.clear();releaseAllExcept(null);}
+    }
+    private void notifyExpiry(){
+        if(!expiryPending||nativePort==null||destroyed)return;
+        try{nativePort.postMessage(new WebMessage(new JSONObject().put("event","sessionExpired").toString()));expiryPending=false;}catch(Exception ignored){}
+    }
     private void launchPicker(WebMessagePort port,int id,boolean folder){
         if(pickerBusy){reply(port,id,null,new IOException("Hãy hoàn tất bộ chọn tệp đang mở."));return;}
         Intent intent=new Intent(folder?Intent.ACTION_OPEN_DOCUMENT_TREE:Intent.ACTION_OPEN_DOCUMENT);
-        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);intent.putExtra(Intent.EXTRA_LOCAL_ONLY,true);
-        if(folder)intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION|Intent.FLAG_GRANT_PREFIX_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);intent.putExtra(Intent.EXTRA_LOCAL_ONLY,true);
+        if(folder)intent.addFlags(Intent.FLAG_GRANT_PREFIX_URI_PERMISSION);
         else {intent.addCategory(Intent.CATEGORY_OPENABLE);intent.setType("*/*");intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,true);}
         pickerBusy=true;pickerRequest=id;pickerPort=port;
         try{startActivityForResult(intent,folder?PICK_TREE:PICK_FILES);}catch(ActivityNotFoundException e){pickerBusy=false;pickerRequest=-1;pickerPort=null;reply(port,id,null,new IOException("Thiết bị không có bộ chọn tài liệu phù hợp."));}
@@ -223,16 +284,24 @@ public final class MainActivity extends Activity {
         }
         final Uri tree=data.getData();final int flags=data.getFlags();final List<Uri> uris=new ArrayList<>();
         if(request==PICK_FILES){ClipData clip=data.getClipData();if(clip!=null){for(int n=0;n<clip.getItemCount();n++)uris.add(clip.getItemAt(n).getUri());}else if(tree!=null)uris.add(tree);}
-        io.execute(()->{Uri newGrant=null;int newGrantFlags=0;try{
+        io.execute(()->{Uri newGrant=null;int newGrantFlags=0;List<Uri> acquired=new ArrayList<>();try{
             DocumentStore.Snapshot next;
             if(request==PICK_TREE){
                 if(tree==null||!Policy.treeProvider(tree.toString()))throw new IOException("Hãy chọn thư mục trong Bộ nhớ trong hoặc thẻ nhớ.");
                 if((flags&Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)!=0){newGrantFlags=flags&(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION);getContentResolver().takePersistableUriPermission(tree,newGrantFlags);newGrant=tree;}
                 next=documents.scanTree(tree);
-                documents.commit(next);releaseAllExcept(newGrant);if(newGrant!=null)prefs.edit().putString("tree",tree.toString()).apply();else prefs.edit().remove("tree").apply();
-            }else{next=documents.scanFiles(uris);documents.commit(next);releaseAllExcept(null);prefs.edit().remove("tree").apply();}
-            restored=true;reply(port,id,next.json(),null);
-        }catch(Exception e){if(newGrant!=null&&!newGrant.toString().equals(prefs.getString("tree",null)))try{getContentResolver().releasePersistableUriPermission(newGrant,newGrantFlags);}catch(Exception ignored){}reply(port,id,null,e);} });
+                documents.commit(next);List<Uri> keep=new ArrayList<>();if(newGrant!=null)keep.add(newGrant);releaseAllExcept(keep);prefs.edit().remove("files").remove("activeUri").apply();if(newGrant!=null)prefs.edit().putString("tree",tree.toString()).apply();else prefs.edit().remove("tree").apply();
+            }else{
+                next=documents.scanFiles(uris);
+                Set<Uri> grants=readGrants();
+                if((flags&Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)!=0)for(DocumentStore.Entry entry:next.entries.values()){
+                    boolean hadGrant=grants.contains(entry.uri);
+                    try{getContentResolver().takePersistableUriPermission(entry.uri,flags&(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION));if(!hadGrant)acquired.add(entry.uri);}catch(SecurityException ignored){/* Provider may offer only temporary access. */}
+                }
+                documents.commit(next);releaseAllExcept(documents.selectedUris());prefs.edit().remove("activeUri").apply();saveFileScope();
+            }
+            sessionToken=UUID.randomUUID().toString();restored=true;reply(port,id,next.json().put("sessionToken",sessionToken),null);
+        }catch(Exception e){if(newGrant!=null&&!newGrant.toString().equals(prefs.getString("tree",null)))try{getContentResolver().releasePersistableUriPermission(newGrant,newGrantFlags);}catch(Exception ignored){}for(Uri uri:acquired)try{getContentResolver().releasePersistableUriPermission(uri,flags&(Intent.FLAG_GRANT_READ_URI_PERMISSION|Intent.FLAG_GRANT_WRITE_URI_PERMISSION));}catch(Exception ignored){}reply(port,id,null,e);} });
     }
     @SuppressWarnings("deprecation") private void setThemeColors(String theme){
         boolean light="light".equals(theme)||"sepia".equals(theme)||"tokyo-light".equals(theme);
@@ -252,6 +321,19 @@ public final class MainActivity extends Activity {
         web.evaluateJavascript("window.markReadBack?window.markReadBack():'exit'",value->{if(destroyed)return;if("\"dirty\"".equals(value))new AlertDialog.Builder(this).setTitle("Bản sửa chưa lưu").setMessage("Bạn có bản sửa trong bộ nhớ. Thoát app sẽ mất các bản sửa chưa lưu.").setPositiveButton("Ở lại",(d,w)->{}).setNeutralButton("Lưu bài đang mở",(d,w)->web.evaluateJavascript("window.markReadSave&&window.markReadSave()",null)).setNegativeButton("Thoát, bỏ sửa",(d,w)->finish()).show();else if("\"exit\"".equals(value))finish();});
     }
     @Override protected void onPause(){super.onPause();if(web!=null)web.onPause();}
+    @Override protected void onStop(){
+        super.onStop();
+        if(!pickerBusy&&!isChangingConfigurations()){
+            backgroundAt=SystemClock.elapsedRealtime();prefs.edit().putLong("leftAt",System.currentTimeMillis()).apply();
+        }
+    }
+    @Override protected void onStart(){
+        super.onStart();
+        if(backgroundAt>0){
+            resumeRecent=SessionPolicy.recent(SystemClock.elapsedRealtime(),backgroundAt);backgroundAt=0;
+            if(!resumeRecent)io.execute(()->{expireSession();main.post(()->{expiryPending=true;notifyExpiry();});});
+        }
+    }
     @Override protected void onResume(){super.onResume();if(web!=null)web.onResume();}
-    @Override protected void onDestroy(){destroyed=true;closePort();io.shutdownNow();clearExport();pendingSave=null;if(web!=null){root.removeView(web);web.destroy();web=null;}super.onDestroy();}
+    @Override protected void onDestroy(){destroyed=true;closePort();io.shutdown();clearExport();pendingSave=null;if(web!=null){root.removeView(web);web.destroy();web=null;}super.onDestroy();}
 }

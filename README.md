@@ -1,8 +1,16 @@
-# MarkRead Android 1.1.4
+# MarkRead Android 1.1.5
 
-Offline Android Markdown reader and block editor. Package `vn.markread.local`, versionCode 114, min SDK 26, target/compile SDK 35. No runtime `uses-permission` declarations, no JavaScriptInterface, no analytics, no remote font loading.
+Offline Android Markdown reader and block editor. Package `vn.markread.local`, versionCode 115, min SDK 26, target/compile SDK 35. No runtime `uses-permission` declarations, no JavaScriptInterface, no analytics, no remote font loading.
 
 See `HUONG_DAN_CAI_DAT.md` for Vietnamese installation, feature details, privacy scope and limits. See `CHANGELOG.md` and the validation report for this release.
+
+## Settings and session persistence in 1.1.5
+
+Appearance, typography, layout, editing options, file order and applied CSS save automatically. Android stores an independent durable copy in private SharedPreferences and migrates existing WebView settings. There is no opt-in switch.
+
+Reopening less than ten minutes after leaving restores the selected folder or standalone files and the last document. At ten minutes or later, no old document is opened; the folder and its file list remain available, while standalone selections are released. The same rule applies when returning from the background with the process alive. Time away uses Android lifecycle callbacks and a monotonic clock in the live process, and a persisted wall-clock timestamp after process recreation. System pickers do not count as leaving the app. Only metadata and granted URIs are saved; draft contents still need explicit export. The × control forgets the scope without erasing appearance settings.
+
+Output: `dist/MarkRead-Android-1.1.5.apk`, signed with the existing local certificate. Validation and its environment limits: `test-results/1.1.5/`. `web/tests/session-ui.cjs` exercises fresh renderer contexts and live expiry with a simulated persistent native host; `tests/SessionPolicyTest.java` checks the exact ten-minute boundary. These tests do not execute Android lifecycle or SAF services.
 
 ## Reading update in 1.1.4
 
