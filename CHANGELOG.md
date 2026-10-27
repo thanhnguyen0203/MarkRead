@@ -1,5 +1,6 @@
 # MarkRead 1.1.5 — 27/10/2026
 
+- Sửa nháy giao diện khi khởi động: đưa bản cài đặt Android vào trang ngay lúc tải; đồng bộ nền cửa sổ/WebView với theme đã lưu. Chỉ hiện giao diện sau khi khôi phục phiên và tải xong font của tài liệu đầu tiên, không hiện trang chào mừng chen giữa. Nếu tải chậm, hiện thông báo chờ trên nền cùng theme. Kiểm chứng bổ sung: `test-results/1.1.5/startup/VALIDATION.md`.
 - Luôn tự động lưu theme, font, cỡ chữ, bố cục, tùy chọn đọc/chỉnh sửa, thứ tự tệp và CSS; bỏ công tắc nhớ cài đặt mặc định tắt. Android lưu bản bền vững trong SharedPreferences, tiếp nhận cài đặt WebView đã lưu từ bản trước.
 - Trước 10 phút rời app, khôi phục thư mục/bộ tệp và đúng tài liệu gần nhất; từ đúng 10 phút đóng các tài liệu cũ. Giữ thư mục và danh sách tệp, gỡ bộ tệp mở riêng khi hết phiên. Cài đặt không hết hạn.
 - Áp dụng cùng quy tắc khi app còn sống trong nền; không tính thời gian ở bộ chọn mở/lưu tệp. File mở riêng nhận quyền bền vững theo đúng cờ hệ thống trả về.

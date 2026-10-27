@@ -10,6 +10,7 @@ import android.content.pm.PackageInfo;
 import android.content.UriPermission;
 import android.graphics.Color;
 import android.graphics.Insets;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -76,6 +77,7 @@ public final class MainActivity extends Activity {
     private int exportExpected;
     private byte[] pendingSave;
     private String pendingSaveName;
+    private int themeBackground=Color.rgb(32,35,38);
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -103,7 +105,12 @@ public final class MainActivity extends Activity {
     private void unsupportedWebView(){TextView t=new TextView(this);t.setTextColor(Color.WHITE);t.setTextSize(18);t.setPadding(32,48,32,32);t.setText("MarkRead cần Android System WebView phiên bản 100 trở lên.\n\nHãy cập nhật Android System WebView trên thiết bị rồi mở lại app. Không cần cấp quyền truy cập toàn bộ bộ nhớ.");root.addView(t);}
     @SuppressWarnings("deprecation") private void createWebView(){
         nonce=UUID.randomUUID().toString();
-        web=new WebView(this);web.setBackgroundColor(Color.rgb(32,35,38));web.setDefaultFocusHighlightEnabled(false);
+        // Capture one immutable settings snapshot for this page, before it can paint.
+        String savedAppearance=appearance.getString("settings",null),encodedAppearance="";
+        try{if(savedAppearance!=null&&savedAppearance.length()<=110000)encodedAppearance=Base64.encodeToString(new JSONObject(savedAppearance).toString().getBytes(StandardCharsets.UTF_8),Base64.NO_WRAP);}catch(Exception ignored){}
+        final String initialAppearance=encodedAppearance;
+        final String initialBackground=String.format(java.util.Locale.ROOT,"#%06x",themeBackground&0xffffff);
+        web=new WebView(this);web.setBackgroundColor(themeBackground);web.setDefaultFocusHighlightEnabled(false);
         web.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
         WebView.setWebContentsDebuggingEnabled(false);
         WebSettings s=web.getSettings();
@@ -118,7 +125,7 @@ public final class MainActivity extends Activity {
                 if("GET".equals(request.getMethod())&&Policy.trustedPage(request.getUrl().toString())) {
                     try(InputStream in=getAssets().open("index.html")){
                         ByteArrayOutputStream out=new ByteArrayOutputStream();byte[] b=new byte[16384];int n;while((n=in.read(b))!=-1)out.write(b,0,n);
-                        String html=new String(out.toByteArray(),StandardCharsets.UTF_8).replace("__NATIVE_NONCE__",nonce);
+                        String html=new String(out.toByteArray(),StandardCharsets.UTF_8).replace("__NATIVE_NONCE__",nonce).replace("__NATIVE_APPEARANCE__",initialAppearance).replace("__STARTUP_BACKGROUND__",initialBackground);
                         Map<String,String> headers=new HashMap<>();headers.put("Cache-Control","no-store");headers.put("X-Content-Type-Options","nosniff");headers.put("Referrer-Policy","no-referrer");
                         return new WebResourceResponse("text/html","UTF-8",200,"OK",headers,new ByteArrayInputStream(html.getBytes(StandardCharsets.UTF_8)));
                     }catch(Exception e){return blocked();}
@@ -313,7 +320,8 @@ public final class MainActivity extends Activity {
             case "forest":hex="#1e2924";break;case "gruvbox":hex="#282828";break;default:hex="#202326";
         }
         int color=Color.parseColor(hex);
-        root.setBackgroundColor(color);getWindow().setStatusBarColor(color);getWindow().setNavigationBarColor(color);
+        themeBackground=color;root.setBackgroundColor(color);if(web!=null)web.setBackgroundColor(color);
+        getWindow().setBackgroundDrawable(new ColorDrawable(color));getWindow().setStatusBarColor(color);getWindow().setNavigationBarColor(color);
         int flags=View.SYSTEM_UI_FLAG_LAYOUT_STABLE;if(light)flags|=View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR|View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;getWindow().getDecorView().setSystemUiVisibility(flags);
     }
     @Override public void onBackPressed(){

@@ -8,6 +8,8 @@ See `HUONG_DAN_CAI_DAT.md` for Vietnamese installation, feature details, privacy
 
 Appearance, typography, layout, editing options, file order and applied CSS save automatically. Android stores an independent durable copy in private SharedPreferences and migrates existing WebView settings. There is no opt-in switch.
 
+Startup embeds a safe native appearance snapshot in the initial HTML and uses the saved theme for the native window and WebView backgrounds. The UI is revealed after session restoration and the first reader's fonts are ready, avoiding intermediate default styling and welcome content. Slow restoration shows a delayed loading message. Startup validation and the rebuilt APK metadata are in `test-results/1.1.5/startup/VALIDATION.md`.
+
 Reopening less than ten minutes after leaving restores the selected folder or standalone files and the last document. At ten minutes or later, no old document is opened; the folder and its file list remain available, while standalone selections are released. The same rule applies when returning from the background with the process alive. Time away uses Android lifecycle callbacks and a monotonic clock in the live process, and a persisted wall-clock timestamp after process recreation. System pickers do not count as leaving the app. Only metadata and granted URIs are saved; draft contents still need explicit export. The × control forgets the scope without erasing appearance settings.
 
 Output: `dist/MarkRead-Android-1.1.5.apk`, signed with the existing local certificate. Validation and its environment limits: `test-results/1.1.5/`. `web/tests/session-ui.cjs` exercises fresh renderer contexts and live expiry with a simulated persistent native host; `tests/SessionPolicyTest.java` checks the exact ten-minute boundary. These tests do not execute Android lifecycle or SAF services.
@@ -54,6 +56,7 @@ The build embeds all libraries, KaTeX assets and Merriweather WOFF2 fonts. No fo
 ## Validation
 
 - `web/tests/*.test.mjs`: parser utilities, scoped native transport, tree order/navigation and source-span replacements.
+- `web/tests/startup-ui.cjs`: samples visible animation frames during delayed native initialization, verifies embedded settings with stale WebView storage, saved typography, one initial document render, fallback/error recovery and CSP integrity after native HTML substitutions.
 - `web/tests/ui.cjs`: end-to-end UI with Playwright. Install Playwright and Chromium, set `MARKREAD_CHROMIUM` to the executable, and run `node web/tests/ui.cjs` from a writable checkout. Fixtures/screenshots are written to sibling `qa/`.
 - `web/tests/revision-ui.cjs`: verifies one-row toolbar across six viewport sizes, menu, themed font selection, touch states, compact settings, source search/replacement, regex timeout/recovery, extension changes and independent CSS import.
 - `web/tests/reading-ui.cjs`: verifies unboxed file extensions, rename focus without an outer ring, consecutive unified edits without iframe reloads or focus loss, stable tapped positions, source offsets, cancellation, progressive toolbar visibility, reduced motion, export, math, diagrams and reference links.

@@ -1,17 +1,20 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-startup="pending">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
 <meta name="native-channel" content="__NATIVE_NONCE__">
+<meta name="native-appearance" content="__NATIVE_APPEARANCE__">
 <meta http-equiv="Content-Security-Policy" content="__CSP__">
 <meta name="color-scheme" content="dark light">
 <title>MarkRead — Đọc Markdown cục bộ</title>
 <style>__APP_CSS__</style>
+<style>html{background:#202326;background:__STARTUP_BACKGROUND__}html[data-startup=pending] body{background:transparent}html[data-startup=pending] #app{visibility:hidden}html:not([data-startup=pending]) #startupStatus{display:none}#startupStatus{position:fixed;inset:0;display:grid;place-items:center;color:var(--muted);font-size:13px;pointer-events:none;animation:startup-status .15s .8s both}@keyframes startup-status{from{opacity:0}to{opacity:1}}</style>
 </head>
 <body data-theme="dark">
-<div id="app">
+<div id="startupStatus" role="status">Đang mở tài liệu…</div>
+<div id="app" aria-busy="true">
 <aside id="sidebar" aria-label="Tệp tài liệu">
   <div class="brand"><span class="brand-mark">m<span>r</span></span><div>MarkRead<small>KHÔNG GIAN ĐỌC CỦA BẠN</small></div></div>
   <div class="library-actions"><button id="openMenu" class="primary" aria-haspopup="menu" aria-expanded="false" aria-controls="openOptions"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3Z"/></svg><span>Mở</span><span class="open-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg></span></button><div id="openOptions" class="open-options" role="menu" hidden><button id="openFolder" role="menuitem"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3Z"/></svg><span>Mở thư mục</span></button><button id="openFiles" role="menuitem"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Zm0 0v6h6M8 13h8M8 17h5"/></svg><span>Mở tệp</span></button></div></div>
