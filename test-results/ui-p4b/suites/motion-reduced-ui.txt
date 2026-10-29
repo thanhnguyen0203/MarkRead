@@ -1,0 +1,54 @@
+PASS native=true,media=reduce: initial preference is native OR media
+PASS native=true,media=reduce: first reader receives the same transient preference
+PASS native=true,media=reduce: opening UI is static when either source requests reduction
+PASS native=true,media=reduce: actual Java host script cancels an in-flight entry without closing dialog
+PASS native=true,media=reduce: native false cannot override a true media query
+PASS native=true,media=reduce: runtime preference changes preserve source node/caret/selection/scroll/draft
+PASS native=true,media=reduce: runtime flag does not reload iframe or override user type CSS
+PASS native=true,media=reduce: shell transitions and reader smooth scroll stop
+PASS native=true,media=reduce: invalid host event cannot alter the preference or UI state
+PASS native=true,media=reduce: reducing motion reveals the real header immediately
+PASS native=true,media=reduce: reduced motion disables scroll-driven auto-hide
+PASS native=true,media=reduce: live media-query reduction cancels an in-flight entry
+PASS native=true,media=reduce: no preference/IME-guard renderer errors
+PASS native=true,media=no-preference: initial preference is native OR media
+PASS native=true,media=no-preference: first reader receives the same transient preference
+PASS native=true,media=no-preference: opening UI is static when either source requests reduction
+PASS native=true,media=no-preference: actual Java host script cancels an in-flight entry without closing dialog
+PASS native=true,media=no-preference: native false cannot override a true media query
+PASS native=true,media=no-preference: runtime preference changes preserve source node/caret/selection/scroll/draft
+PASS native=true,media=no-preference: runtime flag does not reload iframe or override user type CSS
+PASS native=true,media=no-preference: shell transitions and reader smooth scroll stop
+PASS native=true,media=no-preference: invalid host event cannot alter the preference or UI state
+PASS native=true,media=no-preference: reducing motion reveals the real header immediately
+PASS native=true,media=no-preference: reduced motion disables scroll-driven auto-hide
+PASS native=true,media=no-preference: live media-query reduction cancels an in-flight entry
+PASS native=true,media=no-preference: no preference/IME-guard renderer errors
+PASS native=false,media=reduce: initial preference is native OR media
+PASS native=false,media=reduce: first reader receives the same transient preference
+PASS native=false,media=reduce: opening UI is static when either source requests reduction
+PASS native=false,media=reduce: actual Java host script cancels an in-flight entry without closing dialog
+PASS native=false,media=reduce: native false cannot override a true media query
+PASS native=false,media=reduce: runtime preference changes preserve source node/caret/selection/scroll/draft
+PASS native=false,media=reduce: runtime flag does not reload iframe or override user type CSS
+PASS native=false,media=reduce: shell transitions and reader smooth scroll stop
+PASS native=false,media=reduce: invalid host event cannot alter the preference or UI state
+PASS native=false,media=reduce: reducing motion reveals the real header immediately
+PASS native=false,media=reduce: reduced motion disables scroll-driven auto-hide
+PASS native=false,media=reduce: live media-query reduction cancels an in-flight entry
+PASS native=false,media=reduce: no preference/IME-guard renderer errors
+PASS native=false,media=no-preference: initial preference is native OR media
+PASS native=false,media=no-preference: first reader receives the same transient preference
+PASS native=false,media=no-preference: opening UI is static when either source requests reduction
+PASS native=false,media=no-preference: actual Java host script cancels an in-flight entry without closing dialog
+PASS native=false,media=no-preference: native false cannot override a true media query
+PASS native=false,media=no-preference: runtime preference changes preserve source node/caret/selection/scroll/draft
+PASS native=false,media=no-preference: runtime flag does not reload iframe or override user type CSS
+PASS native=false,media=no-preference: shell transitions and reader smooth scroll stop
+PASS native=false,media=no-preference: invalid host event cannot alter the preference or UI state
+PASS native=false,media=no-preference: reducing motion reveals the real header immediately
+PASS native=false,media=no-preference: reduced motion disables scroll-driven auto-hide
+PASS native=false,media=no-preference: live media-query reduction cancels an in-flight entry
+PASS keyboard-focused toolbar stays fully visible while the reader receives wheel input
+PASS native=false,media=no-preference: no preference/IME-guard renderer errors
+P2G MOTION REDUCED: 53 PASS

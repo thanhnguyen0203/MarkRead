@@ -1,0 +1,1001 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "header": {
+      "height": 113,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 16,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 54
+        },
+        {
+          "id": "filename",
+          "x": 72,
+          "y": 6,
+          "w": 120,
+          "h": 48,
+          "right": 192,
+          "bottom": 54
+        },
+        {
+          "id": "prevFile",
+          "x": 16,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 106
+        },
+        {
+          "id": "nextFile",
+          "x": 72,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 120,
+          "bottom": 106
+        },
+        {
+          "id": "findToggle",
+          "x": 128,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 176,
+          "bottom": 106
+        },
+        {
+          "id": "download",
+          "x": 184,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 232,
+          "bottom": 106
+        },
+        {
+          "id": "settings",
+          "x": 200,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 248,
+          "bottom": 54
+        },
+        {
+          "id": "modeToggle",
+          "x": 256,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 304,
+          "bottom": 54
+        }
+      ],
+      "overflow": false,
+      "readerTop": 116,
+      "bottom": 113
+    }
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "header": {
+      "height": 113,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 16,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 54
+        },
+        {
+          "id": "filename",
+          "x": 72,
+          "y": 6,
+          "w": 160,
+          "h": 48,
+          "right": 232,
+          "bottom": 54
+        },
+        {
+          "id": "prevFile",
+          "x": 16,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 106
+        },
+        {
+          "id": "nextFile",
+          "x": 72,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 120,
+          "bottom": 106
+        },
+        {
+          "id": "findToggle",
+          "x": 128,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 176,
+          "bottom": 106
+        },
+        {
+          "id": "download",
+          "x": 184,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 232,
+          "bottom": 106
+        },
+        {
+          "id": "settings",
+          "x": 240,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 288,
+          "bottom": 54
+        },
+        {
+          "id": "modeToggle",
+          "x": 296,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 344,
+          "bottom": 54
+        }
+      ],
+      "overflow": false,
+      "readerTop": 116,
+      "bottom": 113
+    }
+  },
+  {
+    "width": 393,
+    "height": 852,
+    "header": {
+      "height": 113,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 16,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 54
+        },
+        {
+          "id": "filename",
+          "x": 72,
+          "y": 6,
+          "w": 193,
+          "h": 48,
+          "right": 265,
+          "bottom": 54
+        },
+        {
+          "id": "prevFile",
+          "x": 16,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 106
+        },
+        {
+          "id": "nextFile",
+          "x": 72,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 120,
+          "bottom": 106
+        },
+        {
+          "id": "findToggle",
+          "x": 128,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 176,
+          "bottom": 106
+        },
+        {
+          "id": "download",
+          "x": 184,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 232,
+          "bottom": 106
+        },
+        {
+          "id": "settings",
+          "x": 273,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 321,
+          "bottom": 54
+        },
+        {
+          "id": "modeToggle",
+          "x": 329,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 377,
+          "bottom": 54
+        }
+      ],
+      "overflow": false,
+      "readerTop": 116,
+      "bottom": 113
+    }
+  },
+  {
+    "width": 412,
+    "height": 915,
+    "header": {
+      "height": 113,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 16,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 54
+        },
+        {
+          "id": "filename",
+          "x": 72,
+          "y": 6,
+          "w": 212,
+          "h": 48,
+          "right": 284,
+          "bottom": 54
+        },
+        {
+          "id": "prevFile",
+          "x": 16,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 106
+        },
+        {
+          "id": "nextFile",
+          "x": 72,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 120,
+          "bottom": 106
+        },
+        {
+          "id": "findToggle",
+          "x": 128,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 176,
+          "bottom": 106
+        },
+        {
+          "id": "download",
+          "x": 184,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 232,
+          "bottom": 106
+        },
+        {
+          "id": "settings",
+          "x": 292,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 340,
+          "bottom": 54
+        },
+        {
+          "id": "modeToggle",
+          "x": 348,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 396,
+          "bottom": 54
+        }
+      ],
+      "overflow": false,
+      "readerTop": 116,
+      "bottom": 113
+    }
+  },
+  {
+    "width": 600,
+    "height": 960,
+    "header": {
+      "height": 113,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 16,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 54
+        },
+        {
+          "id": "filename",
+          "x": 72,
+          "y": 6,
+          "w": 400,
+          "h": 48,
+          "right": 472,
+          "bottom": 54
+        },
+        {
+          "id": "prevFile",
+          "x": 16,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 106
+        },
+        {
+          "id": "nextFile",
+          "x": 72,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 120,
+          "bottom": 106
+        },
+        {
+          "id": "findToggle",
+          "x": 128,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 176,
+          "bottom": 106
+        },
+        {
+          "id": "download",
+          "x": 184,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 232,
+          "bottom": 106
+        },
+        {
+          "id": "settings",
+          "x": 480,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 528,
+          "bottom": 54
+        },
+        {
+          "id": "modeToggle",
+          "x": 536,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 584,
+          "bottom": 54
+        }
+      ],
+      "overflow": false,
+      "readerTop": 116,
+      "bottom": 113
+    }
+  },
+  {
+    "width": 800,
+    "height": 1280,
+    "header": {
+      "height": 65,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 24,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 72,
+          "bottom": 56
+        },
+        {
+          "id": "filename",
+          "x": 80,
+          "y": 8,
+          "w": 360,
+          "h": 48,
+          "right": 440,
+          "bottom": 56
+        },
+        {
+          "id": "prevFile",
+          "x": 448,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 496,
+          "bottom": 56
+        },
+        {
+          "id": "nextFile",
+          "x": 504,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 552,
+          "bottom": 56
+        },
+        {
+          "id": "findToggle",
+          "x": 560,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 608,
+          "bottom": 56
+        },
+        {
+          "id": "download",
+          "x": 616,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 664,
+          "bottom": 56
+        },
+        {
+          "id": "settings",
+          "x": 672,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 720,
+          "bottom": 56
+        },
+        {
+          "id": "modeToggle",
+          "x": 728,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 776,
+          "bottom": 56
+        }
+      ],
+      "overflow": false,
+      "readerTop": 68,
+      "bottom": 65
+    }
+  },
+  {
+    "width": 568,
+    "height": 320,
+    "header": {
+      "height": 113,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 16,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 54
+        },
+        {
+          "id": "filename",
+          "x": 72,
+          "y": 6,
+          "w": 368,
+          "h": 48,
+          "right": 440,
+          "bottom": 54
+        },
+        {
+          "id": "prevFile",
+          "x": 16,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 64,
+          "bottom": 106
+        },
+        {
+          "id": "nextFile",
+          "x": 72,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 120,
+          "bottom": 106
+        },
+        {
+          "id": "findToggle",
+          "x": 128,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 176,
+          "bottom": 106
+        },
+        {
+          "id": "download",
+          "x": 184,
+          "y": 58,
+          "w": 48,
+          "h": 48,
+          "right": 232,
+          "bottom": 106
+        },
+        {
+          "id": "settings",
+          "x": 448,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 496,
+          "bottom": 54
+        },
+        {
+          "id": "modeToggle",
+          "x": 504,
+          "y": 6,
+          "w": 48,
+          "h": 48,
+          "right": 552,
+          "bottom": 54
+        }
+      ],
+      "overflow": false,
+      "readerTop": 116,
+      "bottom": 113
+    }
+  },
+  {
+    "width": 800,
+    "height": 360,
+    "header": {
+      "height": 65,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 24,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 72,
+          "bottom": 56
+        },
+        {
+          "id": "filename",
+          "x": 80,
+          "y": 8,
+          "w": 360,
+          "h": 48,
+          "right": 440,
+          "bottom": 56
+        },
+        {
+          "id": "prevFile",
+          "x": 448,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 496,
+          "bottom": 56
+        },
+        {
+          "id": "nextFile",
+          "x": 504,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 552,
+          "bottom": 56
+        },
+        {
+          "id": "findToggle",
+          "x": 560,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 608,
+          "bottom": 56
+        },
+        {
+          "id": "download",
+          "x": 616,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 664,
+          "bottom": 56
+        },
+        {
+          "id": "settings",
+          "x": 672,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 720,
+          "bottom": 56
+        },
+        {
+          "id": "modeToggle",
+          "x": 728,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 776,
+          "bottom": 56
+        }
+      ],
+      "overflow": false,
+      "readerTop": 68,
+      "bottom": 65
+    }
+  },
+  {
+    "width": 852,
+    "height": 393,
+    "header": {
+      "height": 65,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 24,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 72,
+          "bottom": 56
+        },
+        {
+          "id": "filename",
+          "x": 107.203125,
+          "y": 8,
+          "w": 384.796875,
+          "h": 48,
+          "right": 492,
+          "bottom": 56
+        },
+        {
+          "id": "prevFile",
+          "x": 500,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 548,
+          "bottom": 56
+        },
+        {
+          "id": "nextFile",
+          "x": 556,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 604,
+          "bottom": 56
+        },
+        {
+          "id": "findToggle",
+          "x": 612,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 660,
+          "bottom": 56
+        },
+        {
+          "id": "download",
+          "x": 668,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 716,
+          "bottom": 56
+        },
+        {
+          "id": "settings",
+          "x": 724,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 772,
+          "bottom": 56
+        },
+        {
+          "id": "modeToggle",
+          "x": 780,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 828,
+          "bottom": 56
+        }
+      ],
+      "overflow": false,
+      "readerTop": 68,
+      "bottom": 65
+    }
+  },
+  {
+    "width": 915,
+    "height": 412,
+    "header": {
+      "height": 65,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 24,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 72,
+          "bottom": 56
+        },
+        {
+          "id": "filename",
+          "x": 107.203125,
+          "y": 8,
+          "w": 447.796875,
+          "h": 48,
+          "right": 555,
+          "bottom": 56
+        },
+        {
+          "id": "prevFile",
+          "x": 563,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 611,
+          "bottom": 56
+        },
+        {
+          "id": "nextFile",
+          "x": 619,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 667,
+          "bottom": 56
+        },
+        {
+          "id": "findToggle",
+          "x": 675,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 723,
+          "bottom": 56
+        },
+        {
+          "id": "download",
+          "x": 731,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 779,
+          "bottom": 56
+        },
+        {
+          "id": "settings",
+          "x": 787,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 835,
+          "bottom": 56
+        },
+        {
+          "id": "modeToggle",
+          "x": 843,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 891,
+          "bottom": 56
+        }
+      ],
+      "overflow": false,
+      "readerTop": 68,
+      "bottom": 65
+    }
+  },
+  {
+    "width": 960,
+    "height": 600,
+    "header": {
+      "height": 65,
+      "buttons": [
+        {
+          "id": "menu",
+          "x": 24,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 72,
+          "bottom": 56
+        },
+        {
+          "id": "filename",
+          "x": 107.203125,
+          "y": 8,
+          "w": 492.796875,
+          "h": 48,
+          "right": 600,
+          "bottom": 56
+        },
+        {
+          "id": "prevFile",
+          "x": 608,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 656,
+          "bottom": 56
+        },
+        {
+          "id": "nextFile",
+          "x": 664,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 712,
+          "bottom": 56
+        },
+        {
+          "id": "findToggle",
+          "x": 720,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 768,
+          "bottom": 56
+        },
+        {
+          "id": "download",
+          "x": 776,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 824,
+          "bottom": 56
+        },
+        {
+          "id": "settings",
+          "x": 832,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 880,
+          "bottom": 56
+        },
+        {
+          "id": "modeToggle",
+          "x": 888,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 936,
+          "bottom": 56
+        }
+      ],
+      "overflow": false,
+      "readerTop": 68,
+      "bottom": 65
+    }
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "header": {
+      "height": 65,
+      "buttons": [
+        {
+          "id": "filename",
+          "x": 331.203125,
+          "y": 8,
+          "w": 588.796875,
+          "h": 48,
+          "right": 920,
+          "bottom": 56
+        },
+        {
+          "id": "prevFile",
+          "x": 928,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 976,
+          "bottom": 56
+        },
+        {
+          "id": "nextFile",
+          "x": 984,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 1032,
+          "bottom": 56
+        },
+        {
+          "id": "findToggle",
+          "x": 1040,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 1088,
+          "bottom": 56
+        },
+        {
+          "id": "download",
+          "x": 1096,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 1144,
+          "bottom": 56
+        },
+        {
+          "id": "settings",
+          "x": 1152,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 1200,
+          "bottom": 56
+        },
+        {
+          "id": "modeToggle",
+          "x": 1208,
+          "y": 8,
+          "w": 48,
+          "h": 48,
+          "right": 1256,
+          "bottom": 56
+        }
+      ],
+      "overflow": false,
+      "readerTop": 68,
+      "bottom": 65
+    }
+  }
+]

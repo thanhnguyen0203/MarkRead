@@ -1,0 +1,13 @@
+{
+  "gradle": {
+    "version": "8.9",
+    "url": "https://services.gradle.org/distributions/gradle-8.9-bin.zip",
+    "sha256": "d725d707bfabd4dfdc958c624003b3c80accc03f7037b5122c4b1d0ef15cecab"
+  },
+  "sdkTools": {
+    "version": "12.0",
+    "url": "https://dl.google.com/android/repository/commandlinetools-win-11076708_latest.zip",
+    "manifestSha1": "3d2917302740f476999a091bc5558837c7a863c5",
+    "actualSha256": "4d6931209eebb1bfb7c7e8b240a6a3cb3ab24479ea294f3539429574b1eec862"
+  }
+}

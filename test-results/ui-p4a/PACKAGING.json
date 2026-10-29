@@ -1,0 +1,16 @@
+{
+  "adaptiveXML": 4,
+  "legacyPNGs": 10,
+  "resolvedIconResources": [
+    "ic_launcher",
+    "ic_launcher_round",
+    "ic_foreground",
+    "ic_background",
+    "ic_monochrome"
+  ],
+  "compiledMonochromePresent": true,
+  "allAppDexExceptGeneratedRUnchanged": true,
+  "rendererAssetUnchanged": true,
+  "debugCertificateUnchanged": true,
+  "installedApkSha256": "4b8ede97f832e0f97d8ad91970e20eb416a9a229d5d3ec54e991f9e96dd5a314"
+}

@@ -1,0 +1,71 @@
+PASS dark: selected check is visible, semantic and contrasted
+PASS dark: currentColor/default/primary/disabled use readable inherited theme colors
+PASS dark: keyboard focus remains distinct from icon/selection
+PASS dark: press/release keeps contrast, geometry and actual document state
+PASS light: selected check is visible, semantic and contrasted
+PASS light: currentColor/default/primary/disabled use readable inherited theme colors
+PASS light: keyboard focus remains distinct from icon/selection
+PASS light: press/release keeps contrast, geometry and actual document state
+PASS sepia: selected check is visible, semantic and contrasted
+PASS sepia: currentColor/default/primary/disabled use readable inherited theme colors
+PASS sepia: keyboard focus remains distinct from icon/selection
+PASS sepia: press/release keeps contrast, geometry and actual document state
+PASS black: selected check is visible, semantic and contrasted
+PASS black: currentColor/default/primary/disabled use readable inherited theme colors
+PASS black: keyboard focus remains distinct from icon/selection
+PASS black: press/release keeps contrast, geometry and actual document state
+PASS tokyo-night: selected check is visible, semantic and contrasted
+PASS tokyo-night: currentColor/default/primary/disabled use readable inherited theme colors
+PASS tokyo-night: keyboard focus remains distinct from icon/selection
+PASS tokyo-night: press/release keeps contrast, geometry and actual document state
+PASS tokyo-light: selected check is visible, semantic and contrasted
+PASS tokyo-light: currentColor/default/primary/disabled use readable inherited theme colors
+PASS tokyo-light: keyboard focus remains distinct from icon/selection
+PASS tokyo-light: press/release keeps contrast, geometry and actual document state
+PASS blue-gray: selected check is visible, semantic and contrasted
+PASS blue-gray: currentColor/default/primary/disabled use readable inherited theme colors
+PASS blue-gray: keyboard focus remains distinct from icon/selection
+PASS blue-gray: press/release keeps contrast, geometry and actual document state
+PASS nord: selected check is visible, semantic and contrasted
+PASS nord: currentColor/default/primary/disabled use readable inherited theme colors
+PASS nord: keyboard focus remains distinct from icon/selection
+PASS nord: press/release keeps contrast, geometry and actual document state
+PASS dracula: selected check is visible, semantic and contrasted
+PASS dracula: currentColor/default/primary/disabled use readable inherited theme colors
+PASS dracula: keyboard focus remains distinct from icon/selection
+PASS dracula: press/release keeps contrast, geometry and actual document state
+PASS rose-pine: selected check is visible, semantic and contrasted
+PASS rose-pine: currentColor/default/primary/disabled use readable inherited theme colors
+PASS rose-pine: keyboard focus remains distinct from icon/selection
+PASS rose-pine: press/release keeps contrast, geometry and actual document state
+PASS forest: selected check is visible, semantic and contrasted
+PASS forest: currentColor/default/primary/disabled use readable inherited theme colors
+PASS forest: keyboard focus remains distinct from icon/selection
+PASS forest: press/release keeps contrast, geometry and actual document state
+PASS gruvbox: selected check is visible, semantic and contrasted
+PASS gruvbox: currentColor/default/primary/disabled use readable inherited theme colors
+PASS gruvbox: keyboard focus remains distinct from icon/selection
+PASS gruvbox: press/release keeps contrast, geometry and actual document state
+PASS 320x568:24px glyphs are centered in actual48px controls
+PASS 320x568: no toolbar target overlap or body overflow
+PASS 360x800:24px glyphs are centered in actual48px controls
+PASS 360x800: no toolbar target overlap or body overflow
+PASS 390x844:24px glyphs are centered in actual48px controls
+PASS 390x844: no toolbar target overlap or body overflow
+PASS 600x960:24px glyphs are centered in actual48px controls
+PASS 600x960: no toolbar target overlap or body overflow
+PASS 844x390:24px glyphs are centered in actual48px controls
+PASS 844x390: no toolbar target overlap or body overflow
+PASS 1280x800:24px glyphs are centered in actual48px controls
+PASS 1280x800: no toolbar target overlap or body overflow
+PASS all23 pinned SVGs render nonempty geometry in Chromium
+PASS icon system adds no spinner/keyframe animation under reduced motion
+PASS icon presentation stays outside reader/source and preserves bytes
+PASS no page errors during12-theme/responsive icon checks
+PASS simulated native rename busy uses static loader and actual disabled/busy state
+PASS busy label remains meaningful without motion or duplicate accessible SVG name
+PASS rename error restores glyph on the same button with one handler invocation
+PASS native error message/source are unchanged by icon update
+PASS rename retry retains original behavior and resets decorative state
+PASS no errors in MessagePort icon busy/retry simulation
+P2E ICON STATES: 70 PASS

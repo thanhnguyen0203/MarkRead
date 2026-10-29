@@ -1,0 +1,37 @@
+PASS dark: ordinary math contrast>=4.5
+PASS dark: custom CSS retains math precedence
+PASS dark: explicit formula color is preserved
+PASS light: ordinary math contrast>=4.5
+PASS light: custom CSS retains math precedence
+PASS light: explicit formula color is preserved
+PASS sepia: ordinary math contrast>=4.5
+PASS sepia: custom CSS retains math precedence
+PASS sepia: explicit formula color is preserved
+PASS black: ordinary math contrast>=4.5
+PASS black: custom CSS retains math precedence
+PASS black: explicit formula color is preserved
+PASS tokyo-night: ordinary math contrast>=4.5
+PASS tokyo-night: custom CSS retains math precedence
+PASS tokyo-night: explicit formula color is preserved
+PASS tokyo-light: ordinary math contrast>=4.5
+PASS tokyo-light: custom CSS retains math precedence
+PASS tokyo-light: explicit formula color is preserved
+PASS blue-gray: ordinary math contrast>=4.5
+PASS blue-gray: custom CSS retains math precedence
+PASS blue-gray: explicit formula color is preserved
+PASS nord: ordinary math contrast>=4.5
+PASS nord: custom CSS retains math precedence
+PASS nord: explicit formula color is preserved
+PASS dracula: ordinary math contrast>=4.5
+PASS dracula: custom CSS retains math precedence
+PASS dracula: explicit formula color is preserved
+PASS rose-pine: ordinary math contrast>=4.5
+PASS rose-pine: custom CSS retains math precedence
+PASS rose-pine: explicit formula color is preserved
+PASS forest: ordinary math contrast>=4.5
+PASS forest: custom CSS retains math precedence
+PASS forest: explicit formula color is preserved
+PASS gruvbox: ordinary math contrast>=4.5
+PASS gruvbox: custom CSS retains math precedence
+PASS gruvbox: explicit formula color is preserved
+P3F MATH QA: 36 PASS

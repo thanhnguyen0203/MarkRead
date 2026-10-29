@@ -1,0 +1,115 @@
+PASS 320x568: toolbar targets and reader clearance fit
+PASS 320x568: at most two compact rows, no overlap
+PASS 320x568: drawer/fixed mode is width-owned
+PASS 320x568: Settings appearance visible, synchronized and contained
+PASS 320x568: Settings typography visible, synchronized and contained
+PASS 320x568: Settings editing visible, synchronized and contained
+PASS 320x568: Settings css visible, synchronized and contained
+PASS 320x568: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 320
+PASS 360x800: toolbar targets and reader clearance fit
+PASS 360x800: at most two compact rows, no overlap
+PASS 360x800: drawer/fixed mode is width-owned
+PASS 360x800: Settings appearance visible, synchronized and contained
+PASS 360x800: Settings typography visible, synchronized and contained
+PASS 360x800: Settings editing visible, synchronized and contained
+PASS 360x800: Settings css visible, synchronized and contained
+PASS 360x800: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 360
+PASS 393x852: toolbar targets and reader clearance fit
+PASS 393x852: at most two compact rows, no overlap
+PASS 393x852: drawer/fixed mode is width-owned
+PASS 393x852: Settings appearance visible, synchronized and contained
+PASS 393x852: Settings typography visible, synchronized and contained
+PASS 393x852: Settings editing visible, synchronized and contained
+PASS 393x852: Settings css visible, synchronized and contained
+PASS 393x852: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 393
+PASS 412x915: toolbar targets and reader clearance fit
+PASS 412x915: at most two compact rows, no overlap
+PASS 412x915: drawer/fixed mode is width-owned
+PASS 412x915: Settings appearance visible, synchronized and contained
+PASS 412x915: Settings typography visible, synchronized and contained
+PASS 412x915: Settings editing visible, synchronized and contained
+PASS 412x915: Settings css visible, synchronized and contained
+PASS 412x915: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 412
+PASS 600x960: toolbar targets and reader clearance fit
+PASS 600x960: at most two compact rows, no overlap
+PASS 600x960: drawer/fixed mode is width-owned
+PASS 600x960: Settings appearance visible, synchronized and contained
+PASS 600x960: Settings typography visible, synchronized and contained
+PASS 600x960: Settings editing visible, synchronized and contained
+PASS 600x960: Settings css visible, synchronized and contained
+PASS 600x960: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 600
+PASS 800x1280: toolbar targets and reader clearance fit
+PASS 800x1280: at most two compact rows, no overlap
+PASS 800x1280: drawer/fixed mode is width-owned
+PASS 800x1280: Settings appearance visible, synchronized and contained
+PASS 800x1280: Settings typography visible, synchronized and contained
+PASS 800x1280: Settings editing visible, synchronized and contained
+PASS 800x1280: Settings css visible, synchronized and contained
+PASS 800x1280: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 800
+PASS 568x320: toolbar targets and reader clearance fit
+PASS 568x320: at most two compact rows, no overlap
+PASS 568x320: drawer/fixed mode is width-owned
+PASS 568x320: Settings appearance visible, synchronized and contained
+PASS 568x320: Settings typography visible, synchronized and contained
+PASS 568x320: Settings editing visible, synchronized and contained
+PASS 568x320: Settings css visible, synchronized and contained
+PASS 568x320: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 568
+PASS 800x360: toolbar targets and reader clearance fit
+PASS 800x360: at most two compact rows, no overlap
+PASS 800x360: drawer/fixed mode is width-owned
+PASS 800x360: Settings appearance visible, synchronized and contained
+PASS 800x360: Settings typography visible, synchronized and contained
+PASS 800x360: Settings editing visible, synchronized and contained
+PASS 800x360: Settings css visible, synchronized and contained
+PASS 800x360: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 800
+PASS 852x393: toolbar targets and reader clearance fit
+PASS 852x393: at most two compact rows, no overlap
+PASS 852x393: drawer/fixed mode is width-owned
+PASS 852x393: Settings appearance visible, synchronized and contained
+PASS 852x393: Settings typography visible, synchronized and contained
+PASS 852x393: Settings editing visible, synchronized and contained
+PASS 852x393: Settings css visible, synchronized and contained
+PASS 852x393: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 852
+PASS 915x412: toolbar targets and reader clearance fit
+PASS 915x412: at most two compact rows, no overlap
+PASS 915x412: drawer/fixed mode is width-owned
+PASS 915x412: Settings appearance visible, synchronized and contained
+PASS 915x412: Settings typography visible, synchronized and contained
+PASS 915x412: Settings editing visible, synchronized and contained
+PASS 915x412: Settings css visible, synchronized and contained
+PASS 915x412: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 915
+PASS 960x600: toolbar targets and reader clearance fit
+PASS 960x600: at most two compact rows, no overlap
+PASS 960x600: drawer/fixed mode is width-owned
+PASS 960x600: Settings appearance visible, synchronized and contained
+PASS 960x600: Settings typography visible, synchronized and contained
+PASS 960x600: Settings editing visible, synchronized and contained
+PASS 960x600: Settings css visible, synchronized and contained
+PASS 960x600: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 960
+PASS 1280x800: toolbar targets and reader clearance fit
+PASS 1280x800: at most two compact rows, no overlap
+PASS 1280x800: drawer/fixed mode is width-owned
+PASS 1280x800: Settings appearance visible, synchronized and contained
+PASS 1280x800: Settings typography visible, synchronized and contained
+PASS 1280x800: Settings editing visible, synchronized and contained
+PASS 1280x800: Settings css visible, synchronized and contained
+PASS 1280x800: Settings general visible, synchronized and contained
+PASS native category selector retains five full accessible names at 1280
+PASS height-only shrink preserves drawer, filter focus and caret
+PASS height restoration does not close drawer or switch current file
+PASS responsive reflow preserves source node, selection, focus and draft
+PASS short viewport keeps Settings text input and selection
+PASS Settings reflow leaves unsaved document state intact
+PASS no responsive renderer errors
+P2F RESPONSIVE: 114 PASS

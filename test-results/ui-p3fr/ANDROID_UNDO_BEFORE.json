@@ -1,0 +1,37 @@
+[
+  {
+    "name": "QA runtime Android API",
+    "status": "PASS",
+    "expected": "35",
+    "actual": "35",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "single exact result",
+    "status": "PASS",
+    "expected": "# A\n\ntwo one",
+    "actual": "# A\n\ntwo one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "single native Undo",
+    "status": "FAIL",
+    "expected": "# A\n\none one",
+    "actual": "# A\n\ntwo one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "single native Redo",
+    "status": "PASS",
+    "expected": "# A\n\ntwo one",
+    "actual": "# A\n\ntwo one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "no unsafe pane projection remains",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView native editing command, instrumentation"
+  }
+]

@@ -1,0 +1,97 @@
+PASS dark: valid inline/display glyphs/operators readable
+PASS dark: unsupported inline command contrast
+PASS dark: unsupported display command contrast
+PASS dark: invalid inline/display source readable
+PASS dark: author inline/display color unchanged
+PASS dark: exact source and valid MathML preserved
+PASS dark: later custom CSS overrides generated error color
+PASS dark: custom CSS never changes Markdown
+PASS light: valid inline/display glyphs/operators readable
+PASS light: unsupported inline command contrast
+PASS light: unsupported display command contrast
+PASS light: invalid inline/display source readable
+PASS light: author inline/display color unchanged
+PASS light: exact source and valid MathML preserved
+PASS light: later custom CSS overrides generated error color
+PASS light: custom CSS never changes Markdown
+PASS sepia: valid inline/display glyphs/operators readable
+PASS sepia: unsupported inline command contrast
+PASS sepia: unsupported display command contrast
+PASS sepia: invalid inline/display source readable
+PASS sepia: author inline/display color unchanged
+PASS sepia: exact source and valid MathML preserved
+PASS sepia: later custom CSS overrides generated error color
+PASS sepia: custom CSS never changes Markdown
+PASS black: valid inline/display glyphs/operators readable
+PASS black: unsupported inline command contrast
+PASS black: unsupported display command contrast
+PASS black: invalid inline/display source readable
+PASS black: author inline/display color unchanged
+PASS black: exact source and valid MathML preserved
+PASS black: later custom CSS overrides generated error color
+PASS black: custom CSS never changes Markdown
+PASS tokyo-night: valid inline/display glyphs/operators readable
+PASS tokyo-night: unsupported inline command contrast
+PASS tokyo-night: unsupported display command contrast
+PASS tokyo-night: invalid inline/display source readable
+PASS tokyo-night: author inline/display color unchanged
+PASS tokyo-night: exact source and valid MathML preserved
+PASS tokyo-night: later custom CSS overrides generated error color
+PASS tokyo-night: custom CSS never changes Markdown
+PASS tokyo-light: valid inline/display glyphs/operators readable
+PASS tokyo-light: unsupported inline command contrast
+PASS tokyo-light: unsupported display command contrast
+PASS tokyo-light: invalid inline/display source readable
+PASS tokyo-light: author inline/display color unchanged
+PASS tokyo-light: exact source and valid MathML preserved
+PASS tokyo-light: later custom CSS overrides generated error color
+PASS tokyo-light: custom CSS never changes Markdown
+PASS blue-gray: valid inline/display glyphs/operators readable
+PASS blue-gray: unsupported inline command contrast
+PASS blue-gray: unsupported display command contrast
+PASS blue-gray: invalid inline/display source readable
+PASS blue-gray: author inline/display color unchanged
+PASS blue-gray: exact source and valid MathML preserved
+PASS blue-gray: later custom CSS overrides generated error color
+PASS blue-gray: custom CSS never changes Markdown
+PASS nord: valid inline/display glyphs/operators readable
+PASS nord: unsupported inline command contrast
+PASS nord: unsupported display command contrast
+PASS nord: invalid inline/display source readable
+PASS nord: author inline/display color unchanged
+PASS nord: exact source and valid MathML preserved
+PASS nord: later custom CSS overrides generated error color
+PASS nord: custom CSS never changes Markdown
+PASS dracula: valid inline/display glyphs/operators readable
+PASS dracula: unsupported inline command contrast
+PASS dracula: unsupported display command contrast
+PASS dracula: invalid inline/display source readable
+PASS dracula: author inline/display color unchanged
+PASS dracula: exact source and valid MathML preserved
+PASS dracula: later custom CSS overrides generated error color
+PASS dracula: custom CSS never changes Markdown
+PASS rose-pine: valid inline/display glyphs/operators readable
+PASS rose-pine: unsupported inline command contrast
+PASS rose-pine: unsupported display command contrast
+PASS rose-pine: invalid inline/display source readable
+PASS rose-pine: author inline/display color unchanged
+PASS rose-pine: exact source and valid MathML preserved
+PASS rose-pine: later custom CSS overrides generated error color
+PASS rose-pine: custom CSS never changes Markdown
+PASS forest: valid inline/display glyphs/operators readable
+PASS forest: unsupported inline command contrast
+PASS forest: unsupported display command contrast
+PASS forest: invalid inline/display source readable
+PASS forest: author inline/display color unchanged
+PASS forest: exact source and valid MathML preserved
+PASS forest: later custom CSS overrides generated error color
+PASS forest: custom CSS never changes Markdown
+PASS gruvbox: valid inline/display glyphs/operators readable
+PASS gruvbox: unsupported inline command contrast
+PASS gruvbox: unsupported display command contrast
+PASS gruvbox: invalid inline/display source readable
+PASS gruvbox: author inline/display color unchanged
+PASS gruvbox: exact source and valid MathML preserved
+PASS gruvbox: later custom CSS overrides generated error color
+PASS gruvbox: custom CSS never changes Markdown
+P3FR2 MATH RELEASE: 96 PASS

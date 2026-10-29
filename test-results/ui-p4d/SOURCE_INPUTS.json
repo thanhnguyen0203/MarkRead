@@ -1,0 +1,445 @@
+{
+  "apkSha256": "a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995",
+  "sourceSnapshot": "P4C verified workspace, not a historical build commit",
+  "buildCommit": null,
+  "futureReleaseCommit": null,
+  "productionInputCount": 87,
+  "rawBytesPreservedByGitAttributes": true,
+  "inputs": [
+    {
+      "path": "app/build.gradle.kts",
+      "bytes": 3570,
+      "sha256": "f53b1899ddc64f69d60888c85cbcf8129a2ed49f0eb5f932d74194bb1b0f1b93"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "bytes": 1146,
+      "sha256": "eb75e35af451a841b70ea12ffcbad69e91b1b240fc4d7d08af8d5374a6e0aaa0"
+    },
+    {
+      "path": "app/src/main/assets/THIRD_PARTY_NOTICES.txt",
+      "bytes": 252772,
+      "sha256": "101c9cae29fddaeb76a800ad6e1cfb1152c962b2316e843c12ff778029c81f5d"
+    },
+    {
+      "path": "app/src/main/assets/index.html",
+      "bytes": 13313023,
+      "sha256": "6bb2e49d0b0ec0378e3c3cfafdd6ae7578fa1f4e4d8678d9d7d2ed04cff6b49a"
+    },
+    {
+      "path": "app/src/main/java/vn/markread/local/DocumentStore.java",
+      "bytes": 13692,
+      "sha256": "fb7eb770bd9a4d043a7a7a8ddda42614716ce6164263c1fd4c117e39482383f2"
+    },
+    {
+      "path": "app/src/main/java/vn/markread/local/MainActivity.java",
+      "bytes": 40950,
+      "sha256": "daa4bae40b30d080fdd3de1e0858626e310cc1c9d2e15b2cd2f40f05f6127908"
+    },
+    {
+      "path": "app/src/main/java/vn/markread/local/MotionPolicy.java",
+      "bytes": 584,
+      "sha256": "a7e05a0341b4c17465666a7dff706e650a592d11ca5a9bf91187bcc19692110d"
+    },
+    {
+      "path": "app/src/main/java/vn/markread/local/NativeUiPolicy.java",
+      "bytes": 4480,
+      "sha256": "e5b7252345a033b27d9353fa43d25e1c9f8bb302084984bbb8f19950a1272ecb"
+    },
+    {
+      "path": "app/src/main/java/vn/markread/local/Policy.java",
+      "bytes": 3035,
+      "sha256": "d3fa0fa0c32e8acb75cfa2d6f80ac99f0a6f04c10d415ff07e1438943797600c"
+    },
+    {
+      "path": "app/src/main/java/vn/markread/local/SessionPolicy.java",
+      "bytes": 351,
+      "sha256": "42445bc8a78bf59e5cdbd227d2e4d867da65fd972d5b7b3417aef50b9ab5da11"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_background.xml",
+      "bytes": 179,
+      "sha256": "b28daad0f4c6e450dc6eb3f7425ef77e23ec4c2c2e238a3a67ec201d46d96679"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_foreground.xml",
+      "bytes": 561,
+      "sha256": "1decb5f56a8cdad5af87537673d5cef6daa5e8e2d83e9726403e62b3584ab58b"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_monochrome.xml",
+      "bytes": 561,
+      "sha256": "ea6e3b9967c8f05d9e7f7c6b35a43b457131214c420d3f0a25d99b4e3f9a96bc"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "bytes": 255,
+      "sha256": "fbdd13225cdb89df3f86a0791104db22a1b5e8326f8880e4dd601a9bf3277c8e"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "bytes": 255,
+      "sha256": "fbdd13225cdb89df3f86a0791104db22a1b5e8326f8880e4dd601a9bf3277c8e"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml",
+      "bytes": 317,
+      "sha256": "980f09f1d41123615b7dd2f9cc6c0a89c2e14e3d02e7ddd999f069eb25d12abd"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v33/ic_launcher_round.xml",
+      "bytes": 317,
+      "sha256": "980f09f1d41123615b7dd2f9cc6c0a89c2e14e3d02e7ddd999f069eb25d12abd"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "bytes": 1145,
+      "sha256": "1650318d77fc49fec47ec66aa0c528a18d19a1d784aa28ab57c6249adbe03eea"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "bytes": 2134,
+      "sha256": "5d352982b417fe4fbf4630d431f1d7dba6d5e8b5bb227ad11ee47593be2233e8"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "bytes": 940,
+      "sha256": "82e1a4b313fdd51d3317fcc28b89babb873d1b7e90dbbd0789e3eaaed1b248ec"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "bytes": 1549,
+      "sha256": "b7e486e566189700f09f53b2f4eaf88b457e81ebd01464be19aa1048ab2e8a32"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "bytes": 1733,
+      "sha256": "e1ea5f3d72f5ec575ffbc78d94d9386a566e1051829e7acf2331428b2846cae5"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "bytes": 3244,
+      "sha256": "cd7795a3b23fe6c6003596ee0949eec00f4c7fd62cb4cfabacf79d9e67ebf081"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "bytes": 2139,
+      "sha256": "33241136a10a65d3ae7527aa4629bc1313b0a451d12ee2ac23aa4b13d9a5d646"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "bytes": 4677,
+      "sha256": "ef7ed3f72a353bd97c1998a0d41084620418c7753ed57eda53f6f2b085f84b4f"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "bytes": 3078,
+      "sha256": "f861a2e2fa04d5b9a99e3420322d71e13cfd5a5256e0a1cfd500946a8d2aae18"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "bytes": 6660,
+      "sha256": "40dd107996e5a1e7e87222390e5ea4ec8d768e5b2b0b34e5d9f06360d3c9f996"
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "bytes": 461,
+      "sha256": "c871d1adafd95ac1735dd6ec64bc5dd04ede4c5650b1d3dee5bffa91eca9ab37"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "bytes": 851,
+      "sha256": "196c2a0a0a01733d2e91d69d9e2975890a813542882f0d1525ef6b4b3a33b3f9"
+    },
+    {
+      "path": "build.gradle.kts",
+      "bytes": 70,
+      "sha256": "3171f812360cad9bdc98a6ea83d49124024409267200fa383acccac0cf4d261f"
+    },
+    {
+      "path": "gradle.properties",
+      "bytes": 107,
+      "sha256": "fd3dc84bf51d174859c61ea75231586e0a93de9bbad80da4e5e783ff5e730d09"
+    },
+    {
+      "path": "gradle/release-certificate.sha256",
+      "bytes": 65,
+      "sha256": "644ccade67d4445326dfc7a995976ca2514c934051677db998172df684238e34"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 43504,
+      "sha256": "498495120a03b9a6ab5d155f5de3c8f0d986a449153702fb80fc80e134484f17"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 287,
+      "sha256": "090143f692ca28fdc433de6dc10c738eb0e98d4891d9ccced38726c99e5d1824"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "bytes": 277,
+      "sha256": "4519e3730c226a4c995a4dfa2815148b8fce153548453d6aab0cbfd523df6957"
+    },
+    {
+      "path": "web/build.mjs",
+      "bytes": 3860,
+      "sha256": "fc87ef6784a3daf7ad76dd7c23fe1b77f2f178dace2ad1fc3c58de838d78acf3"
+    },
+    {
+      "path": "web/fonts/Merriweather-Italic.woff2",
+      "bytes": 2479668,
+      "sha256": "852be1f16e8f7961790f3fb243079a74db4421c71ce6f15daedca5ff3935d5e0"
+    },
+    {
+      "path": "web/fonts/Merriweather.woff2",
+      "bytes": 2490244,
+      "sha256": "2cc90adc36e53317cb9990acbf928e2380559e905301006918f22ae8167b2d01"
+    },
+    {
+      "path": "web/fonts/OFL.txt",
+      "bytes": 4438,
+      "sha256": "715bd349bfa6116f99e351e1548321dcfa25b91df65502d22ca8d624557697d2"
+    },
+    {
+      "path": "web/icon-registry.mjs",
+      "bytes": 3776,
+      "sha256": "022243b2143c55db639dedbd17b961ef92b085ff13879a54d0768a7e1c4c9e5f"
+    },
+    {
+      "path": "web/icons/.gitattributes",
+      "bytes": 114,
+      "sha256": "9f0856d73f49afffb58a2240342965a31eb85075a29a7e1f7e3c67579fb4f337"
+    },
+    {
+      "path": "web/icons/LICENSE-feather",
+      "bytes": 1082,
+      "sha256": "308028e93fcf84972523cdf6e616f73168546b4953895f516d01287f16fe7bee"
+    },
+    {
+      "path": "web/icons/LICENSE-lucide",
+      "bytes": 880,
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    {
+      "path": "web/icons/lucide/arrow-down.svg",
+      "bytes": 262,
+      "sha256": "2b641c7a59d39450edfed72067fcc9940a1a316a737346af23b4b9103c0689f2"
+    },
+    {
+      "path": "web/icons/lucide/arrow-up-down.svg",
+      "bytes": 313,
+      "sha256": "d15411438095bac7cab0cf91f18cadfbde2ca752284c06b4b3642c4695b1774e"
+    },
+    {
+      "path": "web/icons/lucide/arrow-up.svg",
+      "bytes": 261,
+      "sha256": "8c22c25874c80bb062bef985d207d8f1d4a4d7847237d0a8cf720a3235968518"
+    },
+    {
+      "path": "web/icons/lucide/book-open.svg",
+      "bytes": 378,
+      "sha256": "a5eb669f66989fdbc003b1689ebc93769b3b9d680f840573f2a3ac268756f894"
+    },
+    {
+      "path": "web/icons/lucide/check.svg",
+      "bytes": 239,
+      "sha256": "7f33acc9a77a61659531044525fc008edebe215bf4dcf1c789c8674ad3277db0"
+    },
+    {
+      "path": "web/icons/lucide/chevron-down.svg",
+      "bytes": 236,
+      "sha256": "66ea878e72ed3488bb3b464c39dfdccee8d1f78e560dccea40e5e12da0e87e87"
+    },
+    {
+      "path": "web/icons/lucide/chevron-left.svg",
+      "bytes": 238,
+      "sha256": "83b0681aa38bf55e9d52a1e4b4cced624abe1fe7678ecafda133a574f1161d93"
+    },
+    {
+      "path": "web/icons/lucide/chevron-right.svg",
+      "bytes": 237,
+      "sha256": "2758143d7b2434e4aa7307dfd34405c87909ff4052f21b5f3f40d45224b4f19b"
+    },
+    {
+      "path": "web/icons/lucide/code-xml.svg",
+      "bytes": 294,
+      "sha256": "a6d2110227be375be21da7324d3c09262c1bf019d06bdeab356d515342ab7cce"
+    },
+    {
+      "path": "web/icons/lucide/columns-2.svg",
+      "bytes": 285,
+      "sha256": "bddf3348a9c82d111a060d118299c90755b1ae8411bd16ea1d5ddb83c5f98a27"
+    },
+    {
+      "path": "web/icons/lucide/copy.svg",
+      "bytes": 339,
+      "sha256": "ea80e566c7a12628a447cb53179b19aea4f60b9143e2becd0d0f20bf260e5718"
+    },
+    {
+      "path": "web/icons/lucide/download.svg",
+      "bytes": 348,
+      "sha256": "21ee20839a201a74e612aafe7eaaf56f6ddc095c74aa5fcbb252c51f74a7535c"
+    },
+    {
+      "path": "web/icons/lucide/ellipsis-vertical.svg",
+      "bytes": 312,
+      "sha256": "655ee2104d9540cc9377c83f3b9fea628d78d9f4e1cdca7c1b36e952599944d7"
+    },
+    {
+      "path": "web/icons/lucide/file-text.svg",
+      "bytes": 392,
+      "sha256": "486fab70d8ad3cdc69b5ff9b6c356a58d41fcc4c885359cbf9d6e088a7c47f70"
+    },
+    {
+      "path": "web/icons/lucide/folder-open.svg",
+      "bytes": 401,
+      "sha256": "ee57452b40e71df310214091dd9da1941a397c83197b8ff8d7ae66dd4242578b"
+    },
+    {
+      "path": "web/icons/lucide/info.svg",
+      "bytes": 294,
+      "sha256": "bc977a64eb96f3e9c1041ffd09a3fceb70e3e65c02b571f76064062ed31f3cb9"
+    },
+    {
+      "path": "web/icons/lucide/loader-circle.svg",
+      "bytes": 251,
+      "sha256": "043021bb903919668804bdb6fee0342072e4ffea5f03fbd857774c440179ad3b"
+    },
+    {
+      "path": "web/icons/lucide/menu.svg",
+      "bytes": 332,
+      "sha256": "90a31b3ab1cf6c796b6024560324daf425233ae3c11f30818b182ce557bafa99"
+    },
+    {
+      "path": "web/icons/lucide/pencil.svg",
+      "bytes": 377,
+      "sha256": "7e1ca7a6f5c1eb949671df762f2baadd32f5bd841d43153c3a15279af7d78d0c"
+    },
+    {
+      "path": "web/icons/lucide/search.svg",
+      "bytes": 273,
+      "sha256": "9322d964b61cf729b3a81210568d5a97eaf4a1f3239f25a056fda3013bf35611"
+    },
+    {
+      "path": "web/icons/lucide/settings.svg",
+      "bytes": 824,
+      "sha256": "3c7bee2696ce0c2d48d34e813f4fcda31f0ad21ab9309aee3751cde4280ad737"
+    },
+    {
+      "path": "web/icons/lucide/triangle-alert.svg",
+      "bytes": 345,
+      "sha256": "4866f38b8560d410f21e3226413e0b77997b6dfbb6931fadfe0a0d5aef9ffeb4"
+    },
+    {
+      "path": "web/icons/lucide/x.svg",
+      "bytes": 260,
+      "sha256": "4a9cdab38fbb96162e7dace28e33f4ca0e49d8963a6162abc3d4691b7d675117"
+    },
+    {
+      "path": "web/icons/manifest.json",
+      "bytes": 7783,
+      "sha256": "ff0706ed72fb64fff1430042bedca065cce218481413195329672d3a375df3f9"
+    },
+    {
+      "path": "web/package-lock.json",
+      "bytes": 63580,
+      "sha256": "c7a0abd517be96385f83daf497a017bb4395809c72cc1de655c7c29358fefd94"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 578,
+      "sha256": "7e482627e3f5907e1361a02279d8d400dc7af18ca32b1c82639440884119f8c6"
+    },
+    {
+      "path": "web/src/app.css",
+      "bytes": 71411,
+      "sha256": "a1bc0eff65e44ef75567cc079362f7d55e3c8bc23a637f680c2a29a83d616f5d"
+    },
+    {
+      "path": "web/src/app.js",
+      "bytes": 79831,
+      "sha256": "55331c59948413c1ee6e6d5612c041768fdeb88915154a3a32750c66d1a9066a"
+    },
+    {
+      "path": "web/src/core.js",
+      "bytes": 4297,
+      "sha256": "54363665bfd20a97f7ed4850d35f7dd4d04953c0a99fcd60b3cee0660c0ac1fa"
+    },
+    {
+      "path": "web/src/demo.md",
+      "bytes": 2730,
+      "sha256": "1fb5b1720a81dba196c5c46d244b8dfd6c88b81b29d77df6d58763bc1b8bfa20"
+    },
+    {
+      "path": "web/src/icon-markup.js",
+      "bytes": 436,
+      "sha256": "561ec43625bc5f1faad4808d088b91dbd2442e9aa40a229dc00b78f84f048600"
+    },
+    {
+      "path": "web/src/icons.js",
+      "bytes": 2642,
+      "sha256": "c80731cdd41bb3ffd1b8d24152c3b22edfc3119e34a77683635056c560b266e7"
+    },
+    {
+      "path": "web/src/keyboard.js",
+      "bytes": 3657,
+      "sha256": "b8bfdcf2c0c13baea046941007093323fa483e4ca8cbe66d0cc922a2d5884c11"
+    },
+    {
+      "path": "web/src/motion.js",
+      "bytes": 3742,
+      "sha256": "61f604313083efb1094b7cca71b8201a283a7ea1037a13096cc8b496a1b5544b"
+    },
+    {
+      "path": "web/src/native.js",
+      "bytes": 3424,
+      "sha256": "2050f4d42b43e9d7eb0067dd04c31f20ae5525f2081858389b20252d4cf3e35c"
+    },
+    {
+      "path": "web/src/paper.css",
+      "bytes": 8677,
+      "sha256": "aec631582eae06f4c95ee6e0189cad5ce673a74c064e9409ad2f72d81fcf322f"
+    },
+    {
+      "path": "web/src/preferences.js",
+      "bytes": 973,
+      "sha256": "30c71aedc01399ef4a77f28688c5b65a51edf89053ae6199a752a488d1e1f912"
+    },
+    {
+      "path": "web/src/search-worker.js",
+      "bytes": 175,
+      "sha256": "5d3499b28b8d9ff24cd911791b01c574458150a6df91163badcd4f1bed73b12d"
+    },
+    {
+      "path": "web/src/search.js",
+      "bytes": 2910,
+      "sha256": "5706a5a5e965a54dd15247cbd120fc0dec72c4861d1b6f5abccf9b6abdf84a5a"
+    },
+    {
+      "path": "web/src/shell.html",
+      "bytes": 23016,
+      "sha256": "4d0252406f81eef0c024aafdf5c5766ea215bfe79a7e726b5cce4efa1f3b63db"
+    },
+    {
+      "path": "web/src/text-transaction.js",
+      "bytes": 3509,
+      "sha256": "77369c3f33f5f22d41c2a2c1122c674496f902c3fb3b0ef8e5b25ea0c2c71421"
+    },
+    {
+      "path": "web/src/themes.js",
+      "bytes": 2233,
+      "sha256": "9f51d5be93fd0a376dd8b6878c472b8aa4049321fd699218ba6fce5ebffcfb00"
+    },
+    {
+      "path": "web/src/tokens.js",
+      "bytes": 3911,
+      "sha256": "fbe1cfb78ea7e4005fb22e9f1f678e7304be464d884a6bcfea1b52fb92e5eaeb"
+    },
+    {
+      "path": "web/src/workspace.js",
+      "bytes": 2471,
+      "sha256": "df18b14ae25a07ff1871c99ec2084244cb176edd3190a8f95e3513db097e85b3"
+    }
+  ]
+}

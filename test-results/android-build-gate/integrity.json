@@ -1,0 +1,12 @@
+{
+  "changedExistingFiles": [
+    "gradle/wrapper/gradle-wrapper.properties"
+  ],
+  "missing": [],
+  "sourceUiTestsP0P2FAndExistingApksUnchanged": true,
+  "newRepositoryFiles": [
+    "scripts/Build-AndroidDebug.ps1",
+    "docs/ui-redesign/ANDROID_BUILD_GATE.md"
+  ],
+  "scope": "build environment and wrapper checksum only"
+}

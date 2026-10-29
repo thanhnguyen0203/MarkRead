@@ -1,0 +1,17 @@
+[
+  {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 7607214,
+    "sha256": "a2ecb98b62a4df5bbd9a3df3876af00e066040d0aef15f5c2acbef1e659283d3"
+  },
+  {
+    "path": "app/src/main/assets/index.html",
+    "bytes": 13312939,
+    "sha256": "957d2d1e2769a7b71efe8ea25a1a5c4997b26223b44a256fd6c5f3660fd2be6b"
+  },
+  {
+    "path": "web/dist/MarkRead.html",
+    "bytes": 13312939,
+    "sha256": "957d2d1e2769a7b71efe8ea25a1a5c4997b26223b44a256fd6c5f3660fd2be6b"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "device": "API35 emulator",
+  "activityLaunch": {
+    "processBefore": "absent",
+    "launchState": "COLD",
+    "totalTimeMs": 1574,
+    "waitTimeMs": 1584,
+    "scope": "am start -W Activity timing, not complete Markdown resources/first meaningful paint"
+  },
+  "nativeViewFrames": {
+    "interaction": "6 Settings open/close cycles",
+    "total": 78,
+    "janky": 16,
+    "jankPercent": 20.51,
+    "p50ms": 27,
+    "p90ms": 53,
+    "scope": "dumpsys gfxinfo framestats; native Views only, under instrumentation/shared host load; not complete WebView compositor FPS"
+  },
+  "target60FPSVerified": false
+}

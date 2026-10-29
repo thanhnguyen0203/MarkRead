@@ -1,0 +1,436 @@
+{
+  "pass": 44,
+  "fail": 0,
+  "checks": [
+    {
+      "name": "old release SAF tree",
+      "expected": "MarkReadP4C_20261029_a28c71",
+      "actual": "MarkReadP4C_20261029_a28c71",
+      "status": "PASS"
+    },
+    {
+      "name": "old release source exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "old release indexes nested file",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "old release editor edit",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n\nBản lưu trước cập nhật.\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n\nBản lưu trước cập nhật.\n",
+      "status": "PASS"
+    },
+    {
+      "name": "old release exported bytes",
+      "expected": "92dddf796d442506cd55120f66c92e4c43526427ac7fe5743f01ca841ee78783",
+      "actual": "92dddf796d442506cd55120f66c92e4c43526427ac7fe5743f01ca841ee78783",
+      "status": "PASS"
+    },
+    {
+      "name": "old original never overwritten",
+      "expected": "23204b69e1bb836d20747261206ec3a26e672063e1baa5700a0a5469e1babf6e67205669e1bb87742063c3b26e206e677579c3aa6e2e207570646174652070726f6f662070726f6f662e0a0a24785e322b31240a0a24245c667261637b617d7b627d3d5c737172747b787d24240a0a5bc490e1bb8d632074e1bb877020636f6e5d285375622f30325f4368696c642e6d64290a",
+      "actual": "23204b69e1bb836d20747261206ec3a26e672063e1baa5700a0a5469e1babf6e67205669e1bb87742063c3b26e206e677579c3aa6e2e207570646174652070726f6f662070726f6f662e0a0a24785e322b31240a0a24245c667261637b617d7b627d3d5c737172747b787d24240a0a5bc490e1bb8d632074e1bb877020636f6e5d285375622f30325f4368696c642e6d64290a",
+      "status": "PASS"
+    },
+    {
+      "name": "old editor restored clean source",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "old fixture clean before update",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "name": "old native theme persisted",
+      "expected": "nord",
+      "actual": "nord",
+      "status": "PASS"
+    },
+    {
+      "name": "old native font persisted",
+      "expected": "serif",
+      "actual": "serif",
+      "status": "PASS"
+    },
+    {
+      "name": "old native CSS persisted",
+      "expected": "#paper{border-top:5px solid #b58863}",
+      "actual": "#paper{border-top:5px solid #b58863}",
+      "status": "PASS"
+    },
+    {
+      "name": "old reader applies CSS",
+      "expected": "5px",
+      "actual": "5px",
+      "status": "PASS"
+    },
+    {
+      "name": "old grants read/write",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "new native appearance retained",
+      "expected": {
+        "theme": "nord",
+        "font": "serif",
+        "size": 22,
+        "width": 720,
+        "leading": 1.9,
+        "css": "#paper{border-top:5px solid #b58863}",
+        "mermaid": true,
+        "unified": false,
+        "descending": false
+      },
+      "actual": {
+        "theme": "nord",
+        "font": "serif",
+        "size": 22,
+        "width": 720,
+        "leading": 1.9,
+        "css": "#paper{border-top:5px solid #b58863}",
+        "mermaid": true,
+        "unified": false,
+        "descending": false
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "new SAF grants retained",
+      "expected": [
+        {
+          "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP4C_20261029_a28c71",
+          "read": true,
+          "write": true
+        }
+      ],
+      "actual": [
+        {
+          "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP4C_20261029_a28c71",
+          "read": true,
+          "write": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "tree restored without granting again",
+      "expected": "MarkReadP4C_20261029_a28c71",
+      "actual": "MarkReadP4C_20261029_a28c71",
+      "status": "PASS"
+    },
+    {
+      "name": "new original source exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "new theme restored",
+      "expected": "nord",
+      "actual": "nord",
+      "status": "PASS"
+    },
+    {
+      "name": "new reader font retained",
+      "expected": "Georgia, \"Times New Roman\", serif",
+      "actual": "Georgia, \"Times New Roman\", serif",
+      "status": "PASS"
+    },
+    {
+      "name": "custom CSS rendered after update",
+      "expected": "5px",
+      "actual": "5px",
+      "status": "PASS"
+    },
+    {
+      "name": "nested file still indexed",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "saved copy indexed after update",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "saved file reopened exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n\nBản lưu trước cập nhật.\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n\nBản lưu trước cập nhật.\n",
+      "status": "PASS"
+    },
+    {
+      "name": "nested file reopened",
+      "expected": "# Tài liệu con\n\nDữ liệu thư mục con không thay đổi.\n",
+      "actual": "# Tài liệu con\n\nDữ liệu thư mục con không thay đổi.\n",
+      "status": "PASS"
+    },
+    {
+      "name": "CSS editable value retained",
+      "expected": "#paper{border-top:5px solid #b58863}",
+      "actual": "#paper{border-top:5px solid #b58863}",
+      "status": "PASS"
+    },
+    {
+      "name": "Replace All exact after upgrade",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update verified verified.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update verified verified.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "Undo Replace exact after upgrade",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "Redo Replace exact after upgrade",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update verified verified.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update verified verified.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "Undo restored original again",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "Android input on release editor",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n P4C-input",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n P4C-input",
+      "status": "PASS"
+    },
+    {
+      "name": "Undo Android input",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "Redo Android input groups exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n P4C-input",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n P4C-input",
+      "status": "PASS"
+    },
+    {
+      "name": "typing undo keeps original exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "new editor Unicode content exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n\nBản lưu sau cập nhật.\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n\nBản lưu sau cập nhật.\n",
+      "status": "PASS"
+    },
+    {
+      "name": "new release export bytes",
+      "expected": "86f297b2b978c8b8dd83d184bf7dcec57f001821a6b337eb7f37d724cb087832",
+      "actual": "86f297b2b978c8b8dd83d184bf7dcec57f001821a6b337eb7f37d724cb087832",
+      "status": "PASS"
+    },
+    {
+      "name": "original bytes still unchanged",
+      "expected": "23204b69e1bb836d20747261206ec3a26e672063e1baa5700a0a5469e1babf6e67205669e1bb87742063c3b26e206e677579c3aa6e2e207570646174652070726f6f662070726f6f662e0a0a24785e322b31240a0a24245c667261637b617d7b627d3d5c737172747b787d24240a0a5bc490e1bb8d632074e1bb877020636f6e5d285375622f30325f4368696c642e6d64290a",
+      "actual": "23204b69e1bb836d20747261206ec3a26e672063e1baa5700a0a5469e1babf6e67205669e1bb87742063c3b26e206e677579c3aa6e2e207570646174652070726f6f662070726f6f662e0a0a24785e322b31240a0a24245c667261637b617d7b627d3d5c737172747b787d24240a0a5bc490e1bb8d632074e1bb877020636f6e5d285375622f30325f4368696c642e6d64290a",
+      "status": "PASS"
+    },
+    {
+      "name": "saved-before bytes unchanged",
+      "expected": "23204b69e1bb836d20747261206ec3a26e672063e1baa5700a0a5469e1babf6e67205669e1bb87742063c3b26e206e677579c3aa6e2e207570646174652070726f6f662070726f6f662e0a0a24785e322b31240a0a24245c667261637b617d7b627d3d5c737172747b787d24240a0a5bc490e1bb8d632074e1bb877020636f6e5d285375622f30325f4368696c642e6d64290a0a42e1baa36e206cc6b075207472c6b0e1bb9b632063e1baad70206e68e1baad742e0a",
+      "actual": "23204b69e1bb836d20747261206ec3a26e672063e1baa5700a0a5469e1babf6e67205669e1bb87742063c3b26e206e677579c3aa6e2e207570646174652070726f6f662070726f6f662e0a0a24785e322b31240a0a24245c667261637b617d7b627d3d5c737172747b787d24240a0a5bc490e1bb8d632074e1bb877020636f6e5d285375622f30325f4368696c642e6d64290a0a42e1baa36e206cc6b075207472c6b0e1bb9b632063e1baad70206e68e1baad742e0a",
+      "status": "PASS"
+    },
+    {
+      "name": "nested bytes unchanged",
+      "expected": "232054c3a069206c69e1bb877520636f6e0a0a44e1bbaf206c69e1bb8775207468c6b0206de1bba56320636f6e206b68c3b46e67207468617920c491e1bb95692e0a",
+      "actual": "232054c3a069206c69e1bb877520636f6e0a0a44e1bbaf206c69e1bb8775207468c6b0206de1bba56320636f6e206b68c3b46e67207468617920c491e1bb95692e0a",
+      "status": "PASS"
+    },
+    {
+      "name": "new fixture clean after Undo",
+      "expected": false,
+      "actual": false,
+      "status": "PASS"
+    },
+    {
+      "name": "Android Back closes Search",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Android Back keeps exact source",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    },
+    {
+      "name": "cold relaunch appearance retained",
+      "expected": {
+        "theme": "nord",
+        "font": "serif",
+        "size": 22,
+        "width": 720,
+        "leading": 1.9,
+        "css": "#paper{border-top:5px solid #b58863}",
+        "mermaid": true,
+        "unified": false,
+        "descending": false
+      },
+      "actual": {
+        "theme": "nord",
+        "font": "serif",
+        "size": 22,
+        "width": 720,
+        "leading": 1.9,
+        "css": "#paper{border-top:5px solid #b58863}",
+        "mermaid": true,
+        "unified": false,
+        "descending": false
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "cold relaunch SAF grants retained",
+      "expected": [
+        {
+          "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP4C_20261029_a28c71",
+          "read": true,
+          "write": true
+        }
+      ],
+      "actual": [
+        {
+          "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP4C_20261029_a28c71",
+          "read": true,
+          "write": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "cold relaunch source exact",
+      "expected": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "actual": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "status": "PASS"
+    }
+  ],
+  "settingsAndGrantsExact": true,
+  "before": {
+    "ui": {
+      "appearance": {
+        "css": "#paper{border-top:5px solid #b58863}",
+        "descending": false,
+        "font": "serif",
+        "leading": 1.9,
+        "mermaid": true,
+        "size": 22,
+        "theme": "nord",
+        "unified": false,
+        "width": 720
+      },
+      "caret": [
+        131,
+        131
+      ],
+      "dirty": false,
+      "fileTitles": [
+        "Sub/02_Child.md",
+        "01_Main.md"
+      ],
+      "filename": "01_Main.md",
+      "readerBorder": "5px",
+      "readerFont": "Georgia, \"Times New Roman\", serif",
+      "readerText": "Kiểm tra nâng cấp\nTiếng Việt còn nguyên. update proof proof.\nx2+1x^2+1x2+1\nab=x\\frac{a}{b}=\\sqrt{x}ba​=x​Đọc tệp con\n",
+      "source": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "theme": "nord"
+    },
+    "persistence": {
+      "appearance": {
+        "theme": "nord",
+        "font": "serif",
+        "size": 22,
+        "width": 720,
+        "leading": 1.9,
+        "css": "#paper{border-top:5px solid #b58863}",
+        "mermaid": true,
+        "unified": false,
+        "descending": false
+      },
+      "grants": [
+        {
+          "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP4C_20261029_a28c71",
+          "read": true,
+          "write": true
+        }
+      ]
+    }
+  },
+  "after": {
+    "ui": {
+      "appearance": {
+        "css": "#paper{border-top:5px solid #b58863}",
+        "descending": false,
+        "font": "serif",
+        "leading": 1.9,
+        "mermaid": true,
+        "size": 22,
+        "theme": "nord",
+        "unified": false,
+        "width": 720
+      },
+      "caret": [
+        51,
+        56
+      ],
+      "dirty": false,
+      "fileTitles": [
+        "Sub/02_Child.md",
+        "01_Main.md",
+        "03_SavedBefore.md"
+      ],
+      "filename": "01_Main.md",
+      "readerBorder": "5px",
+      "readerFont": "Georgia, \"Times New Roman\", serif",
+      "readerText": "Kiểm tra nâng cấp\nTiếng Việt còn nguyên. update proof proof.\nx2+1x^2+1x2+1\nab=x\\frac{a}{b}=\\sqrt{x}ba​=x​Đọc tệp con\n",
+      "source": "# Kiểm tra nâng cấp\n\nTiếng Việt còn nguyên. update proof proof.\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n[Đọc tệp con](Sub/02_Child.md)\n",
+      "theme": "nord"
+    },
+    "persistence": {
+      "appearance": {
+        "theme": "nord",
+        "font": "serif",
+        "size": 22,
+        "width": 720,
+        "leading": 1.9,
+        "css": "#paper{border-top:5px solid #b58863}",
+        "mermaid": true,
+        "unified": false,
+        "descending": false
+      },
+      "grants": [
+        {
+          "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP4C_20261029_a28c71",
+          "read": true,
+          "write": true
+        }
+      ]
+    }
+  }
+}

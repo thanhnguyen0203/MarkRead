@@ -1,0 +1,122 @@
+{
+  "browser": "156.0.8078.49",
+  "platform": "Windows desktop Chromium/Playwright",
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "deviceScaleFactor": 1,
+  "theme": "dark",
+  "reducedMotion": "no-preference",
+  "sampling": "Animations explicitly paused and sampled at named timeline times. Not real-time footage, a frame-rate measurement or Android runtime evidence.",
+  "frames": [
+    {
+      "file": "settings-enter-0ms.png",
+      "kind": "settings-enter",
+      "manuallySampledTimeMs": 0,
+      "metrics": {
+        "dialogOpen": true,
+        "drawerExpanded": "false",
+        "drawerAriaHidden": "true",
+        "drawerInert": true,
+        "focused": ""
+      }
+    },
+    {
+      "file": "settings-enter-80ms.png",
+      "kind": "settings-enter",
+      "manuallySampledTimeMs": 80,
+      "metrics": {
+        "dialogOpen": true,
+        "drawerExpanded": "false",
+        "drawerAriaHidden": "true",
+        "drawerInert": true,
+        "focused": ""
+      }
+    },
+    {
+      "file": "settings-enter-200ms.png",
+      "kind": "settings-enter",
+      "manuallySampledTimeMs": 200,
+      "metrics": {
+        "dialogOpen": true,
+        "drawerExpanded": "false",
+        "drawerAriaHidden": "true",
+        "drawerInert": true,
+        "focused": ""
+      }
+    },
+    {
+      "file": "drawer-enter-0ms.png",
+      "kind": "drawer-enter",
+      "manuallySampledTimeMs": 0,
+      "metrics": {
+        "dialogOpen": false,
+        "drawerExpanded": "true",
+        "drawerAriaHidden": null,
+        "drawerInert": false,
+        "focused": "closeSidebar"
+      }
+    },
+    {
+      "file": "drawer-enter-120ms.png",
+      "kind": "drawer-enter",
+      "manuallySampledTimeMs": 120,
+      "metrics": {
+        "dialogOpen": false,
+        "drawerExpanded": "true",
+        "drawerAriaHidden": null,
+        "drawerInert": false,
+        "focused": "closeSidebar"
+      }
+    },
+    {
+      "file": "drawer-enter-240ms.png",
+      "kind": "drawer-enter",
+      "manuallySampledTimeMs": 240,
+      "metrics": {
+        "dialogOpen": false,
+        "drawerExpanded": "true",
+        "drawerAriaHidden": null,
+        "drawerInert": false,
+        "focused": "closeSidebar"
+      }
+    },
+    {
+      "file": "drawer-exit-0ms.png",
+      "kind": "drawer-exit",
+      "manuallySampledTimeMs": 0,
+      "metrics": {
+        "dialogOpen": false,
+        "drawerExpanded": "false",
+        "drawerAriaHidden": "true",
+        "drawerInert": true,
+        "focused": ""
+      }
+    },
+    {
+      "file": "drawer-exit-90ms.png",
+      "kind": "drawer-exit",
+      "manuallySampledTimeMs": 90,
+      "metrics": {
+        "dialogOpen": false,
+        "drawerExpanded": "false",
+        "drawerAriaHidden": "true",
+        "drawerInert": true,
+        "focused": ""
+      }
+    },
+    {
+      "file": "drawer-exit-180ms.png",
+      "kind": "drawer-exit",
+      "manuallySampledTimeMs": 180,
+      "metrics": {
+        "dialogOpen": false,
+        "drawerExpanded": "false",
+        "drawerAriaHidden": "true",
+        "drawerInert": true,
+        "focused": ""
+      }
+    }
+  ]
+}

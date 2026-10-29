@@ -1,0 +1,20 @@
+{
+  "changedSinceP2E": [
+    "app/src/main/assets/index.html",
+    "web/dist/MarkRead.html",
+    "web/src/app.css",
+    "web/src/app.js",
+    "web/src/paper.css",
+    "web/src/shell.html",
+    "web/tests/accessibility-ui.cjs",
+    "web/tests/foundations-ui.cjs",
+    "web/tests/icons-ui.cjs",
+    "web/tests/keyboard-ui.cjs",
+    "web/tests/native-ui.cjs",
+    "web/tests/reading-ui.cjs",
+    "web/tests/revision-ui.cjs",
+    "web/tests/session-ui.cjs",
+    "web/tests/ui.cjs"
+  ],
+  "missing": []
+}

@@ -1,0 +1,30 @@
+{
+  "inherited": 2097,
+  "inheritedPassed": 2097,
+  "newUndoBrowser": 68,
+  "newMathDiagnostics": 36,
+  "total": 2201,
+  "failedFinalChecks": 0,
+  "palette": 2220,
+  "apkDebug": 18,
+  "androidUndoAfter": 23,
+  "androidUndoAfterFailed": 0,
+  "knownLatexContrastFailures": 9,
+  "syntaxFiles": 54,
+  "changedExistingComparedToP3F": [
+    "web/src/app.js",
+    "web/tests/search-dialogs-ui.cjs",
+    "app/src/main/assets/index.html",
+    "qa/android/build_p3f_probe.py",
+    "qa/android/P3FInstrumentation.java",
+    "qa/android/README.md",
+    "qa/android/runtime_p3f.py"
+  ],
+  "retry": "revision-ui navigation timeout12s under concurrent load, raw retained; isolated retry62PASS; no test-timeout changes",
+  "scope": "Final automated assertions only; runtime/contrast acceptance tracked separately",
+  "releaseReadiness": "NOT READY",
+  "runtimeHighGaps": [
+    "Full Vietnamese IME composition/selection/clipboard coverage",
+    "TalkBack full speech/traversal/activation"
+  ]
+}

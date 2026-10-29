@@ -1,0 +1,76 @@
+{
+  "dirty": true,
+  "events": [
+    {
+      "composing": false,
+      "data": "D",
+      "inputType": "insertText",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nD"
+    },
+    {
+      "composing": false,
+      "data": null,
+      "inputType": "deleteContentBackward",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\n"
+    },
+    {
+      "composing": false,
+      "data": "Đ",
+      "inputType": "insertText",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nĐ"
+    },
+    {
+      "composing": false,
+      "data": "u",
+      "inputType": "insertText",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nĐu"
+    },
+    {
+      "composing": false,
+      "data": "n",
+      "inputType": "insertText",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nĐun"
+    },
+    {
+      "composing": false,
+      "data": "g",
+      "inputType": "insertText",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nĐung"
+    },
+    {
+      "composing": false,
+      "data": null,
+      "inputType": "deleteContentBackward",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nĐ"
+    },
+    {
+      "composing": false,
+      "data": "úng",
+      "inputType": "insertText",
+      "trusted": true,
+      "type": "input",
+      "value": "# Final IME\n\nĐúng"
+    }
+  ],
+  "selection": [
+    17,
+    17
+  ],
+  "value": "# Final IME\n\nĐúng",
+  "expected": "# Final IME\n\nĐúng",
+  "status": "PASS"
+}

@@ -1,0 +1,26 @@
+{
+  "syntaxFiles": 43,
+  "cssParses": 2,
+  "bundlesByteIdentical": true,
+  "oldTestsUnchanged": true,
+  "oldDocumentsUnchanged": true,
+  "apkEntriesAddedOrRemoved": false,
+  "changedApkEntries": [
+    "classes2.dex",
+    "assets/index.html"
+  ],
+  "measurements": {
+    "before": {
+      "rendererBytes": 13272195,
+      "rendererSha256": "dd43198eec05a7ea72b5d00958042d5ac444fd1851a9f0cc3a59b5c323f58c11",
+      "debugApkBytes": 7595498,
+      "debugApkSha256": "4ccc28bdffa4e539f48b80e994aa76eab1b3046336f90d61d49ced86a3e4a373"
+    },
+    "after": {
+      "rendererBytes": 13279607,
+      "rendererSha256": "1d1a55efcb320e64c38f5a5a0b8ea28847b99c00a72bc4087606893e7d9c74e6",
+      "debugApkBytes": 7598666,
+      "debugApkSha256": "689a3c58c0112c770970df7f8e124203a7b76567ba2e1e61d1822864f7788f22"
+    }
+  }
+}

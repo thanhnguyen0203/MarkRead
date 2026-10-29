@@ -1,0 +1,23 @@
+{
+  "files": {
+    "web/dist/MarkRead.html": {
+      "bytes": 13290985,
+      "sha256": "5c225beedae3e275534b5d5f0b51bd748151f9f04dd65ab39a3ec19bdf8826f8"
+    },
+    "app/src/main/assets/index.html": {
+      "bytes": 13290985,
+      "sha256": "5c225beedae3e275534b5d5f0b51bd748151f9f04dd65ab39a3ec19bdf8826f8"
+    },
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "bytes": 7601198,
+      "sha256": "c752ecc515a9148f121255aca8c0fecbacace530bd696c70d45d40ce6688f85c"
+    }
+  },
+  "changedApkEntries": [
+    "assets/index.html"
+  ],
+  "syntaxFiles": 44,
+  "cssParses": 2,
+  "newDependencies": 0,
+  "androidRuntimeTested": false
+}

@@ -1,0 +1,23 @@
+{
+  "changedExistingFiles": [
+    "app/build/outputs/apk/debug/app-debug.apk",
+    "app/src/main/assets/index.html",
+    "app/src/main/java/vn/markread/local/MainActivity.java",
+    "web/dist/MarkRead.html",
+    "web/src/app.css",
+    "web/src/app.js",
+    "web/src/keyboard.js",
+    "web/src/paper.css",
+    "web/src/shell.html"
+  ],
+  "missing": [],
+  "protectedOldFiles": 443,
+  "unchanged": [
+    "all P0-P2F/build-gate documents",
+    "Gradle/AGP/JDK/build scripts/Manifest/resources",
+    "appearance/theme/custom-CSS/file/search/SAF policies",
+    "23 SVG/registry/licenses",
+    "all inherited test files",
+    "existing signed release/P2C APKs and P2F screenshots"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "documents": {
+    "P4B_REPORT.md": {
+      "sha256": "43f430bf6920c4b9ffd10a436cb547904722e73e2c2b7474e6b908c62242359d",
+      "links": "PASS"
+    },
+    "P4B_SIGNING_AUDIT.md": {
+      "sha256": "04da3c818a85f6eaa5b99e8141a3cb5b67c6487b8ca29c4bb1aedb89f9fc6ad9",
+      "links": "PASS"
+    },
+    "P4B_VERSION_PLAN.md": {
+      "sha256": "2c44bb6df574237454339762a9778b36d6f1aab24c935aea5a3d1e03d230d620",
+      "links": "PASS"
+    },
+    "P4B_UPDATE_TEST_PLAN.md": {
+      "sha256": "a6058bd6efa083701d0e73bdec7d58c46b8f135f5a14fcc855afd2c344a6f561",
+      "links": "PASS"
+    },
+    "CHANGELOG_DRAFT.md": {
+      "sha256": "2aeeabf077304236a2be9c06f7c8ca61a669d41d42f1a06d3149d3139bfd8c37",
+      "links": "PASS"
+    }
+  },
+  "sourceSyntax": "PASS",
+  "newIgnorePatterns": "PASS",
+  "finalDebugHashMatchesValidatedArtifact": true
+}

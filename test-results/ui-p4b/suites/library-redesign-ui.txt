@@ -1,0 +1,114 @@
+PASS initial empty state offers existing open action
+PASS 320: sidebar contained without horizontal overflow
+PASS 320: visible library targets at least48 CSS px
+PASS 320: names include extensions and accessible full paths
+PASS 320: decorative Lucide file icons
+PASS 320: folder icon remains separate from disclosure
+PASS 320: all existing nested branches preserved
+PASS 320: one actual current file
+PASS 360: sidebar contained without horizontal overflow
+PASS 360: visible library targets at least48 CSS px
+PASS 360: names include extensions and accessible full paths
+PASS 360: decorative Lucide file icons
+PASS 360: folder icon remains separate from disclosure
+PASS 360: all existing nested branches preserved
+PASS 360: one actual current file
+PASS 393: sidebar contained without horizontal overflow
+PASS 393: visible library targets at least48 CSS px
+PASS 393: names include extensions and accessible full paths
+PASS 393: decorative Lucide file icons
+PASS 393: folder icon remains separate from disclosure
+PASS 393: all existing nested branches preserved
+PASS 393: one actual current file
+PASS 412: sidebar contained without horizontal overflow
+PASS 412: visible library targets at least48 CSS px
+PASS 412: names include extensions and accessible full paths
+PASS 412: decorative Lucide file icons
+PASS 412: folder icon remains separate from disclosure
+PASS 412: all existing nested branches preserved
+PASS 412: one actual current file
+PASS 600: sidebar contained without horizontal overflow
+PASS 600: visible library targets at least48 CSS px
+PASS 600: names include extensions and accessible full paths
+PASS 600: decorative Lucide file icons
+PASS 600: folder icon remains separate from disclosure
+PASS 600: all existing nested branches preserved
+PASS 600: one actual current file
+PASS 800: sidebar contained without horizontal overflow
+PASS 800: visible library targets at least48 CSS px
+PASS 800: names include extensions and accessible full paths
+PASS 800: decorative Lucide file icons
+PASS 800: folder icon remains separate from disclosure
+PASS 800: all existing nested branches preserved
+PASS 800: one actual current file
+PASS 1280: sidebar contained without horizontal overflow
+PASS 1280: visible library targets at least48 CSS px
+PASS 1280: names include extensions and accessible full paths
+PASS 1280: decorative Lucide file icons
+PASS 1280: folder icon remains separate from disclosure
+PASS 1280: all existing nested branches preserved
+PASS 1280: one actual current file
+PASS Space collapses native folder
+PASS reopening drawer retains collapse state
+PASS resize retains collapse state
+PASS Enter expands native folder
+PASS filter and visible/total count synchronized
+PASS filter empty state is distinct
+PASS clearing filter restores all documents
+PASS context request keeps existing direct rename flow without opening file
+PASS Escape dismisses rename above drawer
+PASS scroll threshold cancels long press
+PASS long press still opens rename
+PASS synthetic post-hold click cannot open another file
+PASS previous/next retains exact unsaved source
+PASS navigation order independent from filtered list
+PASS dark: current marker independent of pressed
+PASS dark: keyboard focus visible
+PASS dark: release preserves selection and draft
+PASS light: current marker independent of pressed
+PASS light: keyboard focus visible
+PASS light: release preserves selection and draft
+PASS sepia: current marker independent of pressed
+PASS sepia: keyboard focus visible
+PASS sepia: release preserves selection and draft
+PASS black: current marker independent of pressed
+PASS black: keyboard focus visible
+PASS black: release preserves selection and draft
+PASS tokyo-night: current marker independent of pressed
+PASS tokyo-night: keyboard focus visible
+PASS tokyo-night: release preserves selection and draft
+PASS tokyo-light: current marker independent of pressed
+PASS tokyo-light: keyboard focus visible
+PASS tokyo-light: release preserves selection and draft
+PASS blue-gray: current marker independent of pressed
+PASS blue-gray: keyboard focus visible
+PASS blue-gray: release preserves selection and draft
+PASS nord: current marker independent of pressed
+PASS nord: keyboard focus visible
+PASS nord: release preserves selection and draft
+PASS dracula: current marker independent of pressed
+PASS dracula: keyboard focus visible
+PASS dracula: release preserves selection and draft
+PASS rose-pine: current marker independent of pressed
+PASS rose-pine: keyboard focus visible
+PASS rose-pine: release preserves selection and draft
+PASS forest: current marker independent of pressed
+PASS forest: keyboard focus visible
+PASS forest: release preserves selection and draft
+PASS gruvbox: current marker independent of pressed
+PASS gruvbox: keyboard focus visible
+PASS gruvbox: release preserves selection and draft
+PASS 320x568: 200% text no horizontal overflow
+PASS 320x568: filter remains reachable at large text/short height
+PASS 800x360: 200% text no horizontal overflow
+PASS 800x360: filter remains reachable at large text/short height
+PASS rapid drawer changes settle under reduced motion
+PASS Escape isolates drawer and restores trigger
+PASS collapsing a visible branch preserves list scroll
+PASS drawer reopen preserves long-list position
+PROFILE desktop 5000 documents import+row commit 1718ms; not Android/FPS
+PASS all5000 permitted file rows receive offline icons
+PASS opening large library does not animate file rows
+PASS filename markup remains literal text
+PASS no renderer errors
+P3B LIBRARY: 112 PASS

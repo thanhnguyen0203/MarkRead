@@ -1,0 +1,6 @@
+{
+  "process": "MarkRead only",
+  "fatalException": false,
+  "applicationNotResponding": false,
+  "scope": "after final cold restart; not a full-session crash assertion"
+}

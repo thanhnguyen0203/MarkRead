@@ -1,0 +1,69 @@
+PASS closed mobile sidebar matches its expanded state
+PASS first Tab reaches a visible control instead of the closed sidebar
+PASS closed sidebar controls are excluded from role queries
+PASS header targets fit without overlap at 320x568
+PASS header reserves space above Markdown at 320
+PASS header targets fit without overlap at 360x800
+PASS header reserves space above Markdown at 360
+PASS header targets fit without overlap at 390x844
+PASS header reserves space above Markdown at 390
+PASS header targets fit without overlap at 600x960
+PASS header reserves space above Markdown at 600
+PASS header targets fit without overlap at 680x800
+PASS header reserves space above Markdown at 680
+PASS header targets fit without overlap at 820x800
+PASS header reserves space above Markdown at 820
+PASS header targets fit without overlap at 844x390
+PASS header reserves space above Markdown at 844
+PASS header targets fit without overlap at 910x800
+PASS header reserves space above Markdown at 910
+PASS header targets fit without overlap at 1024x800
+PASS header reserves space above Markdown at 1024
+PASS header targets fit without overlap at 1280x800
+PASS header reserves space above Markdown at 1280
+PASS open mobile sidebar has a dialog name and synchronized expanded state
+PASS file list exposes a real named button within a list
+PASS nested folders and files retain valid list-item ownership
+PASS active document retains current-page semantics
+PASS sidebar controls and folder disclosures have usable 48 CSS px bounds
+PASS sort and forget targets do not overlap
+PASS open-file menu has a name and expanded state
+PASS open-file menu targets are at least 48 CSS px
+PASS long press still renames an unselected file without opening it
+PASS rename input keeps its label and idle form state
+PASS rename controls have 48 CSS px targets
+PASS explicit sidebar close hides its accessibility subtree
+PASS desktop sidebar becomes accessible after a breakpoint change
+PASS returning to mobile closes the accessibility subtree consistently
+PASS settings dialog has an accessible name
+PASS settings section state and controls relationship: appearance
+PASS visible settings button targets: appearance
+PASS settings section state and controls relationship: typography
+PASS visible settings button targets: typography
+PASS settings section state and controls relationship: editing
+PASS visible settings button targets: editing
+PASS settings section state and controls relationship: css
+PASS visible settings button targets: css
+PASS settings section state and controls relationship: general
+PASS visible settings button targets: general
+PASS help dialog exposes its purpose by name
+PASS range input hit areas are 48 CSS px high
+PASS font listbox retains its name and single selected option
+PASS font options have 48 CSS px targets
+PASS switch labels and inputs have separated 48 CSS px targets
+PASS find disclosure exposes its actual state and panel
+PASS search and replacement controls have 48 CSS px targets
+PASS closing find clears expanded state
+PASS mode menu keeps one checked mode
+PASS source undo retains original Markdown
+PASS source redo retains the edit
+PASS viewport resize retains the editor node, focus and caret
+PASS dirty marker has meaningful accessible text
+PASS export dialog and download link keep their names
+PASS export actions have 48 CSS px targets
+PASS shell contains no nested interactive controls
+PASS CSS target bounds remain stable at browser device scale 1; dp is not inferred
+PASS CSS target bounds remain stable at browser device scale 2; dp is not inferred
+PASS CSS target bounds remain stable at browser device scale 3; dp is not inferred
+PASS no page errors during P2B flows
+P2B ACCESSIBILITY: 68 PASS

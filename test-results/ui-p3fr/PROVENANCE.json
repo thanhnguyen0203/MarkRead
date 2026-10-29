@@ -1,0 +1,16 @@
+{
+  "p3fBefore": "a982db7123aab3e8cb75ecce8878d103fac9056c4d21c36cf0590f3a48a24b9d",
+  "intermediate": "945c822a85f7cbe222c67a4d869144e23749af162d1d97f4fda5a7878465576b",
+  "final": "a2ecb98b62a4df5bbd9a3df3876af00e066040d0aef15f5c2acbef1e659283d3",
+  "intermediateCases": [
+    "IME Telex/multiline/Backspace/app switch",
+    "SAF tree/read/export/hash/rename/nested"
+  ],
+  "finalCases": [
+    "Native Undo23",
+    "IME Telex ddungs -> Đúng",
+    "Android Back keyboard/Source keeps draft",
+    "TalkBack attempts inconclusive",
+    "SAF persisted grant revoke/restart error handling"
+  ]
+}

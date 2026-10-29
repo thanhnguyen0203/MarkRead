@@ -1,0 +1,13 @@
+{
+  "type": "PKCS12",
+  "privateKeyEntries": 1,
+  "aliasMatchesExistingConfiguration": true,
+  "certificateSha256": "52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54",
+  "notBefore": "2026-10-27T04:34:29Z",
+  "notAfter": "2054-03-14T04:34:29Z",
+  "keyAlgorithm": "RSA",
+  "keySize": 3072,
+  "signatureAlgorithm": "SHA256withRSA",
+  "certificateValidNow": true,
+  "privateKeyChallengeVerified": true
+}

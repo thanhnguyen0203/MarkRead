@@ -1,0 +1,10 @@
+{
+  "status": "PASS for merged/compiled inputs; no release APK inspected",
+  "manifest": "app/build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml",
+  "debuggable": false,
+  "permissions": [],
+  "backup": false,
+  "cleartext": false,
+  "offlineRendererAndNoticesExact": true,
+  "debugApkNoPrivateMaterialAndNoNativeAbiRestriction": true
+}

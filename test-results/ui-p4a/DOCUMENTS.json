@@ -1,0 +1,8 @@
+{
+  "report": "docs/release/P4A_ICON_REPORT.md",
+  "reportSha256": "bf63347d4f0026dd646e122bda86adef92dfb8cfa4d430b22a39ce87577e611e",
+  "links": "PASS",
+  "applicationSourceSnapshot": "unchanged except four listed launcher inputs",
+  "newIconChecks": 81,
+  "allInheritedTests": 2297
+}

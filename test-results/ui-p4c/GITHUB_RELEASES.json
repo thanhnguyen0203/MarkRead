@@ -1,0 +1,38 @@
+{
+  "checkedDate": "2026-10-29",
+  "source": "GitHub connected read-only releases API",
+  "perPage": 100,
+  "returned": 2,
+  "releases": [
+    {
+      "tag": "v1.1.6",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/releases/tag/v1.1.6",
+      "draft": false,
+      "prerelease": false,
+      "published": "2026-10-27T07:21:22Z",
+      "assets": [
+        {
+          "name": "MarkRead-release-1.1.6.apk",
+          "url": "https://github.com/thanhnguyen0203/MarkRead/releases/download/v1.1.6/MarkRead-release-1.1.6.apk",
+          "bytes": 7136088,
+          "digest": "sha256:5a0ee4e950df4ca30963b0669337b7ab731f7b65c493be35cde9f3fad6eefa90"
+        }
+      ]
+    },
+    {
+      "tag": "v1.1.5",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/releases/tag/v1.1.5",
+      "draft": false,
+      "prerelease": false,
+      "published": "2026-10-27T06:58:43Z",
+      "assets": [
+        {
+          "name": "MarkRead-Android-1.1.5.apk",
+          "url": "https://github.com/thanhnguyen0203/MarkRead/releases/download/v1.1.5/MarkRead-Android-1.1.5.apk",
+          "bytes": 7131992,
+          "digest": "sha256:7a5622167ecdd4133683f1616b3499f7812b5f8e633674514450d1b90754bde5"
+        }
+      ]
+    }
+  ]
+}

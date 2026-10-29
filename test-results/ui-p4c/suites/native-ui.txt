@@ -1,0 +1,28 @@
+PASS Android transport initialization and restore path
+PASS native snapshot creates nested folder tree
+PASS scoped native reads use bounded chunks
+PASS native file navigation uses natural numeric order
+PASS native file changes preserve drafts
+PASS native export sends exact Unicode source
+PASS duplicate rename rejected before native mutation
+PASS rename cannot escape selected directory
+PASS native permission failure retains existing file and reports recovery
+PASS long-press title completes native rename
+PASS rename preserves unsaved Unicode draft
+PASS renamed file retains draft after navigation
+PASS long-press unselected file renames it without switching current document
+PASS rename transmits only scoped opaque file ID and basename
+PASS unified editing works on native-loaded source
+PASS native export includes unified changes
+PASS native rename changes extension and retains unified draft
+PASS native txt stays in navigation
+PASS native export receives full renamed extension
+PASS native CSS import accepts independently selected host result
+PASS cancelled CSS picker preserves editor
+PASS CSS read failure retains prior editor
+PASS CSS import and cancellation preserve native scope
+PASS empty newly selected native scope clears prior file list
+PASS navigation disables after empty scope
+PASS native forget command is sent
+PASS no native UI JavaScript errors: 
+Simulated native UI: 27 checks passed

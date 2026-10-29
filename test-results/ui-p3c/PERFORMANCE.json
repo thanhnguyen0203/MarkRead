@@ -1,0 +1,13 @@
+{
+  "environment": "Windows desktop Chromium156 via Playwright",
+  "fixtureBytes": 173410,
+  "codeBlocks": 181,
+  "addedChapters": 180,
+  "visibleReadMode": true,
+  "importToHeadingsReadyMs": 406,
+  "readerEndScrollChecked": true,
+  "session": "warm; fonts used earlier in the same test; cache hits not independently traced",
+  "includes": "Playwright file transfer/import and headings-ready wait",
+  "excludes": "full paint, all resources complete, Android, FPS, p95 input latency",
+  "improvementClaimed": false
+}

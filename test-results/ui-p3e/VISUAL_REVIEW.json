@@ -1,0 +1,36 @@
+{
+  "historical": {
+    "p3d": {
+      "reviewed": 60,
+      "selection": "all before/after screenshots"
+    },
+    "p3aToP3c": {
+      "reviewedBefore": 22,
+      "reviewedAfterOrNavigation": 24,
+      "selection": "narrow/wide, Settings, sidebar/tree, read/edit/inline, menu, empty, font200%, landscape"
+    }
+  },
+  "current": {
+    "before": 28,
+    "after": 28,
+    "platform": "Windows desktop Chromium156, DPR1, reduced motion",
+    "contactSheetsUsed": [
+      "current-1.jpg",
+      "current-2.jpg",
+      "current-3.jpg",
+      "p3d-all-1.jpg",
+      "p3d-all-2.jpg",
+      "p3d-all-3.jpg",
+      "p3d-all-4.jpg",
+      "p3d-all-5.jpg",
+      "prior-1.jpg",
+      "prior-2.jpg",
+      "prior-before-1.jpg",
+      "prior-before-2.jpg"
+    ]
+  },
+  "notes": [
+    "Contact sheets used for inventory/comparison; individual affected screenshots also inspected at full size.",
+    "Not Android screenshots or measured FPS."
+  ]
+}

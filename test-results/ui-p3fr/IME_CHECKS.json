@@ -1,0 +1,57 @@
+[
+  {
+    "name": "real Gboard Vietnamese Telex",
+    "expected": "# IME\n\nTiếng việt ",
+    "actual": {
+      "dirty": true,
+      "selection": [
+        18,
+        18
+      ],
+      "value": "# IME\n\nTiếng việt "
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "Gboard multiline + ddungs",
+    "expected": "# IME\n\nTiếng việt \nđúng",
+    "actual": {
+      "dirty": true,
+      "selection": [
+        23,
+        23
+      ],
+      "value": "# IME\n\nTiếng việt \nĐúng"
+    },
+    "status": "INCONCLUSIVE",
+    "reviewedStatus": "PASS",
+    "reviewedExpected": "# IME\n\nTiếng việt \nĐúng",
+    "reviewReason": "Gboard auto-capitalizes at a new line; exact diacritics and caret position verified. Raw lowercase expectation and INCONCLUSIVE retained."
+  },
+  {
+    "name": "Gboard Backspace last glyph",
+    "expected": "# IME\n\nTiếng việt \nĐún",
+    "actual": {
+      "dirty": true,
+      "selection": [
+        22,
+        22
+      ],
+      "value": "# IME\n\nTiếng việt \nĐún"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "app switch keeps native-input draft",
+    "expected": "# IME\n\nTiếng việt \nĐún",
+    "actual": {
+      "dirty": true,
+      "selection": [
+        22,
+        22
+      ],
+      "value": "# IME\n\nTiếng việt \nĐún"
+    },
+    "status": "PASS"
+  }
+]

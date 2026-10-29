@@ -1,0 +1,45 @@
+{
+  "inherited": {
+    "node": 132,
+    "browser": 1488,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1816,
+    "pass": 1816,
+    "fail": 0
+  },
+  "new": {
+    "searchDialogsBrowser": 160,
+    "modalNativeHostSimulation": 10,
+    "total": 170,
+    "pass": 170,
+    "fail": 0
+  },
+  "final": {
+    "node": 132,
+    "browser": 1658,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1986,
+    "pass": 1986,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "javascriptSyntax": {
+    "sourceAndTests": 48,
+    "topLevelBuildModules": 2,
+    "pass": 50
+  },
+  "cssParse": 2,
+  "themes": 12,
+  "offlineLucideDefinitions": 23,
+  "androidRuntimeTested": false,
+  "notes": [
+    "Browser viewport/composition and MessagePort hosts are simulations, not Android runtime, IME, TalkBack or SAF.",
+    "Native textarea Undo after Replace has the same existing limitation in the before and after probes."
+  ]
+}

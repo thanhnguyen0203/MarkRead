@@ -1,0 +1,28 @@
+PASS all 12 existing theme choices remain
+PASS rendered palette, aliases and preview: dark
+PASS rendered palette, aliases and preview: light
+PASS rendered palette, aliases and preview: sepia
+PASS rendered palette, aliases and preview: black
+PASS rendered palette, aliases and preview: tokyo-night
+PASS rendered palette, aliases and preview: tokyo-light
+PASS rendered palette, aliases and preview: blue-gray
+PASS rendered palette, aliases and preview: nord
+PASS rendered palette, aliases and preview: dracula
+PASS rendered palette, aliases and preview: rose-pine
+PASS rendered palette, aliases and preview: forest
+PASS rendered palette, aliases and preview: gruvbox
+PASS touch on theme tile has no visible outer ring
+PASS keyboard focus uses a neutral two-pixel ring
+PASS keyboard focus does not alter theme selection
+PASS toolbar button has a distinct pressed fill
+PASS toolbar button returns to resting state after release and panel close
+PASS selected file keeps both current semantics and selected fill
+PASS navigation remains truly disabled at file boundaries
+PASS disabled toolbar icon uses a token rather than container opacity
+PASS rename input preserves neutral focus indicator and caret
+PASS source editor retains focus and caret
+PASS CSS state changes leave source selection and synthetic composition in place
+PASS custom CSS stays inside the reader iframe
+PASS legacy accent alias remains usable in custom CSS
+PASS no page errors across theme, focus, editor and CSS flows
+P2A FOUNDATIONS: 27 PASS

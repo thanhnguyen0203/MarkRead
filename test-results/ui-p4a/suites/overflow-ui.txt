@@ -1,0 +1,147 @@
+PASS 320x568 @1x: appearance has no clipped/overflowing panel
+PASS 320x568 @1x: typography has no clipped/overflowing panel
+PASS 320x568 @1x: editing has no clipped/overflowing panel
+PASS 320x568 @1x: css has no clipped/overflowing panel
+PASS 320x568 @1x: general has no clipped/overflowing panel
+PASS 320x568 @1x: font menu End remains fully visible and wrapped
+PASS 320x568 @1x: help header/body stay inside modal
+PASS 320x568 @1x: replacement field keeps a usable width
+PASS 320x568 @1x: replaceOne label/target is not clipped
+PASS 320x568 @1x: replaceAll label/target is not clipped
+PASS 320x568 @1.5x: appearance has no clipped/overflowing panel
+PASS 320x568 @1.5x: typography has no clipped/overflowing panel
+PASS 320x568 @1.5x: editing has no clipped/overflowing panel
+PASS 320x568 @1.5x: css has no clipped/overflowing panel
+PASS 320x568 @1.5x: general has no clipped/overflowing panel
+PASS 320x568 @1.5x: font menu End remains fully visible and wrapped
+PASS 320x568 @1.5x: help header/body stay inside modal
+PASS 320x568 @1.5x: replacement field keeps a usable width
+PASS 320x568 @1.5x: replaceOne label/target is not clipped
+PASS 320x568 @1.5x: replaceAll label/target is not clipped
+PASS 320x568 @2x: appearance has no clipped/overflowing panel
+PASS 320x568 @2x: typography has no clipped/overflowing panel
+PASS 320x568 @2x: editing has no clipped/overflowing panel
+PASS 320x568 @2x: css has no clipped/overflowing panel
+PASS 320x568 @2x: general has no clipped/overflowing panel
+PASS 320x568 @2x: font menu End remains fully visible and wrapped
+PASS 320x568 @2x: help header/body stay inside modal
+PASS 320x568 @2x: replacement field keeps a usable width
+PASS 320x568 @2x: replaceOne label/target is not clipped
+PASS 320x568 @2x: replaceAll label/target is not clipped
+PASS 393x852 @1x: appearance has no clipped/overflowing panel
+PASS 393x852 @1x: typography has no clipped/overflowing panel
+PASS 393x852 @1x: editing has no clipped/overflowing panel
+PASS 393x852 @1x: css has no clipped/overflowing panel
+PASS 393x852 @1x: general has no clipped/overflowing panel
+PASS 393x852 @1x: font menu End remains fully visible and wrapped
+PASS 393x852 @1x: help header/body stay inside modal
+PASS 393x852 @1x: replacement field keeps a usable width
+PASS 393x852 @1x: replaceOne label/target is not clipped
+PASS 393x852 @1x: replaceAll label/target is not clipped
+PASS 393x852 @1.5x: appearance has no clipped/overflowing panel
+PASS 393x852 @1.5x: typography has no clipped/overflowing panel
+PASS 393x852 @1.5x: editing has no clipped/overflowing panel
+PASS 393x852 @1.5x: css has no clipped/overflowing panel
+PASS 393x852 @1.5x: general has no clipped/overflowing panel
+PASS 393x852 @1.5x: font menu End remains fully visible and wrapped
+PASS 393x852 @1.5x: help header/body stay inside modal
+PASS 393x852 @1.5x: replacement field keeps a usable width
+PASS 393x852 @1.5x: replaceOne label/target is not clipped
+PASS 393x852 @1.5x: replaceAll label/target is not clipped
+PASS 393x852 @2x: appearance has no clipped/overflowing panel
+PASS 393x852 @2x: typography has no clipped/overflowing panel
+PASS 393x852 @2x: editing has no clipped/overflowing panel
+PASS 393x852 @2x: css has no clipped/overflowing panel
+PASS 393x852 @2x: general has no clipped/overflowing panel
+PASS 393x852 @2x: font menu End remains fully visible and wrapped
+PASS 393x852 @2x: help header/body stay inside modal
+PASS 393x852 @2x: replacement field keeps a usable width
+PASS 393x852 @2x: replaceOne label/target is not clipped
+PASS 393x852 @2x: replaceAll label/target is not clipped
+PASS 800x393 @1x: appearance has no clipped/overflowing panel
+PASS 800x393 @1x: typography has no clipped/overflowing panel
+PASS 800x393 @1x: editing has no clipped/overflowing panel
+PASS 800x393 @1x: css has no clipped/overflowing panel
+PASS 800x393 @1x: general has no clipped/overflowing panel
+PASS 800x393 @1x: font menu End remains fully visible and wrapped
+PASS 800x393 @1x: help header/body stay inside modal
+PASS 800x393 @1x: replacement field keeps a usable width
+PASS 800x393 @1x: replaceOne label/target is not clipped
+PASS 800x393 @1x: replaceAll label/target is not clipped
+PASS 800x393 @1.5x: appearance has no clipped/overflowing panel
+PASS 800x393 @1.5x: typography has no clipped/overflowing panel
+PASS 800x393 @1.5x: editing has no clipped/overflowing panel
+PASS 800x393 @1.5x: css has no clipped/overflowing panel
+PASS 800x393 @1.5x: general has no clipped/overflowing panel
+PASS 800x393 @1.5x: font menu End remains fully visible and wrapped
+PASS 800x393 @1.5x: help header/body stay inside modal
+PASS 800x393 @1.5x: replacement field keeps a usable width
+PASS 800x393 @1.5x: replaceOne label/target is not clipped
+PASS 800x393 @1.5x: replaceAll label/target is not clipped
+PASS 800x393 @2x: appearance has no clipped/overflowing panel
+PASS 800x393 @2x: typography has no clipped/overflowing panel
+PASS 800x393 @2x: editing has no clipped/overflowing panel
+PASS 800x393 @2x: css has no clipped/overflowing panel
+PASS 800x393 @2x: general has no clipped/overflowing panel
+PASS 800x393 @2x: font menu End remains fully visible and wrapped
+PASS 800x393 @2x: help header/body stay inside modal
+PASS 800x393 @2x: replacement field keeps a usable width
+PASS 800x393 @2x: replaceOne label/target is not clipped
+PASS 800x393 @2x: replaceAll label/target is not clipped
+PASS 1280x800 @1x: appearance has no clipped/overflowing panel
+PASS 1280x800 @1x: typography has no clipped/overflowing panel
+PASS 1280x800 @1x: editing has no clipped/overflowing panel
+PASS 1280x800 @1x: css has no clipped/overflowing panel
+PASS 1280x800 @1x: general has no clipped/overflowing panel
+PASS 1280x800 @1x: font menu End remains fully visible and wrapped
+PASS 1280x800 @1x: help header/body stay inside modal
+PASS 1280x800 @1x: replacement field keeps a usable width
+PASS 1280x800 @1x: replaceOne label/target is not clipped
+PASS 1280x800 @1x: replaceAll label/target is not clipped
+PASS 1280x800 @1.5x: appearance has no clipped/overflowing panel
+PASS 1280x800 @1.5x: typography has no clipped/overflowing panel
+PASS 1280x800 @1.5x: editing has no clipped/overflowing panel
+PASS 1280x800 @1.5x: css has no clipped/overflowing panel
+PASS 1280x800 @1.5x: general has no clipped/overflowing panel
+PASS 1280x800 @1.5x: font menu End remains fully visible and wrapped
+PASS 1280x800 @1.5x: help header/body stay inside modal
+PASS 1280x800 @1.5x: replacement field keeps a usable width
+PASS 1280x800 @1.5x: replaceOne label/target is not clipped
+PASS 1280x800 @1.5x: replaceAll label/target is not clipped
+PASS 1280x800 @2x: appearance has no clipped/overflowing panel
+PASS 1280x800 @2x: typography has no clipped/overflowing panel
+PASS 1280x800 @2x: editing has no clipped/overflowing panel
+PASS 1280x800 @2x: css has no clipped/overflowing panel
+PASS 1280x800 @2x: general has no clipped/overflowing panel
+PASS 1280x800 @2x: font menu End remains fully visible and wrapped
+PASS 1280x800 @2x: help header/body stay inside modal
+PASS 1280x800 @2x: replacement field keeps a usable width
+PASS 1280x800 @2x: replaceOne label/target is not clipped
+PASS 1280x800 @2x: replaceAll label/target is not clipped
+PASS 320: max reader font has no document-wide horizontal overflow or break-all
+PASS 320: code/table/math scroll locally while math stays unbroken
+PASS 360: max reader font has no document-wide horizontal overflow or break-all
+PASS 360: code/table/math scroll locally while math stays unbroken
+PASS 393: max reader font has no document-wide horizontal overflow or break-all
+PASS 393: code/table/math scroll locally while math stays unbroken
+PASS 412: max reader font has no document-wide horizontal overflow or break-all
+PASS 412: code/table/math scroll locally while math stays unbroken
+PASS 600: max reader font has no document-wide horizontal overflow or break-all
+PASS 600: code/table/math scroll locally while math stays unbroken
+PASS 800: max reader font has no document-wide horizontal overflow or break-all
+PASS 800: code/table/math scroll locally while math stays unbroken
+PASS scaling/reflow retains textarea node, focus, selection and draft
+PASS native undo survives responsive/text reflow
+PASS native redo survives responsive/text reflow
+PASS 320: long nested paths reflow without horizontal file-browser overflow at200%
+PASS 320: all five nested branches remain open after reflow
+PASS 320: deep file target remains readable and contained
+PASS 393: long nested paths reflow without horizontal file-browser overflow at200%
+PASS 393: all five nested branches remain open after reflow
+PASS 393: deep file target remains readable and contained
+PASS 800: long nested paths reflow without horizontal file-browser overflow at200%
+PASS 800: all five nested branches remain open after reflow
+PASS 800: deep file target remains readable and contained
+PASS deep file remains selectable with unchanged Markdown
+PASS no overflow/scaling renderer errors
+P2F OVERFLOW: 146 PASS

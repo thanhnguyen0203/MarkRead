@@ -1,0 +1,19 @@
+{
+  "before": {
+    "before": "# History\n\none one\nnative",
+    "replaced": "# History\n\ntwo one\nnative",
+    "undone": "# History\n\ntwo one\nnative",
+    "redone": "# History\n\ntwo one\nnative",
+    "dirty": true
+  },
+  "after": {
+    "before": "# History\n\none one\nnative",
+    "replaced": "# History\n\ntwo one\nnative",
+    "undone": "# History\n\ntwo one\nnative",
+    "redone": "# History\n\ntwo one\nnative",
+    "dirty": true
+  },
+  "identical": true,
+  "baseline": "snapshot replay",
+  "evidence": "Chromium native textarea history; no new replacement undo integration"
+}

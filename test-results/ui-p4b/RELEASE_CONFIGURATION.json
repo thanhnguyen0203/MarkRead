@@ -1,0 +1,18 @@
+{
+    "applicationId": "vn.markread.local",
+    "namespace": "vn.markread.local",
+    "versionName": "1.1.5",
+    "versionCode": 115,
+    "minSdk": 26,
+    "targetSdk": 35,
+    "compileSdk": "android-35",
+    "releaseDebuggable": false,
+    "minifyEnabled": false,
+    "shrinkResources": false,
+    "proguardRuleCount": 0,
+    "sourceCompatibility": "1.8",
+    "targetCompatibility": "1.8",
+    "signingConfigPresent": true,
+    "signingIdentityVerifiedForPlay": false,
+    "runtimeDependencyCount": 0
+}

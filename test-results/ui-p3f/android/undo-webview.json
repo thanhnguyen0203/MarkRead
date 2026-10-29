@@ -1,0 +1,12 @@
+{
+  "visibleSource": true,
+  "typed": "# History\n\none one\nnative",
+  "typingUndo": "# History\n\none one\n",
+  "typingRedo": "# History\n\none one\nnative",
+  "replaced": "# History\n\ntwo one\nnative",
+  "undone": "# History\n\ntwo one\nnative",
+  "redone": "# History\n\ntwo one\nnativenativenative",
+  "expectedUndo": "# History\n\none one\nnative",
+  "webview": "124.0.6367.219",
+  "method": "IIFE-scoped native execCommand with typing Undo/Redo positive controls"
+}

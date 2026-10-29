@@ -1,0 +1,13 @@
+{
+  "fixture": "web/tests/search-ui-fixture.cjs",
+  "before": {
+    "sha256": "f6da7d56229b56a3710722a56a011fbc9aaea5885db9089219ffd299ff84a678",
+    "html": "<div class=\"md-block\" data-start=\"0\" data-end=\"21\"><h1 id=\"ghi-chu-tieng-viet\">Ghi chú tiếng Việt</h1>\n</div><div class=\"md-block\" data-start=\"20\" data-end=\"21\"></div><div class=\"md-block\" data-start=\"22\" data-end=\"38\"><p>Việt việt VIỆT.</p>\n</div><div class=\"md-block\" data-start=\"37\" data-end=\"38\"></div><div class=\"md-block\" data-start=\"39\" data-end=\"56\"><p>Item-12 Item-34.</p>\n</div><div class=\"md-block\" data-start=\"55\" data-end=\"56\"></div><div class=\"md-block\" data-start=\"57\" data-end=\"82\"><p>Emoji 💠 và ký tự &amp; &lt; &gt;.</p>\n</div><div class=\"md-block\" data-start=\"81\" data-end=\"82\"></div><div class=\"md-block\" data-start=\"83\" data-end=\"135\"><p>Một đoạn cuối để giữ source ngoài phạm vi thay thế.</p>\n</div>"
+  },
+  "after": {
+    "sha256": "f6da7d56229b56a3710722a56a011fbc9aaea5885db9089219ffd299ff84a678",
+    "html": "<div class=\"md-block\" data-start=\"0\" data-end=\"21\"><h1 id=\"ghi-chu-tieng-viet\">Ghi chú tiếng Việt</h1>\n</div><div class=\"md-block\" data-start=\"20\" data-end=\"21\"></div><div class=\"md-block\" data-start=\"22\" data-end=\"38\"><p>Việt việt VIỆT.</p>\n</div><div class=\"md-block\" data-start=\"37\" data-end=\"38\"></div><div class=\"md-block\" data-start=\"39\" data-end=\"56\"><p>Item-12 Item-34.</p>\n</div><div class=\"md-block\" data-start=\"55\" data-end=\"56\"></div><div class=\"md-block\" data-start=\"57\" data-end=\"82\"><p>Emoji 💠 và ký tự &amp; &lt; &gt;.</p>\n</div><div class=\"md-block\" data-start=\"81\" data-end=\"82\"></div><div class=\"md-block\" data-start=\"83\" data-end=\"135\"><p>Một đoạn cuối để giữ source ngoài phạm vi thay thế.</p>\n</div>"
+  },
+  "byteIdentical": true,
+  "note": "Initial unsearched reader DOM; search transient marks are checked and removed by the browser suite."
+}

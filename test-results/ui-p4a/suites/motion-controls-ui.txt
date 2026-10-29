@@ -1,0 +1,47 @@
+PASS control/drawer tokens are available
+PASS dark: pointer press has visible tint
+PASS dark: release clears press without changing document
+PASS dark: keyboard focus ring is immediate and independent of tint
+PASS light: pointer press has visible tint
+PASS light: release clears press without changing document
+PASS light: keyboard focus ring is immediate and independent of tint
+PASS sepia: pointer press has visible tint
+PASS sepia: release clears press without changing document
+PASS sepia: keyboard focus ring is immediate and independent of tint
+PASS black: pointer press has visible tint
+PASS black: release clears press without changing document
+PASS black: keyboard focus ring is immediate and independent of tint
+PASS tokyo-night: pointer press has visible tint
+PASS tokyo-night: release clears press without changing document
+PASS tokyo-night: keyboard focus ring is immediate and independent of tint
+PASS tokyo-light: pointer press has visible tint
+PASS tokyo-light: release clears press without changing document
+PASS tokyo-light: keyboard focus ring is immediate and independent of tint
+PASS blue-gray: pointer press has visible tint
+PASS blue-gray: release clears press without changing document
+PASS blue-gray: keyboard focus ring is immediate and independent of tint
+PASS nord: pointer press has visible tint
+PASS nord: release clears press without changing document
+PASS nord: keyboard focus ring is immediate and independent of tint
+PASS dracula: pointer press has visible tint
+PASS dracula: release clears press without changing document
+PASS dracula: keyboard focus ring is immediate and independent of tint
+PASS rose-pine: pointer press has visible tint
+PASS rose-pine: release clears press without changing document
+PASS rose-pine: keyboard focus ring is immediate and independent of tint
+PASS forest: pointer press has visible tint
+PASS forest: release clears press without changing document
+PASS forest: keyboard focus ring is immediate and independent of tint
+PASS gruvbox: pointer press has visible tint
+PASS gruvbox: release clears press without changing document
+PASS gruvbox: keyboard focus ring is immediate and independent of tint
+PASS real browser touchCancel clears native active state
+PASS disabled control has no press animation
+PASS reduced-motion change preserves textarea/caret/selection/draft
+PASS reduced motion disables all active control transitions
+PASS reduce: delayed startup status does not appear early
+PASS reduce: delayed status remains visible without a startup keyframe
+PASS no-preference: delayed startup status does not appear early
+PASS no-preference: delayed status remains visible without a startup keyframe
+PASS no control-motion renderer errors
+P2G MOTION CONTROLS: 46 PASS

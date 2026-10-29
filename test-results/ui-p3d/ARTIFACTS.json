@@ -1,0 +1,30 @@
+{
+  "renderer": {
+    "path": "app/src/main/assets/index.html",
+    "bytes": 13309986,
+    "sha256": "32a2ed45cf0d5d7f67c4b550fb5a307016dface84a63c60656c1c7539a978a23",
+    "matchesWebDist": true,
+    "byteDelta": 8765
+  },
+  "debugApk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 7606226,
+    "sha256": "56e1ab37e97293367197cca2a72bb7a73414413bf1e82045b1d4fa333744e706",
+    "sameZipEntryNamesAsInput": true,
+    "changedZipEntries": [
+      "assets/index.html"
+    ],
+    "unchangedNativeDex": true
+  },
+  "build": {
+    "command": "scripts/Build-AndroidDebug.ps1 -Offline -RerunTasks",
+    "result": "BUILD SUCCESSFUL",
+    "durationSeconds": 57,
+    "tasksExecuted": 31
+  },
+  "deviceInventory": {
+    "devices": 0,
+    "emulators": 0,
+    "androidRuntimeTested": false
+  }
+}

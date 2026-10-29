@@ -1,0 +1,46 @@
+{
+  "canvas": 108,
+  "safeRadius": 33,
+  "networkRequests": 0,
+  "concepts": [
+    {
+      "id": "A",
+      "bounds": [
+        29,
+        29.7,
+        79,
+        79
+      ],
+      "width": 50,
+      "height": 49.3,
+      "maxRadius": 31.945343948688365,
+      "painted": 182274
+    },
+    {
+      "id": "B",
+      "bounds": [
+        29,
+        29.7,
+        79,
+        79
+      ],
+      "width": 50,
+      "height": 49.3,
+      "maxRadius": 31.945343948688365,
+      "painted": 159277
+    },
+    {
+      "id": "C",
+      "bounds": [
+        30,
+        29,
+        78,
+        79
+      ],
+      "width": 48,
+      "height": 50,
+      "maxRadius": 32.493460880614116,
+      "painted": 193502
+    }
+  ]
+}

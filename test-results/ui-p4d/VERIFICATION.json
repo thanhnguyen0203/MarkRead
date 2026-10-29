@@ -1,0 +1,304 @@
+{
+  "phase": "P4D local preparation",
+  "apk18": 18,
+  "security25": 25,
+  "launcher81": 81,
+  "paletteChecks": 2220,
+  "paletteThemes": 12,
+  "lucideSvgCount": 23,
+  "inheritedP4CTests": 2385,
+  "inheritedP4CNativeAssertions": 44,
+  "inheritedSuitesRerun": false,
+  "apkRebuilt": false,
+  "appSourceChanged": false,
+  "existingFilesChangedInP4D": [
+    "HUONG_DAN_CAI_DAT.md",
+    "README.md"
+  ],
+  "newGitAttributesPreserveInputs": true,
+  "productionInputs": 87,
+  "secretScanGitVisibleFileCount": 1291,
+  "secretScanFindings": [],
+  "secretScanScope": "Current Git-visible files: known release password/exact keystore copy/PEM markers and limited credential patterns. Not exhaustive historical forensics.",
+  "ignoredSensitivePathsVerified": [
+    "private/markread-release.p12",
+    "private/keystore-password.txt",
+    "private/signing.properties",
+    "local.properties",
+    "app/build/outputs/apk/release/app-release.apk",
+    "dist/releases/v1.2.0/MarkRead-v1.2.0.apk",
+    "toolchain/android-sdk",
+    "web/node_modules"
+  ],
+  "localDocumentationLinks": [
+    {
+      "document": "README.md",
+      "target": "HUONG_DAN_CAI_DAT.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "docs/release/RELEASE_NOTES_v1.2.0_VI.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "test-results/ui-p4c/android/after-update-reader-top.png",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "test-results/ui-p4c/android/after-update-editor.png",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "test-results/ui-p4c/android/after-update-settings-css.png",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "HUONG_DAN_CAI_DAT.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "HUONG_DAN_CAI_DAT.md#phiên-đọc-và-cài-đặt",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "docs/release/P4C_REPORT.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "docs/release/P4C_UPDATE_VALIDATION.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "docs/release/P4C_REPORT.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "LICENSE.txt",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "app/src/main/assets/THIRD_PARTY_NOTICES.txt",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "README.md",
+      "target": "CHANGELOG.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "HUONG_DAN_CAI_DAT.md",
+      "target": "docs/release/P4C_UPDATE_VALIDATION.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "HUONG_DAN_CAI_DAT.md",
+      "target": "docs/release/RELEASE_NOTES_v1.2.0_VI.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../test-results/ui-p4d/GITHUB_AUDIT.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "P4D_COMMIT_PLAN.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../dist/releases/v1.2.0/MarkRead-v1.2.0.apk",
+      "exists": true,
+      "localOnly": true
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../dist/releases/v1.2.0/MarkRead-v1.2.0.sha256",
+      "exists": true,
+      "localOnly": true
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../test-results/ui-p4d/APK_VERIFICATION.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../test-results/ui-p4d/SOURCE_INPUTS.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../test-results/ui-p4d/PUBLICATION_MANIFEST.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "RELEASE_NOTES_v1.2.0_VI.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../README.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../HUONG_DAN_CAI_DAT.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "P4D_PUBLICATION_CHECKLIST.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "P4D_COMMIT_PLAN.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_REPORT.md",
+      "target": "../../test-results/ui-p4d/VERIFICATION.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_PUBLICATION_CHECKLIST.md",
+      "target": "P4D_COMMIT_PLAN.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_PUBLICATION_CHECKLIST.md",
+      "target": "P4D_REPORT.md",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_COMMIT_PLAN.md",
+      "target": "../../test-results/ui-p4d/PUBLICATION_MANIFEST.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_COMMIT_PLAN.md",
+      "target": "../../test-results/ui-p4d/SOURCE_INPUTS.json",
+      "exists": true,
+      "localOnly": false
+    },
+    {
+      "document": "docs/release/P4D_COMMIT_PLAN.md",
+      "target": "RELEASE_NOTES_v1.2.0_VI.md",
+      "exists": true,
+      "localOnly": false
+    }
+  ],
+  "futureLinksNotClaimedLive": [
+    {
+      "document": "README.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/releases/tag/v1.2.0",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "README.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/releases/download/v1.2.0/MarkRead-v1.2.0.apk",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "README.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/releases/download/v1.2.0/MarkRead-v1.2.0.sha256",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "HUONG_DAN_CAI_DAT.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/releases/tag/v1.2.0",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "docs/release/RELEASE_NOTES_v1.2.0_VI.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/blob/v1.2.0/HUONG_DAN_CAI_DAT.md",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "docs/release/RELEASE_NOTES_v1.2.0_VI.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/blob/v1.2.0/docs/release/P4C_REPORT.md",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "docs/release/RELEASE_NOTES_v1.2.0_VI.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/blob/v1.2.0/docs/release/P4C_UPDATE_VALIDATION.md",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    },
+    {
+      "document": "docs/release/RELEASE_NOTES_v1.2.0_VI.md",
+      "url": "https://github.com/thanhnguyen0203/MarkRead/blob/v1.2.0/docs/ui-redesign/P3F_R2_RELEASE_READINESS.md",
+      "status": "PENDING tag/publish; not a live-download PASS"
+    }
+  ],
+  "screenshotsReviewedAsSyntheticApi35Fixtures": [
+    {
+      "path": "test-results/ui-p4c/android/after-update-reader-top.png",
+      "sha256": "66c8e89de91fcd2b906dc55c51185f5423eb00578eb95748ea0168e0444b6abd"
+    },
+    {
+      "path": "test-results/ui-p4c/android/after-update-editor.png",
+      "sha256": "073fdca2b0b50e4d0e7ee0b738c86ccec5114df0b13b9466b34b79698c3596e7"
+    },
+    {
+      "path": "test-results/ui-p4c/android/after-update-settings-css.png",
+      "sha256": "cb45be0b24152a07513f919f5d9c7aba0916ebf2f8ead64652821b69577254d5"
+    }
+  ],
+  "privacySanitizedPublicationCopies": [
+    {
+      "path": "docs/ui-redesign/BASELINE.md",
+      "sourceSha256": "ea5f01cad328decda81dd188f61932b060d4e9a097cfd8975992a7f547e9bb29",
+      "publicationSha256": "f75114a7f2140abf014a519c3b05086834c0e4d641b534c7bc44cf1525fd402e",
+      "change": "user-home prefix to placeholder, publication copy only"
+    }
+  ],
+  "sourceMatchesP4CScope": true,
+  "commitCreated": false,
+  "tagCreated": false,
+  "pushPerformed": false,
+  "draftCreated": false,
+  "published": false,
+  "latestChanged": false
+}

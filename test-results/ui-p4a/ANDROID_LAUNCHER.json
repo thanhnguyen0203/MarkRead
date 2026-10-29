@@ -1,0 +1,38 @@
+{
+  "status": "PASS within launcher scope",
+  "device": "emulator-5556",
+  "avd": "MarkRead_P3FR_Validation",
+  "api": 35,
+  "viewport": [
+    320,
+    640
+  ],
+  "densityDpi": 160,
+  "launcher": "com.google.android.apps.nexuslauncher",
+  "beforeApkSha256": "79a6d98d83855bee3f3e621c696c0bc6580f9d8252300adbc87cda4f6f575b15",
+  "installedApkSha256": "4b8ede97f832e0f97d8ad91970e20eb416a9a229d5d3ec54e991f9e96dd5a314",
+  "update": "adb install -r; no uninstall or clear data",
+  "preferenceFilesBeforeAfterInstall": 4,
+  "preferenceHashesUnchanged": true,
+  "observations": [
+    "Color icon visible on Home and App Drawer",
+    "Native themed icon on Home in system light and dark",
+    "App Drawer stays colored with themed option enabled (launcher behavior)",
+    "Tap Home icon opens actual MarkRead welcome WebView",
+    "No app configuration, document or UI edits during launcher validation"
+  ],
+  "restored": {
+    "night": "no",
+    "themedIcons": false,
+    "wifi_on": 1,
+    "mobile_data": 1
+  },
+  "notTested": [
+    "Physical device",
+    "API26 OEM launcher",
+    "Actual squircle/other OEM masks",
+    "SAF/IME/TalkBack not repeated in P4A"
+  ],
+  "acceptedInheritedLimitation": "TalkBack NOT TESTED \u2014 accepted limitation",
+  "rawEvidence": "build/ui-p4a/runtime; review screenshots docs/release/assets/p4a/android"
+}

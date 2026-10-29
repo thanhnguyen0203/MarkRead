@@ -1,0 +1,18 @@
+{
+  "pass": 2,
+  "fail": 0,
+  "cases": [
+    {
+      "case": "missing-store",
+      "status": "PASS",
+      "invalidIdentityRejected": true,
+      "builtApkUnchanged": true
+    },
+    {
+      "case": "wrong-alias",
+      "status": "PASS",
+      "invalidIdentityRejected": true,
+      "builtApkUnchanged": true
+    }
+  ]
+}

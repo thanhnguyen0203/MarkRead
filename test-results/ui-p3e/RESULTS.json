@@ -1,0 +1,37 @@
+{
+  "inherited": {
+    "node": 132,
+    "browser": 1658,
+    "jvm": 171,
+    "apk": 25,
+    "pass": 1986,
+    "fail": 0
+  },
+  "new": {
+    "browser": 75,
+    "pass": 75,
+    "fail": 0
+  },
+  "final": {
+    "node": 132,
+    "browser": 1733,
+    "jvm": 171,
+    "apk": 25,
+    "pass": 2061,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "javascriptSyntaxFiles": 51,
+  "cssParseFiles": 2,
+  "themes": 12,
+  "offlineLucideDefinitions": 23,
+  "androidRuntimeTested": false,
+  "notes": [
+    "Desktop Chromium/MessagePort/composition tests are not Android runtime/IME/SAF/TalkBack tests.",
+    "Existing Replace undo limitation is preserved."
+  ]
+}

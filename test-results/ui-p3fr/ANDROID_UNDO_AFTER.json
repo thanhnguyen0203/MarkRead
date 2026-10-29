@@ -1,0 +1,163 @@
+[
+  {
+    "name": "QA runtime Android API",
+    "status": "PASS",
+    "expected": "35",
+    "actual": "35",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "single exact result",
+    "status": "PASS",
+    "expected": "# A\n\ntwo one",
+    "actual": "# A\n\ntwo one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "single native Undo",
+    "status": "PASS",
+    "expected": "# A\n\none one",
+    "actual": "# A\n\none one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "single native Redo",
+    "status": "PASS",
+    "expected": "# A\n\ntwo one",
+    "actual": "# A\n\ntwo one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "multiple blocks exact result",
+    "status": "PASS",
+    "expected": "# A\n\ntwo\n\n## B\n\ntwo",
+    "actual": "# A\n\ntwo\n\n## B\n\ntwo",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "multiple blocks native Undo",
+    "status": "PASS",
+    "expected": "# A\n\none\n\n## B\n\none",
+    "actual": "# A\n\none\n\n## B\n\none",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "multiple blocks native Redo",
+    "status": "PASS",
+    "expected": "# A\n\ntwo\n\n## B\n\ntwo",
+    "actual": "# A\n\ntwo\n\n## B\n\ntwo",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "regex exact result",
+    "status": "PASS",
+    "expected": "# A\n\nSố 12 Số 34",
+    "actual": "# A\n\nSố 12 Số 34",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "regex native Undo",
+    "status": "PASS",
+    "expected": "# A\n\nItem-12 Item-34",
+    "actual": "# A\n\nItem-12 Item-34",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "regex native Redo",
+    "status": "PASS",
+    "expected": "# A\n\nSố 12 Số 34",
+    "actual": "# A\n\nSố 12 Số 34",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "Vietnamese exact result",
+    "status": "PASS",
+    "expected": "# A\n\nTiếng Tiếng Tiếng",
+    "actual": "# A\n\nTiếng Tiếng Tiếng",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "Vietnamese native Undo",
+    "status": "PASS",
+    "expected": "# A\n\nViệt việt VIỆT",
+    "actual": "# A\n\nViệt việt VIỆT",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "Vietnamese native Redo",
+    "status": "PASS",
+    "expected": "# A\n\nTiếng Tiếng Tiếng",
+    "actual": "# A\n\nTiếng Tiếng Tiếng",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "emoji exact result",
+    "status": "PASS",
+    "expected": "# A\n\n💡 💡",
+    "actual": "# A\n\n💡 💡",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "emoji native Undo",
+    "status": "PASS",
+    "expected": "# A\n\n💠 💠",
+    "actual": "# A\n\n💠 💠",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "emoji native Redo",
+    "status": "PASS",
+    "expected": "# A\n\n💡 💡",
+    "actual": "# A\n\n💡 💡",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "read mode stable",
+    "status": "PASS",
+    "expected": "read",
+    "actual": "read",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "read routed Undo",
+    "status": "PASS",
+    "expected": "# Modes\n\none one",
+    "actual": "# Modes\n\none one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "split mode stable",
+    "status": "PASS",
+    "expected": "split",
+    "actual": "split",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "split routed Undo",
+    "status": "PASS",
+    "expected": "# Modes\n\none one",
+    "actual": "# Modes\n\none one",
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "restored fixture not dirty",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "native bridge still exposed",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView native editing command, instrumentation"
+  },
+  {
+    "name": "no unsafe pane projection remains",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView native editing command, instrumentation"
+  }
+]

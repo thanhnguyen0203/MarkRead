@@ -1,0 +1,16 @@
+java-compile PASS 0
+policy-compile PASS 0
+native-ui-policy-compile PASS 0
+NativeUiPolicyTest PASS 0
+motion-policy-compile PASS 0
+MotionPolicyTest PASS 0
+PolicyTest PASS 0
+SessionPolicyTest PASS 0
+d8 PASS 0
+resources PASS 0
+apk-link PASS 0
+zipalign PASS 0
+zipalign-check PASS 0
+signature-existing PASS 0
+apk-validation PASS 0
+Native compile and inherited APK25 verified; no old release output changed.

@@ -1,0 +1,37 @@
+PASS UI body uses system16/24 and regular weight
+PASS full source uses16/26 monospace independently of reader preference
+PASS saved reader default18/1.8 remains intact
+PASS reader gutters fit 320 CSS px
+PASS reader gutters fit 360 CSS px
+PASS reader gutters fit 393 CSS px
+PASS reader gutters fit 412 CSS px
+PASS reader gutters fit 600 CSS px
+PASS reader gutters fit 800 CSS px
+PASS reader heading scale is relative and uses weight600
+PASS dialog title22/28 and weight600
+PASS section hierarchy18 and readable hint14
+PASS consistent UI type roles in dark
+PASS consistent UI type roles in light
+PASS consistent UI type roles in sepia
+PASS consistent UI type roles in black
+PASS consistent UI type roles in tokyo-night
+PASS consistent UI type roles in tokyo-light
+PASS consistent UI type roles in blue-gray
+PASS consistent UI type roles in nord
+PASS consistent UI type roles in dracula
+PASS consistent UI type roles in rose-pine
+PASS consistent UI type roles in forest
+PASS consistent UI type roles in gruvbox
+PASS reader sans stays independent of UI family/size
+PASS reader serif stays independent of UI family/size
+PASS reader merriweather stays independent of UI family/size
+PASS reader mono stays independent of UI family/size
+PASS reader max size32 does not enlarge UI or change saved slider bounds
+PASS UI rem roles honor simulated200% root text scaling
+PASS native category mirrored value can wrap without cutting full text at200%
+PASS UI root-text scaling never multiplies the saved reader size
+PASS custom CSS remains after base reader gutter/max-width styles
+PASS custom reader type overrides remain effective
+PASS typography and CSS changes preserve exact source
+PASS no typography renderer errors
+P2F TYPOGRAPHY: 36 PASS

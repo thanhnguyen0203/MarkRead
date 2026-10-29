@@ -1,0 +1,37 @@
+[
+  {
+    "name": "native accessibility focus Settings",
+    "actionResult": true,
+    "focused": [
+      {
+        "text": "Cài đặt",
+        "id": "settings"
+      }
+    ],
+    "method": "ACTION_ACCESSIBILITY_FOCUS, not speech acceptance"
+  },
+  {
+    "name": "TalkBack double tap activates Settings",
+    "expected": true,
+    "actual": false,
+    "status": "INCONCLUSIVE",
+    "method": "Android touchscreen double tap with TalkBack bound"
+  },
+  {
+    "name": "TalkBack right swipe focus observation",
+    "before": [
+      {
+        "text": "Cài đặt",
+        "id": "settings"
+      }
+    ],
+    "after": [
+      {
+        "text": "Cài đặt",
+        "id": "settings"
+      }
+    ],
+    "status": "INCONCLUSIVE",
+    "method": "TalkBack swipe; spoken output not captured"
+  }
+]

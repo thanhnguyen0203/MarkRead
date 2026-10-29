@@ -1,0 +1,69 @@
+PASS plain Tab inserts exactly two spaces at the caret
+PASS indent remains undoable through the native text history
+PASS indent remains redoable
+PASS Shift+Tab leaves source without inserting text
+PASS Escape leaves source focus while retaining mode and content
+PASS toolbar and Settings preserve source selection and scroll
+PASS closing Settings returns to its trigger without refocusing the editor
+PASS Settings does not clear the native undo transaction
+PASS file navigation restores the in-memory source view and draft
+PASS a newly disabled navigation button transfers focus to the available neighbor
+PASS Backspace, Delete and Enter retain native text behavior
+PASS native text insertion replaces a selection with multiline Unicode
+PASS Ctrl+Alt text input is not treated as a MarkRead shortcut
+PASS reader scroll is restored when returning to the same in-memory document
+PASS existing Ctrl+F enters find
+PASS closing keyboard-opened find returns to the source field
+PASS existing Ctrl+H enters replacement
+PASS document shortcuts do not focus a workspace field behind a modal
+PASS Escape closes only the top dialog and leaves find intact
+PASS Escape through category list closes Settings without closing the layer behind
+PASS existing Ctrl+O opens the current file chooser
+PASS empty chooser selection leaves the current draft intact
+PASS Chromium composition updates the native textarea candidate
+PASS source composition does not replace the reader after the normal debounce
+PASS IME key is left to the browser: Tab
+PASS IME key is left to the browser: Escape
+PASS IME key is left to the browser: f
+PASS IME key is left to the browser: s
+PASS IME key is left to the browser: o
+PASS IME key is left to the browser: h
+PASS composition shortcuts do not open UI or move focus
+PASS composition commits one Vietnamese character without duplication
+PASS CDP exercises native candidate composition and input events
+PASS composition end is observed; its protocol-generated trust flag is recorded separately
+PASS preview after composition retains editor focus and caret
+PASS native composition remains undoable
+PASS cancelled composition leaves the committed text intact
+PASS Ctrl+S exports the final text after a synthetic late composition input
+PASS opening the mobile drawer focuses a button and isolates main
+PASS drawer does not intercept the browser or system Ctrl+Tab chord
+PASS drawer Shift+Tab wraps inside its active modal layer
+PASS drawer Escape restores its trigger and releases main
+PASS drawer does not overwrite the source selection
+PASS open menu supports End
+PASS open menu supports Home
+PASS native Tab exits and closes a menu without hiding its destination
+PASS explicit search shortcut leaves the drawer before focusing workspace search
+PASS font listbox has one roving tab stop
+PASS font activation closes and restores its trigger
+PASS unified editor has an explicit keyboard block entry
+PASS block navigation skips structural blank separator blocks
+PASS block Edit focuses the existing inline textarea
+PASS inline provisional composition does not commit Markdown source
+PASS inline cancel and commit shortcuts respect IME
+PASS viewport resize preserves composing inline node, document and focus
+PASS the tested inline field remains inside the resized reader viewport
+PASS inline composition commits final Vietnamese text once
+PASS inline native composition is undoable
+PASS explicit inline completion returns to navigator without reopening IME
+PASS inline Escape cancels only its active edit and returns focus
+PASS closing block navigation returns to its menu trigger
+PASS drawer fallback removes main tab stops without inert support
+PASS drawer fallback restores original tab stops and focus
+PASS split activation leaves focus on a visible trigger
+PASS a checked split option hidden by the viewport never receives keyboard focus
+PASS unsupported native indent keeps ordinary Tab navigation and does not mutate text
+PASS unsupported indent does not clear earlier native undo
+PASS no page errors across keyboard, focus and composition flows
+P2C KEYBOARD: 68 PASS

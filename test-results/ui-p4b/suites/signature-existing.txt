@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=MarkRead Local, O=Personal Offline Apps
+Signer #1 certificate SHA-256 digest: 52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54
+Signer #1 certificate SHA-1 digest: d1e39d470f6d631c2ecbcdf09b76fc24333a0c1c
+Signer #1 certificate MD5 digest: 5e077a7f71d7884ff8acbcf3eb41c61a
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 4d002dc4e24534231de077ddfb9fe9df80fe63fe49a01ce8af44605f2af427a8
+Signer #1 public key SHA-1 digest: 0ba00b50e38480c030173a1a09f7dd93ca7bb3b6
+Signer #1 public key MD5 digest: 438489bd75bef2c9c00b3f29f32a4d36

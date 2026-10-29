@@ -1,0 +1,7 @@
+{
+  "beforeSha256": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+  "afterSha256": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+  "identical": true,
+  "normalization": "blob image URL only; no styles/tags/content/source spans removed",
+  "sourceFixture": "web/tests/quiet-ink-reader.md"
+}

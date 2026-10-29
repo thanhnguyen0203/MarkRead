@@ -1,0 +1,34 @@
+{
+  "inherited": {
+    "node": 132,
+    "browser": 1345,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1673,
+    "fail": 0
+  },
+  "new": {
+    "readerBrowser": 139,
+    "emptyFolderHostFixture": 4,
+    "total": 143,
+    "fail": 0
+  },
+  "final": {
+    "node": 132,
+    "browser": 1488,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1816,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "androidRuntimeTested": false,
+  "notes": [
+    "Existing27/62 visual suites keep counts; resting-surface checks account for filled toolbar controls and expanded selection.",
+    "Composition guards/empty folder use browser/host simulations, not Android IME or SAF."
+  ]
+}

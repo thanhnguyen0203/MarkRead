@@ -1,0 +1,38 @@
+{
+  "inherited": {
+    "node": 132,
+    "browser": 1733,
+    "jvm": 171,
+    "apk": 25,
+    "pass": 2061,
+    "fail": 0
+  },
+  "new": {
+    "browser": 36,
+    "pass": 36,
+    "fail": 0
+  },
+  "finalAutomated": {
+    "node": 132,
+    "browser": 1769,
+    "jvm": 171,
+    "apk": 25,
+    "pass": 2097,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "javascriptSyntaxFiles": 52,
+  "androidRuntime": {
+    "device": "API35 emulator / WebView124",
+    "records": 74,
+    "PASS": 66,
+    "FAIL": 1,
+    "NOT TESTED": 7,
+    "notes": "Includes reproductions/observations, not full runtime acceptance. One TalkBack injected-touch attempt failed;7 superseded probes not tested. Known LaTeX error contrast and Replace undo remain separate acceptance failures."
+  },
+  "releaseReadiness": "NOT READY"
+}

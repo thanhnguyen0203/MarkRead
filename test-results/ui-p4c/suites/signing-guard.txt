@@ -1,0 +1,10 @@
+test_empty_password_blocks_before_compilation (__main__.SigningGuardTest.test_empty_password_blocks_before_compilation) ... ok
+test_existing_material_only_returned_no_signing_or_key_generation (__main__.SigningGuardTest.test_existing_material_only_returned_no_signing_or_key_generation) ... ok
+test_missing_directory_never_created (__main__.SigningGuardTest.test_missing_directory_never_created) ... ok
+test_missing_key_never_generates_or_changes_password (__main__.SigningGuardTest.test_missing_key_never_generates_or_changes_password) ... ok
+test_missing_password_keeps_key_bytes (__main__.SigningGuardTest.test_missing_password_keeps_key_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.047s
+
+OK

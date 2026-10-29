@@ -1,0 +1,13 @@
+{
+  "inputFiles": 115,
+  "changedExistingFiles": [
+    "web/src/app.css",
+    "web/src/app.js",
+    "web/src/shell.html",
+    "web/tests/icons-ui.cjs",
+    "app/src/main/assets/index.html"
+  ],
+  "protectedFiles": 110,
+  "appJsOutsideRenderFileListUnchanged": true,
+  "cssAppendOnly": true
+}

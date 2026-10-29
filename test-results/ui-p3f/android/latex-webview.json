@@ -1,0 +1,101 @@
+{
+  "platform": "Android15 API35 WebView124",
+  "measurements": [
+    {
+      "theme": "dark",
+      "background": "rgb(32, 35, 38)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.6826821886397196,
+      "normalColor": "rgb(200, 208, 203)",
+      "normalContrast": 10.031899858348181
+    },
+    {
+      "theme": "light",
+      "background": "rgb(255, 255, 255)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 5.886518279744077,
+      "normalColor": "rgb(56, 67, 60)",
+      "normalContrast": 10.313017803184888
+    },
+    {
+      "theme": "sepia",
+      "background": "rgb(245, 239, 223)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 5.128177437247735,
+      "normalColor": "rgb(81, 74, 59)",
+      "normalContrast": 7.646562319283052
+    },
+    {
+      "theme": "black",
+      "background": "rgb(8, 9, 9)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 3.3868071239888815,
+      "normalColor": "rgb(197, 209, 201)",
+      "normalContrast": 12.662202435044074
+    },
+    {
+      "theme": "tokyo-night",
+      "background": "rgb(26, 27, 38)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.9034923981180705,
+      "normalColor": "rgb(169, 177, 214)",
+      "normalContrast": 8.095547455350856
+    },
+    {
+      "theme": "tokyo-light",
+      "background": "rgb(225, 226, 231)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 4.550546936147614,
+      "normalColor": "rgb(52, 59, 88)",
+      "normalContrast": 8.488277727923736
+    },
+    {
+      "theme": "blue-gray",
+      "background": "rgb(38, 50, 56)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.235596294143319,
+      "normalColor": "rgb(209, 220, 224)",
+      "normalContrast": 9.415395098694852
+    },
+    {
+      "theme": "nord",
+      "background": "rgb(46, 52, 64)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.121730594446795,
+      "normalColor": "rgb(217, 223, 233)",
+      "normalContrast": 9.326792641417718
+    },
+    {
+      "theme": "dracula",
+      "background": "rgb(40, 42, 54)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.4191555182576874,
+      "normalColor": "rgb(248, 248, 242)",
+      "normalContrast": 13.359134716531573
+    },
+    {
+      "theme": "rose-pine",
+      "background": "rgb(25, 23, 36)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.9994700070501903,
+      "normalColor": "rgb(224, 222, 244)",
+      "normalContrast": 13.388874563413934
+    },
+    {
+      "theme": "forest",
+      "background": "rgb(30, 41, 36)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.552107466681052,
+      "normalColor": "rgb(204, 219, 206)",
+      "normalContrast": 10.438376540680826
+    },
+    {
+      "theme": "gruvbox",
+      "background": "rgb(40, 40, 40)",
+      "errorColor": "rgb(204, 0, 0)",
+      "errorContrast": 2.5045797645728842,
+      "normalColor": "rgb(235, 219, 178)",
+      "normalContrast": 10.74706817440964
+    }
+  ]
+}

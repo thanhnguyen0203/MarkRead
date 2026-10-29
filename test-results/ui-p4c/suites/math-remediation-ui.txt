@@ -1,0 +1,37 @@
+PASS dark ordinary inline glyphs including operators meet 4.5
+PASS dark ordinary display glyphs meet 4.5
+PASS dark generated error color is independent from authored red (P3F-R2 fix)
+PASS light ordinary inline glyphs including operators meet 4.5
+PASS light ordinary display glyphs meet 4.5
+PASS light generated error color is independent from authored red (P3F-R2 fix)
+PASS sepia ordinary inline glyphs including operators meet 4.5
+PASS sepia ordinary display glyphs meet 4.5
+PASS sepia generated error color is independent from authored red (P3F-R2 fix)
+PASS black ordinary inline glyphs including operators meet 4.5
+PASS black ordinary display glyphs meet 4.5
+PASS black generated error color is independent from authored red (P3F-R2 fix)
+PASS tokyo-night ordinary inline glyphs including operators meet 4.5
+PASS tokyo-night ordinary display glyphs meet 4.5
+PASS tokyo-night generated error color is independent from authored red (P3F-R2 fix)
+PASS tokyo-light ordinary inline glyphs including operators meet 4.5
+PASS tokyo-light ordinary display glyphs meet 4.5
+PASS tokyo-light generated error color is independent from authored red (P3F-R2 fix)
+PASS blue-gray ordinary inline glyphs including operators meet 4.5
+PASS blue-gray ordinary display glyphs meet 4.5
+PASS blue-gray generated error color is independent from authored red (P3F-R2 fix)
+PASS nord ordinary inline glyphs including operators meet 4.5
+PASS nord ordinary display glyphs meet 4.5
+PASS nord generated error color is independent from authored red (P3F-R2 fix)
+PASS dracula ordinary inline glyphs including operators meet 4.5
+PASS dracula ordinary display glyphs meet 4.5
+PASS dracula generated error color is independent from authored red (P3F-R2 fix)
+PASS rose-pine ordinary inline glyphs including operators meet 4.5
+PASS rose-pine ordinary display glyphs meet 4.5
+PASS rose-pine generated error color is independent from authored red (P3F-R2 fix)
+PASS forest ordinary inline glyphs including operators meet 4.5
+PASS forest ordinary display glyphs meet 4.5
+PASS forest generated error color is independent from authored red (P3F-R2 fix)
+PASS gruvbox ordinary inline glyphs including operators meet 4.5
+PASS gruvbox ordinary display glyphs meet 4.5
+PASS gruvbox generated error color is independent from authored red (P3F-R2 fix)
+P3FR MATH DIAGNOSTICS: 36 PASS

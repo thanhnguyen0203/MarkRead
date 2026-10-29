@@ -1,0 +1,3083 @@
+[
+  {
+    "w": 320,
+    "h": 568,
+    "theme": "light",
+    "view": "read",
+    "file": "320x568-light-read-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 141,
+        "right": 179,
+        "top": 526,
+        "bottom": 552,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "read",
+    "file": "393x852-dark-read-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 600,
+    "h": 960,
+    "theme": "sepia",
+    "view": "read",
+    "file": "600x960-sepia-read-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 281,
+        "right": 319,
+        "top": 918,
+        "bottom": 944,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 800,
+    "h": 852,
+    "theme": "nord",
+    "view": "read",
+    "file": "800x852-nord-read-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 381,
+        "right": 419,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "long",
+    "file": "393x852-dark-long-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "70cf5ae5078e545022c423aaebddae8a4dcec6ee7d8afb0aa0f1bc41c2675445"
+  },
+  {
+    "w": 844,
+    "h": 390,
+    "theme": "light",
+    "view": "table",
+    "file": "844x390-light-table-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 403,
+        "right": 441,
+        "top": 348,
+        "bottom": 374,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "error",
+    "file": "393x852-dark-error-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "434ee60e7776335d3c62ffd2b1bf69c3dbc44700d8f9fd90a86347a79d3a69f0"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "edit",
+    "file": "393x852-dark-edit-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 360,
+    "h": 800,
+    "theme": "dark",
+    "view": "tree",
+    "file": "360x800-dark-tree-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 161,
+        "right": 199,
+        "top": 758,
+        "bottom": 784,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5"
+  },
+  {
+    "w": 1280,
+    "h": 800,
+    "theme": "light",
+    "view": "tree",
+    "file": "1280x800-light-tree-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 621,
+        "right": 659,
+        "top": 758,
+        "bottom": 784,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "sepia",
+    "view": "filter-empty",
+    "file": "393x852-sepia-filter-empty-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5"
+  },
+  {
+    "w": 393,
+    "h": 568,
+    "theme": "dark",
+    "view": "empty",
+    "file": "393x568-dark-empty-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 526,
+        "bottom": 552,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": null
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "theme": "light",
+    "view": "home",
+    "file": "320x568-light-home-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 296,
+        "left": 12,
+        "right": 308,
+        "top": 44.5,
+        "bottom": 523.484375,
+        "scrollWidth": 294,
+        "clientWidth": 294,
+        "margin": "44.5px 12px 44.5156px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 141,
+        "right": 179,
+        "top": 526,
+        "bottom": 552,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 800,
+    "h": 900,
+    "theme": "light",
+    "view": "appearance",
+    "file": "800x900-light-appearance-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 760,
+        "left": 20,
+        "right": 780,
+        "top": 16,
+        "bottom": 884,
+        "scrollWidth": 758,
+        "clientWidth": 758,
+        "margin": "16px 20px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 381,
+        "right": 419,
+        "top": 858,
+        "bottom": 884,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "typography",
+    "file": "393x852-dark-typography-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 369,
+        "left": 12,
+        "right": 381,
+        "top": 19.546875,
+        "bottom": 832.453125,
+        "scrollWidth": 367,
+        "clientWidth": 367,
+        "margin": "19.5469px 12px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "typography",
+    "scale": 2,
+    "file": "393x852-dark-typography-2x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 369,
+        "left": 12,
+        "right": 381,
+        "top": 16,
+        "bottom": 836,
+        "scrollWidth": 367,
+        "clientWidth": 367,
+        "margin": "16px 12px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 412,
+    "h": 915,
+    "theme": "light",
+    "view": "css",
+    "file": "412x915-light-css-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 388,
+        "left": 12,
+        "right": 400,
+        "top": 127.515625,
+        "bottom": 787.484375,
+        "scrollWidth": 386,
+        "clientWidth": 386,
+        "margin": "127.516px 12px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 187,
+        "right": 225,
+        "top": 873,
+        "bottom": 899,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "reader",
+    "file": "393x852-dark-reader-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 369,
+        "left": 12,
+        "right": 381,
+        "top": 146.03125,
+        "bottom": 705.96875,
+        "scrollWidth": 367,
+        "clientWidth": 367,
+        "margin": "146.031px 12px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "light",
+    "view": "general",
+    "file": "393x852-light-general-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 369,
+        "left": 12,
+        "right": 381,
+        "top": 174.015625,
+        "bottom": 677.984375,
+        "scrollWidth": 367,
+        "clientWidth": 367,
+        "margin": "174.016px 12px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 320,
+    "h": 852,
+    "theme": "light",
+    "view": "search",
+    "file": "320x852-light-search-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 141,
+        "right": 179,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 360,
+    "theme": "dark",
+    "view": "search",
+    "file": "393x360-dark-search-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 318,
+        "bottom": 344,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 800,
+    "h": 852,
+    "theme": "dark",
+    "view": "invalid",
+    "file": "800x852-dark-invalid-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 381,
+        "right": 419,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "theme": "light",
+    "view": "rename",
+    "file": "320x568-light-rename-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 141,
+        "right": 179,
+        "top": 526,
+        "bottom": 552,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "mode",
+    "file": "393x852-dark-mode-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 224,
+        "left": 153,
+        "right": 377,
+        "top": 60,
+        "bottom": 174,
+        "scrollWidth": 222,
+        "clientWidth": 222,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "open",
+    "file": "393x852-dark-open-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 287,
+        "left": 16,
+        "right": 303,
+        "top": 138,
+        "bottom": 252,
+        "scrollWidth": 285,
+        "clientWidth": 285,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "light",
+    "view": "font",
+    "file": "393x852-light-font-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 369,
+        "left": 12,
+        "right": 381,
+        "top": 16,
+        "bottom": 836,
+        "scrollWidth": 367,
+        "clientWidth": 367,
+        "margin": "16px 12px",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 301,
+        "left": 46,
+        "right": 347,
+        "top": 385.953125,
+        "bottom": 595.953125,
+        "scrollWidth": 299,
+        "clientWidth": 299,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "light",
+    "view": "export",
+    "file": "393x852-light-export-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 327,
+        "left": 33,
+        "right": 360,
+        "top": 325.484375,
+        "bottom": 373.484375,
+        "scrollWidth": 327,
+        "clientWidth": 327,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 327,
+        "left": 33,
+        "right": 360,
+        "top": 400.484375,
+        "bottom": 448.484375,
+        "scrollWidth": 325,
+        "clientWidth": 325,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 327,
+        "left": 33,
+        "right": 360,
+        "top": 472.484375,
+        "bottom": 682.484375,
+        "scrollWidth": 325,
+        "clientWidth": 325,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 38,
+        "left": 177.5,
+        "right": 215.5,
+        "top": 810,
+        "bottom": 836,
+        "scrollWidth": 36,
+        "clientWidth": 36,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "theme": "dark",
+    "view": "toast",
+    "file": "320x568-dark-toast-1x.png",
+    "browser": "156.0.8078.49",
+    "platform": "Windows desktop Chromium",
+    "deviceScaleFactor": 1,
+    "reducedMotion": "reduce",
+    "caret": "hide",
+    "readerFont": "sans",
+    "readerSize": 18,
+    "readerLeading": 1.8,
+    "readerWidth": 860,
+    "measurements": {
+      "settingsDialog": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "auto",
+        "backdrop": {
+          "filter": "blur(3px)",
+          "color": "rgba(0, 0, 0, 0.533)"
+        }
+      },
+      "exportLink": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 6px 15px 0px",
+        "backdrop": null
+      },
+      "copyExport": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px 0px 12px",
+        "backdrop": null
+      },
+      "exportText": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "toast": {
+        "width": 288,
+        "left": 16,
+        "right": 304,
+        "top": 476,
+        "bottom": 544,
+        "scrollWidth": 1338,
+        "clientWidth": 286,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "openOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "modeOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "0px",
+        "backdrop": null
+      },
+      "fontOptions": {
+        "width": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "scrollWidth": 0,
+        "clientWidth": 0,
+        "margin": "8px 0px 0px",
+        "backdrop": null
+      }
+    },
+    "readerDOM": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3"
+  }
+]

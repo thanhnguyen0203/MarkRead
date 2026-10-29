@@ -1,0 +1,13 @@
+dark: secondary=#acb6b0 accentText=#91c7b0 onAccent=#1b1e20 borderControl=#8e938f hover=#2e3335 pressed=#35393b; minText=4.811, minControl=3.21, minAction=8.778
+light: secondary=#526057 accentText=#2c684d onAccent=#f5f6f5 borderControl=#767a77 hover=#e7eae8 pressed=#dfe3e1; minText=4.813, minControl=3.208, minAction=4.818
+sepia: secondary=#5d5544 accentText=#57572e onAccent=#ffffff borderControl=#757064 hover=#dfd7c3 pressed=#d9d1be; minText=4.806, minControl=3.244, minAction=4.961
+black: secondary=#9faea4 accentText=#9dcea9 onAccent=#101211 borderControl=#868d88 hover=#232725 pressed=#2a2e2c; minText=4.808, minControl=3.278, minAction=10.599
+tokyo-night: secondary=#a6b0d4 accentText=#8fb1f8 onAccent=#16161e borderControl=#8b8fa0 hover=#292d41 pressed=#2f3347; minText=4.82, minControl=3.22, minAction=7.142
+tokyo-light: secondary=#41495f accentText=#2d4978 onAccent=#d5d6db borderControl=#5f6268 hover=#c7cad3 pressed=#c1c4ce; minText=4.804, minControl=3.284, minAction=5.203
+blue-gray: secondary=#ced9df accentText=#bbdde7 onAccent=#202c32 borderControl=#a9b2b6 hover=#374b54 pressed=#3e515a; minText=4.804, minControl=3.204, minAction=7.447
+nord: secondary=#d9dfe8 accentText=#cbe3ea onAccent=#272d38 borderControl=#b4b8c0 hover=#414858 pressed=#484e5e; minText=4.802, minControl=3.236, minAction=6.912
+dracula: secondary=#c3cbe4 accentText=#d9c0fc onAccent=#21222c borderControl=#a4a5b0 hover=#3c3f4d pressed=#444654; minText=4.802, minControl=3.202, minAction=6.546
+rose-pine: secondary=#b8b2c8 accentText=#ebbcba onAccent=#1f1d2e borderControl=#94919e hover=#312e46 pressed=#39364d; minText=4.818, minControl=3.201, minAction=9.765
+forest: secondary=#c1d1c6 accentText=#b9d5ab onAccent=#18231d borderControl=#a0aba3 hover=#314236 pressed=#38493d; minText=4.805, minControl=3.23, minAction=8.75
+gruvbox: secondary=#d5cbba accentText=#e7c897 onAccent=#1d2021 borderControl=#a9a6a4 hover=#433f3b pressed=#4a4540; minText=4.81, minControl=3.207, minAction=7.426
+{"checks":2220,"failures":[]}

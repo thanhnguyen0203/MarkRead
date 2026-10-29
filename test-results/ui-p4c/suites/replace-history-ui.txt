@@ -1,0 +1,69 @@
+PASS single: exact replacement result
+PASS single: one native Undo restores source
+PASS single: native Redo restores replacement
+PASS single: dirty follows replacement
+PASS single: dirty clears when exact original restored
+PASS multiple blocks: exact replacement result
+PASS multiple blocks: one native Undo restores source
+PASS multiple blocks: native Redo restores replacement
+PASS multiple blocks: dirty follows replacement
+PASS multiple blocks: dirty clears when exact original restored
+PASS captures: exact replacement result
+PASS captures: one native Undo restores source
+PASS captures: native Redo restores replacement
+PASS captures: dirty follows replacement
+PASS captures: dirty clears when exact original restored
+PASS Vietnamese: exact replacement result
+PASS Vietnamese: one native Undo restores source
+PASS Vietnamese: native Redo restores replacement
+PASS Vietnamese: dirty follows replacement
+PASS Vietnamese: dirty clears when exact original restored
+PASS surrogate boundary: exact replacement result
+PASS surrogate boundary: one native Undo restores source
+PASS surrogate boundary: native Redo restores replacement
+PASS surrogate boundary: dirty follows replacement
+PASS surrogate boundary: dirty clears when exact original restored
+PASS zero length: exact replacement result
+PASS zero length: one native Undo restores source
+PASS zero length: native Redo restores replacement
+PASS zero length: dirty follows replacement
+PASS zero length: dirty clears when exact original restored
+PASS plain dollar: exact replacement result
+PASS plain dollar: one native Undo restores source
+PASS plain dollar: native Redo restores replacement
+PASS plain dollar: dirty follows replacement
+PASS plain dollar: dirty clears when exact original restored
+PASS delete match: exact replacement result
+PASS delete match: one native Undo restores source
+PASS delete match: native Redo restores replacement
+PASS delete match: dirty follows replacement
+PASS delete match: dirty clears when exact original restored
+PASS sequential replacements have separate Undo steps
+PASS second Undo preserves prior native typing
+PASS older native history keeps the pre-existing search-field boundary (baseline confirmed)
+PASS Redo replacements remains precise across the native search history boundary
+PASS typing after Replace owns its Undo step
+PASS Replace Undo still available after typing Undo
+PASS read: Replace does not switch mode
+PASS read: temporary projection fully restored
+PASS read: reader toolbar Undo uses native source buffer
+PASS read: history returns keyboard focus
+PASS read: reader Redo works
+PASS split: Replace does not switch mode
+PASS split: temporary projection fully restored
+PASS split: reader toolbar Undo uses native source buffer
+PASS split: history returns keyboard focus
+PASS split: reader Redo works
+PASS unified Undo restores Replace without block mapping change
+PASS unified Control+Y Redo
+PASS unified preference/mode unchanged
+PASS active replacement composition blocks commit
+PASS commit succeeds after composition ends
+PASS unsupported native command fails closed without source change
+PASS unsupported native editing is an operational error, not invalid query
+PASS composition starting during worker request blocks delayed commit
+PASS modal interruption cannot redirect native edit into CSS field
+PASS query field owns native Ctrl+Z
+PASS file switch cannot Undo another file transaction
+PASS no unexpected renderer errors
+P3FR REPLACE HISTORY: 68 PASS

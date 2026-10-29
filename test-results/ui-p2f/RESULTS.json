@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-28 Asia/Saigon",
+  "inherited": {
+    "node": 132,
+    "browser": {
+      "ui": 54,
+      "revision-ui": 62,
+      "reading-ui": 46,
+      "native-ui": 27,
+      "session-ui": 17,
+      "startup-ui": 53,
+      "foundations-ui": 27,
+      "accessibility-ui": 68,
+      "keyboard-ui": 68,
+      "keyboard-native-ui": 16,
+      "native-compatibility-ui": 23,
+      "icons-ui": 61,
+      "icon-states-ui": 70
+    },
+    "jvm": {
+      "PolicyTest": 69,
+      "SessionPolicyTest": 7,
+      "NativeUiPolicyTest": 82
+    },
+    "apkValidation": 25,
+    "total": 907
+  },
+  "newBrowser": {
+    "responsive-ui": 114,
+    "typography-ui": 36,
+    "overflow-ui": 146
+  },
+  "newTotal": 296,
+  "finalTotal": 1203,
+  "failures": 0,
+  "palette": {
+    "total": 2220,
+    "failures": 0
+  },
+  "artifactChecks": 8,
+  "notes": [
+    "Isolated fixture setup failures are recorded in P2F_REPORT, not test passes.",
+    "Browser/MessagePort simulations are not Android runtime testing."
+  ]
+}
