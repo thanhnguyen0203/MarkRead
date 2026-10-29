@@ -316,12 +316,7 @@ header{display:flex;min-height:64px;height:auto;padding:8px 24px;gap:8px}
  .document-title #menu{display:inline-flex;align-items:center;justify-content:center}
 }
 @media(min-width:1024px){#sidebar{position:relative;inset:auto;transform:none;visibility:visible;transition:none}.brand .mobile,.document-title #menu{display:none}}
-@media(max-width:679px){
- header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;min-height:112px;padding:6px 16px;row-gap:4px;column-gap:8px}
- .document-title{grid-column:1;grid-row:1}.document-options{grid-column:2;grid-row:1}
- .toolbar:not(.document-options){grid-column:1 / -1;grid-row:2;justify-content:flex-start;width:100%}
- .file-type{display:none}
-}
+@media(max-width:679px){.file-type{display:none}}
 @media(min-width:680px){header{display:flex;min-height:64px;padding:8px 24px}.toolbar:not(.document-options){width:auto;justify-content:flex-start}}
 #settingsDialog{width:760px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow:visible;border-radius:var(--mr-radius-dialog)}
 #settingsDialog[open]{display:flex;flex-direction:column}
@@ -633,3 +628,21 @@ dialog:not(#settingsDialog) .dialog-body{padding:24px;background:var(--mr-bg);bo
 #openOptions button+button,#modeOptions button+button,#fontOptions button+button{margin-top:var(--mr-space-1)}
 @media(max-width:679px){dialog:not(#settingsDialog) .dialog-head,dialog:not(#settingsDialog) .dialog-body{padding:16px}}
 @supports(height:100dvh){#openOptions,#modeOptions{max-height:50dvh}#fontOptions{max-height:40dvh}#exportText{max-height:45dvh}}
+
+/* Compact reader bar: smaller glyphs, full 48px non-overlapping touch slots. */
+#app>main>header{display:flex;flex-wrap:nowrap;height:56px;min-height:56px;gap:4px;padding:4px 12px}
+#app>main>header .document-title{flex:1 1 0;min-width:0;gap:2px}
+#app>main>header #filename{flex:1 1 0;min-width:0;max-width:none;height:48px;padding:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#app>main>header .toolbar.document-actions{flex:0 0 auto;width:auto;gap:0;align-items:center}
+#app>main>header .icon{flex:0 0 48px;width:48px;min-width:48px;height:48px;min-height:48px;padding:12px;border-radius:8px}
+#app>main>header .document-actions>button{display:inline-flex;align-items:center;justify-content:center}
+#app>main>header .icon svg{width:20px;height:20px}
+#app>main>header .toolbar.document-actions>button:not(:disabled){background:transparent;color:var(--mr-text-secondary)}
+#app>main>header .document-actions #download:not(:disabled){background:transparent;color:var(--mr-accent-text)}
+#app>main>header .document-actions #findToggle[aria-expanded=true]:not(:disabled){background:var(--mr-selected);color:var(--mr-selected-text)}
+@media(hover:hover) and (pointer:fine){#app>main>header .toolbar.document-actions>button:not(:disabled):hover{background:var(--mr-hover);color:var(--mr-text-primary)}}
+#app>main>header .toolbar.document-actions>button:not(:disabled):active{background:var(--mr-pressed);color:var(--mr-text-primary)}
+#app>main>header .document-actions #download:not(:disabled):active{background:var(--mr-pressed);color:var(--mr-text-primary)}
+#app>main>header .icon:focus-visible{outline-offset:-4px}
+#documentMode{width:100%;min-height:48px}
+@media(max-width:679px){#app>main>header{gap:2px;padding-inline:4px}}

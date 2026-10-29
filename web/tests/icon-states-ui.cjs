@@ -32,7 +32,7 @@ const contrast=(a,b)=>{const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.m
   for(const [width,height] of [[320,568],[360,800],[390,844],[600,960],[844,390],[1280,800]]){
    await page.setViewportSize({width,height});await page.waitForTimeout(60);
    const bounds=await page.locator('header .icon').evaluateAll(nodes=>nodes.filter(x=>x.getClientRects().length).map(x=>{const b=x.getBoundingClientRect(),s=x.querySelector('svg').getBoundingClientRect();return {id:x.id,x:b.x,y:b.y,w:b.width,h:b.height,sx:s.x,sy:s.y,sw:s.width,sh:s.height};}));
-   ok(bounds.every(b=>b.w>=48&&b.h>=48&&b.sw===24&&b.sh===24&&Math.abs((b.x+b.w/2)-(b.sx+b.sw/2))<1&&Math.abs((b.y+b.h/2)-(b.sy+b.sh/2))<1),width+'x'+height+':24px glyphs are centered in actual48px controls');
+   ok(bounds.every(b=>b.w>=48&&b.h>=48&&b.sw===20&&b.sh===20&&Math.abs((b.x+b.w/2)-(b.sx+b.sw/2))<1&&Math.abs((b.y+b.h/2)-(b.sy+b.sh/2))<1),width+'x'+height+':20px toolbar glyphs are centered in actual48px controls');
    ok(bounds.every((a,i)=>bounds.slice(i+1).every(b=>Math.min(a.x+a.w,b.x+b.w)<=Math.max(a.x,b.x)||Math.min(a.y+a.h,b.y+b.h)<=Math.max(a.y,b.y)))&&await page.evaluate(()=>document.body.scrollWidth<=innerWidth),width+'x'+height+': no toolbar target overlap or body overflow');
   }
   const registry=JSON.parse(fs.readFileSync(path.join(root,'web/icons/manifest.json'),'utf8')).icons;

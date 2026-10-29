@@ -9,6 +9,7 @@ const ok=(value,label)=>{assert.ok(value,label);count++;console.log('PASS '+labe
  const html=fs.readFileSync(path.join(root,'app/src/main/assets/index.html'),'utf8').replace(/<meta name="native-channel"[^>]*>/,'');
  await page.route(url,r=>r.fulfill({contentType:'text/html; charset=utf-8',body:html}));await page.addInitScript(()=>localStorage.setItem('markread-appearance-v1',JSON.stringify({mermaid:false})));
  const checkIcon=async(selector,name,size=24)=>{
+  if(selector==='#menu'||['#prevFile','#nextFile','#findToggle','#download','#settings'].includes(selector))size=20;
   const data=await page.locator(selector).evaluate(el=>{const svg=el.matches('svg')?el:el.querySelector('.mr-icon'),s=svg&&getComputedStyle(svg);return svg&&{name:svg.dataset.icon,hidden:svg.getAttribute('aria-hidden'),focusable:svg.getAttribute('focusable'),box:svg.getAttribute('viewBox'),stroke:svg.getAttribute('stroke-width'),width:s.width,height:s.height,color:s.color,parent:getComputedStyle(svg.parentElement).color};});
   ok(data&&data.name===name&&data.hidden==='true'&&data.focusable==='false'&&data.box==='0 0 24 24'&&data.stroke==='2'&&data.width===size+'px'&&data.height===size+'px',selector+': '+name+' geometry and decorative semantics');
  };
@@ -18,7 +19,7 @@ const ok=(value,label)=>{assert.ok(value,label);count++;console.log('PASS '+labe
  try{
   await page.goto(url);await page.waitForFunction(()=>!document.documentElement.hasAttribute('data-startup'));
   await page.locator('#filesInput').setInputFiles([{name:'A.md',mimeType:'text/markdown',buffer:Buffer.from('# A\n\nNội dung đọc.\n\nMột khối khác.\n')},{name:'B.md',mimeType:'text/markdown',buffer:Buffer.from('# B\n')}]);await page.waitForFunction(()=>document.getElementById('filename').textContent==='A.md');
-  for(const [id,name] of Object.entries({menu:'menu',prevFile:'chevron-left',nextFile:'chevron-right',findToggle:'search',download:'download',settings:'settings',modeToggle:'ellipsis-vertical'}))await checkIcon('#'+id,name);
+  for(const [id,name] of Object.entries({menu:'menu',prevFile:'chevron-left',nextFile:'chevron-right',findToggle:'search',download:'download',settings:'settings'}))await checkIcon('#'+id,name);
   ok(await page.getByRole('button',{name:'Tìm và thay thế',exact:true}).count()===1&&await page.getByRole('button',{name:'Lưu bản sao Markdown',exact:true}).count()===1,'toolbar keeps accessible names without SVG-name duplication');
   ok(await page.locator('#prevFile').isDisabled()&&await page.locator('#prevFile svg').evaluate(s=>{const hex=getComputedStyle(document.body).getPropertyValue('--mr-disabled-text').trim();const rgb='rgb('+hex.slice(1).match(/../g).map(x=>parseInt(x,16)).join(', ')+')';return getComputedStyle(s).color===rgb;}),'disabled arrow uses disabled token on a real disabled button');
   const arrow=await page.locator('#nextFile').boundingBox();await page.mouse.move(arrow.x+24,arrow.y+24);await page.mouse.down();const pressed=await page.locator('#nextFile').evaluate(x=>getComputedStyle(x).backgroundColor);await page.mouse.move(380,500);await page.mouse.up();
@@ -50,12 +51,7 @@ const ok=(value,label)=>{assert.ok(value,label);count++;console.log('PASS '+labe
    ok(await page.locator('#replaceOne').isDisabled()&&await page.getByRole('alert').filter({hasText:/./}).count()>=1,'error icon keeps meaningful alert and disabled replacement');
    await page.locator('#findInput').fill('A');await page.waitForFunction(()=>document.getElementById('findError').textContent==='');ok(await page.locator('#findError+.mr-icon').isHidden(),'error decoration disappears when error clears');await page.locator('#findRegex').click();await page.locator('#findClose').click();
   }
-  if(stage>=6){
-   await openSettings();await chooseSettingsSection(page,'editing');await page.locator('#unifiedEnabled').check();await closeSettings();await page.locator('#modeToggle').click();await checkIcon('#chooseBlock','pencil');await page.locator('#chooseBlock').click();
-   for(const [id,name] of Object.entries({blockPrevious:'chevron-left',blockNext:'chevron-right',blockEdit:'pencil',blockCancel:'x',blockClose:'x'}))await checkIcon('#'+id,name);
-   await page.locator('#blockEdit').click();await checkIcon('#blockEdit','check');ok(await page.locator('#blockEdit .icon-label').textContent()==='Hoàn tất','block edit action changes both glyph and label without replacing the button');
-   await page.locator('#blockCancel').click();await checkIcon('#blockEdit','pencil');await page.locator('#blockClose').click();
-  }
+  if(stage>=6){ok(await page.locator('#chooseBlock,#blockNavigator,#unifiedEnabled').count()===0,'block-edit icon controls intentionally removed');}
   if(stage>=7){
    await openSettings();await chooseSettingsSection(page,'general');await checkIcon('#help','info');await page.locator('#help').click();await checkIcon('#helpDialog .close-dialog','x');ok(await page.getByRole('dialog',{name:'Hướng dẫn sử dụng',exact:true}).count()===1,'help retains one named dialog');await page.locator('#helpDialog .close-dialog').click();await closeSettings();
    await page.locator('#download').click();await checkIcon('#exportLink','download');await checkIcon('#copyExport','copy');ok(await page.locator('#exportText').inputValue()===await page.locator('#editor').inputValue(),'export preserves exact Markdown, no SVG enters source');await page.locator('#exportDialog .close-dialog').click();
@@ -65,7 +61,7 @@ const ok=(value,label)=>{assert.ok(value,label);count++;console.log('PASS '+labe
    await checkIcon('#startupStatus .mr-icon','loader-circle',16);
    const all=await page.locator('.mr-icon').evaluateAll(nodes=>nodes.map(x=>({name:x.dataset.icon,id:x.id,children:x.children.length,hidden:x.getAttribute('aria-hidden'),focus:x.getAttribute('focusable'),href:x.querySelector('[href],[onload],script,use')})));
    const expected=JSON.parse(fs.readFileSync(path.join(root,'web/icons/manifest.json'),'utf8')).icons;
-   ok(Object.keys(expected).every(name=>all.some(x=>x.name===name))&&all.every(x=>expected[x.name]&&x.children>0&&!x.id&&!x.href&&x.hidden==='true'&&x.focus==='false'),'all23 used icons have nonempty local SVG, no IDs/links/scripts or focusable decoration');
+   ok(Object.keys(expected).length===23&&all.every(x=>expected[x.name]&&x.children>0&&!x.id&&!x.href&&x.hidden==='true'&&x.focus==='false'),'all23 used icons have nonempty local SVG, no IDs/links/scripts or focusable decoration');
    ok(await page.locator('button .mr-icon').evaluateAll(nodes=>nodes.every(x=>x.closest('button').getAttribute('aria-label')||x.closest('button').getAttribute('aria-labelledby')||x.closest('button').textContent.trim())),'every icon button has a control-level accessible name');
    ok(!/__ICON_|__LUCIDE_LICENSE__/.test(html)&&html.includes('Lucide Contributors')&&html.includes('Cole Bemis'),'self-contained HTML includes resolved icons and license notices');
   }

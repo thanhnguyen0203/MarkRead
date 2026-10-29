@@ -30,7 +30,7 @@ const separate=xs=>xs.every((a,i)=>xs.slice(i+1).every(b=>Math.min(a.right,b.rig
   const measurements={};
   for(const [width,height] of [[320,568],[360,800],[390,844],[600,960],[680,800],[820,800],[844,390],[910,800],[1024,800],[1280,800]]){
    await page.setViewportSize({width,height});
-   const bounds=await targets(page,'main>header button:not(.mode-options button)');measurements[`${width}x${height}`]=bounds;
+   const bounds=await targets(page,'main>header button:not(#filename)');measurements[`${width}x${height}`]=bounds;
    ok(large(bounds)&&separate(bounds)&&bounds.every(x=>x.hit&&x.x>=0&&x.right<=width+.1)&&await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`header targets fit without overlap at ${width}x${height}`);
    ok(await page.evaluate(()=>document.getElementById('readerPane').getBoundingClientRect().top>=document.querySelector('main>header').getBoundingClientRect().bottom),'header reserves space above Markdown at '+width);
   }
@@ -78,7 +78,7 @@ const separate=xs=>xs.every((a,i)=>xs.slice(i+1).every(b=>Math.min(a.right,b.rig
   await page.locator('#settingsDialog .close-dialog').tap();await page.screenshot({path:path.join(qa,'header-390.png')});
   await page.locator('#findToggle').tap();ok(await page.locator('#findToggle').getAttribute('aria-expanded')==='true'&&await page.locator('#findToggle').getAttribute('aria-controls')==='findbar','find disclosure exposes its actual state and panel');
   ok(large(await targets(page,'#findbar button,#findbar input'))&&separate(await targets(page,'#findPrev,#findNext')),'search and replacement controls have 48 CSS px targets');await page.locator('#findClose').tap();ok(await page.locator('#findToggle').getAttribute('aria-expanded')==='false','closing find clears expanded state');
-  await page.locator('#modeToggle').tap();ok(await page.getByRole('menuitemradio',{checked:true}).count()===1,'mode menu keeps one checked mode');await page.locator('#modeOptions [data-mode=edit]').tap();
+  ok(await page.locator('#modeToggle,#modeMenu').count()===0,'removed mode popup is absent');await require('./layout-helpers.cjs').selectDocumentMode(page,'edit');
   const original=await page.locator('#editor').inputValue();await page.locator('#editor').tap();await page.locator('#editor').evaluate(x=>{window.p2bEditor=x;x.setSelectionRange(2,2);});
   await page.keyboard.insertText('Việt');const edited=await page.locator('#editor').inputValue();await page.keyboard.press('Control+z');ok(await page.locator('#editor').inputValue()===original,'source undo retains original Markdown');await page.keyboard.press('Control+Shift+z');ok(await page.locator('#editor').inputValue()===edited,'source redo retains the edit');
   await page.setViewportSize({width:390,height:560});ok(await page.locator('#editor').evaluate(x=>x===window.p2bEditor&&document.activeElement===x&&x.selectionStart===x.selectionEnd),'viewport resize retains the editor node, focus and caret');await page.setViewportSize({width:390,height:844});
@@ -86,7 +86,7 @@ const separate=xs=>xs.every((a,i)=>xs.slice(i+1).every(b=>Math.min(a.right,b.rig
   await page.locator('#download').tap();ok(await page.getByRole('dialog',{name:'Lưu bản Markdown',exact:true}).isVisible()&&await page.getByRole('link',{name:'Lưu tệp .md',exact:true}).count()===1,'export dialog and download link keep their names');ok(large(await targets(page,'#exportDialog button,#exportLink')),'export actions have 48 CSS px targets');await page.locator('#exportDialog .close-dialog').tap();
   ok(await page.locator('button button,button input,button a,a button,summary button').count()===0,'shell contains no nested interactive controls');
   for(const density of [1,2,3]){
-   const probe=await start(browser,{deviceScaleFactor:density});const bounds=await targets(probe,'main>header button:not(.mode-options button)');ok(large(bounds)&&await probe.evaluate(()=>visualViewport.scale===1),`CSS target bounds remain stable at browser device scale ${density}; dp is not inferred`);await probe.close();
+   const probe=await start(browser,{deviceScaleFactor:density});const bounds=await targets(probe,'main>header button:not(#filename)');ok(large(bounds)&&await probe.evaluate(()=>visualViewport.scale===1),`CSS target bounds remain stable at browser device scale ${density}; dp is not inferred`);await probe.close();
   }
   ok(errors.length===0,'no page errors during P2B flows');console.log(`P2B ACCESSIBILITY: ${count} PASS`);
  }catch(error){await page.screenshot({path:path.join(qa,'failure.png')}).catch(()=>{});throw error;}

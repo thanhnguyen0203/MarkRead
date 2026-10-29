@@ -27,6 +27,8 @@ import fontCSS from 'inline-merriweather-css';
 for (const [name,lang] of Object.entries({python,javascript,json,sql,css,bash,xml})) hljs.registerLanguage(name,lang);
 const $ = id => document.getElementById(id);
 const motion=createMotion();
+// Reader block editing has no UI entry points; legacy preference remains compatible.
+const READER_BLOCK_EDITING=false;
 function showDialog(dialog){if(!dialog.open){dialog.showModal();motion.enter(dialog,'dialog');}}
 const popupMotion=node=>open=>{if(open)motion.enter(node);else motion.cancel(node);};
 for(const dialog of document.querySelectorAll('dialog'))dialog.addEventListener('close',()=>{if(!dialog.open)motion.cancelTree(dialog);});
@@ -133,7 +135,7 @@ function trackReadingScroll(scroller,doc){
     const resized=viewport!==main.clientHeight;previous=top;viewport=main.clientHeight;
     if(resized||delta*direction<0||performance.now()>scrollIntentUntil||motion.reduced())return;
     if(documentBar.contains(document.activeElement)&&document.activeElement.matches(':focus-visible'))return;
-    if(doc.activeElement?.matches('input,textarea')||document.querySelector('dialog[open]')||document.body.classList.contains('sidebar-open')||!$('modeOptions').hidden||!$('blockNavigator').hidden)return;
+    if(doc.activeElement?.matches('input,textarea')||document.querySelector('dialog[open]')||document.body.classList.contains('sidebar-open'))return;
     if(top<=0)barOffset=0;
     else if(delta<0)barOffset+=delta;
     else if(top>72)barOffset+=Math.min(delta,top-72);
@@ -162,14 +164,8 @@ function uiSettings(){
   document.documentElement.style.colorScheme=themes[settings.theme].light?'light':'dark';
   for(const [key,value] of Object.entries({...resolvedThemes[settings.theme].tokens,...resolvedThemes[settings.theme].legacy}))document.body.style.setProperty('--'+key,value);
   document.body.style.colorScheme=themes[settings.theme].light?'light':'dark';
-  document.body.classList.toggle('unified',settings.unified);
-  $('modeMenu').hidden=false;
-  for(const button of $('modeOptions').querySelectorAll('[data-mode]'))button.hidden=settings.unified;
-  $('chooseBlock').hidden=!settings.unified;
-  $('modeToggle').setAttribute('aria-label',settings.unified?'Công cụ chỉnh sửa':'Chế độ tài liệu');
-  $('modeOptions').setAttribute('aria-label',settings.unified?'Chỉnh sửa hợp nhất':'Chế độ tài liệu');
-  if(settings.unified)setModeMenu(false);else closeBlockNavigator(false);
-  $('unifiedEnabled').checked=settings.unified;
+  document.body.classList.remove('unified');
+  $('documentMode').value=mode;
   for(const b of $('themes').querySelectorAll('button')){b.classList.toggle('active',b.dataset.theme===settings.theme);b.setAttribute('aria-pressed',String(b.dataset.theme===settings.theme));}
   $('fontText').textContent=document.querySelector('[data-font="'+settings.font+'"] span').textContent;for(const b of document.querySelectorAll('[data-font]'))b.setAttribute('aria-selected',String(b.dataset.font===settings.font));$('fontSize').value=settings.size;$('width').value=settings.width;$('lineHeight').value=settings.leading;
   $('fontValue').textContent=`${settings.size} px`;$('widthValue').textContent=`${settings.width} px`;$('lineValue').textContent=settings.leading.toFixed(1);
@@ -430,7 +426,7 @@ async function render(ticket){
       trackReadingScroll(d.scrollingElement,d);
       progressObserver?.disconnect();progressObserver=new ResizeObserver(scheduleReadingProgress);
       progressObserver.observe(d.documentElement);progressObserver.observe(d.getElementById('paper'));scheduleReadingProgress();
-      d.body.classList.toggle('unified-reader',settings.unified);
+      d.body.classList.remove('unified-reader');
       updateBlockNavigator();
       applyFind({scroll:false});status(current?'Đã mở · chỉ đọc bộ tệp được chọn':'Tài liệu mẫu · chưa truy cập tệp của bạn');
       // Keep the first visible document in its final typography, including offline fonts.
@@ -509,7 +505,7 @@ function inlineViewportResize(){
   });
 }
 function beginInline(block,box=null,caret=0){
-  if(!settings.unified||!block||editorComposing())return;
+  if(!READER_BLOCK_EDITING||!settings.unified||!block||editorComposing())return;
   if(inlineEdit){
     const start=Number(block.dataset.start);box=finishInline(false,true,true,block);
     block=[...$('reader').contentDocument.querySelectorAll('.md-block')].find(b=>Number(b.dataset.start)<=start&&Number(b.dataset.end)>start);if(!block){box?.remove();return;}caret+=start-Number(block.dataset.start);
@@ -534,7 +530,7 @@ function beginInline(block,box=null,caret=0){
   if(d.activeElement!==input)input.focus({preventScroll:true});input.setSelectionRange(caret,caret);restoreReadingAnchor(d,anchor);updateBlockNavigator();
 }
 // A tap outside the active source returns to rendered text. Scrolling does not commit.
-document.addEventListener('pointerdown',e=>{if(!editorComposing()&&inlineEdit&&e.target!==$('reader')&&!e.target.closest('#blockNavigator'))finishInline();},true);
+document.addEventListener('pointerdown',e=>{if(!editorComposing()&&inlineEdit&&e.target!==$('reader'))finishInline();},true);
 function inlineCaret(block,e){
   if(!e.clientX&&!e.clientY)return 0;
   const d=block.ownerDocument,range=d.caretRangeFromPoint?.(e.clientX,e.clientY);
@@ -544,59 +540,24 @@ function inlineCaret(block,e){
 }
 function readerClick(e){
   if(isIME(e)||editorComposing())return;
-  setModeMenu(false);if(e.target.closest('.inline-editor'))return;
   const a=e.target.closest('a[data-target]');
-  if(!a){
-    const block=e.target.closest('.md-block');
-    if(block&&settings.unified&&mode==='read'&&!e.target.closest('summary,button,input')&&!e.target.ownerDocument.getSelection()?.toString())beginInline(block,null,inlineCaret(block,e));
-    else if(inlineEdit)finishInline();
-    return;
-  }
+  if(!a)return;
   e.preventDefault();const raw=a.dataset.target;if(raw.startsWith('#')){try{$('reader').contentDocument.getElementById(decodeURIComponent(raw.slice(1)))?.scrollIntoView();}catch{}return;}const target=localTarget(raw,current);if(target&&files.has(target.path)&&isDocument(target.path)){openFile(target.path,target.fragment);}else toast('Liên kết bị chặn: chỉ mở tệp Markdown trong bộ tệp đã chọn.');
 }
-function setMode(value){if(editorComposing())return;const leavingEditor=document.activeElement===$('editor');finishInline(false,false);if(settings.unified)value='read';mode=value;$('workspace').dataset.mode=value;for(const b of $('modeOptions').querySelectorAll('[data-mode]'))b.setAttribute('aria-checked',String(value===b.dataset.mode));if(pendingEditorView===current&&(value==='edit'||value==='split'))restoreEditorView();if(value==='edit')$('editor').focus({preventScroll:true});else if(leavingEditor)$('modeToggle').focus({preventScroll:true});scheduleReadingProgress();}
-const modePopup=bindPopup($('modeToggle'),$('modeOptions'),()=>$('modeOptions').querySelector('[aria-checked=true]:not([hidden])'),popupMotion($('modeOptions')));
-function setModeMenu(open){modePopup.setOpen(open);}
-$('modeToggle').addEventListener('click',()=>setModeMenu($('modeOptions').hidden));
-for(const b of $('modeOptions').querySelectorAll('[data-mode]'))b.addEventListener('click',()=>{setModeMenu(false);setMode(b.dataset.mode);if(mode!=='edit')$('modeToggle').focus();});
-document.addEventListener('pointerdown',e=>{if(!e.target.closest('#modeMenu'))setModeMenu(false);},true);
-
-// One transient navigator gives unified editing a keyboard entry without tab stops on every paragraph.
-let blockStart=null;
-function readerBlocks(){return [...($('reader').contentDocument?.querySelectorAll('#paper>.md-block')||[])].filter(block=>block.getClientRects().length&&source.slice(Number(block.dataset.start),Number(block.dataset.end)).trim().length>0);}
-function updateBlockNavigator(){
-  if($('blockNavigator').hidden)return;
-  const blocks=readerBlocks();let at=blocks.findIndex(b=>Number(b.dataset.start)===blockStart);
-  if(at<0)at=Math.max(0,blocks.findIndex(b=>b.getBoundingClientRect().bottom>0));
-  const block=blocks[at];blockStart=block?Number(block.dataset.start):null;
-  for(const node of blocks)node.classList.toggle('keyboard-block',node===block);
-  $('blockPrevious').disabled=!!inlineEdit||at<=0;
-  $('blockNext').disabled=!!inlineEdit||at>=blocks.length-1;
-  $('blockEdit').disabled=!block||editorComposing();setIconLabel($('blockEdit'),inlineEdit?'check':'pencil',inlineEdit?'Hoàn tất':'Sửa khối');
-  $('blockCancel').hidden=!inlineEdit;$('blockCancel').disabled=editorComposing();
-  $('blockClose').disabled=editorComposing();
-  const preview=block===inlineEdit?.host?inlineEdit.original:block?.textContent||'';
-  const description=block?`Khối ${at+1}/${blocks.length}: ${preview.trim().replace(/\s+/g,' ').slice(0,100)}`:'Không có khối để sửa.';
-  if($('blockDescription').textContent!==description)$('blockDescription').textContent=description;
+function setMode(value){
+  if(editorComposing()||!['read','edit','split'].includes(value))return;
+  const leavingEditor=document.activeElement===$('editor');finishInline(false,false);
+  mode=value;$('workspace').dataset.mode=value;$('documentMode').value=value;
+  if(pendingEditorView===current&&(value==='edit'||value==='split'))restoreEditorView();
+  if(!$('settingsDialog').open){if(value==='edit')$('editor').focus({preventScroll:true});else if(leavingEditor)$('settings').focus({preventScroll:true});}
+  scheduleReadingProgress();
 }
-function openBlockNavigator(){
-  if(!settings.unified||editorComposing())return;finishInline();setModeMenu(false);blockStart=null;$('blockNavigator').hidden=false;showDocumentBar();updateBlockNavigator();$('blockEdit').focus({preventScroll:true});
-}
-function closeBlockNavigator(restore=true){
-  if(editorComposing()||$('blockNavigator').hidden)return;$('blockNavigator').hidden=true;
-  for(const node of $('reader').contentDocument?.querySelectorAll('.keyboard-block')||[])node.classList.remove('keyboard-block');
-  if(restore)$('modeToggle').focus({preventScroll:true});
-}
-function focusEditorExit(){if(!$('blockNavigator').hidden){updateBlockNavigator();$('blockEdit').focus({preventScroll:true});}else $('modeToggle').focus({preventScroll:true});}
-function moveBlock(delta){
-  if(inlineEdit||editorComposing())return;const blocks=readerBlocks(),at=blocks.findIndex(b=>Number(b.dataset.start)===blockStart),block=blocks[Math.max(0,Math.min(blocks.length-1,at+delta))];
-  if(block){blockStart=Number(block.dataset.start);showDocumentBar();scrollIntentUntil=0;block.scrollIntoView({block:'center',behavior:'instant'});updateBlockNavigator();}
-}
-$('chooseBlock').addEventListener('click',openBlockNavigator);
-$('blockPrevious').addEventListener('click',()=>moveBlock(-1));$('blockNext').addEventListener('click',()=>moveBlock(1));
-$('blockEdit').addEventListener('click',()=>{if(editorComposing())return;if(inlineEdit){finishInline();focusEditorExit();}else{const block=readerBlocks().find(b=>Number(b.dataset.start)===blockStart);block?.scrollIntoView({block:'center',behavior:'instant'});beginInline(block);}});
-$('blockCancel').addEventListener('click',()=>{if(!editorComposing()){finishInline(true);focusEditorExit();}});
-$('blockClose').addEventListener('click',()=>{if(!editorComposing()){finishInline();closeBlockNavigator();}});
+let settingsModeChanged=false;
+$('documentMode').addEventListener('change',()=>{if(editorComposing())return;settingsModeChanged=true;setMode($('documentMode').value);});
+$('settingsDialog').addEventListener('close',()=>{if(settingsModeChanged){settingsModeChanged=false;(mode==='edit'?$('editor'):$('settings')).focus({preventScroll:true});}});
+// Inert compatibility hook for the retained, unreachable inline-edit implementation.
+function updateBlockNavigator(){}
+function focusEditorExit(){$('settings').focus({preventScroll:true});}
 let exportURL='';
 let saving=false;
 async function download(){
@@ -688,7 +649,7 @@ async function replaceFind(all=false){
 }
 let findReturn=null;
 function closePopupForLayer(topDialog){
-  for(const [popup,trigger,close] of [[$('modeOptions'),$('modeToggle'),setModeMenu],[$('fontOptions'),$('font'),setFontMenu],[$('openOptions'),$('openMenu'),setOpenMenu]]){
+  for(const [popup,trigger,close] of [[$('fontOptions'),$('font'),setFontMenu],[$('openOptions'),$('openMenu'),setOpenMenu]]){
     if(!popup.hidden&&(!topDialog||topDialog.contains(popup))){close(false);trigger.focus({preventScroll:true});return true;}
   }
   return false;
@@ -721,10 +682,9 @@ function keyboard(e){
   // HTML dialog owns its native cancel event. Do not act on layers behind it.
   if(topDialog)return;
   if(inlineEdit){e.preventDefault();finishInline();focusEditorExit();return;}
-  if(!$('blockNavigator').hidden){e.preventDefault();closeBlockNavigator();return;}
   if(drawerModal()){e.preventDefault();setSidebar(false);return;}
   if(!$('findbar').hidden){e.preventDefault();toggleFind(false);return;}
-  if(e.target===$('editor')){e.preventDefault();$('modeToggle').focus({preventScroll:true});}
+  if(e.target===$('editor')){e.preventDefault();$('settings').focus({preventScroll:true});}
 }
 const fontPopup=bindPopup($('font'),$('fontOptions'),()=>document.querySelector('[data-font="'+settings.font+'"]'),popupMotion($('fontOptions')));
 function setFontMenu(open){fontPopup.setOpen(open);}
@@ -780,7 +740,6 @@ $('settingsCategory').addEventListener('change',()=>showSettingsSection($('setti
 for(const b of document.querySelectorAll('.close-dialog'))b.addEventListener('click',()=>b.closest('dialog').close());
 for(const b of $('themes').querySelectorAll('button'))b.addEventListener('click',()=>{settings.theme=b.dataset.theme;settingsChange();});
 for(const [id,key] of [['fontSize','size'],['width','width'],['lineHeight','leading']])$(id).addEventListener('input',()=>{settings[key]=Number($(id).value);settingsChange();});
-$('unifiedEnabled').addEventListener('change',()=>{finishInline(false,false);settings.unified=$('unifiedEnabled').checked;setMode('read');settingsChange();});
 $('mermaidEnabled').addEventListener('change',()=>{settings.mermaid=$('mermaidEnabled').checked;settingsChange();});
 $('applyCSS').addEventListener('click',()=>{try{const cleaned=cleanCSS($('customCSS').value);settings.css=cleaned;cssDraft=null;persist();scheduleRender();$('cssFeedback').textContent='Đã áp dụng CSS trong vùng đọc.';}catch(e){$('cssFeedback').textContent=e.message;}});
 $('resetCSS').addEventListener('click',()=>{settings.css='';cssDraft=null;$('customCSS').value='';$('cssFeedback').textContent='Đã xóa CSS.';persist();scheduleRender();});
@@ -804,7 +763,6 @@ if(IS_ANDROID){
     if(closePopupForLayer(dialog))return 'handled';
     if(dialog){if(dialog===$('settingsDialog')&&settingsList())return 'handled';dialog.close();return 'handled';}
     if(inlineEdit){finishInline();focusEditorExit();return 'handled';}
-    if(!$('blockNavigator').hidden){closeBlockNavigator();return 'handled';}
     if(document.body.classList.contains('sidebar-open')){setSidebar(false);return 'handled';}
     if(!$('findbar').hidden){toggleFind(false);return 'handled';}
     if(mode!=='read'){setMode('read');return 'handled';}

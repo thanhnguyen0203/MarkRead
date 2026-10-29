@@ -1,0 +1,36 @@
+# Compact Reader Toolbar — Integration Review
+
+29/10/2026. Scope: branch `codex/compact-reader-toolbar` above peeled `v1.2.0` commit `82cc52a60e4b93495299ecac778322683b80b6f8`. This note supplements [Android validation](COMPACT_TOOLBAR_ANDROID_VALIDATION.md) and the [initial implementation report](COMPACT_TOOLBAR_REPORT.md). It does not authorize merge, tag, release signing, or publication.
+
+## Scope and baseline
+
+- Five production inputs changed: `web/src/shell.html`, `web/src/app.css`, `web/src/app.js`, `web/src/demo.md`, generated `app/src/main/assets/index.html`. Changes remove Reader overflow/block-edit entry points and place Previous, Next, Search, Save, Settings in the single app bar. Source Editor remains available through Settings. No Java, Android bridge, manifest, permissions, dependencies, application ID, version metadata, signing, or release APK changed.
+- Existing regression suites were migrated for the removed controls; one new 188-assertion toolbar suite was added. Existing test evidence and synthetic screenshots are included under `test-results/compact-toolbar/` and `test-results/compact-toolbar-android/`.
+- Complete final regression: 2,334/2,334 inherited after migration plus 188/188 new = **2,522/2,522 PASS**. Android checks **99/99 PASS**, palette **2,220/2,220 PASS** for 12 themes, debug APK gate **18/18 PASS**, Gradle `assembleDebug` **PASS**. Debug APK is only a QA artifact and is not staged for release.
+- Release `v1.2.0` tag still points to the unchanged base. Existing signed release APK SHA-256 remains `a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995`.
+
+## 320 CSS px: filename and hit areas
+
+On Android emulator API 35 / WebView 124 at 160 dpi, DPR 1 and viewport scale 1, the six icon controls are each 48 × 48 CSS px with 20 × 20 px glyphs. Their horizontal bounds are `[4,52]`, `[76,124]`, `[124,172]`, `[172,220]`, `[220,268]`, `[268,316]`; no overlap or horizontal overflow. The header is one row, 56 px high.
+
+The filename gets **20 CSS px** at 320 px viewport width, with `text-overflow: ellipsis`; it is visually abbreviated to a leading character and ellipsis. Its full Vietnamese filename remains in `aria-label` (see [measured layout](../../test-results/compact-toolbar-android/layout-320.json)), and file-list/rename alternatives remain available. This is a real discoverability tradeoff, not a layout or accessibility-name failure: seven controls at 48 px would already need 336 px before padding. The filename control itself is below the preferred 48 px hit width in this narrow case; the six toolbar actions retain their 48 px targets. Expanding it requires a separately reviewed action-priority or navigation design, without reintroducing overflow. On 360/393/412/600 px, there is progressively more title space. [320 px screenshot](../../test-results/compact-toolbar-android/toolbar-native-320.png).
+
+## Startup watchdog recheck
+
+The earlier full Android run displayed the existing native “Giao diện chưa sẵn sàng” fallback once while the host was executing several browser suites. Pressing **Tiếp tục chờ**, without clearing data or reloading, allowed all 99 native checks to complete.
+
+Two additional checks reused the dedicated QA AVD with no parallel browser suite. On a cold emulator boot, the fallback appeared by the observation at roughly 32 seconds after app launch, process still alive ([result](../../test-results/compact-toolbar-android/startup-recheck-cold.json)). After rebooting that AVD, allowing 60 seconds for the emulator to settle, and launching again, **no fallback appeared**; screenshot at about 35 seconds after launch shows Reader and the compact app bar ([result](../../test-results/compact-toolbar-android/startup-recheck-settled.json), [screen](../../test-results/compact-toolbar-android/startup-settled-screen.png)). The naive `uiautomator` toolbar-name probe was false here because this headless WebView returned an empty accessibility subtree; the screenshot confirms the actual UI. Logcat showed MainActivity displayed in about 2.3 seconds on the settled run, with no fatal exception or app ANR in the captured log. It did not establish the exact time at which JS became ready.
+
+The 22-second native startup watchdog and its **Tiếp tục chờ** path predate this toolbar change. The cold-boot fallback is reproducible in this constrained AVD state but did not reproduce after settling, and the app recovered without losing test data. Evidence does not prove either a toolbar regression or acceptable startup timing on physical devices. Treat it as an environment-sensitive **known observation**; add cold/warm launch timing on a physical device to the next release gate. Do not claim a startup performance PASS from this sample.
+
+## Fifty-one retired inherited assertions
+
+The frozen v1.2.0 source passed all 30 original browser suites: 1,969/1,969. Migrated compact suites passed 1,918/1,918, a net reduction of 51. The audit in [migration ledger](../../test-results/compact-toolbar-android/TEST_MIGRATIONS.json) maps these to removed overflow popup, unified/block editing UI, inline node activation/cancel/composition, and former two-row layout contracts. They are not silently skipped: the related cases were deleted or rewritten to assert no Reader entry point, and the new toolbar suite adds 188 focused assertions.
+
+Retained behavior still has direct coverage: `reading-ui` checks paragraph taps do not shift content, Reader scroll/progress including programmatic positioning, Source editing/export; `reader-redesign-ui` and keyboard/native suites check Source selection/composition and Undo/Redo; Search/Dialogs 160 and Replace history 68 assertions still run; JVM/native policy tests cover SAF/session behavior; Android 99 checks cover real DocumentsUI grant/save and Back/keyboard. No data path, file save, or search assertion was removed solely to make the suite pass. The 51 cannot be claimed as preserved byte-for-byte coverage of deleted features; the new suite checks the intended absence instead.
+
+## Safe integration target and next release
+
+Remote `main` is at `a41a13a5e0e437a83fcd89b6f193292b5fdda9b1` (v1.1.6) and lacks the two v1.2.0 release commits; direct toolbar PR to `main` would combine the entire source transition with this UI change. The reviewable immediate PR base is `codex/release-v1.2.0` at `82cc52a60e4b93495299ecac778322683b80b6f8`, with `codex/compact-reader-toolbar` as head. Do not merge until reviewed. To move the result into `main`, integrate the release-source history first through its own reviewed change, then merge/cherry-pick compact on top and rerun release gates; do not move `v1.2.0`.
+
+Current metadata is `versionName=1.2.0`, `versionCode=120`, `applicationId=vn.markread.local`, `minSdk=26`, `targetSdk=35`. Remote tags and published releases checked for this review contain no v1.2.1; proposed `versionName=1.2.1`, `versionCode=121` should still be confirmed against any APK distributed outside the repository. Change metadata and sign only in the separate release stage, using the already verified existing release key, followed by update-without-uninstall validation, full regression, SAF/editor/Back checks, signature/APK verification and checksum. No release APK, tag, GitHub Release, or merge is part of this integration review.

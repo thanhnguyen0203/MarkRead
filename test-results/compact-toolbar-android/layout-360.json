@@ -1,0 +1,74 @@
+{
+  "buttons": [
+    {
+      "h": 48,
+      "iconHeight": 20,
+      "iconWidth": 20,
+      "id": "menu",
+      "right": 52,
+      "w": 48,
+      "x": 4,
+      "y": 3.5
+    },
+    {
+      "h": 48,
+      "iconHeight": 20,
+      "iconWidth": 20,
+      "id": "prevFile",
+      "right": 164,
+      "w": 48,
+      "x": 116,
+      "y": 3.5
+    },
+    {
+      "h": 48,
+      "iconHeight": 20,
+      "iconWidth": 20,
+      "id": "nextFile",
+      "right": 212,
+      "w": 48,
+      "x": 164,
+      "y": 3.5
+    },
+    {
+      "h": 48,
+      "iconHeight": 20,
+      "iconWidth": 20,
+      "id": "findToggle",
+      "right": 260,
+      "w": 48,
+      "x": 212,
+      "y": 3.5
+    },
+    {
+      "h": 48,
+      "iconHeight": 20,
+      "iconWidth": 20,
+      "id": "download",
+      "right": 308,
+      "w": 48,
+      "x": 260,
+      "y": 3.5
+    },
+    {
+      "h": 48,
+      "iconHeight": 20,
+      "iconWidth": 20,
+      "id": "settings",
+      "right": 356,
+      "w": 48,
+      "x": 308,
+      "y": 3.5
+    }
+  ],
+  "dpr": 1,
+  "ellipsis": "ellipsis",
+  "headerHeight": 56,
+  "overflow": false,
+  "removed": 0,
+  "titleLabel": "01_Chương_đầu_tiên_rất_dài_để_kiểm_tra_toolbar_MarkRead.md · Ấn giữ để đổi tên",
+  "titleText": "01_Chương_đầu_tiên_rất_dài_để_kiểm_tra_toolbar_MarkRead.md",
+  "titleWidth": 60,
+  "viewportScale": 1,
+  "width": 360
+}

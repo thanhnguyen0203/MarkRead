@@ -11,23 +11,20 @@ let count=0;function ok(x,n){assert.ok(x,n);count++;console.log('PASS '+n)}
  const errors=[],external=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith('http://127.0.0.1'))external.push(r.url())});
  await page.route('http://127.0.0.1:*/**',r=>r.fulfill({contentType:'text/html; charset=utf-8',body:html}));
  const $=id=>page.locator('#'+id),frame=()=>page.frameLocator('#reader');
- const setMode=async id=>{await $('modeToggle').click();await page.locator('#modeOptions [data-mode='+id.replace('Mode','')+']').click()};
+ const setMode=id=>require('./layout-helpers.cjs').selectDocumentMode(page,id);
  const setText=async text=>{await setMode('editMode');await $('editor').fill(text);await setMode('readMode');await page.waitForFunction(t=>document.getElementById('reader').contentDocument?.body?.textContent.includes(t),text.replace(/^# /,'').split('\n')[0])};
  const search=async(q,expected)=>{await $('findInput').fill(q);await page.waitForFunction(t=>document.getElementById('findCount').textContent===t&&document.getElementById('findError').textContent==='',expected)};
  try{
   await page.goto('http://127.0.0.1:'+server.address().port);await frame().locator('h1').waitFor();
-  ok(await $('modeToggle').isVisible()&&await $('modeOptions').isHidden(),'separate modes expose closed toolbar menu');
-  await $('modeToggle').tap();await page.locator('#modeOptions [data-mode=edit]').tap();ok(await $('editorPane').isVisible()&&await $('modeOptions').isHidden(),'toolbar menu switches to source and closes');
-  const original=await $('editor').inputValue();await $('editor').fill(original+'\nMenu draft');
-  await $('modeToggle').tap();await page.locator('#modeOptions [data-mode=read]').tap();await frame().getByText('Menu draft',{exact:true}).waitFor();
-  await $('modeToggle').focus();await page.keyboard.press('ArrowDown');await page.keyboard.press('ArrowDown');await page.keyboard.press('Enter');
-  ok((await $('editor').inputValue()).endsWith('Menu draft')&&await $('editorPane').isVisible(),'menu keyboard navigation preserves source draft');
-  await $('editor').fill(original);await $('modeToggle').tap();await page.locator('#modeOptions [data-mode=read]').tap();
-  await $('modeToggle').tap();await page.keyboard.press('Escape');ok(await $('modeOptions').isHidden()&&await $('modeToggle').evaluate(x=>x===document.activeElement),'Escape dismisses menu and restores focus');
-  await $('modeToggle').tap();await frame().locator('h1').click({position:{x:4,y:4}});ok(await $('modeOptions').isHidden(),'reader tap dismisses toolbar menu');
+  ok(await $('modeToggle').count()===0,'removed overflow button absent');
+  await setMode('editMode');ok(await $('editorPane').isVisible()&&await $('settingsDialog').isHidden(),'Settings mode switches to source and closes');
+  const original=await $('editor').inputValue();await $('editor').fill(original+'\nMenu draft');await setMode('readMode');await frame().getByText('Menu draft',{exact:true}).waitFor();
+  await setMode('editMode');ok((await $('editor').inputValue()).endsWith('Menu draft')&&await $('editorPane').isVisible(),'Settings mode navigation preserves source draft');await $('editor').fill(original);await setMode('readMode');
+  await $('settings').tap();await page.keyboard.press('Escape');ok(await $('settingsDialog').isHidden()&&await $('settings').evaluate(x=>x===document.activeElement),'Escape dismisses Settings and restores focus');
+  ok(await $('modeOptions').count()===0,'reader has no toolbar popup to dismiss');
   for(const [width,height] of [[320,640],[360,800],[390,844],[412,915],[844,390],[1280,800]]){
    await page.setViewportSize({width,height});
-   ok(await page.evaluate(()=>{const t=document.getElementById('filename').getBoundingClientRect(),s=document.getElementById('settings').getBoundingClientRect();return Math.abs(t.y+t.height/2-s.y-s.height/2)<2&&t.width>35&&s.right<=innerWidth&&document.documentElement.scrollWidth<=innerWidth}),'toolbar fits '+width+'×'+height);
+   ok(await page.evaluate(()=>{const t=document.getElementById('filename').getBoundingClientRect(),s=document.getElementById('settings').getBoundingClientRect();return Math.abs(t.y+t.height/2-s.y-s.height/2)<2&&t.width>0&&s.right<=innerWidth&&document.documentElement.scrollWidth<=innerWidth}),'toolbar fits '+width+'×'+height);
   }
   await page.setViewportSize({width:390,height:844});await $('menu').tap();await $('openMenu').tap();
   ok(await page.locator('#openMenu>svg').count()===1&&await page.locator('#openOptions button svg').count()===2,'open button and choices use SVG icons');await page.screenshot({path:path.join(qa,'v112-open-menu.png')});

@@ -53,7 +53,7 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   await page.locator('#filename').dispatchEvent('contextmenu');
   ok(await page.locator('#renameInput').evaluate(x=>{const s=getComputedStyle(x);return s.outlineWidth==='2px'&&s.caretColor!=='transparent'}),'rename input preserves neutral focus indicator and caret');
   await page.locator('#renameCancel').tap();
-  await page.locator('#modeToggle').tap();await page.locator('[data-mode=edit]').tap();
+  await require('./layout-helpers.cjs').selectDocumentMode(page,'edit');
   await page.locator('#editor').tap();
   ok(await page.locator('#editor').evaluate(x=>document.activeElement===x&&getComputedStyle(x).caretColor!=='transparent'&&x.selectionStart===x.selectionEnd),'source editor retains focus and caret');
   await page.locator('#editor').evaluate(x=>{x.setSelectionRange(2,5);x.dispatchEvent(new CompositionEvent('compositionstart',{bubbles:true,data:'ắ'}));x.dispatchEvent(new CompositionEvent('compositionend',{bubbles:true,data:'ắ'}));});

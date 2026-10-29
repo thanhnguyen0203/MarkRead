@@ -56,7 +56,7 @@ let count=0;const ok=(value,label)=>{assert.ok(value,label);count++;console.log(
   ok(await page.locator('body').getAttribute('data-theme')==='sepia','restore failure retains saved theme');
   await page.evaluate(()=>delete hostFailure.restore);await choose();await name('A.md');await closeDrawer();
   ok(await page.locator('.file-row').count()===2&&await ready(),'system-picker host retry reuses live renderer and restores scoped list');
-  await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode=edit]').click();await page.locator('#editor').fill(draft);
+  await require('./layout-helpers.cjs').selectDocumentMode(page,'edit');await page.locator('#editor').fill(draft);
   await page.evaluate(()=>hostFailure.read='Tệp hoặc thư mục không còn tồn tại hoặc không đọc được. Hãy chọn lại bằng bộ chọn tài liệu.');await page.locator('#nextFile').click();await toast('không còn tồn tại');
   ok(await page.locator('#filename').textContent()==='A.md'&&await page.locator('#editor').inputValue()===draft,'missing next file cannot replace current draft or title');
   ok(await page.locator('.file-row').count()===2&&await ready(),'read error keeps existing scope and usable UI');
