@@ -1,0 +1,21 @@
+{
+  "branch": "codex/compact-reader-toolbar",
+  "head": "82cc52a60e4b93495299ecac778322683b80b6f8",
+  "v1.2.0": "82cc52a60e4b93495299ecac778322683b80b6f8",
+  "frozenP4CProductionInputsMatched": 87,
+  "changedProductionInputs": [
+    "app/src/main/assets/index.html",
+    "web/src/app.css",
+    "web/src/app.js",
+    "web/src/demo.md",
+    "web/src/shell.html"
+  ],
+  "releaseAPK": "dist/releases/v1.2.0/MarkRead-v1.2.0.apk",
+  "releaseSHA256": "a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995",
+  "debugSHA256": "6a5f1d5223cf66b4d6e96da2d8d27b34d336734efddbbdb0e0198d74c8e51f4c",
+  "uninstall": false,
+  "clearData": false,
+  "commitCreated": false,
+  "push": false,
+  "releasePublished": false
+}

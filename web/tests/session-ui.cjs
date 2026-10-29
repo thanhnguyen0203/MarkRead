@@ -50,14 +50,14 @@ let checks=0;const ok=(value,label)=>{assert.ok(value,label);checks++;console.lo
   await page.locator('#settings').click();await chooseSettingsSection(page,await page.locator('#settingsCategory').inputValue());await page.locator('[data-theme=sepia]').click();await chooseSettingsSection(page,'typography');
   await page.locator('#font').click();await page.locator('[data-font=merriweather]').click();
   for(const [id,value] of [['fontSize','24'],['width','1080'],['lineHeight','2.1']])await page.locator('#'+id).evaluate((el,value)=>{el.value=value;el.dispatchEvent(new Event('input'));},value);
-  await chooseSettingsSection(page,'editing');await page.locator('#unifiedEnabled').check();await page.locator('#mermaidEnabled').uncheck();
+  await chooseSettingsSection(page,'editing');await page.locator('#mermaidEnabled').uncheck();
   await chooseSettingsSection(page,'css');await page.locator('#customCSS').fill('h1 { color: #123456; }');await page.locator('#applyCSS').click();await page.locator('#settingsDialog .close-dialog').click();
   await page.locator('#menu').click();await page.locator('#sortOrder').click();
   await page.waitForFunction(()=>JSON.parse(localStorage.getItem('markread-appearance-v1')).descending);
   // Drain the native port before closing the renderer.
   await page.waitForTimeout(100);
   ok(host.settings.theme==='sepia'&&host.settings.font==='merriweather'&&host.settings.size===24&&host.settings.width===1080&&host.settings.leading===2.1,'appearance saves without an opt-in toggle');
-  ok(host.settings.unified&&!host.settings.mermaid&&host.settings.descending&&host.settings.css==='h1{color:#123456}','editing, order and custom CSS save with appearance');
+  ok(!host.settings.mermaid&&host.settings.descending&&host.settings.css==='h1{color:#123456}','editing, order and custom CSS save with appearance');
   const expected={...host.settings};await close();host.now+=599999;host.reads=[];await start();await filename('B.md');
   ok(host.reads.every(id=>id==='b')&&host.reads.length>0,'fresh renderer at 9m59.999s reopens only the last document');
   ok(await page.locator('.file-row').count()===2,'selected folder survives a fresh renderer');

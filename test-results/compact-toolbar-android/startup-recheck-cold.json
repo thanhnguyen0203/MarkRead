@@ -1,0 +1,12 @@
+{
+  "avd": "MarkRead_CompactToolbar_API35",
+  "api": "35",
+  "durationSeconds": 39.44,
+  "startupFallbackVisible": true,
+  "toolbarVisible": false,
+  "processAlive": true,
+  "noDataReset": true,
+  "appUninstalled": false,
+  "hostLoad": "no parallel browser test suite",
+  "uiautomator": "UI hierchary dumped to: /sdcard/window.xml"
+}

@@ -14,7 +14,7 @@ const ok=(value,name)=>{assert.ok(value,name);count++;console.log('PASS '+name);
  }
  const field=p.locator('#filename'),box=await field.boundingBox(),cdp=await p.context().newCDPSession(p);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:box.x+20,y:box.y+20}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchCancel',touchPoints:[]});await p.waitForTimeout(180);ok(!await field.evaluate(x=>x.matches(':active')),'real browser touchCancel clears native active state');
  ok(await p.locator('#prevFile').evaluate(x=>x.disabled&&getComputedStyle(x).transitionDuration==='0s'),'disabled control has no press animation');
- await p.locator('#modeToggle').click();await p.locator('[data-mode=edit]').click();const editor=p.locator('#editor');await editor.fill('Bản sửa tiếng Việt\n');await editor.evaluate(x=>{x.setSelectionRange(3,8);window.controlEditor=x;});await p.emulateMedia({reducedMotion:'reduce'});
+ await require('./layout-helpers.cjs').selectDocumentMode(p,'edit');const editor=p.locator('#editor');await editor.fill('Bản sửa tiếng Việt\n');await editor.evaluate(x=>{x.setSelectionRange(3,8);window.controlEditor=x;});await p.emulateMedia({reducedMotion:'reduce'});
  ok(await editor.evaluate(x=>x===window.controlEditor&&document.activeElement===x&&x.selectionStart===3&&x.selectionEnd===8)&&await editor.inputValue()==='Bản sửa tiếng Việt\n','reduced-motion change preserves textarea/caret/selection/draft');
  ok(await field.evaluate(x=>getComputedStyle(x).transitionDuration==='0s')&&await p.evaluate(()=>document.getAnimations().length===0),'reduced motion disables all active control transitions');
  for(const preference of ['reduce','no-preference']){
