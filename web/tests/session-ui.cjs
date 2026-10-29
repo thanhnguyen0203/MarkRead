@@ -1,3 +1,4 @@
+const {chooseSettingsSection}=require('./layout-helpers.cjs');
 // Real renderer + persistent simulated Android MessagePort host; no Android services run here.
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
@@ -46,11 +47,11 @@ let checks=0;const ok=(value,label)=>{assert.ok(value,label);checks++;console.lo
  async function choose(folder=true){if(!await page.locator('body').evaluate(el=>el.classList.contains('sidebar-open')))await page.locator('#menu').click();await page.locator('#openMenu').click();await page.locator(folder?'#openFolder':'#openFiles').click();await filename(host.settings?.descending?'B.md':'A.md');}
  try{
   await start();await choose();await page.locator('#nextFile').click();await filename('B.md');
-  await page.locator('#settings').click();await page.locator('[data-theme=sepia]').click();await page.locator('[data-section=typography]').click();
+  await page.locator('#settings').click();await chooseSettingsSection(page,await page.locator('#settingsCategory').inputValue());await page.locator('[data-theme=sepia]').click();await chooseSettingsSection(page,'typography');
   await page.locator('#font').click();await page.locator('[data-font=merriweather]').click();
   for(const [id,value] of [['fontSize','24'],['width','1080'],['lineHeight','2.1']])await page.locator('#'+id).evaluate((el,value)=>{el.value=value;el.dispatchEvent(new Event('input'));},value);
-  await page.locator('[data-section=editing]').click();await page.locator('#unifiedEnabled').check();await page.locator('#mermaidEnabled').uncheck();
-  await page.locator('[data-section=css]').click();await page.locator('#customCSS').fill('h1 { color: #123456; }');await page.locator('#applyCSS').click();await page.locator('#settingsDialog .close-dialog').click();
+  await chooseSettingsSection(page,'editing');await page.locator('#unifiedEnabled').check();await page.locator('#mermaidEnabled').uncheck();
+  await chooseSettingsSection(page,'css');await page.locator('#customCSS').fill('h1 { color: #123456; }');await page.locator('#applyCSS').click();await page.locator('#settingsDialog .close-dialog').click();
   await page.locator('#menu').click();await page.locator('#sortOrder').click();
   await page.waitForFunction(()=>JSON.parse(localStorage.getItem('markread-appearance-v1')).descending);
   // Drain the native port before closing the renderer.

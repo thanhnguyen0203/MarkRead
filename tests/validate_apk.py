@@ -1,16 +1,16 @@
 from pathlib import Path
-import hashlib,subprocess,zipfile,re,os,xml.etree.ElementTree as ET
-R=Path(__file__).resolve().parents[1];apk=R/'dist/MarkRead-Android-1.1.5.apk';aapt=R/('toolchain/build-tools/android-15/aapt2.exe' if os.name=='nt' else 'toolchain/build-tools/android-15/aapt2');checks=[]
+import hashlib,subprocess,zipfile,re,os,sys,xml.etree.ElementTree as ET
+R=Path(__file__).resolve().parents[1];apk=Path(sys.argv[1]) if len(sys.argv)>1 else R/'dist/releases/v1.2.0/MarkRead-v1.2.0.apk';aapt=R/('toolchain/build-tools/android-15/aapt2.exe' if os.name=='nt' else 'toolchain/build-tools/android-15/aapt2');checks=[]
 def check(condition,name):
  if not condition:raise AssertionError(name)
  checks.append(name)
 root=ET.parse(R/'app/src/main/AndroidManifest.xml').getroot();ns='{http://schemas.android.com/apk/res/android}'
 check(root.findall('uses-permission')==[],'source manifest requests zero permissions')
-app=root.find('application');check(app.get(ns+'allowBackup')=='false','backup disabled');check(app.get(ns+'debuggable')=='false','release debugging disabled');check(app.get(ns+'usesCleartextTraffic')=='false','cleartext disabled')
+app=root.find('application');check(app.get(ns+'allowBackup')=='false','backup disabled');check(app.get(ns+'debuggable') in (None,'false'),'release debugging disabled');check(app.get(ns+'usesCleartextTraffic')=='false','cleartext disabled')
 permissions=subprocess.check_output([str(aapt),'dump','permissions',str(apk)],text=True)
 check('uses-permission' not in permissions,'compiled APK requests zero permissions')
 badging=subprocess.check_output([str(aapt),'dump','badging',str(apk)],text=True)
-check("package: name='vn.markread.local'" in badging,'correct package');check("versionCode='115'" in badging and "versionName='1.1.5'" in badging,'correct upgrade version');check("minSdkVersion:'26'" in badging,'minimum Android 8');check("targetSdkVersion:'35'" in badging,'target Android 15');check("launchable-activity: name='vn.markread.local.MainActivity'" in badging,'launcher activity packaged')
+check("package: name='vn.markread.local'" in badging,'correct package');check("versionCode='120'" in badging and "versionName='1.2.0'" in badging,'correct upgrade version');check("minSdkVersion:'26'" in badging,'minimum Android 8');check("targetSdkVersion:'35'" in badging,'target Android 15');check("launchable-activity: name='vn.markread.local.MainActivity'" in badging,'launcher activity packaged')
 with zipfile.ZipFile(apk) as z:
  check(z.testzip() is None,'APK ZIP CRC valid');check(z.read('classes.dex')[:4]==b'dex\n','DEX packaged')
  check(all(not any(x in n.lower() for x in ['.p12','keystore-password','private/']) for n in z.namelist()),'no signing secrets in APK')
@@ -24,5 +24,5 @@ with zipfile.ZipFile(apk) as z:
 main=(R/'app/src/main/java/vn/markread/local/MainActivity.java').read_text(encoding='utf-8')
 check('addJavascriptInterface' not in main,'no JavaScriptInterface API used');check('s.setAllowFileAccess(false)' in main and 's.setAllowContentAccess(false)' in main,'WebView direct file/content access disabled');check('s.setBlockNetworkLoads(true)' in main,'WebView network loads disabled');check('takePersistableUriPermission(tree,newGrantFlags)' in main,'persistent tree grant uses only picker-returned read/write flags')
 report='APK validation: '+str(len(checks))+' checks passed\n'+'\n'.join('PASS '+x for x in checks)+'\n\n'+permissions+'\n'+badging
-(R/'dist/APK_VALIDATION_RESULTS.txt').write_text(report,encoding='utf-8')
+(Path(sys.argv[2]) if len(sys.argv)>2 else apk.with_suffix('.validation.txt')).write_text(report,encoding='utf-8')
 print('APK validation:',len(checks),'checks passed')

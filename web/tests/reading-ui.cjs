@@ -1,3 +1,4 @@
+const {chooseSettingsSection}=require('./layout-helpers.cjs');
 // Regression coverage for continuous unified editing and the reading toolbar.
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
@@ -22,12 +23,12 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   ok(await progress.evaluate(x=>{const bar=document.querySelector('main>header').getBoundingClientRect(),r=x.getBoundingClientRect();return r.height===3&&Math.abs(r.top-bar.bottom)<1}),'compact reading progress sits immediately below the navigation divider');
   ok(await page.locator('.file-icon').evaluate(x=>getComputedStyle(x).borderWidth==='0px'),'file extension has no border');
   await page.locator('#filename').dispatchEvent('contextmenu');
-  const neutral=await page.locator('.rename-field').evaluate(x=>({border:getComputedStyle(x).border,outline:getComputedStyle(x).outlineStyle,shadow:getComputedStyle(x).boxShadow}));
+  const neutral=await page.locator('.rename-field').evaluate(x=>({shadow:getComputedStyle(x).boxShadow}));
   await page.locator('#renameInput').tap();
-  ok(await page.locator('.rename-field').evaluate((x,b)=>{const s=getComputedStyle(x);return s.border===b.border&&s.outlineStyle==='none'&&s.boxShadow==='none'},neutral),'rename focus keeps the original border without an outer ring');
-  ok(await page.locator('#renameInput').evaluate(x=>getComputedStyle(x).outlineStyle==='none'&&getComputedStyle(x).boxShadow==='none'),'rename text input adds no focus ring');
+  ok(await page.locator('.rename-field').evaluate((x,b)=>{const probe=document.createElement('span');probe.style.color='var(--mr-border-control)';x.append(probe);const expected=getComputedStyle(probe).color;probe.remove();const s=getComputedStyle(x);return s.borderColor===expected&&s.boxShadow===b.shadow},neutral),'rename focus uses the neutral control border without a shadow');
+  ok(await page.locator('#renameInput').evaluate(x=>{const s=getComputedStyle(x);return s.outlineWidth==='2px'&&s.caretColor!=='transparent'}),'rename text input retains a focus outline and caret');
   await page.locator('#renameCancel').tap();
-  await page.locator('#settings').tap();await page.locator('[data-section=editing]').tap();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').tap();
+  await page.locator('#settings').tap();await chooseSettingsSection(page,await page.locator('#settingsCategory').inputValue());await chooseSettingsSection(page,'editing');await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').tap();
   await page.waitForFunction(()=>document.getElementById('reader').contentDocument?.body?.classList.contains('unified-reader'));
   ok(await frame().locator('.add-block').count()===0,'no add-paragraph button at the end of unified content');
   await page.evaluate(()=>{const f=document.getElementById('reader');window.readerLoads=0;f.addEventListener('load',()=>window.readerLoads++);window.readerDocument=f.contentDocument;});
@@ -98,13 +99,13 @@ function ok(value,label){assert.ok(value,label);console.log('PASS '+label);count
   await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='100');ok(true,'a fully visible short document has complete progress');
   await page.locator('#filesInput').setInputFiles({name:'Again.md',mimeType:'text/markdown',buffer:Buffer.from(original)});await frame().getByText(paragraphs[0],{exact:true}).waitFor();
   await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='0');ok(true,'opening another long document resets reading progress');
-  await page.locator('#settings').tap();await page.locator('[data-section=editing]').tap();await page.locator('#unifiedEnabled').uncheck();await page.locator('#settingsDialog .close-dialog').tap();
+  await page.locator('#settings').tap();await chooseSettingsSection(page,await page.locator('#settingsCategory').inputValue());await chooseSettingsSection(page,'editing');await page.locator('#unifiedEnabled').uncheck();await page.locator('#settingsDialog .close-dialog').tap();
   await page.locator('#modeToggle').tap();await page.locator('#modeOptions [data-mode=edit]').tap();await page.locator('#editor').evaluate(x=>x.scrollTop=x.scrollHeight);
   await page.waitForFunction(()=>document.getElementById('readingProgress').getAttribute('aria-valuenow')==='100');ok(true,'source mode tracks its own scroll progress');
   await page.setViewportSize({width:1280,height:800});await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode=split]').click();
   ok(await page.locator('#editorPane').isVisible()&&await page.locator('#readerPane').isVisible(),'desktop split view remains available from the navigation menu');
   await page.locator('#modeToggle').click();await page.locator('#modeOptions [data-mode=read]').click();
-  await page.locator('#settings').click();await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').click();
+  await page.locator('#settings').click();await chooseSettingsSection(page,await page.locator('#settingsCategory').inputValue());await page.locator('#unifiedEnabled').check();await page.locator('#settingsDialog .close-dialog').click();
   // Inspect the actual export Blob without depending on the browser's download-to-disk policy.
   await page.evaluate(()=>{const create=URL.createObjectURL;window.__exportBlobs=new Map();URL.createObjectURL=function(blob){const url=create.call(this,blob);window.__exportBlobs.set(url,blob);return url;};});
   const exportedText=()=>page.evaluate(()=>window.__exportBlobs.get(document.getElementById('exportLink').href).text());
