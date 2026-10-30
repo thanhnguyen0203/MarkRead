@@ -1,0 +1,10 @@
+{
+  "snapshotInputs": 158,
+  "changedExistingInputs": [
+    "build_apk.py",
+    "README.md",
+    ".gitignore"
+  ],
+  "javaWebViewRendererManifestGradleVersionAndLauncherUnchanged": true,
+  "oldDistApkHashesUnchanged": true
+}

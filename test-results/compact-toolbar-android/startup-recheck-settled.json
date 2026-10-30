@@ -1,0 +1,9 @@
+{
+  "avd": "MarkRead_CompactToolbar_API35",
+  "bootSettledSeconds": 60,
+  "appAlreadyRunningAtCheck": false,
+  "startupFallbackVisible": false,
+  "toolbarVisible": false,
+  "processAlive": true,
+  "noClearOrUninstall": true
+}

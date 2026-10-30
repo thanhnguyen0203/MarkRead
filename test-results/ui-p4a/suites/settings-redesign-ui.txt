@@ -1,0 +1,149 @@
+PASS 320: all five named categories accessible on entry
+PASS 320/appearance: detail contained and no horizontal overflow
+PASS 320/appearance: current category synchronized
+PASS 320/appearance: back restores selected category focus
+PASS 320/typography: detail contained and no horizontal overflow
+PASS 320/typography: current category synchronized
+PASS 320/typography: back restores selected category focus
+PASS 320/editing: detail contained and no horizontal overflow
+PASS 320/editing: current category synchronized
+PASS 320/editing: back restores selected category focus
+PASS 320/css: detail contained and no horizontal overflow
+PASS 320/css: current category synchronized
+PASS 320/css: back restores selected category focus
+PASS 320/general: detail contained and no horizontal overflow
+PASS 320/general: current category synchronized
+PASS 320/general: back restores selected category focus
+PASS 360: all five named categories accessible on entry
+PASS 360/appearance: detail contained and no horizontal overflow
+PASS 360/appearance: current category synchronized
+PASS 360/appearance: back restores selected category focus
+PASS 360/typography: detail contained and no horizontal overflow
+PASS 360/typography: current category synchronized
+PASS 360/typography: back restores selected category focus
+PASS 360/editing: detail contained and no horizontal overflow
+PASS 360/editing: current category synchronized
+PASS 360/editing: back restores selected category focus
+PASS 360/css: detail contained and no horizontal overflow
+PASS 360/css: current category synchronized
+PASS 360/css: back restores selected category focus
+PASS 360/general: detail contained and no horizontal overflow
+PASS 360/general: current category synchronized
+PASS 360/general: back restores selected category focus
+PASS 393: all five named categories accessible on entry
+PASS 393/appearance: detail contained and no horizontal overflow
+PASS 393/appearance: current category synchronized
+PASS 393/appearance: back restores selected category focus
+PASS 393/typography: detail contained and no horizontal overflow
+PASS 393/typography: current category synchronized
+PASS 393/typography: back restores selected category focus
+PASS 393/editing: detail contained and no horizontal overflow
+PASS 393/editing: current category synchronized
+PASS 393/editing: back restores selected category focus
+PASS 393/css: detail contained and no horizontal overflow
+PASS 393/css: current category synchronized
+PASS 393/css: back restores selected category focus
+PASS 393/general: detail contained and no horizontal overflow
+PASS 393/general: current category synchronized
+PASS 393/general: back restores selected category focus
+PASS 412: all five named categories accessible on entry
+PASS 412/appearance: detail contained and no horizontal overflow
+PASS 412/appearance: current category synchronized
+PASS 412/appearance: back restores selected category focus
+PASS 412/typography: detail contained and no horizontal overflow
+PASS 412/typography: current category synchronized
+PASS 412/typography: back restores selected category focus
+PASS 412/editing: detail contained and no horizontal overflow
+PASS 412/editing: current category synchronized
+PASS 412/editing: back restores selected category focus
+PASS 412/css: detail contained and no horizontal overflow
+PASS 412/css: current category synchronized
+PASS 412/css: back restores selected category focus
+PASS 412/general: detail contained and no horizontal overflow
+PASS 412/general: current category synchronized
+PASS 412/general: back restores selected category focus
+PASS 600: all five named categories accessible on entry
+PASS 600/appearance: detail contained and no horizontal overflow
+PASS 600/appearance: current category synchronized
+PASS 600/appearance: back restores selected category focus
+PASS 600/typography: detail contained and no horizontal overflow
+PASS 600/typography: current category synchronized
+PASS 600/typography: back restores selected category focus
+PASS 600/editing: detail contained and no horizontal overflow
+PASS 600/editing: current category synchronized
+PASS 600/editing: back restores selected category focus
+PASS 600/css: detail contained and no horizontal overflow
+PASS 600/css: current category synchronized
+PASS 600/css: back restores selected category focus
+PASS 600/general: detail contained and no horizontal overflow
+PASS 600/general: current category synchronized
+PASS 600/general: back restores selected category focus
+PASS 800: all five named categories accessible on entry
+PASS 800/appearance: detail contained and no horizontal overflow
+PASS 800/appearance: current category synchronized
+PASS 800/typography: detail contained and no horizontal overflow
+PASS 800/typography: current category synchronized
+PASS 800/editing: detail contained and no horizontal overflow
+PASS 800/editing: current category synchronized
+PASS 800/css: detail contained and no horizontal overflow
+PASS 800/css: current category synchronized
+PASS 800/general: detail contained and no horizontal overflow
+PASS 800/general: current category synchronized
+PASS twelve original theme IDs
+PASS dark: one selected theme
+PASS dark: preview uses actual resolved background and is decorative
+PASS dark: keyboard focus independent from selected
+PASS light: one selected theme
+PASS light: preview uses actual resolved background and is decorative
+PASS light: keyboard focus independent from selected
+PASS sepia: one selected theme
+PASS sepia: preview uses actual resolved background and is decorative
+PASS sepia: keyboard focus independent from selected
+PASS black: one selected theme
+PASS black: preview uses actual resolved background and is decorative
+PASS black: keyboard focus independent from selected
+PASS tokyo-night: one selected theme
+PASS tokyo-night: preview uses actual resolved background and is decorative
+PASS tokyo-night: keyboard focus independent from selected
+PASS tokyo-light: one selected theme
+PASS tokyo-light: preview uses actual resolved background and is decorative
+PASS tokyo-light: keyboard focus independent from selected
+PASS blue-gray: one selected theme
+PASS blue-gray: preview uses actual resolved background and is decorative
+PASS blue-gray: keyboard focus independent from selected
+PASS nord: one selected theme
+PASS nord: preview uses actual resolved background and is decorative
+PASS nord: keyboard focus independent from selected
+PASS dracula: one selected theme
+PASS dracula: preview uses actual resolved background and is decorative
+PASS dracula: keyboard focus independent from selected
+PASS rose-pine: one selected theme
+PASS rose-pine: preview uses actual resolved background and is decorative
+PASS rose-pine: keyboard focus independent from selected
+PASS forest: one selected theme
+PASS forest: preview uses actual resolved background and is decorative
+PASS forest: keyboard focus independent from selected
+PASS gruvbox: one selected theme
+PASS gruvbox: preview uses actual resolved background and is decorative
+PASS gruvbox: keyboard focus independent from selected
+PASS Merriweather retained
+PASS fontSize: native range keyboard endpoint
+PASS fontSize: original persistence schema
+PASS width: native range keyboard endpoint
+PASS width: original persistence schema
+PASS lineHeight: native range keyboard endpoint
+PASS lineHeight: original persistence schema
+PASS navigation retains unapplied CSS text
+PASS closing and reopening retains live unapplied CSS draft
+PASS custom CSS applied after reader stylesheet
+PASS Escape from detail returns to list
+PASS Escape from list closes and restores trigger
+PASS opening/navigation/closing Settings preserves document draft
+PASS theme survives reload
+PASS applied CSS survives reload
+PASS appearance: 200% text remains horizontally contained
+PASS typography: 200% text remains horizontally contained
+PASS css: 200% text remains horizontally contained
+PASS rapid navigation interrupted by reduced motion settles
+PASS no renderer errors
+P3A SETTINGS: 148 PASS

@@ -1,0 +1,9 @@
+{
+  "releaseFolder": "dist/releases/v1.2.0",
+  "apk": "dist/releases/v1.2.0/MarkRead-v1.2.0.apk",
+  "sha256": "a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995",
+  "bytes": 7184639,
+  "rendererSha256": "6bb2e49d0b0ec0378e3c3cfafdd6ae7578fa1f4e4d8678d9d7d2ed04cff6b49a",
+  "certificateSha256": "52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54",
+  "uploaded": false
+}

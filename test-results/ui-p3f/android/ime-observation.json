@@ -1,0 +1,204 @@
+{
+  "keyboard": "Gboard14.2.09.629370537-preload-x86_64",
+  "touchInputObserved": true,
+  "enteredTelexKeys": "tieengs vieetj ",
+  "observedText": "tieengs vieetj ",
+  "compositionEventsInThisAttempt": 0,
+  "events": [
+    {
+      "composing": false,
+      "data": "t",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "t",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "i",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "i",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "n",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "n",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "g",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "g",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "s",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "s",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": " ",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": " ",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "v",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "v",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "i",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "i",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "e",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "t",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "t",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "j",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "j",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": " ",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": " ",
+      "inputType": "insertText",
+      "type": "input"
+    },
+    {
+      "composing": false,
+      "data": "in ",
+      "inputType": "insertText",
+      "type": "beforeinput"
+    },
+    {
+      "composing": false,
+      "data": "in ",
+      "inputType": "insertText",
+      "type": "input"
+    }
+  ],
+  "vietnameseTelex": "NOT TESTED - active composing layout not confirmed",
+  "vni": "NOT TESTED",
+  "note": "Raw Latin output is not classified as a MarkRead IME defect without confirmed Vietnamese layout."
+}

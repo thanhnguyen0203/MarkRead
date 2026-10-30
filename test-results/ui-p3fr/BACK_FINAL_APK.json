@@ -1,0 +1,13 @@
+{
+  "afterKeyboardBack": {
+    "dirty": true,
+    "mode": "edit",
+    "value": "# Final IME\n\nĐúng"
+  },
+  "afterSourceBack": {
+    "dirty": true,
+    "mode": "read",
+    "value": "# Final IME\n\nĐúng"
+  },
+  "expectedSource": "# Final IME\n\nĐúng"
+}

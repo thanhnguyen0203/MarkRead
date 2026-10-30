@@ -1,0 +1,24 @@
+PASS actual native probe detects missing bridge while startup stays pending
+PASS saved light background is used while channel is missing
+PASS wrong nonce cannot initialize the renderer or run file commands
+PASS valid delayed channel completes startup after recoverable restore failure
+PASS restore permission error keeps actionable picker message
+PASS failed scope restore does not reopen an arbitrary file
+PASS restore failure retains saved theme
+PASS system-picker host retry reuses live renderer and restores scoped list
+PASS missing next file cannot replace current draft or title
+PASS read error keeps existing scope and usable UI
+PASS failed folder reselection preserves RAM draft despite discard confirmation
+PASS cancelled picker retains current draft and file list
+PASS rename permission error stays visible with editable recovery controls
+PASS failed rename leaves title and Unicode draft intact
+PASS failed export cannot discard draft or report a successful write
+PASS cancelled Android save keeps draft
+PASS retry exports exact Unicode bytes without resetting source
+PASS custom reader CSS still applies through file access failures
+PASS recovery tests never forget scope or force a reload
+PASS failure and recovery paths have no uncaught renderer errors
+PASS fresh JS heap restores original bytes, never claims RAM drafts survive process recreation
+PASS fresh context receives saved native appearance independently of WebView storage
+PASS fresh renderer has no uncaught errors
+P2D NATIVE COMPATIBILITY SIMULATION: 23 PASS

@@ -3,7 +3,7 @@
 Signing credentials are read from files, never printed or stored in the public source ZIP.
 """
 from pathlib import Path
-import os,sys,subprocess,zipfile,secrets,hashlib,json,shutil
+import os,sys,subprocess,zipfile,hashlib,json,shutil
 ROOT=Path(__file__).resolve().parent
 TC=Path(os.environ.get('MARKREAD_TOOLCHAIN',str(ROOT/'toolchain')))
 BT=TC/'build-tools/android-15';PLATFORM=next((TC/'platform').glob('android-35*/android.jar'),TC/'platform/android-35/android.jar')
@@ -13,8 +13,16 @@ BUILD=ROOT/'build';DIST=ROOT/'dist';PRIVATE=ROOT/'private'
 def run(args):
     subprocess.run([str(a) for a in args],cwd=ROOT,check=True)
 
+def existing_signing_material():
+    key=PRIVATE/'markread-release.p12';password=PRIVATE/'keystore-password.txt'
+    if not key.is_file() or not password.is_file() or not password.read_text().strip():
+        raise SystemExit('SIGNING BLOCKED: restore the existing compatible keystore and its local password file. No key will be generated. See docs/release/P4B_SIGNING_AUDIT.md.')
+    return key,password
+
 def build():
-    for p in [BUILD/'classes',BUILD/'dex',DIST,PRIVATE]:p.mkdir(parents=True,exist_ok=True)
+    # Fail before compiling, writing assets or creating output folders. Never replace an update identity.
+    key,password=existing_signing_material()
+    for p in [BUILD/'classes',BUILD/'dex',DIST]:p.mkdir(parents=True,exist_ok=True)
     if not PLATFORM.exists() or not (tool('aapt2')).exists():
         raise SystemExit('Missing toolchain. Run: python3 toolchain/fetch_tools.py')
     if (ROOT/'web/node_modules').exists():
@@ -35,12 +43,7 @@ def build():
     run([tool('aapt2'),'link','-I',PLATFORM,'--manifest',manifest,'-A',ROOT/'app/src/main/assets','-o',unsigned,BUILD/'resources.zip'])
     with zipfile.ZipFile(unsigned,'a',compression=zipfile.ZIP_DEFLATED) as z:z.write(BUILD/'dex/classes.dex','classes.dex')
     aligned=BUILD/'aligned.apk';run([tool('zipalign'),'-f','4',unsigned,aligned])
-    key=PRIVATE/'markread-release.p12';password=PRIVATE/'keystore-password.txt'
-    if not key.exists():
-        password.write_text(secrets.token_urlsafe(36));password.chmod(0o600)
-        run(['keytool','-genkeypair','-keystore',key,'-storetype','PKCS12','-alias','markread','-keyalg','RSA','-keysize','3072','-validity','10000','-dname','CN=MarkRead Local, O=Personal Offline Apps','-storepass:file',password,'-keypass:file',password,'-noprompt'])
-        key.chmod(0o600)
-    output=DIST/'MarkRead-Android-1.1.5.apk'
+    output=DIST/'MarkRead-Android-1.2.1.apk'
     signed=BUILD/'signed.apk'
     run(['java','-jar',BT/'lib/apksigner.jar','sign','--ks',key,'--ks-key-alias','markread','--ks-pass','file:'+str(password),'--v4-signing-enabled','false','--out',signed,aligned])
     verify=subprocess.run(['java','-jar',str(BT/'lib/apksigner.jar'),'verify','--verbose','--print-certs',str(signed)],check=True,text=True,capture_output=True)

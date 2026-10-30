@@ -1,0 +1,59 @@
+--- P3D/web/src/app.css
++++ P3E/web/src/app.css
+@@ -284,9 +284,9 @@
+ .theme-check,.option-check{display:inline-flex;align-items:center;justify-content:center}
+ .theme-check>.mr-icon,.option-check>.mr-icon{width:var(--mr-icon-size);height:var(--mr-icon-size)}
+ 
+-.icon-error{display:flex;align-items:flex-start;gap:8px;min-width:0}
++.icon-error{display:flex;align-items:flex-start;gap:var(--mr-space-2);min-width:0;font-size:var(--mr-type-label);line-height:1.5}
+ .icon-error>[role=alert]{flex:1;min-width:0}
+-.icon-error>.mr-icon{order:-1;width:var(--mr-icon-size-inline);height:var(--mr-icon-size-inline);margin-top:8px;color:var(--mr-error)}
++.icon-error>.mr-icon{order:-1;width:var(--mr-icon-size-inline);height:var(--mr-icon-size-inline);margin-top:calc((1.5em - var(--mr-icon-size-inline))/2);color:var(--mr-error)}
+ .icon-error>:empty+.mr-icon{display:none}
+ .icon-label-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:normal}
+ .icon-label-button>.icon-label{min-width:0}
+@@ -372,7 +372,10 @@
+ .find-heading,.find-row button,.find-options button{font-size:var(--mr-type-label);line-height:1.428571}
+ .find-options b{font:500 var(--mr-type-label)/1.428571 var(--mr-ui-mono)}
+ .find-scope,#findCount,#stats{font-size:var(--mr-type-caption);line-height:1.5}
+-#toast{font-size:var(--mr-type-label);line-height:1.5}
++#toast{font-size:var(--mr-type-label);line-height:1.5;max-width:calc(100vw - 32px);max-height:40vh;padding:var(--mr-space-3) var(--mr-space-4);border-radius:var(--mr-radius-control);box-shadow:var(--mr-popover-shadow);overflow:auto;overflow-wrap:anywhere}
++#toast.show{pointer-events:auto}
++#toast:focus{outline:2px solid var(--mr-focus);outline-offset:2px}
++@supports(height:100dvh){#toast{max-height:40dvh}}
+ .block-actions button,#blockDescription{font-size:var(--mr-type-label);line-height:1.428571}
+ .pane-caption,.pane-caption span,#editorHelp{font-size:var(--mr-type-caption);line-height:1.5;letter-spacing:0}
+ #editor{font:400 var(--mr-type-body)/1.625 var(--mr-ui-mono);padding:24px;caret-color:currentColor}
+@@ -440,7 +443,7 @@
+ #toast.show{visibility:visible;transform:translateX(-50%) translateY(0);transition:opacity var(--mr-motion-enter) var(--mr-ease-enter),transform var(--mr-motion-enter) var(--mr-ease-enter),visibility 0s}
+ 
+ /* P3A: Quiet Ink Settings. The native root remains the sole system/IME inset owner. */
+-#settingsDialog{background:var(--mr-surface);border:1px solid var(--mr-border);box-shadow:0 12px 32px #0004}
++#settingsDialog{background:var(--mr-surface);border:1px solid var(--mr-border);box-shadow:var(--mr-dialog-shadow)}
+ #settingsDialog .dialog-head{padding:var(--mr-space-4) var(--mr-space-6);gap:var(--mr-space-4)}
+ #settingsDialog .dialog-head small{color:var(--mr-text-secondary);letter-spacing:.06em}
+ #settingsDialog .settings-layout{overflow:hidden;border-bottom-left-radius:inherit;border-bottom-right-radius:inherit}
+@@ -604,7 +607,7 @@
+ /* P3D / C-D: common web modal/popover surfaces; native dialogs and Settings layout keep their owners. */
+ :root{--mr-popover-shadow:0 4px 12px #0003;--mr-dialog-shadow:0 12px 32px #0004;--mr-dialog-scrim:#0007}
+ dialog:not(#settingsDialog){max-width:calc(100vw - 32px);border:1px solid var(--mr-border);border-radius:var(--mr-radius-dialog);background:var(--mr-surface);color:var(--mr-text-primary);box-shadow:var(--mr-dialog-shadow);overflow:hidden}
+-dialog:not(#settingsDialog)::backdrop{background:var(--mr-dialog-scrim);backdrop-filter:none}
++dialog::backdrop{background:var(--mr-dialog-scrim);backdrop-filter:none}
+ dialog:not(#settingsDialog) .dialog-head{padding:16px 24px;background:var(--mr-surface);border-bottom-color:var(--mr-border)}
+ dialog:not(#settingsDialog) .dialog-head h2{color:var(--mr-heading)}
+ dialog:not(#settingsDialog) .dialog-head small{color:var(--mr-text-secondary)}
+@@ -620,12 +623,13 @@
+ #exportDialog{width:680px}
+ #exportDialog .dialog-body{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+ #exportDialog .dialog-body>.hint{margin:0}
+-#exportLink,#copyExport{width:100%;border-radius:var(--mr-radius-control)}
++#exportLink,#copyExport{width:100%;margin:0;border-radius:var(--mr-radius-control)}
+ #exportText{width:100%;min-height:160px;max-height:45vh;resize:vertical;padding:12px;border:1px solid var(--mr-border-control);border-radius:var(--mr-radius-control);background:var(--mr-bg);color:var(--mr-text-primary);font:400 var(--mr-type-label)/1.6 var(--mr-ui-mono);scroll-behavior:auto}
+ #exportFeedback{color:var(--mr-text-secondary);line-height:1.5;overflow-wrap:anywhere}
+ #openOptions,#modeOptions,#fontOptions{padding:8px;background:var(--mr-surface-elevated);color:var(--mr-text-primary);border:1px solid var(--mr-border);border-radius:var(--mr-radius-row);box-shadow:var(--mr-popover-shadow);overflow:auto;overscroll-behavior:contain;scroll-padding:8px}
+ #openOptions,#modeOptions{max-height:50vh}
+ #fontOptions{max-height:40vh}
+ #openOptions button,#modeOptions button,#fontOptions button{min-height:48px;white-space:normal;overflow-wrap:anywhere;border-radius:var(--mr-radius-control)}
++#openOptions button+button,#modeOptions button+button,#fontOptions button+button{margin-top:var(--mr-space-1)}
+ @media(max-width:679px){dialog:not(#settingsDialog) .dialog-head,dialog:not(#settingsDialog) .dialog-body{padding:16px}}
+ @supports(height:100dvh){#openOptions,#modeOptions{max-height:50dvh}#fontOptions{max-height:40dvh}#exportText{max-height:45dvh}}

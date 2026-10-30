@@ -1,0 +1,226 @@
+{
+  "before": {
+    "ui": {
+      "pass": 54,
+      "fail": 0,
+      "summary": "Browser UI: 54 checks passed"
+    },
+    "revision-ui": {
+      "pass": 62,
+      "fail": 0,
+      "summary": "Revision 1.1.3 UI: 62 checks passed"
+    },
+    "reading-ui": {
+      "pass": 46,
+      "fail": 0,
+      "summary": "Reading UI: 46 checks passed"
+    },
+    "native-ui": {
+      "pass": 27,
+      "fail": 0,
+      "summary": "Simulated native UI: 27 checks passed"
+    },
+    "session-ui": {
+      "pass": 17,
+      "fail": 0,
+      "summary": "Session UI: 17 checks passed"
+    },
+    "startup-ui": {
+      "pass": 53,
+      "fail": 0,
+      "summary": "Startup UI: 53 checks passed"
+    },
+    "foundations-ui": {
+      "pass": 27,
+      "fail": 0,
+      "summary": "P2A FOUNDATIONS: 27 PASS"
+    },
+    "accessibility-ui": {
+      "pass": 68,
+      "fail": 0,
+      "summary": "P2B ACCESSIBILITY: 68 PASS"
+    },
+    "keyboard-ui": {
+      "pass": 68,
+      "fail": 0,
+      "summary": "P2C KEYBOARD: 68 PASS"
+    },
+    "keyboard-native-ui": {
+      "pass": 16,
+      "fail": 0,
+      "summary": "P2C KEYBOARD NATIVE SIMULATION: 16 PASS"
+    },
+    "native-compatibility-ui": {
+      "pass": 23,
+      "fail": 0,
+      "summary": "P2D NATIVE COMPATIBILITY SIMULATION: 23 PASS"
+    },
+    "icons-ui": {
+      "pass": 61,
+      "fail": 0,
+      "summary": "P2E ICON UI STAGE8: 61 PASS"
+    },
+    "icon-states-ui": {
+      "pass": 70,
+      "fail": 0,
+      "summary": "P2E ICON STATES: 70 PASS"
+    },
+    "responsive-ui": {
+      "pass": 114,
+      "fail": 0,
+      "summary": "P2F RESPONSIVE: 114 PASS"
+    },
+    "typography-ui": {
+      "pass": 36,
+      "fail": 0,
+      "summary": "P2F TYPOGRAPHY: 36 PASS"
+    },
+    "overflow-ui": {
+      "pass": 146,
+      "fail": 0,
+      "summary": "P2F OVERFLOW: 146 PASS"
+    },
+    "motion-controls-ui": {
+      "pass": 46,
+      "fail": 0,
+      "summary": "P2G MOTION CONTROLS: 46 PASS"
+    },
+    "motion-surfaces-ui": {
+      "pass": 98,
+      "fail": 0,
+      "summary": "P2G MOTION SURFACES: 98 PASS"
+    },
+    "motion-reduced-ui": {
+      "pass": 53,
+      "fail": 0,
+      "summary": "P2G MOTION REDUCED: 53 PASS"
+    },
+    "settings-redesign-ui": {
+      "pass": 148,
+      "fail": 0,
+      "summary": "P3A SETTINGS: 148 PASS"
+    },
+    "library-redesign-ui": {
+      "pass": 112,
+      "fail": 0,
+      "summary": "P3B LIBRARY: 112 PASS"
+    }
+  },
+  "after": {
+    "ui": {
+      "pass": 54,
+      "fail": 0,
+      "summary": "Browser UI: 54 checks passed"
+    },
+    "revision-ui": {
+      "pass": 62,
+      "fail": 0,
+      "summary": "Revision 1.1.3 UI: 62 checks passed"
+    },
+    "reading-ui": {
+      "pass": 46,
+      "fail": 0,
+      "summary": "Reading UI: 46 checks passed"
+    },
+    "native-ui": {
+      "pass": 27,
+      "fail": 0,
+      "summary": "Simulated native UI: 27 checks passed"
+    },
+    "session-ui": {
+      "pass": 17,
+      "fail": 0,
+      "summary": "Session UI: 17 checks passed"
+    },
+    "startup-ui": {
+      "pass": 53,
+      "fail": 0,
+      "summary": "Startup UI: 53 checks passed"
+    },
+    "foundations-ui": {
+      "pass": 27,
+      "fail": 0,
+      "summary": "P2A FOUNDATIONS: 27 PASS"
+    },
+    "accessibility-ui": {
+      "pass": 68,
+      "fail": 0,
+      "summary": "P2B ACCESSIBILITY: 68 PASS"
+    },
+    "keyboard-ui": {
+      "pass": 68,
+      "fail": 0,
+      "summary": "P2C KEYBOARD: 68 PASS"
+    },
+    "keyboard-native-ui": {
+      "pass": 16,
+      "fail": 0,
+      "summary": "P2C KEYBOARD NATIVE SIMULATION: 16 PASS"
+    },
+    "native-compatibility-ui": {
+      "pass": 23,
+      "fail": 0,
+      "summary": "P2D NATIVE COMPATIBILITY SIMULATION: 23 PASS"
+    },
+    "icons-ui": {
+      "pass": 61,
+      "fail": 0,
+      "summary": "P2E ICON UI STAGE8: 61 PASS"
+    },
+    "icon-states-ui": {
+      "pass": 70,
+      "fail": 0,
+      "summary": "P2E ICON STATES: 70 PASS"
+    },
+    "responsive-ui": {
+      "pass": 114,
+      "fail": 0,
+      "summary": "P2F RESPONSIVE: 114 PASS"
+    },
+    "typography-ui": {
+      "pass": 36,
+      "fail": 0,
+      "summary": "P2F TYPOGRAPHY: 36 PASS"
+    },
+    "overflow-ui": {
+      "pass": 146,
+      "fail": 0,
+      "summary": "P2F OVERFLOW: 146 PASS"
+    },
+    "motion-controls-ui": {
+      "pass": 46,
+      "fail": 0,
+      "summary": "P2G MOTION CONTROLS: 46 PASS"
+    },
+    "motion-surfaces-ui": {
+      "pass": 98,
+      "fail": 0,
+      "summary": "P2G MOTION SURFACES: 98 PASS"
+    },
+    "motion-reduced-ui": {
+      "pass": 53,
+      "fail": 0,
+      "summary": "P2G MOTION REDUCED: 53 PASS"
+    },
+    "settings-redesign-ui": {
+      "pass": 148,
+      "fail": 0,
+      "summary": "P3A SETTINGS: 148 PASS"
+    },
+    "library-redesign-ui": {
+      "pass": 112,
+      "fail": 0,
+      "summary": "P3B LIBRARY: 112 PASS"
+    },
+    "reader-redesign-ui": {
+      "pass": 139,
+      "fail": 0,
+      "summary": "P3C READER: 139 PASS"
+    },
+    "empty-folder-fixture-ui": {
+      "pass": 4,
+      "fail": 0,
+      "summary": "P3C EMPTY FOLDER: 4 PASS"
+    }
+  }
+}

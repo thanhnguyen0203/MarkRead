@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "Gradle debug APK exists and is nonempty",
+    "AGP metadata identifies debug variant and actual output",
+    "applicationId/version unchanged",
+    "min26/target35/compile35 packaged",
+    "debug build is actually debuggable",
+    "launcher activity packaged",
+    "zero compiled app permissions including Internet/storage",
+    "backup/cleartext remain disabled in merged debug manifest",
+    "debug APK signature verifies with scheme v2",
+    "debug APK alignment verified",
+    "debug APK ZIP CRC valid",
+    "APK contains exact P3C renderer source asset",
+    "third-party notices packaged unchanged",
+    "DEX exists with valid magic",
+    "APK contains no signing credentials",
+    "renderer CSP hash valid inside Gradle APK",
+    "network-denying CSP and reader sandbox preserved",
+    "reader font remains embedded offline"
+  ],
+  "pass": 18,
+  "fail": 0,
+  "apk": "app/build/outputs/apk/debug/app-debug.apk",
+  "bytes": 7604078,
+  "sha256": "0ce9008b9267ffd248c3270338856d59b1d253fdcabd7b56334a79e5d631bce6",
+  "certificateSha256": "32564670cdd48011aa5d82a79051054ca6a143eca0e03f27079b366f948134a3",
+  "androidRuntimeTested": false
+}

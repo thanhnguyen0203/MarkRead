@@ -1,0 +1,18 @@
+{
+  "avd": "MarkRead_v121_Release",
+  "androidApi": 35,
+  "probeAtSeconds": 28,
+  "cold": {
+    "fallbackVisible": false,
+    "appProcessAlive": true,
+    "xmlHasWebView": true
+  },
+  "warm": {
+    "fallbackVisible": false,
+    "appProcessAlive": true,
+    "xmlHasWebView": true
+  },
+  "coldObservationWallSeconds": 36.8,
+  "warmObservationWallSeconds": 31.3,
+  "noUninstallOrClearData": true
+}

@@ -1,0 +1,62 @@
+PASS #menu: menu geometry and decorative semantics
+PASS #prevFile: chevron-left geometry and decorative semantics
+PASS #nextFile: chevron-right geometry and decorative semantics
+PASS #findToggle: search geometry and decorative semantics
+PASS #download: download geometry and decorative semantics
+PASS #settings: settings geometry and decorative semantics
+PASS #modeToggle: ellipsis-vertical geometry and decorative semantics
+PASS toolbar keeps accessible names without SVG-name duplication
+PASS disabled arrow uses disabled token on a real disabled button
+PASS pressed icon state releases without selecting/navigating a file
+PASS keyboard focus indicator survives icon migration
+PASS click at icon control still opens find
+PASS #closeSidebar: x geometry and decorative semantics
+PASS #openMenu: folder-open geometry and decorative semantics
+PASS #openFolder: folder-open geometry and decorative semantics
+PASS #openFiles: file-text geometry and decorative semantics
+PASS #sortOrder: arrow-up-down geometry and decorative semantics
+PASS #forget: x geometry and decorative semantics
+PASS .file-search .mr-icon: search geometry and decorative semantics
+PASS .open-chevron .mr-icon: chevron-down geometry and decorative semantics
+PASS folder icon control preserves expanded/menu interaction
+PASS sort icon selected state follows actual order state without changing current file
+PASS .folder-group>summary>.mr-icon: chevron-down geometry and decorative semantics
+PASS decorative folder chevron still toggles native details
+PASS extensions remain metadata and current file semantics stay intact
+PASS file context menu does not replace the selected document
+PASS #themes [data-theme=dark] .theme-check: check geometry and decorative semantics
+PASS theme accessible name excludes decorative check
+PASS #font .mr-icon: chevron-down geometry and decorative semantics
+PASS [data-font=sans] .option-check: check geometry and decorative semantics
+PASS font selection and visible label survive SVG check
+PASS #findClose: x geometry and decorative semantics
+PASS #findPrev: arrow-up geometry and decorative semantics
+PASS #findNext: arrow-down geometry and decorative semantics
+PASS #findError+.mr-icon: triangle-alert geometry and decorative semantics
+PASS error icon keeps meaningful alert and disabled replacement
+PASS error decoration disappears when error clears
+PASS #chooseBlock: pencil geometry and decorative semantics
+PASS #blockPrevious: chevron-left geometry and decorative semantics
+PASS #blockNext: chevron-right geometry and decorative semantics
+PASS #blockEdit: pencil geometry and decorative semantics
+PASS #blockCancel: x geometry and decorative semantics
+PASS #blockClose: x geometry and decorative semantics
+PASS #blockEdit: check geometry and decorative semantics
+PASS block edit action changes both glyph and label without replacing the button
+PASS #blockEdit: pencil geometry and decorative semantics
+PASS #help: info geometry and decorative semantics
+PASS #helpDialog .close-dialog: x geometry and decorative semantics
+PASS help retains one named dialog
+PASS #exportLink: download geometry and decorative semantics
+PASS #copyExport: copy geometry and decorative semantics
+PASS export preserves exact Markdown, no SVG enters source
+PASS #renameSubmit: pencil geometry and decorative semantics
+PASS #renameError+.mr-icon: triangle-alert geometry and decorative semantics
+PASS rename error keeps readable text alongside glyph
+PASS #startupStatus .mr-icon: loader-circle geometry and decorative semantics
+PASS all23 used icons have nonempty local SVG, no IDs/links/scripts or focusable decoration
+PASS every icon button has a control-level accessible name
+PASS self-contained HTML includes resolved icons and license notices
+PASS no renderer errors in migrated groups
+PASS no external icon/asset requests
+P2E ICON UI STAGE8: 61 PASS

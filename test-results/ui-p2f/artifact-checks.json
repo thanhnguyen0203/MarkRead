@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "web renderer and Android asset are byte-identical",
+    "68 protected native/theme/bridge/icon/dependency/P0-P2E files are unchanged",
+    "existing signed release and P2C-test APKs are unchanged",
+    "unsigned APK has no added/removed entries",
+    "packaged renderer matches current Android source asset",
+    "every other APK entry including DEX/resources/notices is byte-identical",
+    "JavaScript syntax: 39 source/build/test files",
+    "app.css and paper.css parse without errors"
+  ],
+  "measurements": {
+    "before": {
+      "htmlBytes": 13260933,
+      "htmlSha256": "12867a73b92b35a36cb5e18d50d71ea923a473a6f3f4e9542be2fbe23d833662",
+      "unsignedApkBytes": 7143365,
+      "compressedRendererBytes": 7078012,
+      "dexSha256": ""
+    },
+    "after": {
+      "htmlBytes": 13272195,
+      "htmlSha256": "dd43198eec05a7ea72b5d00958042d5ac444fd1851a9f0cc3a59b5c323f58c11",
+      "unsignedApkBytes": 7145728,
+      "compressedRendererBytes": 7080375,
+      "dexSha256": ""
+    }
+  },
+  "syntaxFiles": 39
+}

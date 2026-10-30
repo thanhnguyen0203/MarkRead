@@ -22,6 +22,10 @@ toolchain/*
 # Android signing
 *.jks
 *.keystore
+*.p12
+*.pfx
+keystore.properties
+signing.properties
 
 # Local credentials
 .env

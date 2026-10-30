@@ -1,0 +1,5 @@
+PASS empty folder root label retained from host metadata
+PASS no fabricated child folder/file entries
+PASS existing generic empty state remains usable
+PASS empty snapshot triggers no permission request or mutation
+P3C EMPTY FOLDER: 4 PASS

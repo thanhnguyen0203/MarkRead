@@ -1,0 +1,9 @@
+{
+  "selected_input_method_subtype": true,
+  "enabled_input_methods": true,
+  "default_input_method": true,
+  "enabled_accessibility_services": true,
+  "accessibility_enabled": true,
+  "accelerometer_rotation": true,
+  "user_rotation": true
+}

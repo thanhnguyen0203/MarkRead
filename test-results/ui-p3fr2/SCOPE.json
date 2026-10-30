@@ -1,0 +1,25 @@
+{
+  "snapshotInputs": 118,
+  "changedExisting": [
+    "web/src/app.js",
+    "web/src/shell.html",
+    "web/tests/math-remediation-ui.cjs",
+    "app/src/main/assets/index.html",
+    "qa/android/build_p3f_probe.py",
+    "qa/android/P3FInstrumentation.java",
+    "qa/android/p3fr_undo.py",
+    "qa/android/README.md",
+    "qa/android/runtime_p3f.py",
+    "docs/ui-redesign/P3F_R_KNOWN_ISSUES.md",
+    "docs/ui-redesign/P3F_R_RELEASE_READINESS.md",
+    "docs/ui-redesign/P3F_R_REPORT.md",
+    "docs/ui-redesign/P3F_R_TEST_MATRIX.md"
+  ],
+  "newProductionFiles": [],
+  "productionJavaDexManifestGradleDependenciesThemesCssUnchanged": true,
+  "priorP0P1DocumentsUnchanged": true,
+  "sourceSyntaxFiles": 55,
+  "readyFor": "P4 only, not automatically implemented",
+  "originalEmulator5554": "preserved",
+  "qa5556": "fixture clean, clipboard/options restored, shutdown accepted"
+}

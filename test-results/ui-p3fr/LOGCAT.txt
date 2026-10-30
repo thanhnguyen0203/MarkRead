@@ -1,0 +1,81 @@
+--------- beginning of main
+10-28 22:36:38.895  8836  8836 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-28 22:36:38.935  8836  8836 I AndroidRuntime: Using default boot image
+10-28 22:36:38.936  8836  8836 I AndroidRuntime: Leaving lock profiling enabled
+10-28 22:36:43.972  8836  8836 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-28 22:36:57.492  8889  8926 I chromium: [1028/223657.468889:INFO:variations_seed_loader.cc(66)] Failed to open file for reading.: No such file or directory (2)
+10-28 22:36:59.687  8889  8936 W chromium: [WARNING:dns_config_service_android.cc(81)] Failed to read DnsConfig.
+10-28 22:37:05.194  8935  8965 W chromium: [WARNING:runtime_features.cc(694)] SharedStorage for M118+ cannot be enabled in this configuration. Use --enable-features=SharedStorageAPI,SharedStorageAPIM118 in addition.
+10-28 22:37:26.295  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:37.782  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:41.566  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:43.010  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:45.433  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:46.596  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:47.692  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:48.667  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:50.142  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:52.010  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:53.853  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:55.564  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:56.587  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:37:57.920  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:01.744  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:03.910  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:07.564  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:11.551  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:13.918  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:16.616  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:18.326  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:19.339  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:20.407  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:21.264  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:23.494  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:25.019  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:25.890  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:26.962  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:27.938  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:28.994  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:30.019  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:30.665  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:31.307  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:31.954  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:32.483  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:33.107  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'textContent')", source:  (1)
+10-28 22:38:35.805  8935  8965 I chromium: [INFO:viewport_data.cc(133)] E2E_Used ViewportFitCover
+10-28 22:38:36.094  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot set properties of null (setting 'files')", source: https://appassets.androidplatform.net/app/index.html (1)
+10-28 22:40:40.724  8889  8889 I chromium: [INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of null (reading 'checked')", source: https://appassets.androidplatform.net/app/index.html (1)
+10-28 22:40:45.823  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:40:47.329  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:40:47.459  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:03.347  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:03.595  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:05.902  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:06.291  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:06.312  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:06.745  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:06.746  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:06.746  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:06.820  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:07.237  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:07.536  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:26.277  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:28.077  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:30.625  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:42:30.989  8889  8889 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:48:32.502  8836  8836 I AndroidRuntime: VM exiting with result code 0.
+10-28 22:48:32.571  8935  8935 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+10-28 22:48:34.787 11245 11245 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-28 22:48:35.004 11245 11245 I AndroidRuntime: Using default boot image
+10-28 22:48:35.004 11245 11245 I AndroidRuntime: Leaving lock profiling enabled
+10-28 22:48:37.439 11245 11245 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-28 22:48:42.942 11272 11298 I chromium: [INFO:variations_seed_loader.cc(66)] Failed to open file for reading.: No such file or directory (2)
+10-28 22:48:43.440 11272 11304 W chromium: [WARNING:dns_config_service_android.cc(81)] Failed to read DnsConfig.
+10-28 22:48:43.593 11272 11303 E chromium: [ERROR:simple_file_enumerator.cc(43)] readdir /data/user/0/vn.markread.local/cache/WebView/Default/HTTP Cache/Code Cache/js: No such file or directory (2)
+10-28 22:48:43.594 11272 11303 E chromium: [ERROR:simple_index_file.cc(614)] Could not reconstruct index from disk
+10-28 22:48:44.388 11301 11328 W chromium: [WARNING:runtime_features.cc(694)] SharedStorage for M118+ cannot be enabled in this configuration. Use --enable-features=SharedStorageAPI,SharedStorageAPIM118 in addition.
+10-28 22:48:54.625 11301 11328 I chromium: [INFO:viewport_data.cc(133)] E2E_Used ViewportFitCover
+10-28 22:53:17.358 11272 11272 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:53:18.442 11272 11272 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:53:19.542 11272 11272 I chromium: [INFO:CONSOLE(0)] "ResizeObserver loop completed with undelivered notifications.", source: https://appassets.androidplatform.net/app/index.html (0)
+10-28 22:54:54.437 11245 11245 I AndroidRuntime: VM exiting with result code 0.

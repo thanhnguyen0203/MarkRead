@@ -1,0 +1,12 @@
+{
+  "browser": "156.0.8078.49",
+  "platform": "Windows desktop Chromium via Playwright",
+  "deviceScaleFactor": 1,
+  "isMobile": false,
+  "hasTouch": false,
+  "staticCaptures": "before9+after9+themes12, reducedMotion=reduce; viewport/theme/view/scale in per-folder manifests",
+  "motionCaptures": "9 paused timeline samples at393x852/Dark/no-preference; manifest distinguishes native open/ARIA state",
+  "sourceFixture": "web/tests/layout-helpers.cjs; Mermaid disabled",
+  "androidRuntimeTested": false,
+  "frameRateMeasured": false
+}

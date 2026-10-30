@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "Gradle release APK exists and is nonempty",
+    "AGP metadata identifies release variant and actual output",
+    "applicationId/version 1.2.1",
+    "min26/target35/compile35 packaged",
+    "release build is not debuggable",
+    "launcher activity packaged",
+    "zero compiled app permissions including Internet/storage",
+    "backup/cleartext remain disabled in merged release manifest",
+    "release signature v2 verifies and matches original release certificate",
+    "release APK alignment verified",
+    "release APK ZIP CRC valid",
+    "APK contains exact P3FR renderer source asset",
+    "third-party notices packaged unchanged",
+    "DEX exists with valid magic",
+    "APK contains no signing credentials",
+    "renderer CSP hash valid inside Gradle APK",
+    "network-denying CSP and reader sandbox preserved",
+    "reader font remains embedded offline"
+  ],
+  "pass": 18,
+  "fail": 0,
+  "apk": "app/build/outputs/apk/release/app-release.apk",
+  "bytes": 7182539,
+  "sha256": "ea969b837edc050baac287afae4d2a9572969e3cd254d30d37bff93fb6e7ebb2",
+  "certificateSha256": "52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54",
+  "androidRuntimeTested": false
+}

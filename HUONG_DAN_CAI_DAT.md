@@ -1,102 +1,104 @@
-# MarkRead Android 1.1.5
+# MarkRead 1.2.0 — Cài đặt và sử dụng
 
-Ứng dụng đọc và chỉnh sửa tài liệu Markdown ngoại tuyến. Hỗ trợ Android 8 trở lên; cần Android System WebView 100 trở lên.
+Android 8.0 trở lên (minSdk 26), Android System WebView 100 trở lên. Package `vn.markread.local`, versionCode 120, targetSdk 35. Phân phối APK trực tiếp qua GitHub Releases, không qua Google Play.
 
-## Cài đặt APK 1.1.5
+## Tải đúng APK
 
-1. Tải `dist/MarkRead-Android-1.1.5.apk` về điện thoại.
-2. Mở APK bằng trình quản lý tệp. Nếu Android yêu cầu, cho phép ứng dụng đang mở APK cài ứng dụng.
-3. Mở MarkRead và cấp lại quyền thư mục bằng bộ chọn hệ thống nếu cần.
+Mở [GitHub Releases](https://github.com/thanhnguyen0203/MarkRead/releases). Khi v1.2.0 được xuất bản, chọn [MarkRead v1.2.0 — Quiet Ink](https://github.com/thanhnguyen0203/MarkRead/releases/tag/v1.2.0) và tải **MarkRead-v1.2.0.apk** cùng **MarkRead-v1.2.0.sha256** trong Assets. Source code ZIP/TAR không phải file cài Android.
 
-Bản này dùng package `vn.markread.local`, versionCode 115 và cùng khóa ký cục bộ với APK 1.1.4 đã dựng trong dự án. Có thể cài đè bản dùng cùng chữ ký đó để giữ cài đặt và quyền thư mục. Nếu bản đang cài dùng khóa cũ khác, Android sẽ từ chối cài đè; muốn cài đè cần đúng khóa riêng tương ứng. File `APK_SIGNATURE.txt` chỉ chứa thông tin chữ ký, không thể dùng để ký APK. Luôn xuất bản sửa cần giữ trước khi thay bản cài; gỡ ứng dụng sẽ xóa cài đặt và quyền thư mục đã nhớ.
+**Chỉ tải v1.2.0 khi bản phát hành đã được duyệt và xuất bản.** Nếu chưa thấy v1.2.0 trên trang Releases, bản đó chưa được công bố; link theo phiên bản chưa hoạt động. Draft chỉ dành cho người có quyền review. Trong workspace chuẩn bị, hai file nằm ở `dist/releases/v1.2.0/`; thư mục này không nằm trong source Git.
 
-## Nhớ cài đặt và phiên đọc trong 1.1.5
+APK có 7.184.639 byte; SHA-256:
 
-- Theme, phông chữ, cỡ chữ, độ rộng bài, giãn dòng, tùy chọn chỉnh sửa, sơ đồ, thứ tự tệp và CSS đã áp dụng luôn tự động lưu. Không cần bật “Nhớ cài đặt”.
-- Rời app rồi mở lại trước 10 phút: khôi phục bộ thư mục/tệp đã chọn và tài liệu đang đọc gần nhất, nếu quyền Android vẫn còn hiệu lực. File mở riêng được giữ quyền đọc khi bộ chọn hỗ trợ.
-- Từ đúng 10 phút trở lên: đóng các tài liệu cũ, trở về màn hình chào. Thư mục và danh sách tệp vẫn được giữ để chọn bài; bộ tệp mở riêng được gỡ. Các cài đặt giao diện vẫn còn.
-- Quy tắc áp dụng cả khi thoát app và khi quay lại từ nền. Thời gian ở trong bộ chọn mở/lưu tệp không tính là rời app.
-- App chỉ lưu thông tin phiên và quyền truy cập; bản sửa chưa xuất không được ghi ra đĩa. Hãy xuất bản sửa trước khi đóng app hoặc rời app lâu hơn 10 phút. Nút × cạnh thư mục gỡ bộ tệp/quyền và phiên đọc, giữ cài đặt giao diện.
+```text
+a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995
+```
 
-## Các thay đổi trong 1.1.4
+Trên Windows, đặt hai file tải về cùng thư mục, mở PowerShell ở đó và kiểm tra:
 
-- Bỏ nút **Thêm đoạn** ở cuối bài.
-- Tắt highlight chạm của vùng nội dung và highlight focus mặc định của WebView; giữ con trỏ nhập chữ.
-- Chạm đoạn để sửa không tạo thêm dòng trống hay khoảng cách với đoạn phía dưới. Các dấu xuống dòng phân cách trong nguồn đang mở vẫn được giữ nguyên.
-- Bỏ nhóm chọn Đọc/Nguồn trong cài đặt; dùng menu **⋮** trên thanh điều hướng. Chế độ Chia đôi trên màn hình lớn cũng nằm trong menu này.
-- Thêm thanh tiến độ đọc mảnh 3 px, đồng bộ màu theme, nằm sát dưới đường phân cách thanh điều hướng. Khi cuộn xuống làm ẩn thanh điều hướng, thanh tiến độ vẫn ở đầu vùng đọc.
+```powershell
+$releaseHash = (Get-FileHash -LiteralPath '.\MarkRead-v1.2.0.apk' -Algorithm SHA256).Hash.ToLowerInvariant()
+$checksumLine = (Get-Content -LiteralPath '.\MarkRead-v1.2.0.sha256' -Raw).Trim()
+if ($checksumLine -ne ($releaseHash + '  MarkRead-v1.2.0.apk')) { throw 'Checksum không khớp; dừng cài đặt.' }
+if ($releaseHash -ne 'a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995') { throw 'APK khác bản đã kiểm chứng.' }
+```
 
-Vòng tròn từ **Hiển thị lần chạm / Show taps** của Android hoặc tính năng hiện lần chạm của trình quay màn hình được điều khiển bên ngoài MarkRead. Nếu đang bật, tắt tùy chọn tương ứng trên thiết bị; ứng dụng không thay đổi cài đặt hệ thống này. Tham khảo [hướng dẫn Android](https://developer.android.com/studio/debug/dev-options).
+Checksum kiểm toàn vẹn file; đồng thời kiểm tra đúng repository/nguồn tải. Không sửa file checksum để làm một APK khác đạt kiểm tra.
 
-## Mở tài liệu, thư mục con và chuyển bài
+## Cài đặt mới
 
-Bấm **☰ → Mở → Mở thư mục**, chọn thư mục tài liệu rồi cấp quyền trong bộ chọn Android. Nếu không chọn được gốc Download, dùng thư mục con như `Download/TaiLieu`.
+1. Mở APK từ trình quản lý tệp trên Android.
+2. Nếu Android yêu cầu, cho phép **ứng dụng đang mở APK** cài ứng dụng không rõ nguồn gốc, rồi quay lại cài đặt. Tên mục tùy thiết bị; có thể tắt lại quyền của trình cài sau đó.
+3. Mở MarkRead. Không đăng nhập; chọn file/thư mục qua bộ chọn Android để bắt đầu.
 
-App chỉ lập danh sách tệp trong phạm vi đã chọn. Hỗ trợ tài liệu `.md`, `.markdown`, `.txt`, CSS và ảnh raster; quét cả thư mục con bên trong phạm vi đó. Nhánh chứa tài liệu xuất hiện thành cây, có thể gập/mở. Ảnh/CSS không xuất hiện như bài đọc.
+Không cần bật USB debugging hay thay cài đặt bảo mật/chứng chỉ để cài APK. Nếu trình cài từ chối, kiểm checksum, Android version, nguồn bản đang cài và chữ ký trước khi tiếp tục.
 
-Nút trước/sau chuyển theo toàn bộ cây, kể cả nhánh đang gập. Tên sắp theo số tự nhiên: 2 trước 10. Nút ⇅ đảo thứ tự. Ô lọc chỉ lọc danh sách, không thu hẹp phạm vi chuyển bài. Không chuyển vòng ở đầu/cuối.
+## Cập nhật từ bản cũ
 
-Bản sửa của từng tệp được giữ khi chuyển bài trong cùng phiên. Dấu chấm cạnh tên báo bài đang có sửa chưa xuất. Bấm × **cạnh tên thư mục** để gỡ bộ tệp và thu hồi quyền đã nhớ; dấu × này khác dấu cạnh thương hiệu đã được bỏ.
+1. **Lưu bản sao Markdown của mọi draft cần giữ** trước khi cập nhật. Draft, caret và history Undo trong RAM không được bảo đảm qua installer/process death.
+2. Kiểm checksum, mở APK mới và chọn **Cập nhật**. Không gỡ ứng dụng trước; không xóa dữ liệu.
+3. Mở lại và kiểm theme, font, CSS, thư mục và file đã lưu. Có thể chọn lại đúng thư mục nếu provider đã thu hồi quyền độc lập với cập nhật.
 
-## Đọc và chỉnh sửa
+Release này dùng certificate SHA-256 công khai:
 
-Khi tắt hợp nhất, bấm **⋮** ở góc trên bên phải để chọn **Đọc** hoặc **Nguồn**. Chế độ **Chia đôi** có trong cùng menu trên màn hình lớn.
+```text
+52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54
+```
 
-Bật **Hợp nhất Đọc và Nguồn** để chạm vào từng đoạn, tiêu đề, bảng hoặc khối mã và sửa Markdown của khối đó. Vùng sửa xuất hiện trực tiếp trong bài, không có khung hoặc thanh công cụ riêng. Chạm vào đoạn khác để kết thúc sửa đoạn hiện tại và chuyển trực tiếp sang đoạn vừa chạm, giữ nguyên vị trí và ô nhập đang lấy nét. Chạm vùng trống ngoài đoạn hoặc bấm **Ctrl/Cmd+Enter** để trở lại bản đọc; **Esc** phục hồi riêng khối đang sửa. Các liên kết vẫn hoạt động như bình thường. Khi hợp nhất đang bật, nút ⋮ được ẩn.
+Đã kiểm nâng cấp trên emulator API 35 từ APK GitHub tag `v1.1.6` (metadata Android thực là **1.1.5/code 115**) lên **1.2.0/code 120**, cùng chữ ký và UID, giữ Settings/CSS/SAF và file đã lưu. Không suy kết quả này cho mọi APK từ nguồn khác.
 
-Khi cuộn xuống qua đoạn đầu của bài, thanh tiêu đề sẽ trượt và mờ dần để tăng vùng đọc. Cuộn lên để thanh xuất hiện trở lại và dùng các nút chuyển bài, tìm kiếm, lưu hoặc cài đặt. Việc định vị nội dung bằng chương trình không tự ẩn thanh.
+Bản debug có chữ ký khác. Nếu Android báo xung đột package/chữ ký, **không uninstall hoặc clear data để vượt lỗi**; kiểm nguồn APK và certificate của bản đã cài. Chứng chỉ công khai không thay được khóa riêng để ký. [Chi tiết bằng chứng nâng cấp](docs/release/P4C_UPDATE_VALIDATION.md).
 
-Thanh tiến độ bên dưới phản ánh vị trí cuộn trong chế độ đang xem. Đọc đến cuối bài sẽ đầy thanh; bài ngắn đã hiển thị toàn bộ cũng có thanh đầy. Thanh vẫn cập nhật khi đổi cỡ chữ, kích thước màn hình hoặc nội dung bài; không lưu lịch sử đọc.
+## Mở file và thư mục qua SAF
 
-Bấm biểu tượng lưu trên thanh trên để chọn nơi xuất bản sao bằng hộp lưu Android. App không tự ghi nội dung bản sửa vào tệp gốc. Chỉ đóng app sau khi đã xuất những bản sửa cần giữ.
+1. Bấm **Danh sách tệp (☰) → Mở → Mở thư mục**, chọn thư mục tài liệu và xác nhận dùng thư mục/cấp quyền trong bộ chọn hệ thống Android.
+2. Hoặc chọn **Mở tệp** để chọn tài liệu riêng. Quyền được nhớ khi provider và cờ hệ thống hỗ trợ.
+3. Nếu Android không cho chọn gốc Download, tạo/chọn thư mục con như `Download/MarkReadDocs`.
 
-## Tìm, thay thế và regex
+Chỉ phạm vi đã chọn được đọc/lập danh sách; không quét toàn thiết bị. `.md`, `.markdown`, `.txt` xuất hiện như tài liệu; thư mục con gập/mở được. Ảnh raster và CSS trong phạm vi phục vụ nội dung, không xuất hiện như bài đọc.
 
-1. Bấm biểu tượng kính lúp.
-2. Nhập nội dung cần tìm. Số kết quả và các nút lên/xuống dùng để chọn kết quả.
-3. Nhập nội dung thay thế; để trống nếu muốn xóa phần khớp.
-4. Bấm **Thay thế** cho kết quả hiện tại hoặc **Thay tất cả** cho mọi kết quả trong bài đang mở.
+Tên được sắp theo số tự nhiên (2 trước 10); nút đổi thứ tự đảo chiều. Tệp trước/sau đi theo toàn cây, kể cả nhánh gập, không bị giới hạn bởi ô lọc và không chuyển vòng ở đầu/cuối. **Gỡ tệp đã chọn (× cạnh tên thư mục)** bỏ phạm vi/quyền khỏi phiên và giữ Settings; hãy xuất draft trước.
 
-**Hoa/thường** bật phân biệt chữ hoa và chữ thường. **Regex** bật biểu thức chính quy JavaScript với chế độ Unicode và nhiều dòng: `^`, `$` áp dụng cho từng dòng. Nhập biểu thức trực tiếp, ví dụ `Item-(\d+)`, không bọc thêm `/.../g`.
+## Đọc, chỉnh sửa và lưu
 
-Khi bật Regex, phần thay hỗ trợ `$1`, `$2`, `$<ten_nhom>`, `$&` và `$$` theo quy tắc JavaScript. Ví dụ: tìm `Item-(\d+)`, thay `Số $1` sẽ đổi `Item-12` thành `Số 12`. Khi tắt Regex, các ký tự `$` được thay nguyên văn.
+Khi tắt hợp nhất, dùng **⋮ → Đọc / Nguồn**, hoặc **Chia đôi** trên màn hình lớn. Để sửa từng đoạn ngay trong bài, bật **Cài đặt → Đọc & chỉnh sửa → Hợp nhất Đọc và Nguồn**. Chạm đoạn/tiêu đề/bảng/khối mã để sửa; chạm ngoài hoặc Ctrl/Cmd+Enter để hoàn tất khối; Esc hủy lần sửa khối đó. Liên kết nội bộ vẫn cần đích nằm trong phạm vi được cấp quyền.
 
-Phạm vi tìm là **mã nguồn Markdown của tài liệu hiện tại**, gồm cả ký hiệu định dạng, mã và URL trong tài liệu. Nếu kết quả không có chữ tương ứng trên bản đọc, app đánh dấu khối chứa kết quả; chuyển sang Nguồn để xem chính xác vùng đã chọn. Thay thế không chạm vào tệp khác và chưa ghi xuống ổ lưu trữ cho tới khi xuất bản sửa.
+Nút **Lưu bản sao Markdown** trên toolbar mở hộp lưu hệ thống. Chọn nơi/tên file và xác nhận; nếu provider hỏi thay thế tệp trùng tên, kiểm tra kỹ trước khi đồng ý. App không tự ghi đè file gốc khi gõ. Mở lại bản đã lưu để kiểm nội dung trước khi đóng phiên.
 
-Regex xử lý quá lâu sẽ bị dừng sau khoảng 2,5 giây; tài liệu vẫn được giữ nguyên nếu chưa thay thành công. Tối đa 20.000 kết quả được liệt kê; khi vượt mức này, thu hẹp biểu thức trước khi thay tất cả. Bản sửa không được vượt 5 MiB.
+Draft từng tệp được giữ khi chuyển bài trong cùng phiên; dấu chấm cạnh tên báo sửa chưa xuất. Thanh tiến độ phản ánh vị trí trong nội dung; toolbar ẩn/hiện theo cuộn và reduced motion. Không có tự lưu draft hoặc đồng bộ đám mây.
 
-Phím tắt: **Ctrl/Cmd+F** mở tìm; **Ctrl/Cmd+H** mở phần thay; Enter/Shift+Enter trong ô tìm chuyển kết quả; Enter trong ô thay thay một, Ctrl/Cmd+Enter thay tất cả.
+## Tìm và thay thế
 
-## Đổi tên và phần mở rộng
+Bấm kính lúp hoặc Ctrl/Cmd+F; Ctrl/Cmd+H mở phần thay. Phạm vi là **nguồn Markdown của bài hiện tại**, gồm cú pháp, mã và URL. **Thay thế** áp dụng kết quả hiện tại, **Thay tất cả** áp dụng mọi kết quả; thay thế chưa ghi ra ổ lưu trữ cho tới khi xuất bản sửa.
 
-1. Ấn giữ khoảng nửa giây vào tên trên thanh trên hoặc trong danh sách. Bàn phím có thể dùng **F2**.
-2. Nhập toàn bộ tên, ví dụ `Chương 3.txt` hoặc `Chương 3.markdown`.
-3. Bấm **Đổi tên**.
+**Hoa/thường** bật phân biệt chữ hoa; **Regex** dùng JavaScript Unicode/nhiều dòng. Nhập `Item-(\d+)`, không bọc `/.../g`; thay `Số $1` đổi `Item-12` thành `Số 12`. Regex hỗ trợ `$1`, `$2`, `$<ten_nhom>`, `$&`, `$$`; chế độ thường giữ nguyên ký tự `$`.
 
-Ô nhập tên giữ viền thông thường khi được chọn, không có thêm vòng viền xanh bên ngoài.
+Regex quá lâu bị dừng khoảng 2,5 giây; giới hạn 20.000 kết quả, bản sửa không vượt 5 MiB. Enter/Shift+Enter trong ô tìm chuyển kết quả; Enter trong ô thay thay một, Ctrl/Cmd+Enter thay tất cả. Dùng Undo/Redo trong editor phù hợp; không cam kết history xuyên field/file/reload. Một chuỗi nhập có thể chia nhiều nhóm Undo.
 
-Đổi phần mở rộng chỉ đổi tên, không chuyển đổi định dạng nội dung. App kiểm tra tên sai và tên trùng, kể cả thư mục và tệp khác khi dùng quyền thư mục Android. Vị trí chỉ đọc hoặc không hỗ trợ đổi tên sẽ báo lỗi, giữ tên hiện tại. Nếu quyền ghi chưa có, mở lại đúng thư mục/tệp để cấp quyền.
+## Đổi tên
 
-Các bản sửa đang có vẫn theo tệp sau khi đổi tên và chuyển bài. Tệp đổi sang phần mở rộng khác vẫn dùng được trong phiên hiện tại. Sau khi đóng app và quét lại thư mục, danh sách tài liệu tự nhận `.md`, `.markdown`, `.txt`; phần mở rộng tùy ý khác không tự xuất hiện thành tài liệu. Các liên kết dùng tên cũ không tự cập nhật.
+Ấn giữ tên file trên toolbar hoặc trong danh sách (bàn phím: F2), nhập toàn bộ basename/phần mở rộng và bấm **Đổi tên**. Chỉ đổi tên, không chuyển đổi định dạng nội dung. Quyền ghi/provider phải hỗ trợ; nếu cần, chọn lại đúng thư mục để cập nhật quyền.
 
-## Nhập và áp dụng CSS
+App kiểm tên sai/trùng; lỗi giữ tên hiện tại. Tệp đổi sang đuôi khác vẫn dùng trong phiên; lần quét mới chỉ nhận `.md`, `.markdown`, `.txt` như tài liệu. Liên kết dùng tên cũ không tự đổi theo.
 
-Mở **Cài đặt → CSS riêng → Nhập tệp CSS**. Chọn `.css` bằng bộ chọn hệ thống ở Bộ nhớ trong hoặc thẻ nhớ, kể cả nơi ngoài thư mục tài liệu đang mở. Tệp không cần được thêm vào bộ tài liệu. Hủy chọn hoặc lỗi đọc không thay nội dung CSS đang nhập và không làm mất tài liệu.
+## Theme, font và CSS riêng
 
-Sau khi nhập, bấm **Áp dụng CSS**. Dùng `body`, `#paper`, `h1`, `table`… để định dạng vùng đọc. Có thể sửa trực tiếp hoặc bấm **Xóa CSS**. Tệp tối đa 100.000 byte; hỗ trợ UTF-8 và UTF-16 có BOM. CSS có URL, `@import` hoặc lỗi cú pháp bị từ chối. Chọn một tệp CSS là thao tác nhập nội dung cục bộ; không hỗ trợ tự tải tài nguyên mạng bằng CSS.
+**Cài đặt** tổ chức thành Màu giao diện, Font chữ & bố cục, Đọc & chỉnh sửa, CSS riêng, Chung & hướng dẫn. Có 12 theme; font hệ thống, serif, Merriweather offline và monospace; chỉnh cỡ chữ, độ rộng bài, giãn dòng. Theme áp dụng đồng bộ UI/reader/native; CSS riêng dành cho vùng đọc.
 
-## Theme, font và cài đặt
+Vào **CSS riêng → Nhập tệp CSS**, hoặc nhập trực tiếp; bấm **Áp dụng CSS**. Dùng `body`, `#paper`, `h1`, `table`…; **Xóa CSS** để trở về mặc định. Tối đa 100.000 byte, UTF-8/UTF-16 có BOM; CSS có URL, `@import` hoặc cú pháp sai bị từ chối. Hủy/lỗi nhập không thay nội dung bài hay quyền thư mục. CSS của bạn hoặc màu chỉ định trong công thức có thể tự làm giảm tương phản.
 
-Có 12 theme, trong đó có Tokyo Night/Light, Nord, xanh xám, Dracula, Rose Pine và các theme sáng/tối. Mỗi ô theme thể hiện màu nền và chữ của chính theme đó.
+## Phiên đọc và cài đặt
 
-**Font chữ & bố cục** có font hệ thống, serif, Merriweather và monospace; chỉnh cỡ chữ, độ rộng, giãn dòng. Các font Merriweather được gói sẵn, không tải từ mạng. Bảng cài đặt co theo nội dung và cuộn khi màn hình thấp.
+Theme, font, cỡ chữ, bố cục, tùy chọn chỉnh sửa, thứ tự tệp và CSS đã áp dụng tự lưu trên thiết bị. Rời app dưới 10 phút có thể khôi phục tài liệu gần nhất khi quyền còn hiệu lực. Từ đúng 10 phút: đóng tài liệu cũ, giữ thư mục/danh sách, gỡ bộ tệp mở riêng; Settings vẫn còn. Thời gian ở bộ chọn mở/lưu không tính là rời app.
 
-Các cài đặt giao diện luôn tự động lưu trên thiết bị, độc lập với thời hạn phiên đọc. App giữ quyền thư mục, bộ tệp mở riêng và tài liệu gần nhất để khôi phục phiên theo mốc 10 phút ở trên. Không lưu nội dung bài hoặc bản sửa chưa xuất.
+Chỉ metadata/URI được giữ; nội dung draft không lưu bền vững. Hãy xuất bản sửa trước khi rời lâu, đóng app hoặc cập nhật. Không bảo đảm phục hồi draft sau khi Android kết thúc process.
 
-## Dữ liệu và giới hạn
+## Ngoại tuyến, quyền riêng tư và giới hạn
 
-Ứng dụng không khai báo quyền Internet, không tài khoản, quảng cáo hoặc thư viện thống kê. Không yêu cầu quyền toàn bộ bộ nhớ. Tệp chỉ được đọc qua bộ chọn hệ thống và quyền thư mục người dùng đã cấp. CSS nhập riêng không thay quyền thư mục đã giữ. Giao diện và bản đọc chặn kết nối mạng; thư viện, công thức, sơ đồ và phông được gói sẵn.
+Không quyền Internet/toàn bộ bộ nhớ, tài khoản, quảng cáo, analytics hay telemetry. Thư viện, LaTeX, Mermaid, icon/font nằm trong APK; WebView chặn kết nối mạng. Android và provider do người dùng chọn nằm ngoài chính sách dữ liệu của MarkRead; chọn thư mục cục bộ để không phụ thuộc mạng.
 
-Giới hạn: 5 MiB mỗi tài liệu, 5.000 mục trong cây, tối đa 32 cấp thư mục, 10 MiB mỗi ảnh, 8 sơ đồ mỗi bài. Ảnh SVG/ảnh Internet bị chặn; ảnh raster phải thuộc bộ tệp được chọn. Sơ đồ, công thức hoặc CSS không hợp lệ có thể giữ mã nguồn/hiện thông báo thay vì hiển thị.
+Tối đa 5 MiB/tài liệu, 5.000 mục/32 cấp thư mục, 10 MiB/ảnh, 8 sơ đồ/bài. Chỉ ảnh raster được cấp quyền; ảnh mạng/SVG/nhúng Markdown bị chặn. Nội dung UTF-8/UTF-16 có BOM; mã hóa khác cần chuyển đổi trước. Công thức/sơ đồ/CSS sai có thể hiện lỗi hoặc giữ nguồn.
 
-MarkRead là ứng dụng độc lập lấy cảm hứng từ MarkText, không thuộc dự án MarkText.
+Runtime release đã kiểm API 35; máy thật/API 26/OEM/provider cloud, chỉ đọc, thẻ nhớ hoặc thiếu dung lượng chưa nghiệm thu đầy đủ. TalkBack **NOT TESTED — accepted limitation**; ARIA/semantic/focus vẫn giữ. Một số lỗi provider có thể là tiếng Anh kỹ thuật. Không hứa mọi IME/provider hay 60 FPS. [Release notes và phạm vi đã kiểm](docs/release/RELEASE_NOTES_v1.2.0_VI.md).
+
+MarkRead là dự án độc lập, không thuộc MarkText.

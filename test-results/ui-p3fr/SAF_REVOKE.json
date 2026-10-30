@@ -1,0 +1,5 @@
+{
+  "uri": "content://com.android.externalstorage.documents/tree/primary%3ADocuments%2FMarkReadP3FR_20261028",
+  "persistedGrantAbsent": true,
+  "method": "fixture-only ContentResolver.releasePersistableUriPermission in separate instrumentation; no other URI touched"
+}

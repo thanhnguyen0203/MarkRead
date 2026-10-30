@@ -1,0 +1,58 @@
+{
+  "phase": "Compact reader toolbar refinement",
+  "branch": "codex/compact-reader-toolbar",
+  "automated": {
+    "existingFocusedAssertions": 655,
+    "newAssertions": 188,
+    "pass": 843,
+    "fail": 0,
+    "suiteCounts": {
+      "node-unit": 132,
+      "search-dialogs-ui": 160,
+      "replace-history-ui": 68,
+      "startup-ui": 53,
+      "icon-states-ui": 70,
+      "math-release-ui": 96,
+      "qa-math-ui": 36,
+      "math-remediation-ui": 36,
+      "empty-folder-fixture-ui": 4,
+      "compact-toolbar-ui": 188
+    }
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0,
+    "themes": 12
+  },
+  "debugApkChecks": 18,
+  "gradle": "assembleDebug PASS: initial full rerun55s/31tasks; final clean build16s/32tasks",
+  "apkSha256": "ec89a871e493eff2311c753831791ba207a1716a7272328ae749a1e5191ad024",
+  "androidRuntime": false,
+  "realIme": false,
+  "realSaf": false,
+  "talkBack": "NOT TESTED — accepted limitation",
+  "full2385BaselineRerun": false,
+  "initialAttemptFailures": [
+    {
+      "scope": "QA isolated workspace",
+      "reason": "missing existing ESM dependency junction and stdout encoding; fixed QA setup"
+    },
+    {
+      "scope": "new QA selector",
+      "reason": "unscoped data-theme matched body and theme button; scoped to #themes"
+    },
+    {
+      "scope": "legacy search helper",
+      "reason": "called removed modeToggle; updated only mode-entry wiring"
+    },
+    {
+      "scope": "legacy icon assertion",
+      "reason": "expected24px toolbar icons; changed to requested20px, keeping48px/centering/contrast/interaction checks"
+    }
+  ],
+  "legacyAssertionChanges": "Replace-history retains68 assertions, with3 unified-entry expectations replaced by legacy-preference non-entry/history checks. Icon-states retains70 assertions with20px header glyph expectation. SearchDialogs160 retained; only source-entry wiring updated.",
+  "noAppVersionDependencyJavaBridgeChange": true,
+  "releaseP4CApkAndTagUnchanged": true,
+  "notCommittedOrPushed": true,
+  "screenshots": "Chromium fixture393x852, not Android/device screenshots"
+}

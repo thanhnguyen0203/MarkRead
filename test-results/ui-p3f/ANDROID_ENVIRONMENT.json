@@ -1,0 +1,40 @@
+{
+  "kind": "Android Emulator",
+  "physicalDeviceTested": false,
+  "serial": "emulator-5554",
+  "androidRelease": "15",
+  "api": 35,
+  "webviewPackage": "com.google.android.webview",
+  "webviewVersion": "124.0.6367.219",
+  "screenPx": [
+    1080,
+    2400
+  ],
+  "densityDpi": 420,
+  "devicePixelRatio": 2.625,
+  "gboardVersion": "14.2.09.629370537-preload-x86_64",
+  "talkBackInstalledAndBoundDuringTest": true,
+  "talkBackAcceptance": "NOT TESTED / injected activation attempt failed",
+  "freshInstallTested": false,
+  "install": "adb install -r; no clear-data/uninstall/force-stop",
+  "systemSettings": "IME subtype/enabled list/accessibility/orientation settings restored; app appearance settings exercised and left Dark/Sans/unified off",
+  "artifacts": "Fixtures only; no private documents used",
+  "screenshots": [
+    "01-system-picker-fixture",
+    "03-reader-fixture",
+    "04-long-reader",
+    "05-invalid-regex",
+    "08-save-fixture-location",
+    "10-rename-extension",
+    "16-ime-input",
+    "19-language-page",
+    "21-landscape-source",
+    "26-missing-file-error",
+    "27-recreated",
+    "math-dark",
+    "math-light",
+    "31-empty-state",
+    "32-saved-reopened",
+    "33-cold-restart"
+  ]
+}

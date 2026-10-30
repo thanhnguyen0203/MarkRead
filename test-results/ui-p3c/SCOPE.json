@@ -1,0 +1,14 @@
+{
+  "inputFiles": 126,
+  "changedExistingFiles": [
+    "web/src/app.css",
+    "web/src/paper.css",
+    "web/tests/foundations-ui.cjs",
+    "web/tests/revision-ui.cjs",
+    "app/src/main/assets/index.html"
+  ],
+  "protectedFiles": 121,
+  "productionJavaScriptUnchanged": true,
+  "shellUnchanged": true,
+  "cssAppendOnly": true
+}

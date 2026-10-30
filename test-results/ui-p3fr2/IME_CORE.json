@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Gboard Vietnamese sentence",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang đọc tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang đọc tiếng Việt.",
+    "method": "Gboard Vietnamese QWERTY touchscreen Telex"
+  },
+  {
+    "name": "typing dirty/caret",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView textarea state"
+  },
+  {
+    "name": "native typing Undo changes source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android Ctrl+Z"
+  },
+  {
+    "name": "native typing Redo exact roundtrip",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang đọc tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang đọc tiếng Việt.",
+    "method": "Android Ctrl+Shift+Z"
+  },
+  {
+    "name": "edit tone in middle of sentence",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang đóc tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang đóc tiếng Việt.",
+    "method": "Native selection + Gboard os"
+  },
+  {
+    "name": "mid-word caret stays in edited word",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android textarea caret"
+  },
+  {
+    "name": "replace middle word with Vietnamese",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.",
+    "method": "Native selection + Gboard Telex"
+  },
+  {
+    "name": "forward Delete exact character",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang ược tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang ược tiếng Việt.",
+    "method": "Android KEYCODE_FORWARD_DEL"
+  },
+  {
+    "name": "Undo forward Delete",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.",
+    "method": "Android Ctrl+Z"
+  },
+  {
+    "name": "Gboard Backspace exact character",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang đượ tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang đượ tiếng Việt.",
+    "method": "Gboard Backspace touchscreen"
+  },
+  {
+    "name": "Undo Backspace",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.",
+    "method": "Android Ctrl+Z"
+  },
+  {
+    "name": "native selection exact",
+    "status": "PASS",
+    "expected": "tiếng Việt",
+    "actual": "tiếng Việt",
+    "method": "Android Ctrl+Home / arrows / Shift+Right"
+  },
+  {
+    "name": "Gboard multiline Enter",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\n",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\n",
+    "method": "Gboard Enter touchscreen"
+  },
+  {
+    "name": "native Copy/Paste preserves Unicode",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt",
+    "method": "Android Ctrl+C/Ctrl+V, clipboard seeded before attempt"
+  },
+  {
+    "name": "Undo Paste",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\n",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\n",
+    "method": "Android Ctrl+Z"
+  },
+  {
+    "name": "Redo Paste exact",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt",
+    "method": "Android Ctrl+Shift+Z"
+  },
+  {
+    "name": "Gboard Search Vietnamese query",
+    "status": "PASS",
+    "expected": "tiếng",
+    "actual": "tiếng",
+    "method": "Gboard touchscreen in Search"
+  },
+  {
+    "name": "Gboard Replace literal lowercase",
+    "status": "PASS",
+    "expected": "việt",
+    "actual": "việt",
+    "method": "Gboard touchscreen in Replace"
+  },
+  {
+    "name": "Search never changes draft",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt",
+    "method": "Editor/Search transfer"
+  },
+  {
+    "name": "return to editor typing exact",
+    "status": "PASS",
+    "expected": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt tốt",
+    "actual": "# P3FR2 IME\n\nTôi đang được tiếng Việt.\ntiếng Việt tốt",
+    "method": "Gboard touchscreen after Search"
+  },
+  {
+    "name": "app switch preserves dirty source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android Home/resume"
+  },
+  {
+    "name": "app switch caret stable",
+    "status": "PASS",
+    "expected": 53,
+    "actual": 53,
+    "method": "Android textarea state"
+  },
+  {
+    "name": "Back closes keyboard keeps Source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android Back"
+  },
+  {
+    "name": "Back Source to Read keeps dirty draft",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android Back"
+  },
+  {
+    "name": "dirty exit warning shown",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android Back + native dialog"
+  },
+  {
+    "name": "stay action available",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Native dialog action using observed uppercase label"
+  },
+  {
+    "name": "cancel exit retains dirty source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android native dirty-exit guard"
+  },
+  {
+    "name": "fixture clean after smoke",
+    "status": "PASS",
+    "expected": false,
+    "actual": false,
+    "method": "QA fixture cleanup"
+  }
+]

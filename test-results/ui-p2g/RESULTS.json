@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-28 Asia/Saigon",
+  "inherited": {
+    "node": 132,
+    "browser": {
+      "ui": 54,
+      "revision-ui": 62,
+      "reading-ui": 46,
+      "native-ui": 27,
+      "session-ui": 17,
+      "startup-ui": 53,
+      "foundations-ui": 27,
+      "accessibility-ui": 68,
+      "keyboard-ui": 68,
+      "keyboard-native-ui": 16,
+      "native-compatibility-ui": 23,
+      "icons-ui": 61,
+      "icon-states-ui": 70,
+      "responsive-ui": 114,
+      "typography-ui": 36,
+      "overflow-ui": 146
+    },
+    "jvm": 158,
+    "apk": 25,
+    "total": 1203
+  },
+  "new": {
+    "browser": {
+      "motion-controls-ui": 46,
+      "motion-surfaces-ui": 98,
+      "motion-reduced-ui": 53
+    },
+    "jvmMotionPolicy": 13,
+    "total": 210
+  },
+  "final": {
+    "node": 132,
+    "browser": 1085,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1413,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "androidRuntimeTested": false,
+  "notes": [
+    "All inherited assertions and test source files unchanged.",
+    "Fixture generator assertions and repeated group smoke runs are not added twice.",
+    "Browser/host-event/JVM policy simulations are not Android Settings, IME, TalkBack or SAF testing."
+  ]
+}

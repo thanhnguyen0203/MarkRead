@@ -1,0 +1,5 @@
+const fixture=require('node:fs').readFileSync(require('node:path').join(__dirname,'quiet-ink-reader.md'),'utf8').replace(/\r\n?/g,'\n');
+const longFixture=fixture+'\n'+Array.from({length:180},(_,i)=>`\n## Chương ${i+1}\n\n`+('Một đoạn văn tiếng Việt dùng để kiểm tra tài liệu dài, Unicode và chiều rộng đọc. '.repeat(8))+'\n\n```text\n  giữ    khoảng trắng\n\tgiữ tab\n```\n').join('');
+async function sampleImage(page){return Buffer.from(await page.evaluate(()=>{const c=document.createElement('canvas');c.width=480;c.height=160;const x=c.getContext('2d');x.fillStyle='#253a33';x.fillRect(0,0,480,160);x.fillStyle='#91c7b0';x.fillRect(24,28,6,104);x.font='28px sans-serif';x.fillText('Một khoảng thở',52,84);return c.toDataURL('image/png').split(',')[1];}),'base64');}
+async function semantic(page){return page.frameLocator('#reader').locator('#paper').evaluate(p=>{const clone=p.cloneNode(true);for(const img of clone.querySelectorAll('img[src^="blob:"]'))img.setAttribute('src','blob:fixture');return clone.innerHTML;});}
+module.exports={fixture,longFixture,sampleImage,semantic};

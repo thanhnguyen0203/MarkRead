@@ -1,0 +1,15 @@
+{
+  "browserSuites": 31,
+  "browserInherited": 1918,
+  "browserNew": 188,
+  "node": 132,
+  "jvm": 171,
+  "launcher": 81,
+  "legacySigning": 5,
+  "negativeSigning": 2,
+  "inheritedApk": 25,
+  "total": 2522,
+  "fail": 0,
+  "palette": 2220,
+  "paletteFail": 0
+}

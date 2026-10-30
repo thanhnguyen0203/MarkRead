@@ -1,0 +1,32 @@
+[
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "home",
+    "file": "393x852-dark-home-1x.png",
+    "metrics": {
+      "bodyWidth": 393,
+      "viewport": 393,
+      "uiSize": "16px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 800,
+    "h": 900,
+    "theme": "light",
+    "view": "appearance",
+    "file": "800x900-light-appearance-1x.png",
+    "metrics": {
+      "bodyWidth": 800,
+      "viewport": 800,
+      "uiSize": "16px",
+      "header": 65,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  }
+]

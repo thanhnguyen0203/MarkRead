@@ -1,0 +1,141 @@
+PASS normalized Markdown DOM is byte-identical to P3B (only blob URL normalized)
+PASS Markdown source bytes unchanged
+PASS all six heading levels retained
+PASS code whitespace and Unicode retained
+PASS task list state and disabled semantics unchanged
+PASS inline and display LaTeX MathML retained
+PASS source spans retained
+PASS 320x852: compact top inset, no document horizontal overflow
+PASS 320x852: toolbar stays within two existing rows and clears reader
+PASS 320x852: toolbar targets retain48 CSS px
+PASS 320x852: long code scrolls locally with whitespace intact
+PASS 320x852: wide table scrolls locally
+PASS 320x852: display math not vertically clipped by hidden overflow
+PASS 320x852: image scales without distortion
+PASS 360x852: compact top inset, no document horizontal overflow
+PASS 360x852: toolbar stays within two existing rows and clears reader
+PASS 360x852: toolbar targets retain48 CSS px
+PASS 360x852: long code scrolls locally with whitespace intact
+PASS 360x852: wide table scrolls locally
+PASS 360x852: display math not vertically clipped by hidden overflow
+PASS 360x852: image scales without distortion
+PASS 393x852: compact top inset, no document horizontal overflow
+PASS 393x852: toolbar stays within two existing rows and clears reader
+PASS 393x852: toolbar targets retain48 CSS px
+PASS 393x852: long code scrolls locally with whitespace intact
+PASS 393x852: wide table scrolls locally
+PASS 393x852: display math not vertically clipped by hidden overflow
+PASS 393x852: image scales without distortion
+PASS 412x852: compact top inset, no document horizontal overflow
+PASS 412x852: toolbar stays within two existing rows and clears reader
+PASS 412x852: toolbar targets retain48 CSS px
+PASS 412x852: long code scrolls locally with whitespace intact
+PASS 412x852: wide table scrolls locally
+PASS 412x852: display math not vertically clipped by hidden overflow
+PASS 412x852: image scales without distortion
+PASS 600x960: compact top inset, no document horizontal overflow
+PASS 600x960: toolbar stays within two existing rows and clears reader
+PASS 600x960: toolbar targets retain48 CSS px
+PASS 600x960: long code scrolls locally with whitespace intact
+PASS 600x960: wide table scrolls locally
+PASS 600x960: display math not vertically clipped by hidden overflow
+PASS 600x960: image scales without distortion
+PASS 800x900: compact top inset, no document horizontal overflow
+PASS 800x900: toolbar stays within two existing rows and clears reader
+PASS 800x900: toolbar targets retain48 CSS px
+PASS 800x900: long code scrolls locally with whitespace intact
+PASS 800x900: wide table scrolls locally
+PASS 800x900: display math not vertically clipped by hidden overflow
+PASS 800x900: image scales without distortion
+PASS 844x390: compact top inset, no document horizontal overflow
+PASS 844x390: toolbar stays within two existing rows and clears reader
+PASS 844x390: toolbar targets retain48 CSS px
+PASS 844x390: long code scrolls locally with whitespace intact
+PASS 844x390: wide table scrolls locally
+PASS 844x390: display math not vertically clipped by hidden overflow
+PASS 844x390: image scales without distortion
+PASS 1280x800: compact top inset, no document horizontal overflow
+PASS 1280x800: toolbar stays within two existing rows and clears reader
+PASS 1280x800: toolbar targets retain48 CSS px
+PASS 1280x800: long code scrolls locally with whitespace intact
+PASS 1280x800: wide table scrolls locally
+PASS 1280x800: display math not vertically clipped by hidden overflow
+PASS 1280x800: image scales without distortion
+PASS entering Source preserves selection rather than selecting all
+PASS source native undo retained
+PASS source native redo retained
+PASS dirty state remains visible after editing
+PASS mode menu state immediate
+PASS menu/Settings do not alter source selection or data
+PASS unrelated menu/Settings visibility does not reload reader
+PASS closing Settings returns control focus, not editor/IME
+PASS find expanded state reflects its panel
+PASS find selection ends on actual close
+PASS simulated composition prevents premature mode transition
+PASS composition-end retains final textarea value
+PASS existing split mode still displays both panes
+PASS read/split switching keeps exact unsaved source
+PASS mode popup retains pixel reading position
+PASS dark: reader links recognized without relying only on color
+PASS dark: primary action keeps keyboard focus
+PASS dark: pressed feedback does not trigger save or mutate source on cancellation
+PASS dark: editor caret/selection visible without animation
+PASS light: reader links recognized without relying only on color
+PASS light: primary action keeps keyboard focus
+PASS light: pressed feedback does not trigger save or mutate source on cancellation
+PASS light: editor caret/selection visible without animation
+PASS sepia: reader links recognized without relying only on color
+PASS sepia: primary action keeps keyboard focus
+PASS sepia: pressed feedback does not trigger save or mutate source on cancellation
+PASS sepia: editor caret/selection visible without animation
+PASS black: reader links recognized without relying only on color
+PASS black: primary action keeps keyboard focus
+PASS black: pressed feedback does not trigger save or mutate source on cancellation
+PASS black: editor caret/selection visible without animation
+PASS tokyo-night: reader links recognized without relying only on color
+PASS tokyo-night: primary action keeps keyboard focus
+PASS tokyo-night: pressed feedback does not trigger save or mutate source on cancellation
+PASS tokyo-night: editor caret/selection visible without animation
+PASS tokyo-light: reader links recognized without relying only on color
+PASS tokyo-light: primary action keeps keyboard focus
+PASS tokyo-light: pressed feedback does not trigger save or mutate source on cancellation
+PASS tokyo-light: editor caret/selection visible without animation
+PASS blue-gray: reader links recognized without relying only on color
+PASS blue-gray: primary action keeps keyboard focus
+PASS blue-gray: pressed feedback does not trigger save or mutate source on cancellation
+PASS blue-gray: editor caret/selection visible without animation
+PASS nord: reader links recognized without relying only on color
+PASS nord: primary action keeps keyboard focus
+PASS nord: pressed feedback does not trigger save or mutate source on cancellation
+PASS nord: editor caret/selection visible without animation
+PASS dracula: reader links recognized without relying only on color
+PASS dracula: primary action keeps keyboard focus
+PASS dracula: pressed feedback does not trigger save or mutate source on cancellation
+PASS dracula: editor caret/selection visible without animation
+PASS rose-pine: reader links recognized without relying only on color
+PASS rose-pine: primary action keeps keyboard focus
+PASS rose-pine: pressed feedback does not trigger save or mutate source on cancellation
+PASS rose-pine: editor caret/selection visible without animation
+PASS forest: reader links recognized without relying only on color
+PASS forest: primary action keeps keyboard focus
+PASS forest: pressed feedback does not trigger save or mutate source on cancellation
+PASS forest: editor caret/selection visible without animation
+PASS gruvbox: reader links recognized without relying only on color
+PASS gruvbox: primary action keeps keyboard focus
+PASS gruvbox: pressed feedback does not trigger save or mutate source on cancellation
+PASS gruvbox: editor caret/selection visible without animation
+PASS custom CSS wins over new Markdown styling
+PASS reader settings persist independently of custom CSS and source {"saved":24,"raw":1973} expected length 1973
+PASS inline input remains same focused textarea
+PASS inline caret and text have no entry animation
+PASS inline cancel restores exact source outside and inside selected block
+PASS toolbar at200% remains horizontally contained 320
+PASS toolbar at200% remains horizontally contained 800
+PASS source textarea stays static without reduced preference
+PROFILE desktop long document 173410 bytes, import+headings 790ms; not Android/FPS
+PASS long document source remains exact
+PASS all181 code blocks remain rendered
+PASS long reader scrolls to its end without document horizontal overflow
+PASS long Markdown DOM has no animations
+PASS no renderer errors
+P3C READER: 139 PASS

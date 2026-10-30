@@ -1,0 +1,15 @@
+# Preserve the exact Android/renderer build inputs verified for the signed APK.
+# The bundled HTML contains mixed line endings and an inline-script CSP hash.
+/app/src/main/** -text
+/app/build.gradle.kts -text
+/web/src/** -text
+/web/build.mjs -text
+/web/icon-registry.mjs -text
+/web/package.json -text
+/web/package-lock.json -text
+/web/fonts/** -text
+/web/icons/** -text
+/build.gradle.kts -text
+/settings.gradle.kts -text
+/gradle.properties -text
+/gradle/** -text

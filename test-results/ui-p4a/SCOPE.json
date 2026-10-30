@@ -1,0 +1,15 @@
+{
+  "snapshotInputs": 132,
+  "changedExistingInputs": [
+    "app/src/main/AndroidManifest.xml",
+    "app/src/main/res/drawable/ic_background.xml",
+    "app/src/main/res/drawable/ic_foreground.xml",
+    "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+  ],
+  "webSourceUnchanged": true,
+  "productionJavaUnchanged": true,
+  "dependenciesAndGradleUnchanged": true,
+  "p0P1P3ReportsUnchanged": true,
+  "lucide23Unchanged": true,
+  "rendererSha256": "9be329e41e942ed481f375d1e2e84738cebedb8a696ea6b9d16fee1dc109df68"
+}

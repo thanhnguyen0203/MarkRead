@@ -1,0 +1,33 @@
+{
+  "inherited": {
+    "node": 132,
+    "browser": 1233,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1561,
+    "fail": 0
+  },
+  "new": {
+    "libraryBrowser": 112,
+    "fail": 0
+  },
+  "final": {
+    "node": 132,
+    "browser": 1345,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1673,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "androidRuntimeTested": false,
+  "notes": [
+    "Inherited icon check targets direct disclosure SVG because a folder SVG was added; assertion and count retained.",
+    "5000 rows checked by grouped assertions, not counted as5000 extra tests.",
+    "Browser/host/JVM checks do not prove Android SAF, TalkBack, IME, lifecycle or density."
+  ]
+}

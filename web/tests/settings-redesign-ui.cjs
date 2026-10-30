@@ -1,0 +1,37 @@
+// Real desktop Chromium; OS Back, density, IME and TalkBack require Android QA.
+const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chooseSettingsSection,source}=require('./layout-helpers.cjs');
+const root=path.resolve(__dirname,'../..'),url='https://markread.test/';let count=0;
+function ok(value,label){assert.ok(value,label);count++;console.log('PASS '+label);}
+(async()=>{const b=await chromium.launch({headless:true,executablePath:process.env.MARKREAD_CHROMIUM});const p=await b.newPage({viewport:{width:393,height:852},reducedMotion:'reduce'});p.setDefaultTimeout(10000);
+ const html=fs.readFileSync(path.join(root,'app/src/main/assets/index.html'),'utf8').replace(/<meta name="native-channel"[^>]*>/,'');const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.route(url,r=>r.fulfill({contentType:'text/html',body:html}));await p.addInitScript(()=>{if(!localStorage.getItem('markread-appearance-v1'))localStorage.setItem('markread-appearance-v1',JSON.stringify({mermaid:false}));});
+ try{await p.goto(url);await p.waitForFunction(()=>!document.documentElement.hasAttribute('data-startup'));await p.locator('#filesInput').setInputFiles({name:'Settings.md',mimeType:'text/markdown',buffer:Buffer.from(source)});
+ for(const width of [320,360,393,412,600,800]){
+  await p.setViewportSize({width,height:900});await p.locator('#settings').click();
+  ok(await p.locator('.settings-nav button:visible').count()===5,width+': all five named categories accessible on entry');
+  for(const id of ['appearance','typography','editing','css','general']){
+   await chooseSettingsSection(p,id);
+   ok(await p.locator('#settingsDialog').evaluate((d,id)=>{const r=d.getBoundingClientRect(),c=document.getElementById('section-'+id);return r.left>=0&&r.right<=innerWidth+.1&&r.bottom<=innerHeight+.1&&!c.hidden&&c.getBoundingClientRect().width>0&&d.scrollWidth<=d.clientWidth+1},id),width+'/'+id+': detail contained and no horizontal overflow');
+   ok(await p.locator('[data-section='+id+']').getAttribute('aria-current')==='true',width+'/'+id+': current category synchronized');
+   if(width<720){await p.locator('#settingsBack').click();ok(await p.locator('.settings-nav button:visible').count()===5&&await p.locator('[data-section='+id+']').evaluate(x=>x===document.activeElement),width+'/'+id+': back restores selected category focus');}
+  }
+  await p.locator('#settingsDialog .close-dialog').click();
+ }
+ await p.setViewportSize({width:393,height:852});await p.locator('#settings').click();await chooseSettingsSection(p,'appearance');
+ const themes=await p.locator('#themes button').evaluateAll(xs=>xs.map(x=>x.dataset.theme));ok(themes.length===12,'twelve original theme IDs');
+ for(const id of themes){const tile=p.locator('#themes [data-theme="'+id+'"]');await tile.click();
+  ok(await tile.getAttribute('aria-pressed')==='true'&&await p.locator('#themes [aria-pressed=true]').count()===1,id+': one selected theme');
+  ok(await tile.evaluate(x=>{const sample=x.querySelector('.theme-preview'),s=getComputedStyle(x),v=s.getPropertyValue('--preview-bg').trim(),probe=document.createElement('span');probe.style.color=v;x.append(probe);const color=getComputedStyle(probe).color;probe.remove();return sample.getAttribute('aria-hidden')==='true'&&getComputedStyle(sample).backgroundColor===color}),id+': preview uses actual resolved background and is decorative');
+  await p.keyboard.press('Tab');await tile.focus();ok(await tile.evaluate(x=>getComputedStyle(x).outlineWidth==='2px'&&x.matches(':focus-visible')),id+': keyboard focus independent from selected');
+ }
+ await chooseSettingsSection(p,'typography');await p.locator('#font').click();await p.locator('[data-font=merriweather]').click();ok((await p.locator('#fontText').textContent())==='Merriweather','Merriweather retained');
+ for(const [id,key,value] of [['fontSize','size',32],['width','width',1400],['lineHeight','leading',2.4]]){await p.locator('#'+id).focus();await p.keyboard.press('End');ok(await p.locator('#'+id).inputValue()===String(value),id+': native range keyboard endpoint');ok(await p.evaluate(({key,value})=>JSON.parse(localStorage.getItem('markread-appearance-v1'))[key]===value,{key,value}),id+': original persistence schema');}
+ await chooseSettingsSection(p,'css');const css='h1 { letter-spacing: 3px; }';await p.locator('#customCSS').fill(css);await p.locator('#settingsBack').click();await chooseSettingsSection(p,'appearance');await chooseSettingsSection(p,'css');ok(await p.locator('#customCSS').inputValue()===css,'navigation retains unapplied CSS text');
+ await p.locator('#settingsDialog .close-dialog').click();await p.locator('#settings').click();await chooseSettingsSection(p,'css');ok(await p.locator('#customCSS').inputValue()===css,'closing and reopening retains live unapplied CSS draft');await p.locator('#applyCSS').click();const appliedCSS=await p.evaluate(()=>JSON.parse(localStorage.getItem('markread-appearance-v1')).css);await p.waitForFunction(()=>{const x=document.getElementById('reader').contentDocument?.querySelector('h1');return x&&getComputedStyle(x).letterSpacing==='3px'});ok(true,'custom CSS applied after reader stylesheet');
+ await p.keyboard.press('Escape');ok(await p.locator('#settingsDialog').isVisible()&&await p.locator('.settings-nav button:visible').count()===5,'Escape from detail returns to list');await p.keyboard.press('Escape');ok(await p.locator('#settingsDialog').isHidden()&&await p.locator('#settings').evaluate(x=>x===document.activeElement),'Escape from list closes and restores trigger');
+ await require('./layout-helpers.cjs').selectDocumentMode(p,'edit');await p.locator('#editor').fill(source+'\nBản sửa chưa lưu.');const draft=await p.locator('#editor').inputValue();await p.locator('#settings').click();await chooseSettingsSection(p,'typography');await p.locator('#settingsDialog .close-dialog').click();ok(await p.locator('#editor').inputValue()===draft&&await p.locator('#dirty').isVisible(),'opening/navigation/closing Settings preserves document draft');
+ await p.locator('#settings').click();await p.locator('#settingsDialog').evaluate(x=>x.close());await p.reload();await p.waitForFunction(()=>!document.documentElement.hasAttribute('data-startup'));ok(await p.locator('body').getAttribute('data-theme')===themes.at(-1),'theme survives reload');await p.locator('#settings').click();await chooseSettingsSection(p,'css');ok(await p.locator('#customCSS').inputValue()===appliedCSS,'applied CSS survives reload');
+ await p.evaluate(()=>document.documentElement.style.fontSize='200%');for(const id of ['appearance','typography','css']){await chooseSettingsSection(p,id);ok(await p.locator('#settingsDialog').evaluate(d=>d.scrollWidth<=d.clientWidth+1),id+': 200% text remains horizontally contained');}
+ await p.emulateMedia({reducedMotion:'no-preference'});for(let i=0;i<4;i++){await p.locator('#settingsBack').click();await chooseSettingsSection(p,i%2?'css':'appearance');}await p.emulateMedia({reducedMotion:'reduce'});ok(await p.locator('.settings-section:not([hidden])').evaluate(x=>x.getAnimations().length===0),'rapid navigation interrupted by reduced motion settles');ok(errors.length===0,'no renderer errors');console.log('P3A SETTINGS: '+count+' PASS');
+ }finally{await b.close();}
+})().catch(e=>{console.error(e);process.exitCode=1});

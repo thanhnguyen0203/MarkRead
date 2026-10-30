@@ -1,0 +1,10 @@
+{
+  "debugApk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 7639333,
+    "sha256": "4b8ede97f832e0f97d8ad91970e20eb416a9a229d5d3ec54e991f9e96dd5a314"
+  },
+  "rendererSha256": "9be329e41e942ed481f375d1e2e84738cebedb8a696ea6b9d16fee1dc109df68",
+  "oldReleaseArtifactsUnmodified": true,
+  "newReleaseArtifact": null
+}

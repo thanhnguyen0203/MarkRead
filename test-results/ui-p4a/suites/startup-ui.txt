@@ -1,0 +1,54 @@
+PASS embedded native settings: native substitutions preserve the CSP hash
+PASS embedded native settings: shell stays hidden while the native host is delayed
+PASS embedded native settings: loading background already matches the saved theme
+PASS embedded native settings: every visible frame has the final theme and a rendered document
+PASS embedded native settings: no intermediate welcome document or filename
+PASS embedded native settings: the first visible frame has the saved typography and loaded font
+PASS embedded native settings: embedded settings avoid an extra preference round trip
+PASS embedded native settings: renders the initial document once
+PASS embedded native settings: no renderer errors: 
+PASS older host fallback: native substitutions preserve the CSP hash
+PASS older host fallback: shell stays hidden while the native host is delayed
+PASS older host fallback: every visible frame has the final theme and a rendered document
+PASS older host fallback: no intermediate welcome document or filename
+PASS older host fallback: the first visible frame has the saved typography and loaded font
+PASS older host fallback: renders the initial document once
+PASS older host fallback: no renderer errors: 
+PASS malformed snapshot fallback: native substitutions preserve the CSP hash
+PASS malformed snapshot fallback: shell stays hidden while the native host is delayed
+PASS malformed snapshot fallback: every visible frame has the final theme and a rendered document
+PASS malformed snapshot fallback: no intermediate welcome document or filename
+PASS malformed snapshot fallback: the first visible frame has the saved typography and loaded font
+PASS malformed snapshot fallback: renders the initial document once
+PASS malformed snapshot fallback: no renderer errors: 
+PASS first install: native substitutions preserve the CSP hash
+PASS first install: shell stays hidden while the native host is delayed
+PASS first install: every visible frame has the final theme and a rendered document
+PASS first install: no intermediate welcome document or filename
+PASS first install: renders the initial document once
+PASS first install: no renderer errors: 
+PASS expired session: native substitutions preserve the CSP hash
+PASS expired session: shell stays hidden while the native host is delayed
+PASS expired session: loading background already matches the saved theme
+PASS expired session: every visible frame has the final theme and a rendered document
+PASS expired session: no intermediate welcome document or filename
+PASS expired session: the first visible frame has the saved typography and loaded font
+PASS expired session: embedded settings avoid an extra preference round trip
+PASS expired session: renders the initial document once
+PASS expired session: no renderer errors: 
+PASS restore failure: native substitutions preserve the CSP hash
+PASS restore failure: shell stays hidden while the native host is delayed
+PASS restore failure: loading background already matches the saved theme
+PASS restore failure: every visible frame has the final theme and a rendered document
+PASS restore failure: no intermediate welcome document or filename
+PASS restore failure: the first visible frame has the saved typography and loaded font
+PASS restore failure: embedded settings avoid an extra preference round trip
+PASS restore failure: renders the initial document once
+PASS restore failure: no renderer errors: 
+PASS preferences failure: native substitutions preserve the CSP hash
+PASS preferences failure: shell stays hidden while the native host is delayed
+PASS preferences failure: every visible frame has the final theme and a rendered document
+PASS preferences failure: no intermediate welcome document or filename
+PASS preferences failure: renders the initial document once
+PASS preferences failure: no renderer errors: 
+Startup UI: 53 checks passed

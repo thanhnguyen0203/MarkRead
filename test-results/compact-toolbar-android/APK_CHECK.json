@@ -1,0 +1,37 @@
+{
+  "pass": 18,
+  "fail": 0,
+  "checks": [
+    "debug APK preserves package/version",
+    "APK correctly identified as DEBUG test build",
+    "SDK26/35 unchanged",
+    "zero permissions",
+    "debug signature verifies",
+    "debug certificate distinguished from release",
+    "zipalign passes",
+    "ZIP CRC valid",
+    "APK/source/dist renderer byte identical",
+    "offline notices exact",
+    "no private/signing/dependency cache packaged",
+    "bundled script CSP hash valid",
+    "removed UI absent from packaged HTML",
+    "ordinary source editor entry packaged",
+    "offline CSP and sandbox preserved",
+    "production changes limited to five UI/renderer files",
+    "P4C release APK untouched",
+    "release tag untouched"
+  ],
+  "apk": "app/build/outputs/apk/debug/app-debug.apk",
+  "bytes": 7636685,
+  "sha256": "6a5f1d5223cf66b4d6e96da2d8d27b34d336734efddbbdb0e0198d74c8e51f4c",
+  "certificateSha256": "dfc1caf30a4cc1da2c4356d8d17cfa4880feaa9e59a31a1badbcb7846ce96c48",
+  "variant": "debug",
+  "androidRuntimeTested": true,
+  "changedProductionInputs": [
+    "app/src/main/assets/index.html",
+    "web/src/app.css",
+    "web/src/app.js",
+    "web/src/demo.md",
+    "web/src/shell.html"
+  ]
+}

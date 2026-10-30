@@ -1,0 +1,310 @@
+[
+  {
+    "name": "long-name fixture source exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "320 CSS px / 160 dpi viewport measured",
+    "status": "PASS",
+    "detail": {
+      "active": 0,
+      "buttons": [
+        {
+          "h": 48,
+          "icon": 20,
+          "id": "menu",
+          "right": 52,
+          "w": 48,
+          "x": 4,
+          "y": 3.5
+        },
+        {
+          "h": 48,
+          "icon": 20,
+          "id": "prevFile",
+          "right": 124,
+          "w": 48,
+          "x": 76,
+          "y": 3.5
+        },
+        {
+          "h": 48,
+          "icon": 20,
+          "id": "nextFile",
+          "right": 172,
+          "w": 48,
+          "x": 124,
+          "y": 3.5
+        },
+        {
+          "h": 48,
+          "icon": 20,
+          "id": "findToggle",
+          "right": 220,
+          "w": 48,
+          "x": 172,
+          "y": 3.5
+        },
+        {
+          "h": 48,
+          "icon": 20,
+          "id": "download",
+          "right": 268,
+          "w": 48,
+          "x": 220,
+          "y": 3.5
+        },
+        {
+          "h": 48,
+          "icon": 20,
+          "id": "settings",
+          "right": 316,
+          "w": 48,
+          "x": 268,
+          "y": 3.5
+        }
+      ],
+      "dpr": 1,
+      "ellipsis": "ellipsis",
+      "header": 56,
+      "overflow": false,
+      "removed": 0,
+      "scale": 1,
+      "titleLabel": "01_Chương_đầu_tiên_rất_dài_để_kiểm_tra_toolbar_MarkRead.md · Ấn giữ để đổi tên",
+      "titleText": "01_Chương_đầu_tiên_rất_dài_để_kiểm_tra_toolbar_MarkRead.md",
+      "titleWidth": 20,
+      "width": 320
+    }
+  },
+  {
+    "name": "one-row 56px header without overflow",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "action order intact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "48px targets and 20px glyphs",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "icon hit areas do not overlap",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "long filename ellipsized with full accessible name",
+    "status": "PASS",
+    "detail": 20
+  },
+  {
+    "name": "removed entries absent and no stuck pressed state",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "Reader block editor not reachable",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "Search opens from compact bar",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "Settings opens from compact bar",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "dark: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "dark: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "dark: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "light: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "light: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "light: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "sepia: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "sepia: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "sepia: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "black: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "black: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "black: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "tokyo-night: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "tokyo-night: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "tokyo-night: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "tokyo-light: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "tokyo-light: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "tokyo-light: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "blue-gray: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "blue-gray: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "blue-gray: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "nord: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "nord: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "nord: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "dracula: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "dracula: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "dracula: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "rose-pine: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "rose-pine: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "rose-pine: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "forest: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "forest: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "forest: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "gruvbox: compact geometry remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "gruvbox: source remains exact",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "gruvbox: custom CSS precedence remains",
+    "status": "PASS",
+    "detail": null
+  },
+  {
+    "name": "fixture intact after restoring Nord",
+    "status": "PASS",
+    "detail": null
+  }
+]

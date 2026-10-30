@@ -1,0 +1,24 @@
+{
+  "snapshotInputs": 176,
+  "changedExistingInputs": [
+    "app/src/main/AndroidManifest.xml",
+    "app/src/main/assets/index.html",
+    "web/src/shell.html",
+    "docs/release/CHANGELOG_DRAFT.md",
+    "docs/release/P4B_REPORT.md",
+    "docs/release/P4B_SIGNING_AUDIT.md",
+    "docs/release/P4B_UPDATE_TEST_PLAN.md",
+    "docs/release/P4B_VERSION_PLAN.md",
+    "tests/validate_apk.py",
+    "app/build.gradle.kts",
+    "build_apk.py",
+    "README.md",
+    "CHANGELOG.md",
+    "HUONG_DAN_CAI_DAT.md",
+    "web/package.json",
+    "web/package-lock.json"
+  ],
+  "javaAndBridgeLogicUnchanged": true,
+  "readerEditorJsCssAnd23LucideUnchanged": true,
+  "oldArtifactsUnchanged": true
+}

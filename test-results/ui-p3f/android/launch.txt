@@ -1,0 +1,15 @@
+processBeforeLaunch=absent
+Starting: Intent { cmp=vn.markread.local/.MainActivity }
+
+Status: ok
+
+LaunchState: COLD
+
+Activity: vn.markread.local/.MainActivity
+
+TotalTime: 1574
+
+WaitTime: 1584
+
+Complete
+

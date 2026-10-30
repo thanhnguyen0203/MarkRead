@@ -1,0 +1,164 @@
+PASS 320x852: search panel contained
+PASS 320x852: all search controls retain48 CSS px targets
+PASS 320x852: focused query reachable inside panel
+PASS 320x852: replacement actions reachable by local scrolling
+PASS 320x852: reader/editor retains space with no app overflow
+PASS 320x852: close restores toolbar context
+PASS 360x852: search panel contained
+PASS 360x852: all search controls retain48 CSS px targets
+PASS 360x852: focused query reachable inside panel
+PASS 360x852: replacement actions reachable by local scrolling
+PASS 360x852: reader/editor retains space with no app overflow
+PASS 360x852: close restores toolbar context
+PASS 393x852: search panel contained
+PASS 393x852: all search controls retain48 CSS px targets
+PASS 393x852: focused query reachable inside panel
+PASS 393x852: replacement actions reachable by local scrolling
+PASS 393x852: reader/editor retains space with no app overflow
+PASS 393x852: close restores toolbar context
+PASS 412x852: search panel contained
+PASS 412x852: all search controls retain48 CSS px targets
+PASS 412x852: focused query reachable inside panel
+PASS 412x852: replacement actions reachable by local scrolling
+PASS 412x852: reader/editor retains space with no app overflow
+PASS 412x852: close restores toolbar context
+PASS 600x960: search panel contained
+PASS 600x960: all search controls retain48 CSS px targets
+PASS 600x960: focused query reachable inside panel
+PASS 600x960: replacement actions reachable by local scrolling
+PASS 600x960: reader/editor retains space with no app overflow
+PASS 600x960: close restores toolbar context
+PASS 800x900: search panel contained
+PASS 800x900: all search controls retain48 CSS px targets
+PASS 800x900: focused query reachable inside panel
+PASS 800x900: replacement actions reachable by local scrolling
+PASS 800x900: reader/editor retains space with no app overflow
+PASS 800x900: close restores toolbar context
+PASS 844x390: search panel contained
+PASS 844x390: all search controls retain48 CSS px targets
+PASS 844x390: focused query reachable inside panel
+PASS 844x390: replacement actions reachable by local scrolling
+PASS 844x390: reader/editor retains space with no app overflow
+PASS 844x390: close restores toolbar context
+PASS 393x360: search panel contained
+PASS 393x360: all search controls retain48 CSS px targets
+PASS 393x360: focused query reachable inside panel
+PASS 393x360: replacement actions reachable by local scrolling
+PASS 393x360: reader/editor retains space with no app overflow
+PASS 393x360: close restores toolbar context
+PASS Next advances source match
+PASS Previous retains wrap-around
+PASS case-sensitive matching unchanged
+PASS typing replacement does not mutate document
+PASS Replace One preserves capture expansion and remaining source
+PASS Replace All sets dirty without saving file
+PASS replacement does not alter other file
+PASS replaced draft survives file navigation
+PASS plain replacement preserves literal dollar syntax
+PASS zero-length Unicode replacement retains surrogate pair
+PASS invalid regex is linked to retained query
+PASS query is described by inline alert
+PASS invalid query disables all match mutations
+PASS clearing query clears invalid state without editing source
+PASS existing query limit has input-invalid semantics
+PASS zero results is not input validation failure
+PASS query composition guard retains text and source
+PASS closing search restores original Markdown DOM after transient marks
+PASS keyboard search closes to same source textarea without data loss
+PASS search visibility does not reload reader document
+PASS dark: selected option has a decorative check beyond color
+PASS dark: keyboard option focus distinct from selected
+PASS dark: pointer cancellation preserves selected option and source
+PASS light: selected option has a decorative check beyond color
+PASS light: keyboard option focus distinct from selected
+PASS light: pointer cancellation preserves selected option and source
+PASS sepia: selected option has a decorative check beyond color
+PASS sepia: keyboard option focus distinct from selected
+PASS sepia: pointer cancellation preserves selected option and source
+PASS black: selected option has a decorative check beyond color
+PASS black: keyboard option focus distinct from selected
+PASS black: pointer cancellation preserves selected option and source
+PASS tokyo-night: selected option has a decorative check beyond color
+PASS tokyo-night: keyboard option focus distinct from selected
+PASS tokyo-night: pointer cancellation preserves selected option and source
+PASS tokyo-light: selected option has a decorative check beyond color
+PASS tokyo-light: keyboard option focus distinct from selected
+PASS tokyo-light: pointer cancellation preserves selected option and source
+PASS blue-gray: selected option has a decorative check beyond color
+PASS blue-gray: keyboard option focus distinct from selected
+PASS blue-gray: pointer cancellation preserves selected option and source
+PASS nord: selected option has a decorative check beyond color
+PASS nord: keyboard option focus distinct from selected
+PASS nord: pointer cancellation preserves selected option and source
+PASS dracula: selected option has a decorative check beyond color
+PASS dracula: keyboard option focus distinct from selected
+PASS dracula: pointer cancellation preserves selected option and source
+PASS rose-pine: selected option has a decorative check beyond color
+PASS rose-pine: keyboard option focus distinct from selected
+PASS rose-pine: pointer cancellation preserves selected option and source
+PASS forest: selected option has a decorative check beyond color
+PASS forest: keyboard option focus distinct from selected
+PASS forest: pointer cancellation preserves selected option and source
+PASS gruvbox: selected option has a decorative check beyond color
+PASS gruvbox: keyboard option focus distinct from selected
+PASS gruvbox: pointer cancellation preserves selected option and source
+PASS 320x568: rename validation retains editable extension/text
+PASS 320x568: rename remains within viewport
+PASS 320x568: cancel cannot rename file
+PASS 320x568: long help body scrolls inside dialog
+PASS 320x568: nested dialog returns focus to Settings Help
+PASS 320x568: export readonly fallback keeps exact source
+PASS 360x800: rename validation retains editable extension/text
+PASS 360x800: rename remains within viewport
+PASS 360x800: cancel cannot rename file
+PASS 360x800: long help body scrolls inside dialog
+PASS 360x800: nested dialog returns focus to Settings Help
+PASS 360x800: export readonly fallback keeps exact source
+PASS 393x852: rename validation retains editable extension/text
+PASS 393x852: rename remains within viewport
+PASS 393x852: cancel cannot rename file
+PASS 393x852: long help body scrolls inside dialog
+PASS 393x852: nested dialog returns focus to Settings Help
+PASS 393x852: export readonly fallback keeps exact source
+PASS 412x915: rename validation retains editable extension/text
+PASS 412x915: rename remains within viewport
+PASS 412x915: cancel cannot rename file
+PASS 412x915: long help body scrolls inside dialog
+PASS 412x915: nested dialog returns focus to Settings Help
+PASS 412x915: export readonly fallback keeps exact source
+PASS 600x960: rename validation retains editable extension/text
+PASS 600x960: rename remains within viewport
+PASS 600x960: cancel cannot rename file
+PASS 600x960: long help body scrolls inside dialog
+PASS 600x960: nested dialog returns focus to Settings Help
+PASS 600x960: export readonly fallback keeps exact source
+PASS 800x900: rename validation retains editable extension/text
+PASS 800x900: rename remains within viewport
+PASS 800x900: cancel cannot rename file
+PASS 800x900: long help body scrolls inside dialog
+PASS 800x900: nested dialog returns focus to Settings Help
+PASS 800x900: export readonly fallback keeps exact source
+PASS 800x360: rename validation retains editable extension/text
+PASS 800x360: rename remains within viewport
+PASS 800x360: cancel cannot rename file
+PASS 800x360: long help body scrolls inside dialog
+PASS 800x360: nested dialog returns focus to Settings Help
+PASS 800x360: export readonly fallback keeps exact source
+PASS valid rename has no effect before submit
+PASS confirmed rename preserves source and arbitrary extension
+PASS clipboard denial retains existing select/copy fallback
+PASS Open menu keyboard focus still follows native popup contract
+PASS End reaches last Open action
+PASS Escape closes popup before drawer
+PASS font popover retains listbox keyboard focus
+PASS reduced-motion interruption retains dialog input and semantic state
+PASS rapid panel toggles settle to actual final state
+PASS 200% search text has no horizontal app overflow
+Error: ENOENT: no such file or directory, open 'C:\AI\MarkRead\build\ui-p4a\after\workspace-1\test-results\ui-p3d\HISTORY.json'
+    at Object.readFileSync (node:fs:441:20)
+    at C:\AI\MarkRead\build\ui-p4a\after\workspace-1\web\tests\search-dialogs-ui.cjs:32:146 {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\AI\\MarkRead\\build\\ui-p4a\\after\\workspace-1\\test-results\\ui-p3d\\HISTORY.json'
+}

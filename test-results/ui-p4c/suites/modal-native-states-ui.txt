@@ -1,0 +1,11 @@
+PASS busy native rename disables actual controls
+PASS Back cannot dismiss a busy native rename
+PASS duplicate submit cannot start another rename
+PASS permission failure does not label valid filename invalid
+PASS permission failure keeps entered text and enables retry
+PASS failed rename preserves current document and source
+PASS Back closes top dialog before search panel
+PASS next Back closes search
+PASS clean native-facing exit contract retained
+PASS permission failure adds no grant/export/file-management operation
+P3D MODAL NATIVE SIMULATION: 10 PASS

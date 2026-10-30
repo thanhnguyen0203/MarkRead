@@ -1,0 +1,76 @@
+PASS 320: export actions/source share one contained column
+PASS 320: consecutive export gaps form a steady12px rhythm
+PASS 320: export target size and exact source preserved
+PASS 320: export closes to its trigger
+PASS 360: export actions/source share one contained column
+PASS 360: consecutive export gaps form a steady12px rhythm
+PASS 360: export target size and exact source preserved
+PASS 360: export closes to its trigger
+PASS 393: export actions/source share one contained column
+PASS 393: consecutive export gaps form a steady12px rhythm
+PASS 393: export target size and exact source preserved
+PASS 393: export closes to its trigger
+PASS 412: export actions/source share one contained column
+PASS 412: consecutive export gaps form a steady12px rhythm
+PASS 412: export target size and exact source preserved
+PASS 412: export closes to its trigger
+PASS 600: export actions/source share one contained column
+PASS 600: consecutive export gaps form a steady12px rhythm
+PASS 600: export target size and exact source preserved
+PASS 600: export closes to its trigger
+PASS 800: export actions/source share one contained column
+PASS 800: consecutive export gaps form a steady12px rhythm
+PASS 800: export target size and exact source preserved
+PASS 800: export closes to its trigger
+PASS 1: error glyph aligns with the first text line
+PASS 1: error presentation keeps query/source
+PASS 2: error glyph aligns with the first text line
+PASS 2: error presentation keeps query/source
+PASS dark: dialogs share a scrim without blur
+PASS dark: actual export label contrast>=4.5 and source exact
+PASS light: dialogs share a scrim without blur
+PASS light: actual export label contrast>=4.5 and source exact
+PASS sepia: dialogs share a scrim without blur
+PASS sepia: actual export label contrast>=4.5 and source exact
+PASS black: dialogs share a scrim without blur
+PASS black: actual export label contrast>=4.5 and source exact
+PASS tokyo-night: dialogs share a scrim without blur
+PASS tokyo-night: actual export label contrast>=4.5 and source exact
+PASS tokyo-light: dialogs share a scrim without blur
+PASS tokyo-light: actual export label contrast>=4.5 and source exact
+PASS blue-gray: dialogs share a scrim without blur
+PASS blue-gray: actual export label contrast>=4.5 and source exact
+PASS nord: dialogs share a scrim without blur
+PASS nord: actual export label contrast>=4.5 and source exact
+PASS dracula: dialogs share a scrim without blur
+PASS dracula: actual export label contrast>=4.5 and source exact
+PASS rose-pine: dialogs share a scrim without blur
+PASS rose-pine: actual export label contrast>=4.5 and source exact
+PASS forest: dialogs share a scrim without blur
+PASS forest: actual export label contrast>=4.5 and source exact
+PASS gruvbox: dialogs share a scrim without blur
+PASS gruvbox: actual export label contrast>=4.5 and source exact
+PASS openOptions: separated48px rows without overlapping touch areas
+PASS openOptions: keyboard focuses menu/listbox content
+PASS openOptions: dismissal preserves focus contract
+PASS modeOptions: separated48px rows without overlapping touch areas
+PASS modeOptions: keyboard focuses menu/listbox content
+PASS modeOptions: dismissal preserves focus contract
+PASS fontOptions: separated48px rows without overlapping touch areas
+PASS fontOptions: keyboard focuses menu/listbox content
+PASS fontOptions: dismissal preserves focus contract
+PASS 1: long filename feedback wraps inside bounded viewport space
+PASS 1: complete status text remains available for scroll and assistive reading
+PASS 1: pointer scrolling reaches the last status line
+PASS 1: expired status cannot intercept interaction
+PASS 2: long filename feedback wraps inside bounded viewport space
+PASS 2: complete status text remains available for scroll and assistive reading
+PASS 2: pointer scrolling reaches the last status line
+PASS 2: expired status cannot intercept interaction
+PASS polish operations preserve exact source and reader DOM
+PASS native textarea undo still restores typed edit
+PASS redo and dirty state remain native
+PASS rapid overlays/reduced motion do not alter editor selection or draft
+PASS interrupted overlay finishes closed with correct focus
+PASS no browser renderer errors
+P3E POLISH: 75 PASS

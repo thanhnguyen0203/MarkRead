@@ -1,0 +1,94 @@
+{
+  "app/build/outputs/apk/debug/app-debug.apk": {
+    "bytes": 7639333,
+    "sha256": "4b8ede97f832e0f97d8ad91970e20eb416a9a229d5d3ec54e991f9e96dd5a314"
+  },
+  "build/ui-p4a/MarkRead-P4A-debug.apk": {
+    "bytes": 7639333,
+    "sha256": "4b8ede97f832e0f97d8ad91970e20eb416a9a229d5d3ec54e991f9e96dd5a314"
+  },
+  "app/src/main/assets/index.html": {
+    "bytes": 13313023,
+    "sha256": "9be329e41e942ed481f375d1e2e84738cebedb8a696ea6b9d16fee1dc109df68"
+  },
+  "web/dist/MarkRead.html": {
+    "bytes": 13313023,
+    "sha256": "9be329e41e942ed481f375d1e2e84738cebedb8a696ea6b9d16fee1dc109df68"
+  },
+  "app/src/main/res/drawable/ic_background.xml": {
+    "bytes": 179,
+    "sha256": "b28daad0f4c6e450dc6eb3f7425ef77e23ec4c2c2e238a3a67ec201d46d96679"
+  },
+  "app/src/main/res/drawable/ic_foreground.xml": {
+    "bytes": 561,
+    "sha256": "1decb5f56a8cdad5af87537673d5cef6daa5e8e2d83e9726403e62b3584ab58b"
+  },
+  "app/src/main/res/drawable/ic_monochrome.xml": {
+    "bytes": 561,
+    "sha256": "ea6e3b9967c8f05d9e7f7c6b35a43b457131214c420d3f0a25d99b4e3f9a96bc"
+  },
+  "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml": {
+    "bytes": 255,
+    "sha256": "fbdd13225cdb89df3f86a0791104db22a1b5e8326f8880e4dd601a9bf3277c8e"
+  },
+  "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml": {
+    "bytes": 255,
+    "sha256": "fbdd13225cdb89df3f86a0791104db22a1b5e8326f8880e4dd601a9bf3277c8e"
+  },
+  "app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml": {
+    "bytes": 317,
+    "sha256": "980f09f1d41123615b7dd2f9cc6c0a89c2e14e3d02e7ddd999f069eb25d12abd"
+  },
+  "app/src/main/res/mipmap-anydpi-v33/ic_launcher_round.xml": {
+    "bytes": 317,
+    "sha256": "980f09f1d41123615b7dd2f9cc6c0a89c2e14e3d02e7ddd999f069eb25d12abd"
+  },
+  "app/src/main/res/mipmap-hdpi/ic_launcher.png": {
+    "bytes": 1145,
+    "sha256": "1650318d77fc49fec47ec66aa0c528a18d19a1d784aa28ab57c6249adbe03eea"
+  },
+  "app/src/main/res/mipmap-hdpi/ic_launcher_round.png": {
+    "bytes": 2134,
+    "sha256": "5d352982b417fe4fbf4630d431f1d7dba6d5e8b5bb227ad11ee47593be2233e8"
+  },
+  "app/src/main/res/mipmap-mdpi/ic_launcher.png": {
+    "bytes": 940,
+    "sha256": "82e1a4b313fdd51d3317fcc28b89babb873d1b7e90dbbd0789e3eaaed1b248ec"
+  },
+  "app/src/main/res/mipmap-mdpi/ic_launcher_round.png": {
+    "bytes": 1549,
+    "sha256": "b7e486e566189700f09f53b2f4eaf88b457e81ebd01464be19aa1048ab2e8a32"
+  },
+  "app/src/main/res/mipmap-xhdpi/ic_launcher.png": {
+    "bytes": 1733,
+    "sha256": "e1ea5f3d72f5ec575ffbc78d94d9386a566e1051829e7acf2331428b2846cae5"
+  },
+  "app/src/main/res/mipmap-xhdpi/ic_launcher_round.png": {
+    "bytes": 3244,
+    "sha256": "cd7795a3b23fe6c6003596ee0949eec00f4c7fd62cb4cfabacf79d9e67ebf081"
+  },
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher.png": {
+    "bytes": 2139,
+    "sha256": "33241136a10a65d3ae7527aa4629bc1313b0a451d12ee2ac23aa4b13d9a5d646"
+  },
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png": {
+    "bytes": 4677,
+    "sha256": "ef7ed3f72a353bd97c1998a0d41084620418c7753ed57eda53f6f2b085f84b4f"
+  },
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": {
+    "bytes": 3078,
+    "sha256": "f861a2e2fa04d5b9a99e3420322d71e13cfd5a5256e0a1cfd500946a8d2aae18"
+  },
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png": {
+    "bytes": 6660,
+    "sha256": "40dd107996e5a1e7e87222390e5ea4ec8d768e5b2b0b34e5d9f06360d3c9f996"
+  },
+  "app/src/main/res/values/styles.xml": {
+    "bytes": 461,
+    "sha256": "c871d1adafd95ac1735dd6ec64bc5dd04ede4c5650b1d3dee5bffa91eca9ab37"
+  },
+  "app/src/main/res/xml/data_extraction_rules.xml": {
+    "bytes": 851,
+    "sha256": "196c2a0a0a01733d2e91d69d9e2975890a813542882f0d1525ef6b4b3a33b3f9"
+  }
+}

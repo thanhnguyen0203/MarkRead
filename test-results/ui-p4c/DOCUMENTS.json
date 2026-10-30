@@ -1,0 +1,23 @@
+{
+  "documents": {
+    "P4C_REPORT.md": {
+      "sha256": "50f297bc55d8a219341e2e50ab8729de6635d5ba6580b040aed6a2df460bf16e",
+      "links": "PASS"
+    },
+    "P4C_UPDATE_VALIDATION.md": {
+      "sha256": "c94c8c5d50515aadceaef73d60a4d4704e33f0e388c23d67274c3333a37797c3",
+      "links": "PASS"
+    },
+    "P4C_RELEASE_CHECKLIST.md": {
+      "sha256": "2464892481d899a284d64bc277489f20cc662a53b98969b1610d837015a6edee",
+      "links": "PASS"
+    },
+    "RELEASE_NOTES_1.2.0.md": {
+      "sha256": "4359e481f4c9c5ce51a430a162068c51d31af66e300cee76b9e14bf4a0ee2f49",
+      "links": "PASS"
+    }
+  },
+  "pythonSyntax": "PASS",
+  "checksumFileExact": "PASS",
+  "releaseFolderOnlyFourApprovedFiles": true
+}

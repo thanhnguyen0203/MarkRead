@@ -1,0 +1,3 @@
+# Preserve pinned upstream bytes for SHA-256 verification on Windows and Unix.
+lucide/*.svg -text
+LICENSE-* -text

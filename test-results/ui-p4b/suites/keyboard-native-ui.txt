@@ -1,0 +1,17 @@
+PASS clean native-facing Back still returns exit
+PASS Back does not leave a composing source field or commit it early
+PASS after composition, Back keeps the existing edit-to-read transition
+PASS edit-to-read Back returns focus to a visible control
+PASS dirty Back still returns the native confirmation contract
+PASS Back closes the open menu before its drawer
+PASS Back restores the open-menu trigger
+PASS next Back closes the drawer and returns focus
+PASS native-facing dialog Back leaves find behind it intact
+PASS following Back closes find
+PASS Back preserves a composing rename field
+PASS closing rename after composition does not rename or save
+PASS focus and Back actions send no file mutation commands
+PASS simulated session expiry cannot reapply composition from the previous scope
+PASS scope expiry keeps the existing restore contract usable
+PASS no errors in the simulated native-facing keyboard path
+P2C KEYBOARD NATIVE SIMULATION: 16 PASS

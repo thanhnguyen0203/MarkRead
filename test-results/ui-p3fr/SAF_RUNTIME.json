@@ -1,0 +1,32 @@
+[
+  {
+    "name": "SAF export byte hash",
+    "expected": "972ca46badf53e963f2745712a8081ad43e8e5b3fc918aa7c5eef84ab28272fa",
+    "actual": "972ca46badf53e963f2745712a8081ad43e8e5b3fc918aa7c5eef84ab28272fa",
+    "status": "PASS"
+  },
+  {
+    "name": "SAF original not overwritten",
+    "expected": "232053414620666978747572650d0a0d0a5669e1bb8774207669e1bb8774205649e1bb86540d0a0d0a4974656d2d3132204974656d2d33340d0a",
+    "actual": "232053414620666978747572650d0a0d0a5669e1bb8774207669e1bb8774205649e1bb86540d0a0d0a4974656d2d3132204974656d2d33340d0a",
+    "status": "PASS"
+  },
+  {
+    "name": "SAF fixture Undo restores original",
+    "expected": true,
+    "actual": true,
+    "status": "PASS"
+  },
+  {
+    "name": "SAF Unicode rename and extension",
+    "expected": "01_Đổi_tên.txt",
+    "actual": "01_Đổi_tên.txt",
+    "status": "PASS"
+  },
+  {
+    "name": "SAF nested reopen exact",
+    "expected": "# Nested\n\nOnly QA fixture.\n",
+    "actual": "# Nested\n\nOnly QA fixture.\n",
+    "status": "PASS"
+  }
+]

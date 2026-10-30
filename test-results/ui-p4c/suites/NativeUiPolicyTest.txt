@@ -1,0 +1,83 @@
+PASS dark: native matches resolved web palette
+PASS dark: readable fallback body
+PASS dark: readable native dialog
+PASS dark: readable button label
+PASS light: native matches resolved web palette
+PASS light: readable fallback body
+PASS light: readable native dialog
+PASS light: readable button label
+PASS sepia: native matches resolved web palette
+PASS sepia: readable fallback body
+PASS sepia: readable native dialog
+PASS sepia: readable button label
+PASS black: native matches resolved web palette
+PASS black: readable fallback body
+PASS black: readable native dialog
+PASS black: readable button label
+PASS tokyo-night: native matches resolved web palette
+PASS tokyo-night: readable fallback body
+PASS tokyo-night: readable native dialog
+PASS tokyo-night: readable button label
+PASS tokyo-light: native matches resolved web palette
+PASS tokyo-light: readable fallback body
+PASS tokyo-light: readable native dialog
+PASS tokyo-light: readable button label
+PASS blue-gray: native matches resolved web palette
+PASS blue-gray: readable fallback body
+PASS blue-gray: readable native dialog
+PASS blue-gray: readable button label
+PASS nord: native matches resolved web palette
+PASS nord: readable fallback body
+PASS nord: readable native dialog
+PASS nord: readable button label
+PASS dracula: native matches resolved web palette
+PASS dracula: readable fallback body
+PASS dracula: readable native dialog
+PASS dracula: readable button label
+PASS rose-pine: native matches resolved web palette
+PASS rose-pine: readable fallback body
+PASS rose-pine: readable native dialog
+PASS rose-pine: readable button label
+PASS forest: native matches resolved web palette
+PASS forest: readable fallback body
+PASS forest: readable native dialog
+PASS forest: readable button label
+PASS gruvbox: native matches resolved web palette
+PASS gruvbox: readable fallback body
+PASS gruvbox: readable native dialog
+PASS gruvbox: readable button label
+PASS all 12 themes, no missing or extra native ids
+PASS invalid saved theme uses established dark fallback
+PASS UI layer consumed Back
+PASS dirty result requires confirmation
+PASS only explicit clean exit can finish
+PASS unavailable Back cannot discard: null
+PASS unavailable Back cannot discard: null
+PASS unavailable Back cannot discard: undefined
+PASS unavailable Back cannot discard: false
+PASS unavailable Back cannot discard: true
+PASS unavailable Back cannot discard: exit
+PASS unavailable Back cannot discard: "EXIT"
+PASS unavailable Back cannot discard: {}
+PASS unavailable Back cannot discard: ""
+PASS unavailable Back cannot discard: ["exit"]
+PASS missing file offers picker recovery without raw provider URI
+PASS revoked permission offers regrant
+PASS specific write error retained
+PASS blank provider error stays intelligible
+PASS unexpected exception offers safe recovery
+PASS onCreate has current page but no foreground watchdog
+PASS resume can verify an unready page
+PASS probe callback belongs to current foreground page
+PASS pause invalidates probe without disposing live WebView
+PASS resume never accepts paused probe
+PASS cancel watchdog invalidates a queued callback
+PASS ready page stops startup checks without recreation
+PASS home/return preserves the already-ready page
+PASS late ready callback cannot affect explicitly recreated page
+PASS renderer disposal invalidates all old callbacks
+PASS manual recovery starts a new page generation
+PASS destroyed Activity cannot resume or show recovery
+PASS destroyed Activity cannot recreate WebView
+PASS bounded startup/probe/Back delays
+Native UI policy: 82 checks passed

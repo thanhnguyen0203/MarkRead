@@ -1,0 +1,14 @@
+PASS zero animator scale requests reduced motion
+PASS negative floating zero is still disabled
+PASS nonzero/invalid scale does not invent a persisted preference: 1.0
+PASS nonzero/invalid scale does not invent a persisted preference: 0.5
+PASS nonzero/invalid scale does not invent a persisted preference: 10.0
+PASS nonzero/invalid scale does not invent a persisted preference: -1.0
+PASS nonzero/invalid scale does not invent a persisted preference: NaN
+PASS nonzero/invalid scale does not invent a persisted preference: Infinity
+PASS nonzero/invalid scale does not invent a persisted preference: -Infinity
+PASS nonzero/invalid scale does not invent a persisted preference: 1.4E-45
+PASS true host script contains only literal boolean metadata/event
+PASS false host script never overrides the web media query directly
+PASS motion script does not touch appearance, ports or Back
+Motion policy: 13 checks passed

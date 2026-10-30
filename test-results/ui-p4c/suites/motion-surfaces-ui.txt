@@ -1,0 +1,99 @@
+PASS no-preference/320: dialog state/focus immediate on entry
+PASS no-preference/320: rapid close/reopen settles open with no stale callback {"open":true,"focused":true,"active":"","animations":[]}
+PASS no-preference/320: rapid category changes leave exactly one current panel
+PASS no-preference/320: input cancels ancestor decorations without moving its caret
+PASS no-preference/320: Escape closes synchronously and restores trigger
+PASS no-preference/320: menu keyboard focus does not wait for enter
+PASS no-preference/320: menu Escape hides and restores immediately
+PASS no-preference/320: rapid menu toggle settles without stale motion
+PASS no-preference/320: find state/focus immediate
+PASS no-preference/320: find closes synchronously during entry
+PASS no-preference/320: UI motion/custom CSS never changes Markdown source
+PASS no-preference/800: dialog state/focus immediate on entry
+PASS no-preference/800: rapid close/reopen settles open with no stale callback {"open":true,"focused":true,"active":"","animations":[]}
+PASS no-preference/800: rapid category changes leave exactly one current panel
+PASS no-preference/800: input cancels ancestor decorations without moving its caret
+PASS no-preference/800: Escape closes synchronously and restores trigger
+PASS no-preference/800: menu keyboard focus does not wait for enter
+PASS no-preference/800: menu Escape hides and restores immediately
+PASS no-preference/800: rapid menu toggle settles without stale motion
+PASS no-preference/800: find state/focus immediate
+PASS no-preference/800: find closes synchronously during entry
+PASS no-preference/800: UI motion/custom CSS never changes Markdown source
+PASS no-preference/1280: dialog state/focus immediate on entry
+PASS no-preference/1280: rapid close/reopen settles open with no stale callback {"open":true,"focused":true,"active":"","animations":[]}
+PASS no-preference/1280: rapid category changes leave exactly one current panel
+PASS no-preference/1280: input cancels ancestor decorations without moving its caret
+PASS no-preference/1280: Escape closes synchronously and restores trigger
+PASS no-preference/1280: menu keyboard focus does not wait for enter
+PASS no-preference/1280: menu Escape hides and restores immediately
+PASS no-preference/1280: rapid menu toggle settles without stale motion
+PASS no-preference/1280: find state/focus immediate
+PASS no-preference/1280: find closes synchronously during entry
+PASS no-preference/1280: UI motion/custom CSS never changes Markdown source
+PASS no-preference: exiting drawer is immediately isolated and focus is already restored
+PASS no-preference: drawer reversal settles at the real open state
+PASS no-preference: breakpoint cancels drawer movement and releases isolation
+PASS no-preference: context rename keeps immediate field focus
+PASS no-preference: rapid rename cancel/reopen retains its new target and submits once
+PASS no-preference: rapid themes commit the final palette/selection atomically
+PASS no-preference: final theme preserves custom CSS and exact source
+PASS no-preference: WAAPI uses only allowed properties and is absent under reduced motion
+PASS no-preference: real blocked-link feedback shows a polite toast
+PASS no-preference: repeated feedback resets the unchanged4.5s timer
+PASS no-preference: toast exit settles without stale state
+PASS no-preference: simulated pagehide cancels decorations and theme frames without changing dialog state
+PASS no-preference: no surface/abort renderer errors
+PASS reduce/320: dialog state/focus immediate on entry
+PASS reduce/320: rapid close/reopen settles open with no stale callback {"open":true,"focused":true,"active":"","animations":[]}
+PASS reduce/320: rapid category changes leave exactly one current panel
+PASS reduce/320: input cancels ancestor decorations without moving its caret
+PASS reduce/320: Escape closes synchronously and restores trigger
+PASS reduce/320: menu keyboard focus does not wait for enter
+PASS reduce/320: menu Escape hides and restores immediately
+PASS reduce/320: rapid menu toggle settles without stale motion
+PASS reduce/320: find state/focus immediate
+PASS reduce/320: find closes synchronously during entry
+PASS reduce/320: UI motion/custom CSS never changes Markdown source
+PASS reduce/800: dialog state/focus immediate on entry
+PASS reduce/800: rapid close/reopen settles open with no stale callback {"open":true,"focused":true,"active":"","animations":[]}
+PASS reduce/800: rapid category changes leave exactly one current panel
+PASS reduce/800: input cancels ancestor decorations without moving its caret
+PASS reduce/800: Escape closes synchronously and restores trigger
+PASS reduce/800: menu keyboard focus does not wait for enter
+PASS reduce/800: menu Escape hides and restores immediately
+PASS reduce/800: rapid menu toggle settles without stale motion
+PASS reduce/800: find state/focus immediate
+PASS reduce/800: find closes synchronously during entry
+PASS reduce/800: UI motion/custom CSS never changes Markdown source
+PASS reduce/1280: dialog state/focus immediate on entry
+PASS reduce/1280: rapid close/reopen settles open with no stale callback {"open":true,"focused":true,"active":"","animations":[]}
+PASS reduce/1280: rapid category changes leave exactly one current panel
+PASS reduce/1280: input cancels ancestor decorations without moving its caret
+PASS reduce/1280: Escape closes synchronously and restores trigger
+PASS reduce/1280: menu keyboard focus does not wait for enter
+PASS reduce/1280: menu Escape hides and restores immediately
+PASS reduce/1280: rapid menu toggle settles without stale motion
+PASS reduce/1280: find state/focus immediate
+PASS reduce/1280: find closes synchronously during entry
+PASS reduce/1280: UI motion/custom CSS never changes Markdown source
+PASS reduce: exiting drawer is immediately isolated and focus is already restored
+PASS reduce: drawer reversal settles at the real open state
+PASS reduce: breakpoint cancels drawer movement and releases isolation
+PASS reduce: context rename keeps immediate field focus
+PASS reduce: rapid rename cancel/reopen retains its new target and submits once
+PASS reduce: rapid themes commit the final palette/selection atomically
+PASS reduce: final theme preserves custom CSS and exact source
+PASS reduce: WAAPI uses only allowed properties and is absent under reduced motion
+PASS reduce: real blocked-link feedback shows a polite toast
+PASS reduce: repeated feedback resets the unchanged4.5s timer
+PASS reduce: toast exit settles without stale state
+PASS reduce: simulated pagehide cancels decorations and theme frames without changing dialog state
+PASS reduce: no surface/abort renderer errors
+PASS WAAPI=false: static/native dialog remains usable
+PASS WAAPI=false: fallback isolation keeps visible exiting controls out of keyboard order
+PASS WAAPI=false: native Tab cannot enter the closed drawer
+PASS WAAPI=true: static/native dialog remains usable
+PASS WAAPI=true: fallback isolation keeps visible exiting controls out of keyboard order
+PASS WAAPI=true: native Tab cannot enter the closed drawer
+P2G MOTION SURFACES: 98 PASS

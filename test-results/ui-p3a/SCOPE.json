@@ -1,0 +1,28 @@
+{
+  "inputFiles": 86,
+  "changedExistingFiles": [
+    "web/src/app.css",
+    "web/src/app.js",
+    "web/src/shell.html",
+    "web/tests/accessibility-ui.cjs",
+    "web/tests/foundations-ui.cjs",
+    "web/tests/icon-states-ui.cjs",
+    "web/tests/icons-ui.cjs",
+    "web/tests/keyboard-native-ui.cjs",
+    "web/tests/keyboard-ui.cjs",
+    "web/tests/layout-helpers.cjs",
+    "web/tests/motion-controls-ui.cjs",
+    "web/tests/motion-reduced-ui.cjs",
+    "web/tests/motion-surfaces-ui.cjs",
+    "web/tests/native-ui.cjs",
+    "web/tests/overflow-ui.cjs",
+    "web/tests/reading-ui.cjs",
+    "web/tests/responsive-ui.cjs",
+    "web/tests/revision-ui.cjs",
+    "web/tests/session-ui.cjs",
+    "web/tests/typography-ui.cjs",
+    "web/tests/ui.cjs",
+    "app/src/main/assets/index.html"
+  ],
+  "protectedFiles": 64
+}

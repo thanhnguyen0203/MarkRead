@@ -1,0 +1,138 @@
+[
+  {
+    "w": 320,
+    "h": 568,
+    "theme": "light",
+    "view": "typography",
+    "file": "320x568-light-typography-1x.png",
+    "metrics": {
+      "bodyWidth": 320,
+      "viewport": 320,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 360,
+    "h": 800,
+    "theme": "dark",
+    "view": "sidebar",
+    "file": "360x800-dark-sidebar-1x.png",
+    "metrics": {
+      "bodyWidth": 360,
+      "viewport": 360,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "reader",
+    "file": "393x852-dark-reader-1x.png",
+    "metrics": {
+      "bodyWidth": 393,
+      "viewport": 393,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 412,
+    "h": 915,
+    "theme": "sepia",
+    "view": "find",
+    "file": "412x915-sepia-find-1x.png",
+    "metrics": {
+      "bodyWidth": 412,
+      "viewport": 412,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 600,
+    "h": 960,
+    "theme": "light",
+    "view": "css",
+    "file": "600x960-light-css-1x.png",
+    "metrics": {
+      "bodyWidth": 600,
+      "viewport": 600,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 800,
+    "h": 393,
+    "theme": "dark",
+    "view": "editing",
+    "file": "800x393-dark-editing-1x.png",
+    "metrics": {
+      "bodyWidth": 800,
+      "viewport": 800,
+      "uiSize": "14px",
+      "header": 65,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 844,
+    "h": 390,
+    "theme": "dark",
+    "view": "reader",
+    "file": "844x390-dark-reader-1x.png",
+    "metrics": {
+      "bodyWidth": 844,
+      "viewport": 844,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "static",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 800,
+    "h": 1280,
+    "theme": "light",
+    "view": "reader",
+    "file": "800x1280-light-reader-1x.png",
+    "metrics": {
+      "bodyWidth": 800,
+      "viewport": 800,
+      "uiSize": "14px",
+      "header": 65,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  },
+  {
+    "w": 393,
+    "h": 852,
+    "theme": "dark",
+    "view": "typography",
+    "scale": 2,
+    "file": "393x852-dark-typography-2x.png",
+    "metrics": {
+      "bodyWidth": 393,
+      "viewport": 393,
+      "uiSize": "14px",
+      "header": 113,
+      "sidebar": "fixed",
+      "readerSize": "18px"
+    }
+  }
+]

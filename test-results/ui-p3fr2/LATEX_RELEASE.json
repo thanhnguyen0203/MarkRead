@@ -1,0 +1,970 @@
+{
+  "fixture": "# Công thức — Quiet Ink\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n$\\notARealCommand{x}$\n\n$$\\notARealCommand{x}$$\n\n$\\sqrt{$\n\n$$\\sqrt{$$\n\n$\\color{#cc0000}{x}$\n\n$$\\color{#cc0000}{x}$$\n",
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "rows": [
+    {
+      "theme": "dark",
+      "background": "rgb(32, 35, 38)",
+      "inline": [
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 7.831045090288326
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 7.831045090288326
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 7.831045090288326
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 7.831045090288326
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.6826821886397196
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.6826821886397196
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ff9b9b;"
+    },
+    {
+      "theme": "light",
+      "background": "rgb(255, 255, 255)",
+      "inline": [
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(178, 35, 50)",
+          "contrast": 6.604882595352183
+        },
+        {
+          "color": "rgb(178, 35, 50)",
+          "contrast": 6.604882595352183
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(178, 35, 50)",
+          "contrast": 6.604882595352183
+        },
+        {
+          "color": "rgb(178, 35, 50)",
+          "contrast": 6.604882595352183
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 5.886518279744077
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 5.886518279744077
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#b22332;"
+    },
+    {
+      "theme": "sepia",
+      "background": "rgb(245, 239, 223)",
+      "inline": [
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(166, 32, 46)",
+          "contrast": 6.380097787325048
+        },
+        {
+          "color": "rgb(166, 32, 46)",
+          "contrast": 6.380097787325048
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(166, 32, 46)",
+          "contrast": 6.380097787325048
+        },
+        {
+          "color": "rgb(166, 32, 46)",
+          "contrast": 6.380097787325048
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 5.128177437247735
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 5.128177437247735
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#a6202e;"
+    },
+    {
+      "theme": "black",
+      "background": "rgb(8, 9, 9)",
+      "inline": [
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 9.886463410529824
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 9.886463410529824
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 9.886463410529824
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 9.886463410529824
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 3.3868071239888815
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 3.3868071239888815
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ff9b9b;"
+    },
+    {
+      "theme": "tokyo-night",
+      "background": "rgb(26, 27, 38)",
+      "inline": [
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.47561443739305
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.47561443739305
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.47561443739305
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.47561443739305
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.9034923981180705
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.9034923981180705
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ff9b9b;"
+    },
+    {
+      "theme": "tokyo-light",
+      "background": "rgb(225, 226, 231)",
+      "inline": [
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(142, 28, 40)",
+          "contrast": 6.917196364981328
+        },
+        {
+          "color": "rgb(142, 28, 40)",
+          "contrast": 6.917196364981328
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(142, 28, 40)",
+          "contrast": 6.917196364981328
+        },
+        {
+          "color": "rgb(142, 28, 40)",
+          "contrast": 6.917196364981328
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 4.550546936147614
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 4.550546936147614
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#8e1c28;"
+    },
+    {
+      "theme": "blue-gray",
+      "background": "rgb(38, 50, 56)",
+      "inline": [
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 203, 203)",
+          "contrast": 9.184801658123328
+        },
+        {
+          "color": "rgb(255, 203, 203)",
+          "contrast": 9.184801658123328
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 203, 203)",
+          "contrast": 9.184801658123328
+        },
+        {
+          "color": "rgb(255, 203, 203)",
+          "contrast": 9.184801658123328
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.235596294143319
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.235596294143319
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ffcbcb;"
+    },
+    {
+      "theme": "nord",
+      "background": "rgb(46, 52, 64)",
+      "inline": [
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 213, 213)",
+          "contrast": 9.355618358675708
+        },
+        {
+          "color": "rgb(255, 213, 213)",
+          "contrast": 9.355618358675708
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 213, 213)",
+          "contrast": 9.355618358675708
+        },
+        {
+          "color": "rgb(255, 213, 213)",
+          "contrast": 9.355618358675708
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.121730594446795
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.121730594446795
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ffd5d5;"
+    },
+    {
+      "theme": "dracula",
+      "background": "rgb(40, 42, 54)",
+      "inline": [
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 185, 185)",
+          "contrast": 8.742347111238027
+        },
+        {
+          "color": "rgb(255, 185, 185)",
+          "contrast": 8.742347111238027
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 185, 185)",
+          "contrast": 8.742347111238027
+        },
+        {
+          "color": "rgb(255, 185, 185)",
+          "contrast": 8.742347111238027
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.4191555182576874
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.4191555182576874
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ffb9b9;"
+    },
+    {
+      "theme": "rose-pine",
+      "background": "rgb(25, 23, 36)",
+      "inline": [
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.75578365996749
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.75578365996749
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.75578365996749
+        },
+        {
+          "color": "rgb(255, 155, 155)",
+          "contrast": 8.75578365996749
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.99947000705019
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.99947000705019
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ff9b9b;"
+    },
+    {
+      "theme": "forest",
+      "background": "rgb(30, 41, 36)",
+      "inline": [
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 188, 188)",
+          "contrast": 9.422625789733544
+        },
+        {
+          "color": "rgb(255, 188, 188)",
+          "contrast": 9.422625789733544
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 188, 188)",
+          "contrast": 9.422625789733544
+        },
+        {
+          "color": "rgb(255, 188, 188)",
+          "contrast": 9.422625789733544
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.552107466681052
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.552107466681052
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ffbcbc;"
+    },
+    {
+      "theme": "gruvbox",
+      "background": "rgb(40, 40, 40)",
+      "inline": [
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        }
+      ],
+      "display": [
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        }
+      ],
+      "unsupported": [
+        {
+          "color": "rgb(255, 187, 187)",
+          "contrast": 9.181327244772394
+        },
+        {
+          "color": "rgb(255, 187, 187)",
+          "contrast": 9.181327244772394
+        }
+      ],
+      "parseErrors": [
+        {
+          "color": "rgb(255, 187, 187)",
+          "contrast": 9.181327244772394
+        },
+        {
+          "color": "rgb(255, 187, 187)",
+          "contrast": 9.181327244772394
+        }
+      ],
+      "authored": [
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.5045797645728842
+        },
+        {
+          "color": "rgb(204, 0, 0)",
+          "contrast": 2.5045797645728842
+        }
+      ],
+      "mathmlCount": 6,
+      "errorStyle": "color:#ffbbbb;"
+    }
+  ],
+  "scope": "Default valid math and renderer-generated errors; arbitrary author/custom colors remain user-controlled"
+}

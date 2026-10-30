@@ -1,0 +1,582 @@
+[
+  {
+    "composing": false,
+    "data": "T",
+    "end": 7,
+    "inputType": "insertText",
+    "start": 7,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\n"
+  },
+  {
+    "composing": false,
+    "data": "T",
+    "end": 8,
+    "inputType": "insertText",
+    "start": 8,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nT"
+  },
+  {
+    "composing": false,
+    "data": "i",
+    "end": 8,
+    "inputType": "insertText",
+    "start": 8,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nT"
+  },
+  {
+    "composing": false,
+    "data": "i",
+    "end": 9,
+    "inputType": "insertText",
+    "start": 9,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTi"
+  },
+  {
+    "composing": false,
+    "data": "e",
+    "end": 9,
+    "inputType": "insertText",
+    "start": 9,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTi"
+  },
+  {
+    "composing": false,
+    "data": "e",
+    "end": 10,
+    "inputType": "insertText",
+    "start": 10,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTie"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 10,
+    "inputType": "deleteContentBackward",
+    "start": 9,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTie"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 9,
+    "inputType": "deleteContentBackward",
+    "start": 9,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTi"
+  },
+  {
+    "composing": false,
+    "data": "ê",
+    "end": 9,
+    "inputType": "insertText",
+    "start": 9,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTi"
+  },
+  {
+    "composing": false,
+    "data": "ê",
+    "end": 10,
+    "inputType": "insertText",
+    "start": 10,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiê"
+  },
+  {
+    "composing": false,
+    "data": "n",
+    "end": 10,
+    "inputType": "insertText",
+    "start": 10,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiê"
+  },
+  {
+    "composing": false,
+    "data": "n",
+    "end": 11,
+    "inputType": "insertText",
+    "start": 11,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiên"
+  },
+  {
+    "composing": false,
+    "data": "g",
+    "end": 11,
+    "inputType": "insertText",
+    "start": 11,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiên"
+  },
+  {
+    "composing": false,
+    "data": "g",
+    "end": 12,
+    "inputType": "insertText",
+    "start": 12,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiêng"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 12,
+    "inputType": "deleteContentBackward",
+    "start": 9,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiêng"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 9,
+    "inputType": "deleteContentBackward",
+    "start": 9,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTi"
+  },
+  {
+    "composing": false,
+    "data": "ếng",
+    "end": 9,
+    "inputType": "insertText",
+    "start": 9,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTi"
+  },
+  {
+    "composing": false,
+    "data": "ếng",
+    "end": 12,
+    "inputType": "insertText",
+    "start": 12,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng"
+  },
+  {
+    "composing": false,
+    "data": " ",
+    "end": 12,
+    "inputType": "insertText",
+    "start": 12,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng"
+  },
+  {
+    "composing": false,
+    "data": " ",
+    "end": 13,
+    "inputType": "insertText",
+    "start": 13,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng "
+  },
+  {
+    "composing": false,
+    "data": "v",
+    "end": 13,
+    "inputType": "insertText",
+    "start": 13,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng "
+  },
+  {
+    "composing": false,
+    "data": "v",
+    "end": 14,
+    "inputType": "insertText",
+    "start": 14,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng v"
+  },
+  {
+    "composing": false,
+    "data": "i",
+    "end": 14,
+    "inputType": "insertText",
+    "start": 14,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng v"
+  },
+  {
+    "composing": false,
+    "data": "i",
+    "end": 15,
+    "inputType": "insertText",
+    "start": 15,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng vi"
+  },
+  {
+    "composing": false,
+    "data": "e",
+    "end": 15,
+    "inputType": "insertText",
+    "start": 15,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng vi"
+  },
+  {
+    "composing": false,
+    "data": "e",
+    "end": 16,
+    "inputType": "insertText",
+    "start": 16,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng vie"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 16,
+    "inputType": "deleteContentBackward",
+    "start": 15,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng vie"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 15,
+    "inputType": "deleteContentBackward",
+    "start": 15,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng vi"
+  },
+  {
+    "composing": false,
+    "data": "ê",
+    "end": 15,
+    "inputType": "insertText",
+    "start": 15,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng vi"
+  },
+  {
+    "composing": false,
+    "data": "ê",
+    "end": 16,
+    "inputType": "insertText",
+    "start": 16,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng viê"
+  },
+  {
+    "composing": false,
+    "data": "t",
+    "end": 16,
+    "inputType": "insertText",
+    "start": 16,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng viê"
+  },
+  {
+    "composing": false,
+    "data": "t",
+    "end": 17,
+    "inputType": "insertText",
+    "start": 17,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng viêt"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 17,
+    "inputType": "deleteContentBackward",
+    "start": 15,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng viêt"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 15,
+    "inputType": "deleteContentBackward",
+    "start": 15,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng vi"
+  },
+  {
+    "composing": false,
+    "data": "ệt",
+    "end": 15,
+    "inputType": "insertText",
+    "start": 15,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng vi"
+  },
+  {
+    "composing": false,
+    "data": "ệt",
+    "end": 17,
+    "inputType": "insertText",
+    "start": 17,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt"
+  },
+  {
+    "composing": false,
+    "data": " ",
+    "end": 17,
+    "inputType": "insertText",
+    "start": 17,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt"
+  },
+  {
+    "composing": false,
+    "data": " ",
+    "end": 18,
+    "inputType": "insertText",
+    "start": 18,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt "
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 18,
+    "inputType": "insertLineBreak",
+    "start": 18,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt "
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 19,
+    "inputType": "insertLineBreak",
+    "start": 19,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \n"
+  },
+  {
+    "composing": false,
+    "data": "D",
+    "end": 19,
+    "inputType": "insertText",
+    "start": 19,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \n"
+  },
+  {
+    "composing": false,
+    "data": "D",
+    "end": 20,
+    "inputType": "insertText",
+    "start": 20,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nD"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 20,
+    "inputType": "deleteContentBackward",
+    "start": 19,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nD"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 19,
+    "inputType": "deleteContentBackward",
+    "start": 19,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \n"
+  },
+  {
+    "composing": false,
+    "data": "Đ",
+    "end": 19,
+    "inputType": "insertText",
+    "start": 19,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \n"
+  },
+  {
+    "composing": false,
+    "data": "Đ",
+    "end": 20,
+    "inputType": "insertText",
+    "start": 20,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐ"
+  },
+  {
+    "composing": false,
+    "data": "u",
+    "end": 20,
+    "inputType": "insertText",
+    "start": 20,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nĐ"
+  },
+  {
+    "composing": false,
+    "data": "u",
+    "end": 21,
+    "inputType": "insertText",
+    "start": 21,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐu"
+  },
+  {
+    "composing": false,
+    "data": "n",
+    "end": 21,
+    "inputType": "insertText",
+    "start": 21,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nĐu"
+  },
+  {
+    "composing": false,
+    "data": "n",
+    "end": 22,
+    "inputType": "insertText",
+    "start": 22,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐun"
+  },
+  {
+    "composing": false,
+    "data": "g",
+    "end": 22,
+    "inputType": "insertText",
+    "start": 22,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nĐun"
+  },
+  {
+    "composing": false,
+    "data": "g",
+    "end": 23,
+    "inputType": "insertText",
+    "start": 23,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐung"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 23,
+    "inputType": "deleteContentBackward",
+    "start": 20,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nĐung"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 20,
+    "inputType": "deleteContentBackward",
+    "start": 20,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐ"
+  },
+  {
+    "composing": false,
+    "data": "úng",
+    "end": 20,
+    "inputType": "insertText",
+    "start": 20,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nĐ"
+  },
+  {
+    "composing": false,
+    "data": "úng",
+    "end": 23,
+    "inputType": "insertText",
+    "start": 23,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐúng"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 23,
+    "inputType": "deleteContentBackward",
+    "start": 22,
+    "trusted": true,
+    "type": "beforeinput",
+    "value": "# IME\n\nTiếng việt \nĐúng"
+  },
+  {
+    "composing": false,
+    "data": null,
+    "end": 22,
+    "inputType": "deleteContentBackward",
+    "start": 22,
+    "trusted": true,
+    "type": "input",
+    "value": "# IME\n\nTiếng việt \nĐún"
+  }
+]

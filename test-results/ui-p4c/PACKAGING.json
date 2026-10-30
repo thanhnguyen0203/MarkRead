@@ -1,0 +1,132 @@
+{
+  "resourceTable": {
+    "drawable/ic_background": {
+      "id": "0x7f010000",
+      "files": [
+        {
+          "qualifier": "",
+          "path": "res/Mo.xml",
+          "type": "XML"
+        }
+      ]
+    },
+    "drawable/ic_foreground": {
+      "id": "0x7f010001",
+      "files": [
+        {
+          "qualifier": "",
+          "path": "res/ro.xml",
+          "type": "XML"
+        }
+      ]
+    },
+    "drawable/ic_monochrome": {
+      "id": "0x7f010002",
+      "files": [
+        {
+          "qualifier": "",
+          "path": "res/Hz.xml",
+          "type": "XML"
+        }
+      ]
+    },
+    "mipmap/ic_launcher": {
+      "id": "0x7f020000",
+      "files": [
+        {
+          "qualifier": "mdpi",
+          "path": "res/9w.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "hdpi",
+          "path": "res/yn.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "xhdpi",
+          "path": "res/FS.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "xxhdpi",
+          "path": "res/RJ.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "xxxhdpi",
+          "path": "res/o-.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "anydpi",
+          "path": "res/BW.xml",
+          "type": "XML"
+        },
+        {
+          "qualifier": "anydpi-v33",
+          "path": "res/IG.xml",
+          "type": "XML"
+        }
+      ]
+    },
+    "mipmap/ic_launcher_round": {
+      "id": "0x7f020001",
+      "files": [
+        {
+          "qualifier": "mdpi",
+          "path": "res/zR.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "hdpi",
+          "path": "res/8c.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "xhdpi",
+          "path": "res/wb.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "xxhdpi",
+          "path": "res/fO.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "xxxhdpi",
+          "path": "res/Gc.png",
+          "type": "PNG"
+        },
+        {
+          "qualifier": "anydpi",
+          "path": "res/0K.xml",
+          "type": "XML"
+        },
+        {
+          "qualifier": "anydpi-v33",
+          "path": "res/6H.xml",
+          "type": "XML"
+        }
+      ]
+    },
+    "style/AppTheme": {
+      "id": "0x7f030000",
+      "files": []
+    },
+    "xml/data_extraction_rules": {
+      "id": "0x7f040000",
+      "files": [
+        {
+          "qualifier": "",
+          "path": "res/4j.xml",
+          "type": "XML"
+        }
+      ]
+    }
+  },
+  "offlineAssetsExact": true,
+  "qaAndPrivateMaterialExcluded": true,
+  "minify": false,
+  "shrinkResources": false
+}

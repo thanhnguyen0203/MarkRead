@@ -62,4 +62,4 @@ blockquote { border-radius: 8px; }
 
 ---
 
-*Bật Cài đặt → Đọc & chỉnh sửa → Hợp nhất Đọc và Nguồn để chạm vào từng khối và sửa ngay trong bài. Khi tắt hợp nhất, chọn “Nguồn” trong menu ⋮ trên thanh điều hướng hoặc trong cài đặt để sửa. Bấm ↓ và chọn nơi lưu bằng hộp lưu của Android; bản sửa chưa tải chỉ nằm trong phiên làm việc.*
+*Mở Cài đặt → Đọc & chỉnh sửa → Chế độ tài liệu → Nguồn Markdown để sửa. Bấm Lưu bản sao Markdown trên thanh công cụ và chọn nơi lưu bằng hộp lưu Android; bản sửa chưa lưu chỉ nằm trong phiên làm việc.*

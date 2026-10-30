@@ -1,0 +1,174 @@
+{
+  "allInitialReaderDOMHashesMatch": true,
+  "cases": [
+    {
+      "case": "320x568-light-read-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-read-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "600x960-sepia-read-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "800x852-nord-read-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-long-1x.png",
+      "before": "70cf5ae5078e545022c423aaebddae8a4dcec6ee7d8afb0aa0f1bc41c2675445",
+      "after": "70cf5ae5078e545022c423aaebddae8a4dcec6ee7d8afb0aa0f1bc41c2675445",
+      "identical": true
+    },
+    {
+      "case": "844x390-light-table-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-error-1x.png",
+      "before": "434ee60e7776335d3c62ffd2b1bf69c3dbc44700d8f9fd90a86347a79d3a69f0",
+      "after": "434ee60e7776335d3c62ffd2b1bf69c3dbc44700d8f9fd90a86347a79d3a69f0",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-edit-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "360x800-dark-tree-1x.png",
+      "before": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "after": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "identical": true
+    },
+    {
+      "case": "1280x800-light-tree-1x.png",
+      "before": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "after": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "identical": true
+    },
+    {
+      "case": "393x852-sepia-filter-empty-1x.png",
+      "before": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "after": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "identical": true
+    },
+    {
+      "case": "393x568-dark-empty-1x.png",
+      "before": null,
+      "after": null,
+      "identical": true
+    },
+    {
+      "case": "320x568-light-home-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "800x900-light-appearance-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-typography-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-typography-2x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "412x915-light-css-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-reader-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-light-general-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "320x852-light-search-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x360-dark-search-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "800x852-dark-invalid-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "320x568-light-rename-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-mode-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-dark-open-1x.png",
+      "before": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "after": "fa8e6a6b0076360ee79cddca250cb6409d3a707a867a76cef9c647cee1d866d5",
+      "identical": true
+    },
+    {
+      "case": "393x852-light-font-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "393x852-light-export-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    },
+    {
+      "case": "320x568-dark-toast-1x.png",
+      "before": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "after": "c59f92722bf303b1b9a01369b9a79df03ff88dd3249833b3a848a1009faab9a3",
+      "identical": true
+    }
+  ],
+  "normalization": "Only local blob image URLs normalized as P3C; no element/text/source span stripping."
+}

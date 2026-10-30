@@ -1,0 +1,1101 @@
+{
+  "frozenP4CBrowser": [
+    {
+      "suite": "revision-ui",
+      "exitCode": 0,
+      "observedPassLines": 62,
+      "last": [
+        "PASS search recovers after timeout",
+        "PASS zero-width regex replacement preserves emoji",
+        "PASS no runtime errors: ",
+        "PASS no external network requests",
+        "Revision 1.1.3 UI: 62 checks passed"
+      ]
+    },
+    {
+      "suite": "reading-ui",
+      "exitCode": 0,
+      "observedPassLines": 46,
+      "last": [
+        "PASS opening and closing Separators.md does not add line endings",
+        "PASS untouched Separators.md exports exactly the imported source",
+        "PASS cancelling Separators.md restores the exact imported source",
+        "PASS no runtime errors: ",
+        "Reading UI: 46 checks passed"
+      ]
+    },
+    {
+      "suite": "ui",
+      "exitCode": 0,
+      "observedPassLines": 54,
+      "last": [
+        "PASS no horizontal application overflow",
+        "PASS appearance settings persist after reload",
+        "PASS no JavaScript runtime errors: ",
+        "PASS no external network requests",
+        "Browser UI: 54 checks passed"
+      ]
+    },
+    {
+      "suite": "native-ui",
+      "exitCode": 0,
+      "observedPassLines": 27,
+      "last": [
+        "PASS empty newly selected native scope clears prior file list",
+        "PASS navigation disables after empty scope",
+        "PASS native forget command is sent",
+        "PASS no native UI JavaScript errors: ",
+        "Simulated native UI: 27 checks passed"
+      ]
+    },
+    {
+      "suite": "session-ui",
+      "exitCode": 0,
+      "observedPassLines": 17,
+      "last": [
+        "PASS live background expiry retains the theme",
+        "PASS forgotten scope stays forgotten after restart",
+        "PASS forgetting files leaves all preferences intact",
+        "PASS session scenarios have no renderer errors: ",
+        "Session UI: 17 checks passed"
+      ]
+    },
+    {
+      "suite": "foundations-ui",
+      "exitCode": 0,
+      "observedPassLines": 27,
+      "last": [
+        "PASS CSS state changes leave source selection and synthetic composition in place",
+        "PASS custom CSS stays inside the reader iframe",
+        "PASS legacy accent alias remains usable in custom CSS",
+        "PASS no page errors across theme, focus, editor and CSS flows",
+        "P2A FOUNDATIONS: 27 PASS"
+      ]
+    },
+    {
+      "suite": "startup-ui",
+      "exitCode": 0,
+      "observedPassLines": 53,
+      "last": [
+        "PASS preferences failure: every visible frame has the final theme and a rendered document",
+        "PASS preferences failure: no intermediate welcome document or filename",
+        "PASS preferences failure: renders the initial document once",
+        "PASS preferences failure: no renderer errors: ",
+        "Startup UI: 53 checks passed"
+      ]
+    },
+    {
+      "suite": "keyboard-native-ui",
+      "exitCode": 0,
+      "observedPassLines": 16,
+      "last": [
+        "PASS focus and Back actions send no file mutation commands",
+        "PASS simulated session expiry cannot reapply composition from the previous scope",
+        "PASS scope expiry keeps the existing restore contract usable",
+        "PASS no errors in the simulated native-facing keyboard path",
+        "P2C KEYBOARD NATIVE SIMULATION: 16 PASS"
+      ]
+    },
+    {
+      "suite": "native-compatibility-ui",
+      "exitCode": 0,
+      "observedPassLines": 23,
+      "last": [
+        "PASS failure and recovery paths have no uncaught renderer errors",
+        "PASS fresh JS heap restores original bytes, never claims RAM drafts survive process recreation",
+        "PASS fresh context receives saved native appearance independently of WebView storage",
+        "PASS fresh renderer has no uncaught errors",
+        "P2D NATIVE COMPATIBILITY SIMULATION: 23 PASS"
+      ]
+    },
+    {
+      "suite": "accessibility-ui",
+      "exitCode": 0,
+      "observedPassLines": 68,
+      "last": [
+        "PASS CSS target bounds remain stable at browser device scale 1; dp is not inferred",
+        "PASS CSS target bounds remain stable at browser device scale 2; dp is not inferred",
+        "PASS CSS target bounds remain stable at browser device scale 3; dp is not inferred",
+        "PASS no page errors during P2B flows",
+        "P2B ACCESSIBILITY: 68 PASS"
+      ]
+    },
+    {
+      "suite": "icons-ui",
+      "exitCode": 0,
+      "observedPassLines": 61,
+      "last": [
+        "PASS every icon button has a control-level accessible name",
+        "PASS self-contained HTML includes resolved icons and license notices",
+        "PASS no renderer errors in migrated groups",
+        "PASS no external icon/asset requests",
+        "P2E ICON UI STAGE8: 61 PASS"
+      ]
+    },
+    {
+      "suite": "keyboard-ui",
+      "exitCode": 0,
+      "observedPassLines": 68,
+      "last": [
+        "PASS a checked split option hidden by the viewport never receives keyboard focus",
+        "PASS unsupported native indent keeps ordinary Tab navigation and does not mutate text",
+        "PASS unsupported indent does not clear earlier native undo",
+        "PASS no page errors across keyboard, focus and composition flows",
+        "P2C KEYBOARD: 68 PASS"
+      ]
+    },
+    {
+      "suite": "icon-states-ui",
+      "exitCode": 0,
+      "observedPassLines": 70,
+      "last": [
+        "PASS rename error restores glyph on the same button with one handler invocation",
+        "PASS native error message/source are unchanged by icon update",
+        "PASS rename retry retains original behavior and resets decorative state",
+        "PASS no errors in MessagePort icon busy/retry simulation",
+        "P2E ICON STATES: 70 PASS"
+      ]
+    },
+    {
+      "suite": "responsive-ui",
+      "exitCode": 0,
+      "observedPassLines": 114,
+      "last": [
+        "PASS responsive reflow preserves source node, selection, focus and draft",
+        "PASS short viewport keeps Settings text input and selection",
+        "PASS Settings reflow leaves unsaved document state intact",
+        "PASS no responsive renderer errors",
+        "P2F RESPONSIVE: 114 PASS"
+      ]
+    },
+    {
+      "suite": "typography-ui",
+      "exitCode": 0,
+      "observedPassLines": 36,
+      "last": [
+        "PASS custom CSS remains after base reader gutter/max-width styles",
+        "PASS custom reader type overrides remain effective",
+        "PASS typography and CSS changes preserve exact source",
+        "PASS no typography renderer errors",
+        "P2F TYPOGRAPHY: 36 PASS"
+      ]
+    },
+    {
+      "suite": "overflow-ui",
+      "exitCode": 0,
+      "observedPassLines": 146,
+      "last": [
+        "PASS 800: all five nested branches remain open after reflow",
+        "PASS 800: deep file target remains readable and contained",
+        "PASS deep file remains selectable with unchanged Markdown",
+        "PASS no overflow/scaling renderer errors",
+        "P2F OVERFLOW: 146 PASS"
+      ]
+    },
+    {
+      "suite": "motion-controls-ui",
+      "exitCode": 0,
+      "observedPassLines": 46,
+      "last": [
+        "PASS reduce: delayed status remains visible without a startup keyframe",
+        "PASS no-preference: delayed startup status does not appear early",
+        "PASS no-preference: delayed status remains visible without a startup keyframe",
+        "PASS no control-motion renderer errors",
+        "P2G MOTION CONTROLS: 46 PASS"
+      ]
+    },
+    {
+      "suite": "settings-redesign-ui",
+      "exitCode": 0,
+      "observedPassLines": 148,
+      "last": [
+        "PASS typography: 200% text remains horizontally contained",
+        "PASS css: 200% text remains horizontally contained",
+        "PASS rapid navigation interrupted by reduced motion settles",
+        "PASS no renderer errors",
+        "P3A SETTINGS: 148 PASS"
+      ]
+    },
+    {
+      "suite": "motion-reduced-ui",
+      "exitCode": 0,
+      "observedPassLines": 53,
+      "last": [
+        "PASS native=false,media=no-preference: reduced motion disables scroll-driven auto-hide",
+        "PASS native=false,media=no-preference: live media-query reduction cancels an in-flight entry",
+        "PASS keyboard-focused toolbar stays fully visible while the reader receives wheel input",
+        "PASS native=false,media=no-preference: no preference/IME-guard renderer errors",
+        "P2G MOTION REDUCED: 53 PASS"
+      ]
+    },
+    {
+      "suite": "motion-surfaces-ui",
+      "exitCode": 0,
+      "observedPassLines": 98,
+      "last": [
+        "PASS WAAPI=false: native Tab cannot enter the closed drawer",
+        "PASS WAAPI=true: static/native dialog remains usable",
+        "PASS WAAPI=true: fallback isolation keeps visible exiting controls out of keyboard order",
+        "PASS WAAPI=true: native Tab cannot enter the closed drawer",
+        "P2G MOTION SURFACES: 98 PASS"
+      ]
+    },
+    {
+      "suite": "empty-folder-fixture-ui",
+      "exitCode": 0,
+      "observedPassLines": 4,
+      "last": [
+        "PASS empty folder root label retained from host metadata",
+        "PASS no fabricated child folder/file entries",
+        "PASS existing generic empty state remains usable",
+        "PASS empty snapshot triggers no permission request or mutation",
+        "P3C EMPTY FOLDER: 4 PASS"
+      ]
+    },
+    {
+      "suite": "library-redesign-ui",
+      "exitCode": 0,
+      "observedPassLines": 112,
+      "last": [
+        "PASS all5000 permitted file rows receive offline icons",
+        "PASS opening large library does not animate file rows",
+        "PASS filename markup remains literal text",
+        "PASS no renderer errors",
+        "P3B LIBRARY: 112 PASS"
+      ]
+    },
+    {
+      "suite": "polish-ui",
+      "exitCode": 0,
+      "observedPassLines": 75,
+      "last": [
+        "PASS redo and dirty state remain native",
+        "PASS rapid overlays/reduced motion do not alter editor selection or draft",
+        "PASS interrupted overlay finishes closed with correct focus",
+        "PASS no browser renderer errors",
+        "P3E POLISH: 75 PASS"
+      ]
+    },
+    {
+      "suite": "search-dialogs-ui",
+      "exitCode": 0,
+      "observedPassLines": 160,
+      "last": [
+        "PASS Replace now supports native Undo/Redo (intentional P3F-R correction of P3C observation)",
+        "PASS worker failure is not falsely attributed to query validity",
+        "PASS operational search failure leaves source untouched",
+        "PASS no unexpected renderer errors",
+        "P3D SEARCH DIALOGS: 160 PASS"
+      ]
+    },
+    {
+      "suite": "reader-redesign-ui",
+      "exitCode": 0,
+      "observedPassLines": 139,
+      "last": [
+        "PASS all181 code blocks remain rendered",
+        "PASS long reader scrolls to its end without document horizontal overflow",
+        "PASS long Markdown DOM has no animations",
+        "PASS no renderer errors",
+        "P3C READER: 139 PASS"
+      ]
+    },
+    {
+      "suite": "replace-history-ui",
+      "exitCode": 0,
+      "observedPassLines": 68,
+      "last": [
+        "PASS modal interruption cannot redirect native edit into CSS field",
+        "PASS query field owns native Ctrl+Z",
+        "PASS file switch cannot Undo another file transaction",
+        "PASS no unexpected renderer errors",
+        "P3FR REPLACE HISTORY: 68 PASS"
+      ]
+    },
+    {
+      "suite": "math-remediation-ui",
+      "exitCode": 0,
+      "observedPassLines": 36,
+      "last": [
+        "PASS forest generated error color is independent from authored red (P3F-R2 fix)",
+        "PASS gruvbox ordinary inline glyphs including operators meet 4.5",
+        "PASS gruvbox ordinary display glyphs meet 4.5",
+        "PASS gruvbox generated error color is independent from authored red (P3F-R2 fix)",
+        "P3FR MATH DIAGNOSTICS: 36 PASS"
+      ]
+    },
+    {
+      "suite": "modal-native-states-ui",
+      "exitCode": 0,
+      "observedPassLines": 10,
+      "last": [
+        "PASS Back closes top dialog before search panel",
+        "PASS next Back closes search",
+        "PASS clean native-facing exit contract retained",
+        "PASS permission failure adds no grant/export/file-management operation",
+        "P3D MODAL NATIVE SIMULATION: 10 PASS"
+      ]
+    },
+    {
+      "suite": "qa-math-ui",
+      "exitCode": 0,
+      "observedPassLines": 36,
+      "last": [
+        "PASS forest: explicit formula color is preserved",
+        "PASS gruvbox: ordinary math contrast>=4.5",
+        "PASS gruvbox: custom CSS retains math precedence",
+        "PASS gruvbox: explicit formula color is preserved",
+        "P3F MATH QA: 36 PASS"
+      ]
+    },
+    {
+      "suite": "math-release-ui",
+      "exitCode": 0,
+      "observedPassLines": 96,
+      "last": [
+        "PASS gruvbox: author inline/display color unchanged",
+        "PASS gruvbox: exact source and valid MathML preserved",
+        "PASS gruvbox: later custom CSS overrides generated error color",
+        "PASS gruvbox: custom CSS never changes Markdown",
+        "P3FR2 MATH RELEASE: 96 PASS"
+      ]
+    }
+  ],
+  "frozenP4CBrowserCount": 1969,
+  "unchangedNonBrowserCount": 416,
+  "historicalP4CCount": 2385,
+  "currentMigratedRegressionCount": 2334,
+  "newToolbarCount": 188,
+  "currentTotal": 2522,
+  "fail": 0,
+  "browserSuites": [
+    {
+      "suite": "reading-ui",
+      "exitCode": 0,
+      "observedPassLines": 35,
+      "last": [
+        "PASS opening and closing Separators.md does not add line endings",
+        "PASS untouched Separators.md exports exactly the imported source",
+        "PASS source Undo Separators.md restores the exact imported source",
+        "PASS no runtime errors: ",
+        "Reading UI: 35 checks passed"
+      ],
+      "assertions": 35,
+      "evidence": "verified"
+    },
+    {
+      "suite": "revision-ui",
+      "exitCode": 0,
+      "observedPassLines": 62,
+      "last": [
+        "PASS search recovers after timeout",
+        "PASS zero-width regex replacement preserves emoji",
+        "PASS no runtime errors: ",
+        "PASS no external network requests",
+        "Revision 1.1.3 UI: 62 checks passed"
+      ],
+      "assertions": 62,
+      "evidence": "verified"
+    },
+    {
+      "suite": "ui",
+      "exitCode": 0,
+      "observedPassLines": 50,
+      "last": [
+        "PASS no horizontal application overflow",
+        "PASS appearance settings persist after reload",
+        "PASS no JavaScript runtime errors: ",
+        "PASS no external network requests",
+        "Browser UI: 50 checks passed"
+      ],
+      "assertions": 50,
+      "evidence": "verified"
+    },
+    {
+      "suite": "native-ui",
+      "exitCode": 0,
+      "observedPassLines": 27,
+      "last": [
+        "PASS empty newly selected native scope clears prior file list",
+        "PASS navigation disables after empty scope",
+        "PASS native forget command is sent",
+        "PASS no native UI JavaScript errors: ",
+        "Simulated native UI: 27 checks passed"
+      ],
+      "assertions": 27,
+      "evidence": "verified"
+    },
+    {
+      "suite": "startup-ui",
+      "exitCode": 0,
+      "observedPassLines": 53,
+      "last": [
+        "PASS preferences failure: every visible frame has the final theme and a rendered document",
+        "PASS preferences failure: no intermediate welcome document or filename",
+        "PASS preferences failure: renders the initial document once",
+        "PASS preferences failure: no renderer errors: ",
+        "Startup UI: 53 checks passed"
+      ],
+      "assertions": 53,
+      "evidence": "verified"
+    },
+    {
+      "suite": "foundations-ui",
+      "exitCode": 0,
+      "observedPassLines": 27,
+      "last": [
+        "PASS CSS state changes leave source selection and synthetic composition in place",
+        "PASS custom CSS stays inside the reader iframe",
+        "PASS legacy accent alias remains usable in custom CSS",
+        "PASS no page errors across theme, focus, editor and CSS flows",
+        "P2A FOUNDATIONS: 27 PASS"
+      ],
+      "assertions": 27,
+      "evidence": "verified"
+    },
+    {
+      "suite": "session-ui",
+      "exitCode": 0,
+      "observedPassLines": 17,
+      "last": [
+        "PASS live background expiry retains the theme",
+        "PASS forgotten scope stays forgotten after restart",
+        "PASS forgetting files leaves all preferences intact",
+        "PASS session scenarios have no renderer errors: ",
+        "Session UI: 17 checks passed"
+      ],
+      "assertions": 17,
+      "evidence": "verified"
+    },
+    {
+      "suite": "keyboard-native-ui",
+      "exitCode": 0,
+      "observedPassLines": 16,
+      "last": [
+        "PASS focus and Back actions send no file mutation commands",
+        "PASS simulated session expiry cannot reapply composition from the previous scope",
+        "PASS scope expiry keeps the existing restore contract usable",
+        "PASS no errors in the simulated native-facing keyboard path",
+        "P2C KEYBOARD NATIVE SIMULATION: 16 PASS"
+      ],
+      "assertions": 16,
+      "evidence": "verified"
+    },
+    {
+      "suite": "accessibility-ui",
+      "exitCode": 0,
+      "observedPassLines": 68,
+      "last": [
+        "PASS CSS target bounds remain stable at browser device scale 1; dp is not inferred",
+        "PASS CSS target bounds remain stable at browser device scale 2; dp is not inferred",
+        "PASS CSS target bounds remain stable at browser device scale 3; dp is not inferred",
+        "PASS no page errors during P2B flows",
+        "P2B ACCESSIBILITY: 68 PASS"
+      ],
+      "assertions": 68,
+      "evidence": "verified"
+    },
+    {
+      "suite": "keyboard-ui",
+      "exitCode": 0,
+      "observedPassLines": 58,
+      "last": [
+        "PASS mode select stays reachable at narrow width",
+        "PASS unsupported native indent keeps ordinary Tab navigation and does not mutate text",
+        "PASS unsupported indent does not clear earlier native undo",
+        "PASS no page errors across keyboard, focus and composition flows",
+        "P2C KEYBOARD: 58 PASS"
+      ],
+      "assertions": 58,
+      "evidence": "verified"
+    },
+    {
+      "suite": "icons-ui",
+      "exitCode": 0,
+      "observedPassLines": 52,
+      "last": [
+        "PASS every icon button has a control-level accessible name",
+        "PASS self-contained HTML includes resolved icons and license notices",
+        "PASS no renderer errors in migrated groups",
+        "PASS no external icon/asset requests",
+        "P2E ICON UI STAGE8: 52 PASS"
+      ],
+      "assertions": 52,
+      "evidence": "verified"
+    },
+    {
+      "suite": "native-compatibility-ui",
+      "exitCode": 0,
+      "observedPassLines": 23,
+      "last": [
+        "PASS failure and recovery paths have no uncaught renderer errors",
+        "PASS fresh JS heap restores original bytes, never claims RAM drafts survive process recreation",
+        "PASS fresh context receives saved native appearance independently of WebView storage",
+        "PASS fresh renderer has no uncaught errors",
+        "P2D NATIVE COMPATIBILITY SIMULATION: 23 PASS"
+      ],
+      "assertions": 23,
+      "evidence": "verified"
+    },
+    {
+      "suite": "icon-states-ui",
+      "exitCode": 0,
+      "observedPassLines": 70,
+      "last": [
+        "PASS rename error restores glyph on the same button with one handler invocation",
+        "PASS native error message/source are unchanged by icon update",
+        "PASS rename retry retains original behavior and resets decorative state",
+        "PASS no errors in MessagePort icon busy/retry simulation",
+        "P2E ICON STATES: 70 PASS"
+      ],
+      "assertions": 70,
+      "evidence": "verified"
+    },
+    {
+      "suite": "responsive-ui",
+      "exitCode": 0,
+      "observedPassLines": 114,
+      "last": [
+        "PASS responsive reflow preserves source node, selection, focus and draft",
+        "PASS short viewport keeps Settings text input and selection",
+        "PASS Settings reflow leaves unsaved document state intact",
+        "PASS no responsive renderer errors",
+        "P2F RESPONSIVE: 114 PASS"
+      ],
+      "assertions": 114,
+      "evidence": "verified"
+    },
+    {
+      "suite": "typography-ui",
+      "exitCode": 0,
+      "observedPassLines": 36,
+      "last": [
+        "PASS custom CSS remains after base reader gutter/max-width styles",
+        "PASS custom reader type overrides remain effective",
+        "PASS typography and CSS changes preserve exact source",
+        "PASS no typography renderer errors",
+        "P2F TYPOGRAPHY: 36 PASS"
+      ],
+      "assertions": 36,
+      "evidence": "verified"
+    },
+    {
+      "suite": "overflow-ui",
+      "exitCode": 0,
+      "observedPassLines": 146,
+      "last": [
+        "PASS 800: all five nested branches remain open after reflow",
+        "PASS 800: deep file target remains readable and contained",
+        "PASS deep file remains selectable with unchanged Markdown",
+        "PASS no overflow/scaling renderer errors",
+        "P2F OVERFLOW: 146 PASS"
+      ],
+      "assertions": 146,
+      "evidence": "verified"
+    },
+    {
+      "suite": "motion-controls-ui",
+      "exitCode": 0,
+      "observedPassLines": 46,
+      "last": [
+        "PASS reduce: delayed status remains visible without a startup keyframe",
+        "PASS no-preference: delayed startup status does not appear early",
+        "PASS no-preference: delayed status remains visible without a startup keyframe",
+        "PASS no control-motion renderer errors",
+        "P2G MOTION CONTROLS: 46 PASS"
+      ],
+      "assertions": 46,
+      "evidence": "verified"
+    },
+    {
+      "suite": "motion-reduced-ui",
+      "exitCode": 0,
+      "observedPassLines": 53,
+      "last": [
+        "PASS native=false,media=no-preference: reduced motion disables scroll-driven auto-hide",
+        "PASS native=false,media=no-preference: live media-query reduction cancels an in-flight entry",
+        "PASS keyboard-focused toolbar stays fully visible while the reader receives wheel input",
+        "PASS native=false,media=no-preference: no preference/IME-guard renderer errors",
+        "P2G MOTION REDUCED: 53 PASS"
+      ],
+      "assertions": 53,
+      "evidence": "motion-final"
+    },
+    {
+      "suite": "settings-redesign-ui",
+      "exitCode": 0,
+      "observedPassLines": 148,
+      "last": [
+        "PASS typography: 200% text remains horizontally contained",
+        "PASS css: 200% text remains horizontally contained",
+        "PASS rapid navigation interrupted by reduced motion settles",
+        "PASS no renderer errors",
+        "P3A SETTINGS: 148 PASS"
+      ],
+      "assertions": 148,
+      "evidence": "verified"
+    },
+    {
+      "suite": "motion-surfaces-ui",
+      "exitCode": 0,
+      "observedPassLines": 86,
+      "last": [
+        "PASS WAAPI=false: native Tab cannot enter the closed drawer",
+        "PASS WAAPI=true: static/native dialog remains usable",
+        "PASS WAAPI=true: fallback isolation keeps visible exiting controls out of keyboard order",
+        "PASS WAAPI=true: native Tab cannot enter the closed drawer",
+        "P2G MOTION SURFACES: 86 PASS"
+      ],
+      "assertions": 86,
+      "evidence": "verified"
+    },
+    {
+      "suite": "empty-folder-fixture-ui",
+      "exitCode": 0,
+      "observedPassLines": 4,
+      "last": [
+        "PASS empty folder root label retained from host metadata",
+        "PASS no fabricated child folder/file entries",
+        "PASS existing generic empty state remains usable",
+        "PASS empty snapshot triggers no permission request or mutation",
+        "P3C EMPTY FOLDER: 4 PASS"
+      ],
+      "assertions": 4,
+      "evidence": "verified"
+    },
+    {
+      "suite": "library-redesign-ui",
+      "exitCode": 0,
+      "observedPassLines": 112,
+      "last": [
+        "PASS all5000 permitted file rows receive offline icons",
+        "PASS opening large library does not animate file rows",
+        "PASS filename markup remains literal text",
+        "PASS no renderer errors",
+        "P3B LIBRARY: 112 PASS"
+      ],
+      "assertions": 112,
+      "evidence": "verified"
+    },
+    {
+      "suite": "polish-ui",
+      "exitCode": 0,
+      "observedPassLines": 72,
+      "last": [
+        "PASS redo and dirty state remain native",
+        "PASS rapid overlays/reduced motion do not alter editor selection or draft",
+        "PASS interrupted overlay finishes closed with correct focus",
+        "PASS no browser renderer errors",
+        "P3E POLISH: 72 PASS"
+      ],
+      "assertions": 72,
+      "evidence": "verified"
+    },
+    {
+      "suite": "reader-redesign-ui",
+      "exitCode": 0,
+      "observedPassLines": 137,
+      "last": [
+        "PASS all181 code blocks remain rendered",
+        "PASS long reader scrolls to its end without document horizontal overflow",
+        "PASS long Markdown DOM has no animations",
+        "PASS no renderer errors",
+        "P3C READER: 137 PASS"
+      ],
+      "assertions": 137,
+      "evidence": "verified"
+    },
+    {
+      "suite": "search-dialogs-ui",
+      "exitCode": 0,
+      "observedPassLines": 160,
+      "last": [
+        "PASS Replace now supports native Undo/Redo (intentional P3F-R correction of P3C observation)",
+        "PASS worker failure is not falsely attributed to query validity",
+        "PASS operational search failure leaves source untouched",
+        "PASS no unexpected renderer errors",
+        "P3D SEARCH DIALOGS: 160 PASS"
+      ],
+      "assertions": 160,
+      "evidence": "verified"
+    },
+    {
+      "suite": "replace-history-ui",
+      "exitCode": 0,
+      "observedPassLines": 68,
+      "last": [
+        "PASS modal interruption cannot redirect native edit into CSS field",
+        "PASS query field owns native Ctrl+Z",
+        "PASS file switch cannot Undo another file transaction",
+        "PASS no unexpected renderer errors",
+        "P3FR REPLACE HISTORY: 68 PASS"
+      ],
+      "assertions": 68,
+      "evidence": "verified"
+    },
+    {
+      "suite": "math-remediation-ui",
+      "exitCode": 0,
+      "observedPassLines": 36,
+      "last": [
+        "PASS forest generated error color is independent from authored red (P3F-R2 fix)",
+        "PASS gruvbox ordinary inline glyphs including operators meet 4.5",
+        "PASS gruvbox ordinary display glyphs meet 4.5",
+        "PASS gruvbox generated error color is independent from authored red (P3F-R2 fix)",
+        "P3FR MATH DIAGNOSTICS: 36 PASS"
+      ],
+      "assertions": 36,
+      "evidence": "verified"
+    },
+    {
+      "suite": "modal-native-states-ui",
+      "exitCode": 0,
+      "observedPassLines": 10,
+      "last": [
+        "PASS Back closes top dialog before search panel",
+        "PASS next Back closes search",
+        "PASS clean native-facing exit contract retained",
+        "PASS permission failure adds no grant/export/file-management operation",
+        "P3D MODAL NATIVE SIMULATION: 10 PASS"
+      ],
+      "assertions": 10,
+      "evidence": "verified"
+    },
+    {
+      "suite": "qa-math-ui",
+      "exitCode": 0,
+      "observedPassLines": 36,
+      "last": [
+        "PASS forest: explicit formula color is preserved",
+        "PASS gruvbox: ordinary math contrast>=4.5",
+        "PASS gruvbox: custom CSS retains math precedence",
+        "PASS gruvbox: explicit formula color is preserved",
+        "P3F MATH QA: 36 PASS"
+      ],
+      "assertions": 36,
+      "evidence": "verified"
+    },
+    {
+      "suite": "compact-toolbar-ui",
+      "exitCode": 0,
+      "observedPassLines": 0,
+      "last": [
+        "COMPACT TOOLBAR: 188 PASS"
+      ],
+      "assertions": 188,
+      "evidence": "verified"
+    },
+    {
+      "suite": "math-release-ui",
+      "exitCode": 0,
+      "observedPassLines": 96,
+      "last": [
+        "PASS gruvbox: author inline/display color unchanged",
+        "PASS gruvbox: exact source and valid MathML preserved",
+        "PASS gruvbox: later custom CSS overrides generated error color",
+        "PASS gruvbox: custom CSS never changes Markdown",
+        "P3FR2 MATH RELEASE: 96 PASS"
+      ],
+      "assertions": 96,
+      "evidence": "verified"
+    }
+  ],
+  "nonBrowserSuites": [
+    {
+      "suite": "node",
+      "code": 0,
+      "tail": [
+        "ℹ suites 0",
+        "ℹ pass 132",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 1438.7559"
+      ]
+    },
+    {
+      "suite": "javac",
+      "code": 0,
+      "tail": []
+    },
+    {
+      "suite": "Policy",
+      "code": 0,
+      "tail": [
+        "Policy tests: 69 passed"
+      ]
+    },
+    {
+      "suite": "SessionPolicy",
+      "code": 0,
+      "tail": [
+        "Session policy: 7 checks passed"
+      ]
+    },
+    {
+      "suite": "NativeUiPolicy",
+      "code": 0,
+      "tail": [
+        "PASS late ready callback cannot affect explicitly recreated page",
+        "PASS renderer disposal invalidates all old callbacks",
+        "PASS manual recovery starts a new page generation",
+        "PASS destroyed Activity cannot resume or show recovery",
+        "PASS destroyed Activity cannot recreate WebView",
+        "PASS bounded startup/probe/Back delays",
+        "Native UI policy: 82 checks passed"
+      ]
+    },
+    {
+      "suite": "MotionPolicy",
+      "code": 0,
+      "tail": [
+        "PASS nonzero/invalid scale does not invent a persisted preference: Infinity",
+        "PASS nonzero/invalid scale does not invent a persisted preference: -Infinity",
+        "PASS nonzero/invalid scale does not invent a persisted preference: 1.4E-45",
+        "PASS true host script contains only literal boolean metadata/event",
+        "PASS false host script never overrides the web media query directly",
+        "PASS motion script does not touch appearance, ports or Back",
+        "Motion policy: 13 checks passed"
+      ]
+    },
+    {
+      "suite": "launcher",
+      "code": 0,
+      "tail": [
+        "Launcher resources: 81 checks PASS"
+      ]
+    },
+    {
+      "suite": "legacy-signing",
+      "code": 0,
+      "tail": [
+        "test_missing_key_never_generates_or_changes_password (__main__.SigningGuardTest.test_missing_key_never_generates_or_changes_password) ... ok",
+        "test_missing_password_keeps_key_bytes (__main__.SigningGuardTest.test_missing_password_keeps_key_bytes) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 5 tests in 0.070s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "apk25",
+      "code": 0,
+      "tail": [
+        "APK validation: 25 checks passed"
+      ]
+    },
+    {
+      "suite": "gradle-signing",
+      "code": 0,
+      "tail": [
+        "PASS release signing rejects missing-store",
+        "PASS release signing rejects wrong-alias"
+      ]
+    },
+    {
+      "suite": "apk18",
+      "code": 0,
+      "tail": [
+        "{\"pass\": 18, \"bytes\": 7636685, \"sha256\": \"6a5f1d5223cf66b4d6e96da2d8d27b34d336734efddbbdb0e0198d74c8e51f4c\", \"variant\": \"debug\"}"
+      ]
+    },
+    {
+      "suite": "palette",
+      "code": 0,
+      "tail": [
+        "blue-gray: secondary=#ced9df accentText=#bbdde7 onAccent=#202c32 borderControl=#a9b2b6 hover=#374b54 pressed=#3e515a; minText=4.804, minControl=3.204, minAction=7.447",
+        "nord: secondary=#d9dfe8 accentText=#cbe3ea onAccent=#272d38 borderControl=#b4b8c0 hover=#414858 pressed=#484e5e; minText=4.802, minControl=3.236, minAction=6.912",
+        "dracula: secondary=#c3cbe4 accentText=#d9c0fc onAccent=#21222c borderControl=#a4a5b0 hover=#3c3f4d pressed=#444654; minText=4.802, minControl=3.202, minAction=6.546",
+        "rose-pine: secondary=#b8b2c8 accentText=#ebbcba onAccent=#1f1d2e borderControl=#94919e hover=#312e46 pressed=#39364d; minText=4.818, minControl=3.201, minAction=9.765",
+        "forest: secondary=#c1d1c6 accentText=#b9d5ab onAccent=#18231d borderControl=#a0aba3 hover=#314236 pressed=#38493d; minText=4.805, minControl=3.23, minAction=8.75",
+        "gruvbox: secondary=#d5cbba accentText=#e7c897 onAccent=#1d2021 borderControl=#a9a6a4 hover=#433f3b pressed=#4a4540; minText=4.81, minControl=3.207, minAction=7.426",
+        "{\"checks\":2220,\"failures\":[]}"
+      ]
+    }
+  ],
+  "migrationCounts": [
+    {
+      "suite": "reading-ui",
+      "p4c": 46,
+      "compact": 35,
+      "netChange": -11
+    },
+    {
+      "suite": "revision-ui",
+      "p4c": 62,
+      "compact": 62,
+      "netChange": 0
+    },
+    {
+      "suite": "ui",
+      "p4c": 54,
+      "compact": 50,
+      "netChange": -4
+    },
+    {
+      "suite": "native-ui",
+      "p4c": 27,
+      "compact": 27,
+      "netChange": 0
+    },
+    {
+      "suite": "startup-ui",
+      "p4c": 53,
+      "compact": 53,
+      "netChange": 0
+    },
+    {
+      "suite": "foundations-ui",
+      "p4c": 27,
+      "compact": 27,
+      "netChange": 0
+    },
+    {
+      "suite": "session-ui",
+      "p4c": 17,
+      "compact": 17,
+      "netChange": 0
+    },
+    {
+      "suite": "keyboard-native-ui",
+      "p4c": 16,
+      "compact": 16,
+      "netChange": 0
+    },
+    {
+      "suite": "accessibility-ui",
+      "p4c": 68,
+      "compact": 68,
+      "netChange": 0
+    },
+    {
+      "suite": "keyboard-ui",
+      "p4c": 68,
+      "compact": 58,
+      "netChange": -10
+    },
+    {
+      "suite": "icons-ui",
+      "p4c": 61,
+      "compact": 52,
+      "netChange": -9
+    },
+    {
+      "suite": "native-compatibility-ui",
+      "p4c": 23,
+      "compact": 23,
+      "netChange": 0
+    },
+    {
+      "suite": "icon-states-ui",
+      "p4c": 70,
+      "compact": 70,
+      "netChange": 0
+    },
+    {
+      "suite": "responsive-ui",
+      "p4c": 114,
+      "compact": 114,
+      "netChange": 0
+    },
+    {
+      "suite": "typography-ui",
+      "p4c": 36,
+      "compact": 36,
+      "netChange": 0
+    },
+    {
+      "suite": "overflow-ui",
+      "p4c": 146,
+      "compact": 146,
+      "netChange": 0
+    },
+    {
+      "suite": "motion-controls-ui",
+      "p4c": 46,
+      "compact": 46,
+      "netChange": 0
+    },
+    {
+      "suite": "motion-reduced-ui",
+      "p4c": 53,
+      "compact": 53,
+      "netChange": 0
+    },
+    {
+      "suite": "settings-redesign-ui",
+      "p4c": 148,
+      "compact": 148,
+      "netChange": 0
+    },
+    {
+      "suite": "motion-surfaces-ui",
+      "p4c": 98,
+      "compact": 86,
+      "netChange": -12
+    },
+    {
+      "suite": "empty-folder-fixture-ui",
+      "p4c": 4,
+      "compact": 4,
+      "netChange": 0
+    },
+    {
+      "suite": "library-redesign-ui",
+      "p4c": 112,
+      "compact": 112,
+      "netChange": 0
+    },
+    {
+      "suite": "polish-ui",
+      "p4c": 75,
+      "compact": 72,
+      "netChange": -3
+    },
+    {
+      "suite": "reader-redesign-ui",
+      "p4c": 139,
+      "compact": 137,
+      "netChange": -2
+    },
+    {
+      "suite": "search-dialogs-ui",
+      "p4c": 160,
+      "compact": 160,
+      "netChange": 0
+    },
+    {
+      "suite": "replace-history-ui",
+      "p4c": 68,
+      "compact": 68,
+      "netChange": 0
+    },
+    {
+      "suite": "math-remediation-ui",
+      "p4c": 36,
+      "compact": 36,
+      "netChange": 0
+    },
+    {
+      "suite": "modal-native-states-ui",
+      "p4c": 10,
+      "compact": 10,
+      "netChange": 0
+    },
+    {
+      "suite": "qa-math-ui",
+      "p4c": 36,
+      "compact": 36,
+      "netChange": 0
+    },
+    {
+      "suite": "math-release-ui",
+      "p4c": 96,
+      "compact": 96,
+      "netChange": 0
+    }
+  ],
+  "note": "All30 historical browser suites ran unchanged against frozen v1.2.0; all30 also ran on compact UI after explicit migration. Net51 assertions removed for deleted UI; other assertions were remapped, not all byte-identical. Motion suite53 rerun after test-focus/input correction on same final production asset. No skipped test is counted PASS."
+}

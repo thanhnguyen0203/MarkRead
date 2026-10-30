@@ -1,0 +1,63 @@
+PASS separate modes expose closed toolbar menu
+PASS toolbar menu switches to source and closes
+PASS menu keyboard navigation preserves source draft
+PASS Escape dismisses menu and restores focus
+PASS reader tap dismisses toolbar menu
+PASS toolbar fits 320×640
+PASS toolbar fits 360×800
+PASS toolbar fits 390×844
+PASS toolbar fits 412×915
+PASS toolbar fits 844×390
+PASS toolbar fits 1280×800
+PASS open button and choices use SVG icons
+PASS custom themed font picker replaces native select
+PASS font selection updates and closes picker
+PASS font picker supports keyboard selection
+PASS font menu inherits active theme
+PASS settings height follows section content
+PASS settings fit 320×640 appearance
+PASS settings fit 320×640 typography
+PASS settings fit 320×640 editing
+PASS settings fit 320×640 css
+PASS settings fit 320×640 general
+PASS settings fit 390×844 appearance
+PASS settings fit 390×844 typography
+PASS settings fit 390×844 editing
+PASS settings fit 390×844 css
+PASS settings fit 390×844 general
+PASS settings fit 844×390 appearance
+PASS settings fit 844×390 typography
+PASS settings fit 844×390 editing
+PASS settings fit 844×390 css
+PASS settings fit 844×390 general
+PASS switch rows disable tap boxes and align tracks right
+PASS settings button returns to neutral after touch
+PASS search button returns to its resting surface after touch
+PASS navigation button releases pressed color
+PASS Vietnamese insensitive search counts source matches
+PASS case-sensitive option works
+PASS next result advances
+PASS previous result advances
+PASS replace-one changes only selected source range
+PASS replace-all updates all remaining matches
+PASS regex replacement expands capture groups
+PASS invalid regex disables replacement without changing source
+PASS plain replacement preserves literal dollar syntax
+PASS replacement never changes another file
+PASS replaced draft survives navigation
+PASS rename input includes editable extension
+PASS rename description and fixed extension removed
+PASS rename changes extension to txt
+PASS renamed txt stays navigable with unsaved draft
+PASS export keeps chosen arbitrary extension
+PASS CSS imports from separately selected file
+PASS imported CSS applies
+PASS unsafe CSS import keeps prior value
+PASS CSS import preserves document and file scope
+PASS main UI responds during pathological regex
+PASS pathological regex terminates with readable error
+PASS search recovers after timeout
+PASS zero-width regex replacement preserves emoji
+PASS no runtime errors: 
+PASS no external network requests
+Revision 1.1.3 UI: 62 checks passed

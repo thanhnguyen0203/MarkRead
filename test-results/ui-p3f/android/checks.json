@@ -1,0 +1,528 @@
+[
+  {
+    "name": "native bridge ready without JavaScriptInterface",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "twelve themes packaged",
+    "status": "PASS",
+    "expected": 12,
+    "actual": 12,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "SAF index includes nested fixture",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "SAF source exact LF fixture",
+    "status": "PASS",
+    "expected": "cd985b0baa8362910908a6b3bffb524722d217bb806e412b86bf22c6e62d75ef",
+    "actual": "cd985b0baa8362910908a6b3bffb524722d217bb806e412b86bf22c6e62d75ef",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "native reader code/table/math/image offline",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "source target mapping retained",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme dark keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme light keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme sepia keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme black keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme tokyo-night keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme tokyo-light keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme blue-gray keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme nord keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme dracula keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme rose-pine keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme forest keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "theme gruvbox keeps source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "offline Merriweather ready",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "custom CSS remains last and source exact",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "long fixture250 chapters rendered",
+    "status": "PASS",
+    "expected": 250,
+    "actual": 250,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "long document scroll reaches last chapter",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "Settings preserves editor selection",
+    "status": "PASS",
+    "expected": "[5,11]",
+    "actual": "[5,11]",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "case insensitive Vietnamese search",
+    "status": "PASS",
+    "expected": "1/3",
+    "actual": "1/3",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "Next match advances",
+    "status": "PASS",
+    "expected": "2/3",
+    "actual": "2/3",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "Previous match restores",
+    "status": "PASS",
+    "expected": "1/3",
+    "actual": "1/3",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "case matching",
+    "status": "PASS",
+    "expected": "1/1",
+    "actual": "1/1",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "Replace one exact Unicode result",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "Replace undo observation",
+    "status": "NOT TESTED",
+    "expected": "unchanged replacement",
+    "actual": "unchanged replacement",
+    "method": "Android WebView124 native execCommand history probe; limitation, not undo acceptance",
+    "note": "Preliminary hidden-source probe under pre-existing unified mode. Superseded by visible Source probe with typing positive controls."
+  },
+  {
+    "name": "Redo observation after Replace",
+    "status": "NOT TESTED",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation",
+    "note": "Preliminary hidden-source probe under pre-existing unified mode. Superseded by visible Source probe with typing positive controls."
+  },
+  {
+    "name": "Replace All changes only matches",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "regex captures retain replacement semantics",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "invalid regex keeps content and disables replacement",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "draft is still dirty",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "real SAF export exact UTF8 bytes",
+    "status": "PASS",
+    "expected": "3a4f33778b15a5be3298be422893c9383c25fd7ab3b5fa68d923250d08758c00",
+    "actual": "3a4f33778b15a5be3298be422893c9383c25fd7ab3b5fa68d923250d08758c00",
+    "method": "DocumentsUI ACTION_CREATE_DOCUMENT + ADB fixture byte comparison"
+  },
+  {
+    "name": "export never overwrites original",
+    "status": "PASS",
+    "expected": "708675b53d0afdf213cc7da9c0105ae2823a36046da5cc2c78933234215cc7db",
+    "actual": "708675b53d0afdf213cc7da9c0105ae2823a36046da5cc2c78933234215cc7db",
+    "method": "real shared-storage fixture bytes"
+  },
+  {
+    "name": "real pointer long-press opens Rename",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android input swipe hold700ms"
+  },
+  {
+    "name": "SAF Unicode rename extension preserves draft",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "native rename keeps original bytes",
+    "status": "PASS",
+    "expected": "708675b53d0afdf213cc7da9c0105ae2823a36046da5cc2c78933234215cc7db",
+    "actual": "708675b53d0afdf213cc7da9c0105ae2823a36046da5cc2c78933234215cc7db",
+    "method": "real SAF tree rename + fixture SHA256"
+  },
+  {
+    "name": "source editor visibly active",
+    "status": "PASS",
+    "expected": "edit",
+    "actual": "edit",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "visible Source native typing Undo",
+    "status": "NOT TESTED",
+    "expected": "# History\n\none one\n",
+    "actual": "# History\n\none one\n",
+    "method": "WebView124 execCommand native editing buffer",
+    "note": "Superseded: QA snippet used a duplicate top-level const; final IIFE-scoped probe saved separately."
+  },
+  {
+    "name": "visible Source native typing Redo",
+    "status": "NOT TESTED",
+    "expected": true,
+    "actual": false,
+    "method": "Android WebView via instrumentation",
+    "note": "Superseded: QA snippet used a duplicate top-level const; final IIFE-scoped probe saved separately."
+  },
+  {
+    "name": "visible Source Replace undo limitation reproduced",
+    "status": "NOT TESTED",
+    "expected": "# History\n\ntwo one\n",
+    "actual": "# History\n\ntwo one\n",
+    "method": "known issue observation; does not satisfy undo acceptance",
+    "note": "Superseded: QA snippet used a duplicate top-level const; final IIFE-scoped probe saved separately."
+  },
+  {
+    "name": "visible native Undo positive control",
+    "status": "PASS",
+    "expected": "# History\n\none one\n",
+    "actual": "# History\n\none one\n",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "visible native Redo positive control",
+    "status": "PASS",
+    "expected": "# History\n\none one\nnative",
+    "actual": "# History\n\none one\nnative",
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "final Replace undo unchanged observation",
+    "status": "PASS",
+    "expected": "# History\n\ntwo one\nnative",
+    "actual": "# History\n\ntwo one\nnative",
+    "method": "known issue reproduction, not acceptance PASS"
+  },
+  {
+    "name": "real Home/return retains draft",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "real orientation retains draft",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "native Back closes Search",
+    "status": "NOT TESTED",
+    "expected": true,
+    "actual": false,
+    "method": "Android WebView via instrumentation",
+    "note": "Premature expectation ignored IME-first Back; superseded by real two-step Back sequence."
+  },
+  {
+    "name": "native Back closes Settings",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "TalkBack touch exploration/double tap Settings",
+    "status": "FAIL",
+    "expected": true,
+    "actual": false,
+    "method": "TalkBack bound + real touchscreen taps",
+    "note": "Service was bound, but injected touch activation was not established; manual TalkBack acceptance remains open, no proven app root cause."
+  },
+  {
+    "name": "Back hides IME then closes Search",
+    "status": "NOT TESTED",
+    "expected": true,
+    "actual": false,
+    "method": "physical Android Back sequence, max2 presses",
+    "note": "Fixed-count expectation invalid with Gboard handwriting+popup layers; later Back-to-final-state test passes."
+  },
+  {
+    "name": "Back dismisses Gboard layers then Search",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "real KEYCODE_BACK, 2 presses for keyboard layers+panel"
+  },
+  {
+    "name": "Back does not change source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "missing SAF file preserves current source",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "fixture cleanup is clean before recreation",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "clean Activity recreation restores granted document",
+    "status": "PASS",
+    "expected": "# Chương con\n\nĐọc thư mục con. Việt việt VIỆT. Item-12 Item-34.\n",
+    "actual": "# Chương con\n\nĐọc thư mục con. Việt việt VIỆT. Item-12 Item-34.\n",
+    "method": "actual Activity.recreate with no unsaved draft"
+  },
+  {
+    "name": "Android normal math contrast dark",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast light",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast sepia",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast black",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast tokyo-night",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast tokyo-light",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast blue-gray",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast nord",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast dracula",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast rose-pine",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast forest",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "Android normal math contrast gruvbox",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "computed WebView124 foreground/background"
+  },
+  {
+    "name": "real SAF empty directory scope",
+    "status": "PASS",
+    "expected": 0,
+    "actual": 0,
+    "method": "DocumentsUI tree grant to fixture Empty"
+  },
+  {
+    "name": "reopen saved Markdown through real tree SAF",
+    "status": "PASS",
+    "expected": "# Chương con\n\nĐọc thư mục con. Tiếng Tiếng Tiếng. Số 12 Số 34.\n",
+    "actual": "# Chương con\n\nĐọc thư mục con. Tiếng Tiếng Tiếng. Số 12 Số 34.\n",
+    "method": "native scope reindex/read after real save"
+  },
+  {
+    "name": "previous/next native scope navigation keeps saved content",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "current saved fixture has no draft",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "Android WebView via instrumentation"
+  },
+  {
+    "name": "48dp control at density420",
+    "status": "PASS",
+    "expected": true,
+    "actual": true,
+    "method": "measured CSS geometry with physical1080px/420dpi density mapping"
+  }
+]

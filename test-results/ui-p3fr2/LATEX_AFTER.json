@@ -1,0 +1,850 @@
+{
+  "fixture": "# Math diagnostics\n\n$x^2+1$\n\n$$\\frac{a}{b}=\\sqrt{x}$$\n\n$\\notARealCommand{x}$\n\n$\\color{#cc0000}{\\text{x}}$\n\n$$\\notARealCommand{x}$$\n\n$$\\color{#cc0000}{\\text{x}}$$\n",
+  "viewport": {
+    "width": 393,
+    "height": 852
+  },
+  "rows": [
+    {
+      "theme": "dark",
+      "background": "rgb(32, 35, 38)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "2",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "+",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "1",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "a",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "​",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "=",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "x",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        },
+        {
+          "text": "​",
+          "color": "rgb(200, 208, 203)",
+          "contrast": 10.031899858348181
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 7.831045090288326,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 7.831045090288326,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "light",
+      "background": "rgb(255, 255, 255)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "2",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "+",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "1",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "a",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "​",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "=",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "x",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        },
+        {
+          "text": "​",
+          "color": "rgb(56, 67, 60)",
+          "contrast": 10.313017803184888
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(178, 35, 50)",
+        "contrast": 6.604882595352183,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(178, 35, 50)",
+        "contrast": 6.604882595352183,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "sepia",
+      "background": "rgb(245, 239, 223)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "2",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "+",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "1",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "a",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "​",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "=",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "x",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        },
+        {
+          "text": "​",
+          "color": "rgb(81, 74, 59)",
+          "contrast": 7.646562319283052
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(166, 32, 46)",
+        "contrast": 6.380097787325048,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(166, 32, 46)",
+        "contrast": 6.380097787325048,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "black",
+      "background": "rgb(8, 9, 9)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "2",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "+",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "1",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "a",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "​",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "=",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "x",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        },
+        {
+          "text": "​",
+          "color": "rgb(197, 209, 201)",
+          "contrast": 12.662202435044074
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 9.886463410529824,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 9.886463410529824,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "tokyo-night",
+      "background": "rgb(26, 27, 38)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "2",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "+",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "1",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "a",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "​",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "=",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "x",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        },
+        {
+          "text": "​",
+          "color": "rgb(169, 177, 214)",
+          "contrast": 8.095547455350856
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 8.47561443739305,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 8.47561443739305,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "tokyo-light",
+      "background": "rgb(225, 226, 231)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "2",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "+",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "1",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "a",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "​",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "=",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "x",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        },
+        {
+          "text": "​",
+          "color": "rgb(52, 59, 88)",
+          "contrast": 8.488277727923736
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(142, 28, 40)",
+        "contrast": 6.917196364981328,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(142, 28, 40)",
+        "contrast": 6.917196364981328,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "blue-gray",
+      "background": "rgb(38, 50, 56)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "2",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "+",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "1",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "a",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "​",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "=",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "x",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        },
+        {
+          "text": "​",
+          "color": "rgb(209, 220, 224)",
+          "contrast": 9.415395098694852
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 203, 203)",
+        "contrast": 9.184801658123328,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 203, 203)",
+        "contrast": 9.184801658123328,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "nord",
+      "background": "rgb(46, 52, 64)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "2",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "+",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "1",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "a",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "​",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "=",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "x",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        },
+        {
+          "text": "​",
+          "color": "rgb(217, 223, 233)",
+          "contrast": 9.326792641417718
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 213, 213)",
+        "contrast": 9.355618358675708,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 213, 213)",
+        "contrast": 9.355618358675708,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "dracula",
+      "background": "rgb(40, 42, 54)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "2",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "+",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "1",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "a",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "​",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "=",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "x",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        },
+        {
+          "text": "​",
+          "color": "rgb(248, 248, 242)",
+          "contrast": 13.359134716531573
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 185, 185)",
+        "contrast": 8.742347111238027,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 185, 185)",
+        "contrast": 8.742347111238027,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "rose-pine",
+      "background": "rgb(25, 23, 36)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "2",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "+",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "1",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "a",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "​",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "=",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "x",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        },
+        {
+          "text": "​",
+          "color": "rgb(224, 222, 244)",
+          "contrast": 13.388874563413932
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 8.75578365996749,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 155, 155)",
+        "contrast": 8.75578365996749,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "forest",
+      "background": "rgb(30, 41, 36)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "2",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "+",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "1",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "a",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "​",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "=",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "x",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        },
+        {
+          "text": "​",
+          "color": "rgb(204, 219, 206)",
+          "contrast": 10.438376540680826
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 188, 188)",
+        "contrast": 9.422625789733544,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 188, 188)",
+        "contrast": 9.422625789733544,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    },
+    {
+      "theme": "gruvbox",
+      "background": "rgb(40, 40, 40)",
+      "inline": [
+        {
+          "text": "x",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "2",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "+",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "1",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        }
+      ],
+      "display": [
+        {
+          "text": "b",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "a",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "​",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "=",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "x",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        },
+        {
+          "text": "​",
+          "color": "rgb(235, 219, 178)",
+          "contrast": 10.74706817440964
+        }
+      ],
+      "inlineError": {
+        "color": "rgb(255, 187, 187)",
+        "contrast": 9.181327244772394,
+        "className": "mord text"
+      },
+      "displayError": {
+        "color": "rgb(255, 187, 187)",
+        "contrast": 9.181327244772394,
+        "className": "mord text"
+      },
+      "indistinguishableInline": false,
+      "indistinguishableDisplay": false
+    }
+  ],
+  "knownContrastFailures": []
+}

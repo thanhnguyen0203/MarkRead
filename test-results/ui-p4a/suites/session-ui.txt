@@ -1,0 +1,18 @@
+PASS appearance saves without an opt-in toggle
+PASS editing, order and custom CSS save with appearance
+PASS fresh renderer at 9m59.999s reopens only the last document
+PASS selected folder survives a fresh renderer
+PASS native preferences restore even with empty WebView localStorage
+PASS every appearance preference survives a fresh browser context
+PASS exactly ten minutes reopens no document
+PASS expiry retains the folder and its file list
+PASS session expiry retains all settings
+PASS restarting again does not reopen an arbitrary first document
+PASS standalone file selection restores before ten minutes
+PASS expired standalone selection closes every selected file
+PASS live background expiry closes the current document and retains the folder
+PASS live background expiry retains the theme
+PASS forgotten scope stays forgotten after restart
+PASS forgetting files leaves all preferences intact
+PASS session scenarios have no renderer errors: 
+Session UI: 17 checks passed

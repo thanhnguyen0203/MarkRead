@@ -1,0 +1,80 @@
+{
+  "sections": [
+    {
+      "file": "accessibility-ui.cjs",
+      "reason": "Six action targets stay48; narrow filename has equivalent48px file-list rename target; removed popup contract replaced by absence + Source Settings",
+      "beforeStaticOkCalls": 42,
+      "afterStaticOkCalls": 42
+    },
+    {
+      "file": "responsive-ui.cjs",
+      "reason": "One row56 replaces two-row contract; icon targets48, filename ellipsis constrained",
+      "beforeStaticOkCalls": 12,
+      "afterStaticOkCalls": 12
+    },
+    {
+      "file": "icons-ui.cjs",
+      "reason": "20px only header icons; retired block-control glyph checks, retain23 offline assets and all remaining semantics",
+      "beforeStaticOkCalls": 25,
+      "afterStaticOkCalls": 25
+    },
+    {
+      "file": "keyboard-ui.cjs",
+      "reason": "Retire inline-only composition/navigator cases, retain source native composition/undo/selection + drawer inert fallback; test absent block entry",
+      "beforeStaticOkCalls": 64,
+      "afterStaticOkCalls": 54
+    },
+    {
+      "file": "revision-ui.cjs",
+      "reason": "Mode selection via real Settings select; five popup assertions become Settings/absence/draft invariants; narrow filename ellipsis",
+      "beforeStaticOkCalls": 45,
+      "afterStaticOkCalls": 45
+    },
+    {
+      "file": "reading-ui.cjs",
+      "reason": "Retire live inline node reuse/block switching/cancel contract; retain scroll/progress/source edit + exact export/CRLF/Unicode/diagrams",
+      "beforeStaticOkCalls": 42,
+      "afterStaticOkCalls": 31
+    }
+  ],
+  "tail": [
+    {
+      "file": "ui.cjs",
+      "reason": "Retire reader inline-only framing/cancel/stale-offset/table/code activation; preserve source edit, export, math, HTML sanitization, links and CSS"
+    },
+    {
+      "file": "native-ui.cjs",
+      "reason": "Move editing step to Source; retain native Unicode export/rename/path grants/errors and navigation"
+    },
+    {
+      "file": "session-ui.cjs",
+      "reason": "Retire enabling removed preference; preserve complete native preference equality/session expiry/folder scope tests"
+    },
+    {
+      "file": "icons-ui.cjs",
+      "reason": "Retire only removed overflow mounted glyph assertion; registry still verifies23 offline assets"
+    },
+    {
+      "file": "motion-reduced-ui.cjs",
+      "reason": "Measure remaining toolbar control reduced motion"
+    },
+    {
+      "file": "motion-surfaces-ui.cjs",
+      "reason": "Retire3 deleted popup motion contracts per6 viewport/preference variants; assert absence. Keep all real dialog/drawer/find/rename/theme/abort/focus tests"
+    },
+    {
+      "file": "reader-redesign-ui.cjs",
+      "reason": "Replace removed menu/inline contracts with Settings and reader no-entry; keep native undo/redo/selection/composition guard/custom CSS/12themes/long doc/scroll"
+    },
+    {
+      "file": "polish-ui.cjs",
+      "reason": "Retire only removed popup loop; keep open and font menus keyboard geometry/focus"
+    }
+  ],
+  "notes": [
+    "Common real mode helpers use Settings documentMode select, close and actual focus return.",
+    "Motion retains53 assertions using PageDown and actual Tab Save→Settings; reading-ui retains ordinary wheel coverage.",
+    "Filename target exemption at320: six icon actions stay48; filename ellipsis has equivalent full-sized file-list rename target.",
+    "Net51 reflects deletion/replacement of inline-only and removed overflow assertions, not data/SAF/history policy removal."
+  ]
+}

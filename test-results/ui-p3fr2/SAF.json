@@ -1,0 +1,110 @@
+[
+  {
+    "name": "tree scoped folder",
+    "expected": "MarkReadP3FR2_20261029_74758a",
+    "actual": "MarkReadP3FR2_20261029_74758a",
+    "status": "PASS"
+  },
+  {
+    "name": "nested file indexed",
+    "expected": true,
+    "actual": true,
+    "status": "PASS"
+  },
+  {
+    "name": "SAF read exact",
+    "expected": "# SAF R2\n\nViệt việt VIỆT\n\nItem-12 Item-34\n",
+    "actual": "# SAF R2\n\nViệt việt VIỆT\n\nItem-12 Item-34\n",
+    "status": "PASS"
+  },
+  {
+    "name": "SAF Replace All exact",
+    "expected": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "actual": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "status": "PASS"
+  },
+  {
+    "name": "export UTF8 byte hash",
+    "expected": "c39317ae20af868b43d694e610143857c90424e334c963c75854caecae6dda45",
+    "actual": "c39317ae20af868b43d694e610143857c90424e334c963c75854caecae6dda45",
+    "status": "PASS"
+  },
+  {
+    "name": "original never overwritten",
+    "expected": "23205341462052320a0a5669e1bb8774207669e1bb8774205649e1bb86540a0a4974656d2d3132204974656d2d33340a",
+    "actual": "23205341462052320a0a5669e1bb8774207669e1bb8774205649e1bb86540a0a4974656d2d3132204974656d2d33340a",
+    "status": "PASS"
+  },
+  {
+    "name": "Undo Replace after export exact",
+    "expected": "# SAF R2\n\nViệt việt VIỆT\n\nItem-12 Item-34\n",
+    "actual": "# SAF R2\n\nViệt việt VIỆT\n\nItem-12 Item-34\n",
+    "status": "PASS"
+  },
+  {
+    "name": "original draft clean after Undo",
+    "expected": false,
+    "actual": false,
+    "status": "PASS"
+  },
+  {
+    "name": "Unicode rename and extension",
+    "expected": "01_Đổi_tên.txt",
+    "actual": "01_Đổi_tên.txt",
+    "status": "PASS"
+  },
+  {
+    "name": "nested file opens exact",
+    "expected": "# Nested R2\n\nOnly the QA fixture.\n",
+    "actual": "# Nested R2\n\nOnly the QA fixture.\n",
+    "status": "PASS"
+  },
+  {
+    "name": "persisted tree after Activity recreation",
+    "expected": "MarkReadP3FR2_20261029_74758a",
+    "actual": "MarkReadP3FR2_20261029_74758a",
+    "status": "PASS"
+  },
+  {
+    "name": "newly saved copy indexed",
+    "expected": true,
+    "actual": true,
+    "status": "PASS"
+  },
+  {
+    "name": "saved copy reopens bytes after lifecycle",
+    "expected": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "actual": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "status": "PASS"
+  },
+  {
+    "name": "missing file preserves previous content",
+    "expected": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "actual": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "status": "PASS"
+  },
+  {
+    "name": "missing file does not dirty previous doc",
+    "expected": false,
+    "actual": false,
+    "status": "PASS"
+  },
+  {
+    "name": "missing file keeps filename consistent",
+    "expected": "R2_Saved.md",
+    "actual": "R2_Saved.md",
+    "status": "PASS"
+  },
+  {
+    "name": "moved file preserves previous content",
+    "expected": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "actual": "# SAF R2\n\nTiếng Tiếng Tiếng\n\nItem-12 Item-34\n",
+    "status": "PASS"
+  },
+  {
+    "name": "moved file keeps filename consistent",
+    "expected": "R2_Saved.md",
+    "actual": "R2_Saved.md",
+    "status": "PASS"
+  }
+]

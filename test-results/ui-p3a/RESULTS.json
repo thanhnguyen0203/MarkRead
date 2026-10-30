@@ -1,0 +1,33 @@
+{
+  "inherited": {
+    "node": 132,
+    "browser": 1085,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1413,
+    "fail": 0
+  },
+  "new": {
+    "settingsRedesignBrowser": 148,
+    "fail": 0
+  },
+  "final": {
+    "node": 132,
+    "browser": 1233,
+    "jvm": 171,
+    "apk": 25,
+    "total": 1561,
+    "fail": 0
+  },
+  "palette": {
+    "pass": 2220,
+    "fail": 0
+  },
+  "debugApkChecks": 18,
+  "androidRuntimeTested": false,
+  "notes": [
+    "1413 inherited assertions retained; navigation drivers now traverse category list. Font accessible-name expectation updated to the explicit reader-font label.",
+    "Native Back and Escape close assertions traverse the new category-list layer.",
+    "New checks are real desktop Chromium; no claim of Android WebView, TalkBack, IME or SAF device coverage."
+  ]
+}

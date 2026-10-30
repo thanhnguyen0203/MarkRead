@@ -1,3 +1,12 @@
+# MarkRead1.2.0 —29/10/2026
+
+- Quiet Ink, responsive typography/layout và tổ chức Settings/Library/Reader/Search được hoàn thiện qua P2–P3.
+-23Lucide offline, launcher Open Book adaptive/round/monochrome và reduced-motion transitions.
+- Sửa Replace Undo/Redo, generated LaTeX error contrast12theme và literal Search/Replace capitalization.
+- Release1.2.0/code120, giữ appId/min26/target35; signing có fingerprint guard, dùng khóa release cũ. Đã kiểm update code115→120 không uninstall/clear data, giữ Settings/CSS/SAF và byte file fixture.
+-2383 regression kế thừa +2signing checks, palette2220, APK18 và44native upgrade assertions đạt. Chưa upload GitHub; không dùng Google Play.
+- Giữ các giới hạn draft RAM, TalkBack NOT TESTED — accepted limitation, provider/device/IME coverage và native Undo history. [Release notes đầy đủ](docs/release/RELEASE_NOTES_1.2.0.md).
+
 # MarkRead 1.1.5 — 27/10/2026
 
 - Sửa nháy giao diện khi khởi động: đưa bản cài đặt Android vào trang ngay lúc tải; đồng bộ nền cửa sổ/WebView với theme đã lưu. Chỉ hiện giao diện sau khi khôi phục phiên và tải xong font của tài liệu đầu tiên, không hiện trang chào mừng chen giữa. Nếu tải chậm, hiện thông báo chờ trên nền cùng theme. Kiểm chứng bổ sung: `test-results/1.1.5/startup/VALIDATION.md`.

@@ -1,0 +1,20 @@
+{
+  "head": "d5a7e5b",
+  "baselineSnapshotFiles": 141,
+  "changedExisting": [
+    "web/src/app.js",
+    "web/tests/search-dialogs-ui.cjs",
+    "app/src/main/assets/index.html",
+    "qa/android/build_p3f_probe.py",
+    "qa/android/P3FInstrumentation.java",
+    "qa/android/README.md",
+    "qa/android/runtime_p3f.py"
+  ],
+  "newProduction": [
+    "web/src/text-transaction.js"
+  ],
+  "productionJavaBridgeManifestGradleDependenciesThemesCssUnchanged": true,
+  "priorDocsUnchanged": true,
+  "originalUserEmulator": "5554 preserved",
+  "qaAvd": "MarkRead_P3FR_Validation, own5556, app finished fixture clean and emu kill accepted"
+}
