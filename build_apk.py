@@ -43,7 +43,7 @@ def build():
     run([tool('aapt2'),'link','-I',PLATFORM,'--manifest',manifest,'-A',ROOT/'app/src/main/assets','-o',unsigned,BUILD/'resources.zip'])
     with zipfile.ZipFile(unsigned,'a',compression=zipfile.ZIP_DEFLATED) as z:z.write(BUILD/'dex/classes.dex','classes.dex')
     aligned=BUILD/'aligned.apk';run([tool('zipalign'),'-f','4',unsigned,aligned])
-    output=DIST/'MarkRead-Android-1.2.0.apk'
+    output=DIST/'MarkRead-Android-1.2.1.apk'
     signed=BUILD/'signed.apk'
     run(['java','-jar',BT/'lib/apksigner.jar','sign','--ks',key,'--ks-key-alias','markread','--ks-pass','file:'+str(password),'--v4-signing-enabled','false','--out',signed,aligned])
     verify=subprocess.run(['java','-jar',str(BT/'lib/apksigner.jar'),'verify','--verbose','--print-certs',str(signed)],check=True,text=True,capture_output=True)

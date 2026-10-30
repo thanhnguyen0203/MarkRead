@@ -1,0 +1,17 @@
+{
+  "method": "adb install -r",
+  "uninstall": false,
+  "clearData": false,
+  "before": {
+    "apkSha256": "a1ffba49a0e48008ba04e63b20baa35cfeaa2f69e8a0b8e844aa60a2743f5995",
+    "uid": 10209,
+    "versionCode": 120
+  },
+  "after": {
+    "apkSha256": "ea969b837edc050baac287afae4d2a9572969e3cd254d30d37bff93fb6e7ebb2",
+    "uid": 10209,
+    "versionCode": 121
+  },
+  "certificateSha256": "52a8a4d97bf264d0d43914f71408f6ccdaf6622951c55246157239aae13c2b54",
+  "installResult": "Performing Streamed Install\r\nSuccess"
+}
